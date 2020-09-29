@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{titlesec}
 \usepackage{amssymb}
 \usepackage{makeidx}
 \usepackage[usenames]{color}
@@ -10,6 +11,11 @@
 \author{Ricardo Fernández, Brami Prudencio, Juan Diego Garcia}
 \title{Research Movement Lecture In A Karate Game}
 \begin{document}	
+	
+\titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
+\newpagestyle{mystyle}
+{\sethead[\thepage][][\chaptertitle]{}{}{\thepage}}
+\pagestyle{mystyle}
 \include{Tapa_Anterior}
 \tableofcontents
 \pagenumbering{arabic}\setcounter{page}{1}
