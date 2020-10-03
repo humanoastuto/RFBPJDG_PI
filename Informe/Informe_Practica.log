@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.19)  29 SEP 2020 00:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.19)  2 OCT 2020 22:35
 entering extended mode
 **./Informe_Practica.tex
 (Informe_Practica.tex
@@ -658,7 +658,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--25
 go_Upb.png>]) [2
 
 
-] (Informe_Practica.toc)
+] (Informe_Practica.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 6.
+
+("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 6.
+("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 \tf@toc=\write3
 \openout3 = `Informe_Practica.toc'.
 
@@ -670,16 +679,22 @@ go_Upb.png>]) [2
 
 ]
 Chapter 1.
-) [3]
+
+Overfull \hbox (31.31714pt too wide) in paragraph at lines 18--33
+\OT1/cmr/m/n/10 [08.07.2011] Gua re-comen-dada de redaccion: http://edicione
+sdigitales.info/Manual/Manual/ingles.html [08.07.2011] 
+ []
+
+[3]) [4]
 \openout2 = `Introduccion.aux'.
 
- (Introduccion.tex [4
+ (Introduccion.tex
+Chapter 2.
+) [5
 
 
 
 ]
-Chapter 2.
-) [5]
 \openout2 = `Objetivos.aux'.
 
  (Objetivos.tex [6
@@ -697,16 +712,46 @@ Chapter 3.
 
 ]
 Chapter 4.
-) [9]
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+) [10]
 \openout2 = `Marco_Teorico.aux'.
 
- (Marco_Teorico.tex [10
+ (Marco_Teorico.tex
+Chapter 5.
+) [11
 
 
 
 ]
-Chapter 5.
-) [11]
 \openout2 = `Alternativas.aux'.
 
  (Alternativas.tex [12
@@ -751,6 +796,12 @@ Chapter 9.
 
 ]
 Chapter 10.
+
+Overfull \hbox (2.15018pt too wide) in paragraph at lines 5--13
+\OT1/cmr/m/n/10 La eval-u-acion fi-nanciera com-parada con-tiene, nor-mal-ment
+e: In-ver-siones Re-queri-das Gas-tos de Fun-cionamiento
+ []
+
 ) [21]
 \openout2 = `Conclusiones.aux'.
 
@@ -760,44 +811,48 @@ Chapter 10.
 
 ]
 Chapter 11.
-) [23]
+) [23] (Informe_Practica.bbl [24
+
+
+]) [25]
 \openout2 = `Recomendaciones.aux'.
 
- (Recomendaciones.tex [24
-
+ (Recomendaciones.tex [26
 
 
 ]
 Chapter 12.
-) [25]
+) [27]
 \openout2 = `Anexos.aux'.
 
- (Anexos.tex [26
+ (Anexos.tex [28
 
 
 
 ]
 Chapter 13.
-) [27] (Informe_Practica.aux (Tapa_Anterior.aux) (Resumen.aux)
+) [29] (Informe_Practica.aux (Tapa_Anterior.aux) (Resumen.aux)
 (Introduccion.aux) (Objetivos.aux) (EstudioDiagnostico.aux) (Marco_Teorico.aux)
 (Alternativas.aux) (Metodologia.aux) (Diseno.aux) (PlanActividades.aux)
 (Evaluacion_Financiera.aux) (Conclusiones.aux) (Recomendaciones.aux)
 (Anexos.aux)) ) 
 Here is how much of TeX's memory you used:
- 3661 strings out of 493305
- 51803 string characters out of 3129801
- 117381 words of memory out of 3000000
- 7062 multiletter control sequences out of 15000+200000
- 5474 words of font info for 20 fonts, out of 3000000 for 9000
+ 3697 strings out of 493305
+ 52497 string characters out of 3129801
+ 122384 words of memory out of 3000000
+ 7081 multiletter control sequences out of 15000+200000
+ 7519 words of font info for 29 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,33p,518b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,6n,33p,832b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmbx10.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/human/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on Informe_Practica.pdf (29 pages, 87431 bytes).
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/human/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/human
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Informe_Practica.pdf (31 pages, 124454 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
+ 123 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
