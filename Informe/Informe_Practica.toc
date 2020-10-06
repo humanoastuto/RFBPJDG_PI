@@ -1,17 +1,20 @@
-\contentsline {chapter}{\numberline {1}Resumen}{3}
+\contentsline {chapter}{\numberline {1}Resumen}{2}
 \contentsline {chapter}{\numberline {2}Introducci\IeC {\'o}n}{5}
-\contentsline {chapter}{\numberline {3}Objetivos}{7}
-\contentsline {chapter}{\numberline {4}Estudio de Diagn\IeC {\'o}stico}{9}
-\contentsline {section}{\numberline {4.1}Seguimiendo de la Pandemia}{9}
-\contentsline {section}{\numberline {4.2}Investigaci\IeC {\'o}n Sobre el Karate}{10}
-\contentsline {subsection}{\numberline {4.2.1}Karate en Tiempos de Pandemia}{12}
+\contentsline {chapter}{\numberline {3}Objetivos}{6}
+\contentsline {section}{\numberline {3.1}Objetivo General}{6}
+\contentsline {section}{\numberline {3.2}Objetivos Espec\IeC {\'\i }ficos}{6}
+\contentsline {chapter}{\numberline {4}Estudio de Diagn\IeC {\'o}stico}{7}
+\contentsline {section}{\numberline {4.1}Seguimiendo de la Pandemia}{7}
+\contentsline {section}{\numberline {4.2}Investigaci\IeC {\'o}n Sobre el Karate}{8}
+\contentsline {subsection}{\numberline {4.2.1}Karate en Tiempos de Pandemia}{11}
+\contentsline {section}{\numberline {4.3}Un Videojuego Con Lectura de Movimiento de Karate}{12}
 \contentsline {chapter}{\numberline {5}Marco Te\IeC {\'o}rico}{13}
 \contentsline {section}{\numberline {5.1}Antecedentes}{13}
-\contentsline {chapter}{\numberline {6}Estudio de alternativas}{15}
-\contentsline {chapter}{\numberline {7}Metodolog\IeC {\'\i }a}{17}
-\contentsline {chapter}{\numberline {8}Dise\IeC {\~n}o del Proyecto}{19}
-\contentsline {chapter}{\numberline {9}Plan de Actividades}{21}
-\contentsline {chapter}{\numberline {10}Evaluaci\IeC {\'o}n Financiera Comparada}{23}
-\contentsline {chapter}{\numberline {11}Conclusiones}{25}
-\contentsline {chapter}{\numberline {12}Recomendaciones}{29}
-\contentsline {chapter}{\numberline {13}Anexos}{31}
+\contentsline {chapter}{\numberline {6}Estudio de alternativas}{14}
+\contentsline {chapter}{\numberline {7}Metodolog\IeC {\'\i }a}{15}
+\contentsline {chapter}{\numberline {8}Dise\IeC {\~n}o del Proyecto}{16}
+\contentsline {chapter}{\numberline {9}Plan de Actividades}{17}
+\contentsline {chapter}{\numberline {10}Evaluaci\IeC {\'o}n Financiera Comparada}{18}
+\contentsline {chapter}{\numberline {11}Conclusiones}{19}
+\contentsline {chapter}{\numberline {12}Recomendaciones}{21}
+\contentsline {chapter}{\numberline {13}Anexos}{22}

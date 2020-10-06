@@ -1,4 +1,4 @@
-\documentclass[10pt,letterpaper]{book}
+\documentclass[12pt,letterpaper, openany]{book}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -9,17 +9,19 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage[left=3.00cm, right=2.00cm, top=2.00cm, bottom=2.00cm]{geometry}
+\usepackage[left=3.50cm, right=2.50cm, top=2.50cm, bottom=2.50cm]{geometry}
 \author{Ricardo Fernández, Brami Prudencio, Juan Diego Garcia}
 \title{Research Movement Lecture In A Karate Game}
-\begin{document}	
+\begin{document}
 	
 \titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
 \newpagestyle{mystyle}
 {\sethead[\thepage][][\chaptertitle]{}{}{\thepage}}
 \pagestyle{mystyle}
 \include{Tapa_Anterior}
+\@openrighttrue\makeatother
 \tableofcontents
+\makeatletter\@openrightfalse	
 \listoffigures
 \pagenumbering{arabic}\setcounter{page}{1}
 \include{Resumen}

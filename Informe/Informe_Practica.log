@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.19)  5 OCT 2020 23:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.19)  6 OCT 2020 00:50
 entering extended mode
 **./Informe_Practica.tex
 (Informe_Practica.tex
@@ -6,8 +6,8 @@ LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\book.cls"
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\bk10.clo"
-File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\bk12.clo"
+File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -629,23 +629,23 @@ Package caption Info: End \AtBeginDocument code.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(85.35826pt, 472.03123pt, 56.9055pt)
-* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
+* h-part:(L,W,R)=(99.58464pt, 443.57848pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 652.70622pt, 71.13188pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=472.03123pt
-* \textheight=681.15898pt
-* \oddsidemargin=13.08827pt
-* \evensidemargin=-15.36449pt
-* \topmargin=-45.43198pt
+* \textwidth=443.57848pt
+* \textheight=652.70622pt
+* \oddsidemargin=27.31465pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-33.0119pt
 * \headheight=12.0pt
-* \headsep=18.06749pt
-* \topskip=10.0pt
-* \footskip=25.29494pt
-* \marginparwidth=125.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=98.0pt
 * \marginparsep=7.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -687,36 +687,36 @@ go_Upb.png>]) [2
 
 
 ] (Informe_Practica.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 5.
+LaTeX Font Info:    Try loading font information for U+msa on input line 4.
 
 ("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 5.
+LaTeX Font Info:    Try loading font information for U+msb on input line 4.
 ("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write3
 \openout3 = `Informe_Practica.toc'.
 
- [3] [4
-
-] (Informe_Practica.lof)
+ [3] (Informe_Practica.lof)
 \tf@lof=\write4
 \openout4 = `Informe_Practica.lof'.
 
- [1]
+ [1
+
+]
 \openout2 = `Resumen.aux'.
 
- (Resumen.tex [2
+ (Resumen.tex
+Chapter 1.
+[2
 
 
 ]
-Chapter 1.
-
-Overfull \hbox (31.31714pt too wide) in paragraph at lines 18--33
-\OT1/cmr/m/n/10 [08.07.2011] Gua re-comen-dada de redaccion: http://edicione
-sdigitales.info/Manual/Manual/ingles.html [08.07.2011] 
+Overfull \hbox (9.82793pt too wide) in paragraph at lines 88--94
+[]\OT1/cmr/m/n/12 Ttulos Se es-tablece el sigu-iente for-mato: Nivel de Ttu
+lo Tama~no (pun-tos) Mayusculas
  []
 
 [3]) [4]
@@ -731,20 +731,16 @@ Chapter 2.
 ]
 \openout2 = `Objetivos.aux'.
 
- (Objetivos.tex [6
+ (Objetivos.tex
+Chapter 3.
+) [6
 
 
 
 ]
-Chapter 3.
-) [7]
 \openout2 = `EstudioDiagnostico.aux'.
 
- (EstudioDiagnostico.tex [8
-
-
-
-]
+ (EstudioDiagnostico.tex
 Chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
@@ -766,12 +762,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--13
 
  []
 
+[7
 
+
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
-[9]
+
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
@@ -785,8 +785,15 @@ LaTeX Font Info:    Try loading font information for OMS+cmr on input line 25.
 ("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 25.
+
+[8]
+Overfull \hbox (7.51685pt too wide) in paragraph at lines 33--34
+[]\OT1/cmr/m/n/12 Do, que es in-ter-pre-tado como busqueda es-pir-i-tual, que 
+in-dica que se~nala la busqueda
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
@@ -802,12 +809,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
-[10]
+
 Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
-
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
@@ -817,7 +824,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
-<./Images/1stJKAChampionships1957.png, id=52, 229.60782pt x 232.61906pt>
+<./Images/1stJKAChampionships1957.png, id=44, 229.60782pt x 232.61906pt>
 File: ./Images/1stJKAChampionships1957.png Graphic file (type png)
 <use ./Images/1stJKAChampionships1957.png>
 Package pdftex.def Info: ./Images/1stJKAChampionships1957.png  used on input li
@@ -828,23 +835,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
-
- []
-
-[11 <./Images/1stJKAChampionships1957.png>]
-<./Images/ClaseVirtual.jpg, id=56, 1480.53125pt x 2055.68pt>
+[10 <./Images/1stJKAChampionships1957.png>]
+<./Images/ClaseVirtual.jpg, id=49, 1480.53125pt x 2055.68pt>
 File: ./Images/ClaseVirtual.jpg Graphic file (type jpg)
 <use ./Images/ClaseVirtual.jpg>
 Package pdftex.def Info: ./Images/ClaseVirtual.jpg  used on input line 74.
 (pdftex.def)             Requested size: 227.60492pt x 142.24985pt.
-<./Images/ClaseEnPandemia.jpg, id=57, 1060.96375pt x 529.98pt>
+
+Overfull \hbox (5.81569pt too wide) in paragraph at lines 74--75
+ [][] 
+ []
+
+<./Images/ClaseEnPandemia.jpg, id=50, 1060.96375pt x 529.98pt>
 File: ./Images/ClaseEnPandemia.jpg Graphic file (type jpg)
 <use ./Images/ClaseEnPandemia.jpg>
 Package pdftex.def Info: ./Images/ClaseEnPandemia.jpg  used on input line 80.
 (pdftex.def)             Requested size: 227.61708pt x 142.26355pt.
-) [12 <./Images/ClaseVirtual.jpg> <./Images/ClaseEnPandemia.jpg>]
+
+Overfull \hbox (5.82785pt too wide) in paragraph at lines 80--81
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11 <./Images/ClaseVirtual.jpg> <./Images/ClaseEnPandemia.jpg>]
+
+LaTeX Warning: Citation `esposito2005shorts' on page 12 undefined on input line
+ 92.
+
+) [12]
 \openout2 = `Marco_Teorico.aux'.
 
  (Marco_Teorico.tex
@@ -856,108 +881,104 @@ Chapter 5.
 ]
 \openout2 = `Alternativas.aux'.
 
- (Alternativas.tex [14
+ (Alternativas.tex
+Chapter 6.
+) [14
 
 
 
 ]
-Chapter 6.
-) [15]
 \openout2 = `Metodologia.aux'.
 
- (Metodologia.tex [16
+ (Metodologia.tex
+Chapter 7.
+) [15
 
 
 
 ]
-Chapter 7.
-) [17]
 \openout2 = `Diseno.aux'.
 
- (Diseno.tex [18
+ (Diseno.tex
+Chapter 8.
+) [16
 
 
 
 ]
-Chapter 8.
-) [19]
 \openout2 = `PlanActividades.aux'.
 
- (PlanActividades.tex [20
+ (PlanActividades.tex
+Chapter 9.
+) [17
 
 
 
 ]
-Chapter 9.
-) [21]
 \openout2 = `Evaluacion_Financiera.aux'.
 
- (Evaluacion_Financiera.tex [22
+ (Evaluacion_Financiera.tex
+Chapter 10.
+) [18
 
 
 
 ]
-Chapter 10.
-
-Overfull \hbox (2.15018pt too wide) in paragraph at lines 5--13
-\OT1/cmr/m/n/10 La eval-u-acion fi-nanciera com-parada con-tiene, nor-mal-ment
-e: In-ver-siones Re-queri-das Gas-tos de Fun-cionamiento
- []
-
-) [23]
 \openout2 = `Conclusiones.aux'.
 
- (Conclusiones.tex [24
+ (Conclusiones.tex
+Chapter 11.
+) [19
 
+
+
+] (Informe_Practica.bbl) [20
 
 
 ]
-Chapter 11.
-) [25] (Informe_Practica.bbl [26
-
-
-]) [27]
 \openout2 = `Recomendaciones.aux'.
 
- (Recomendaciones.tex [28
+ (Recomendaciones.tex
+Chapter 12.
+) [21
 
 
 ]
-Chapter 12.
-) [29]
 \openout2 = `Anexos.aux'.
 
- (Anexos.tex [30
-
-
-
-]
+ (Anexos.tex
 Chapter 13.
-) [31] (Informe_Practica.aux (Tapa_Anterior.aux) (Resumen.aux)
+) [22
+
+
+
+] (Informe_Practica.aux (Tapa_Anterior.aux) (Resumen.aux)
 (Introduccion.aux) (Objetivos.aux) (EstudioDiagnostico.aux) (Marco_Teorico.aux)
 (Alternativas.aux) (Metodologia.aux) (Diseno.aux) (PlanActividades.aux)
 (Evaluacion_Financiera.aux) (Conclusiones.aux) (Recomendaciones.aux)
-(Anexos.aux)) ) 
+(Anexos.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4911 strings out of 493305
- 74656 string characters out of 3129801
- 143790 words of memory out of 3000000
- 8276 multiletter control sequences out of 15000+200000
- 8116 words of font info for 31 fonts, out of 3000000 for 9000
+ 4927 strings out of 493305
+ 74846 string characters out of 3129801
+ 142824 words of memory out of 3000000
+ 8287 multiletter control sequences out of 15000+200000
+ 10757 words of font info for 40 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,8n,41p,1157b,469s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmbx10.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/human/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/human/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/human
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/
-Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmti10.pfb>
-Output written on Informe_Practica.pdf (35 pages, 866079 bytes).
+<C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/human/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/human/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/human/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Informe_Practica.pdf (25 pages, 843965 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
+ 111 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
