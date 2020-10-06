@@ -2,13 +2,16 @@
 \contentsline {chapter}{\numberline {2}Introducci\IeC {\'o}n}{5}
 \contentsline {chapter}{\numberline {3}Objetivos}{7}
 \contentsline {chapter}{\numberline {4}Estudio de Diagn\IeC {\'o}stico}{9}
-\contentsline {chapter}{\numberline {5}Marco Te\IeC {\'o}rico}{11}
-\contentsline {section}{\numberline {5.1}Antecedentes}{11}
-\contentsline {chapter}{\numberline {6}Estudio de alternativas}{13}
-\contentsline {chapter}{\numberline {7}Metodolog\IeC {\'\i }a}{15}
-\contentsline {chapter}{\numberline {8}Dise\IeC {\~n}o del Proyecto}{17}
-\contentsline {chapter}{\numberline {9}Plan de Actividades}{19}
-\contentsline {chapter}{\numberline {10}Evaluaci\IeC {\'o}n Financiera Comparada}{21}
-\contentsline {chapter}{\numberline {11}Conclusiones}{23}
-\contentsline {chapter}{\numberline {12}Recomendaciones}{27}
-\contentsline {chapter}{\numberline {13}Anexos}{29}
+\contentsline {section}{\numberline {4.1}Seguimiendo de la Pandemia}{9}
+\contentsline {section}{\numberline {4.2}Investigaci\IeC {\'o}n Sobre el Karate}{10}
+\contentsline {subsection}{\numberline {4.2.1}Karate en Tiempos de Pandemia}{12}
+\contentsline {chapter}{\numberline {5}Marco Te\IeC {\'o}rico}{13}
+\contentsline {section}{\numberline {5.1}Antecedentes}{13}
+\contentsline {chapter}{\numberline {6}Estudio de alternativas}{15}
+\contentsline {chapter}{\numberline {7}Metodolog\IeC {\'\i }a}{17}
+\contentsline {chapter}{\numberline {8}Dise\IeC {\~n}o del Proyecto}{19}
+\contentsline {chapter}{\numberline {9}Plan de Actividades}{21}
+\contentsline {chapter}{\numberline {10}Evaluaci\IeC {\'o}n Financiera Comparada}{23}
+\contentsline {chapter}{\numberline {11}Conclusiones}{25}
+\contentsline {chapter}{\numberline {12}Recomendaciones}{29}
+\contentsline {chapter}{\numberline {13}Anexos}{31}

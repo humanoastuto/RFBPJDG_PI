@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.19)  2 OCT 2020 22:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.19)  5 OCT 2020 23:03
 entering extended mode
 **./Informe_Practica.tex
 (Informe_Practica.tex
@@ -469,6 +469,31 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 \Gin@req@height=\dimen117
 \Gin@req@width=\dimen118
 )
+("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption.st
+y"
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+
+("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption3.s
+ty"
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen119
+\captionmargin@=\dimen120
+\captionwidth=\dimen121
+\caption@tempdima=\dimen122
+\caption@indent=\dimen123
+\caption@parindent=\dimen124
+\caption@hangindent=\dimen125
+)
+\c@caption@flags=\count100
+\c@ContinuedFloat=\count101
+)
+("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\subcaption
+.sty"
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+\c@subfigure=\count102
+\c@subtable=\count103
+)
 ("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.
 sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -486,17 +511,17 @@ Package ifvtex Info: VTeX not detected.
 sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count100
-\Gm@cntv=\count101
-\c@Gm@tempcnt=\count102
-\Gm@bindingoffset=\dimen119
-\Gm@wd@mp=\dimen120
-\Gm@odd@mp=\dimen121
-\Gm@even@mp=\dimen122
-\Gm@layoutwidth=\dimen123
-\Gm@layoutheight=\dimen124
-\Gm@layouthoffset=\dimen125
-\Gm@layoutvoffset=\dimen126
+\Gm@cnth=\count104
+\Gm@cntv=\count105
+\c@Gm@tempcnt=\count106
+\Gm@bindingoffset=\dimen126
+\Gm@wd@mp=\dimen127
+\Gm@odd@mp=\dimen128
+\Gm@even@mp=\dimen129
+\Gm@layoutwidth=\dimen130
+\Gm@layoutheight=\dimen131
+\Gm@layouthoffset=\dimen132
+\Gm@layoutvoffset=\dimen133
 \Gm@dimlist=\toks23
 
 ("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.
@@ -507,32 +532,32 @@ cfg")) (Informe_Practica.aux (Tapa_Anterior.aux) (Resumen.aux)
 (Anexos.aux))
 \openout1 = `Informe_Practica.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 ("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
 ii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count103
-\scratchdimen=\dimen127
+\scratchcounter=\count107
+\scratchdimen=\dimen134
 \scratchbox=\box29
-\nofMPsegments=\count104
-\nofMParguments=\count105
+\nofMPsegments=\count108
+\nofMParguments=\count109
 \everyMPshowfont=\toks24
-\MPscratchCnt=\count106
-\MPscratchDim=\dimen128
-\MPnumerator=\count107
-\makeMPintoPDFobject=\count108
+\MPscratchCnt=\count110
+\MPscratchDim=\dimen135
+\MPnumerator=\count111
+\makeMPintoPDFobject=\count112
 \everyMPtoPDFconversion=\toks25
 )
 ("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-
@@ -593,6 +618,9 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -659,17 +687,23 @@ go_Upb.png>]) [2
 
 
 ] (Informe_Practica.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 6.
+LaTeX Font Info:    Try loading font information for U+msa on input line 5.
 
 ("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 6.
+LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 ("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write3
 \openout3 = `Informe_Practica.toc'.
+
+ [3] [4
+
+] (Informe_Practica.lof)
+\tf@lof=\write4
+\openout4 = `Informe_Practica.lof'.
 
  [1]
 \openout2 = `Resumen.aux'.
@@ -713,12 +747,22 @@ Chapter 3.
 ]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--13
 
  []
 
@@ -727,70 +771,128 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 16--18
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
-
- []
-
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-) [10]
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 25.
+("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 25.
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+<./Images/1stJKAChampionships1957.png, id=52, 229.60782pt x 232.61906pt>
+File: ./Images/1stJKAChampionships1957.png Graphic file (type png)
+<use ./Images/1stJKAChampionships1957.png>
+Package pdftex.def Info: ./Images/1stJKAChampionships1957.png  used on input li
+ne 55.
+(pdftex.def)             Requested size: 227.63477pt x 142.26656pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+ []
+
+[11 <./Images/1stJKAChampionships1957.png>]
+<./Images/ClaseVirtual.jpg, id=56, 1480.53125pt x 2055.68pt>
+File: ./Images/ClaseVirtual.jpg Graphic file (type jpg)
+<use ./Images/ClaseVirtual.jpg>
+Package pdftex.def Info: ./Images/ClaseVirtual.jpg  used on input line 74.
+(pdftex.def)             Requested size: 227.60492pt x 142.24985pt.
+<./Images/ClaseEnPandemia.jpg, id=57, 1060.96375pt x 529.98pt>
+File: ./Images/ClaseEnPandemia.jpg Graphic file (type jpg)
+<use ./Images/ClaseEnPandemia.jpg>
+Package pdftex.def Info: ./Images/ClaseEnPandemia.jpg  used on input line 80.
+(pdftex.def)             Requested size: 227.61708pt x 142.26355pt.
+) [12 <./Images/ClaseVirtual.jpg> <./Images/ClaseEnPandemia.jpg>]
 \openout2 = `Marco_Teorico.aux'.
 
  (Marco_Teorico.tex
 Chapter 5.
-) [11
+) [13
 
 
 
 ]
 \openout2 = `Alternativas.aux'.
 
- (Alternativas.tex [12
+ (Alternativas.tex [14
 
 
 
 ]
 Chapter 6.
-) [13]
+) [15]
 \openout2 = `Metodologia.aux'.
 
- (Metodologia.tex [14
+ (Metodologia.tex [16
 
 
 
 ]
 Chapter 7.
-) [15]
+) [17]
 \openout2 = `Diseno.aux'.
 
- (Diseno.tex [16
+ (Diseno.tex [18
 
 
 
 ]
 Chapter 8.
-) [17]
+) [19]
 \openout2 = `PlanActividades.aux'.
 
- (PlanActividades.tex [18
+ (PlanActividades.tex [20
 
 
 
 ]
 Chapter 9.
-) [19]
+) [21]
 \openout2 = `Evaluacion_Financiera.aux'.
 
- (Evaluacion_Financiera.tex [20
+ (Evaluacion_Financiera.tex [22
 
 
 
@@ -802,57 +904,60 @@ Overfull \hbox (2.15018pt too wide) in paragraph at lines 5--13
 e: In-ver-siones Re-queri-das Gas-tos de Fun-cionamiento
  []
 
-) [21]
+) [23]
 \openout2 = `Conclusiones.aux'.
 
- (Conclusiones.tex [22
+ (Conclusiones.tex [24
 
 
 
 ]
 Chapter 11.
-) [23] (Informe_Practica.bbl [24
+) [25] (Informe_Practica.bbl [26
 
 
-]) [25]
+]) [27]
 \openout2 = `Recomendaciones.aux'.
 
- (Recomendaciones.tex [26
+ (Recomendaciones.tex [28
 
 
 ]
 Chapter 12.
-) [27]
+) [29]
 \openout2 = `Anexos.aux'.
 
- (Anexos.tex [28
+ (Anexos.tex [30
 
 
 
 ]
 Chapter 13.
-) [29] (Informe_Practica.aux (Tapa_Anterior.aux) (Resumen.aux)
+) [31] (Informe_Practica.aux (Tapa_Anterior.aux) (Resumen.aux)
 (Introduccion.aux) (Objetivos.aux) (EstudioDiagnostico.aux) (Marco_Teorico.aux)
 (Alternativas.aux) (Metodologia.aux) (Diseno.aux) (PlanActividades.aux)
 (Evaluacion_Financiera.aux) (Conclusiones.aux) (Recomendaciones.aux)
 (Anexos.aux)) ) 
 Here is how much of TeX's memory you used:
- 3697 strings out of 493305
- 52497 string characters out of 3129801
- 122384 words of memory out of 3000000
- 7081 multiletter control sequences out of 15000+200000
- 7519 words of font info for 29 fonts, out of 3000000 for 9000
+ 4911 strings out of 493305
+ 74656 string characters out of 3129801
+ 143790 words of memory out of 3000000
+ 8276 multiletter control sequences out of 15000+200000
+ 8116 words of font info for 31 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,33p,832b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,8n,41p,1157b,469s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmbx10.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/human/AppData/Local/Programs
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/human/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/human
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Informe_Practica.pdf (31 pages, 124454 bytes).
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/
+Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmti10.pfb>
+Output written on Informe_Practica.pdf (35 pages, 866079 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
+ 146 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
