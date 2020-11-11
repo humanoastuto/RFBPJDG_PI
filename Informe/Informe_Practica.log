@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.19)  9 NOV 2020 21:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.19)  10 NOV 2020 22:01
 entering extended mode
 **./Informe_Practica.tex
 (Informe_Practica.tex
@@ -770,110 +770,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
-
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 25.
-("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+<./Images/examplekinect.jpg, id=30, 1244.65pt x 816.04875pt>
+File: ./Images/examplekinect.jpg Graphic file (type jpg)
+<use ./Images/examplekinect.jpg>
+Package pdftex.def Info: ./Images/examplekinect.jpg  used on input line 24.
+(pdftex.def)             Requested size: 227.61678pt x 142.26279pt.
+[6]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 29.
+ ("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 25.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
 
-[6]
-Overfull \hbox (7.51685pt too wide) in paragraph at lines 33--34
-[]\OT1/cmr/m/n/12 Do, que es in-ter-pre-tado como busqueda es-pir-i-tual, que 
-in-dica que se~nala la busqueda
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
+Underfull \vbox (badness 2237) has occurred while \output is active []
 
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
-
- []
-
-<./Images/1stJKAChampionships1957.png, id=37, 229.60782pt x 232.61906pt>
-File: ./Images/1stJKAChampionships1957.png Graphic file (type png)
-<use ./Images/1stJKAChampionships1957.png>
-Package pdftex.def Info: ./Images/1stJKAChampionships1957.png  used on input li
-ne 55.
-(pdftex.def)             Requested size: 227.63477pt x 142.26656pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
-
- []
-
-[8 <./Images/1stJKAChampionships1957.png>]
-<./Images/ClaseVirtual.jpg, id=41, 1480.53125pt x 2055.68pt>
-File: ./Images/ClaseVirtual.jpg Graphic file (type jpg)
-<use ./Images/ClaseVirtual.jpg>
-Package pdftex.def Info: ./Images/ClaseVirtual.jpg  used on input line 74.
-(pdftex.def)             Requested size: 227.60492pt x 142.24985pt.
-
-Overfull \hbox (5.81569pt too wide) in paragraph at lines 74--75
- [][] 
- []
-
-<./Images/ClaseEnPandemia.jpg, id=42, 1060.96375pt x 529.98pt>
-File: ./Images/ClaseEnPandemia.jpg Graphic file (type jpg)
-<use ./Images/ClaseEnPandemia.jpg>
-Package pdftex.def Info: ./Images/ClaseEnPandemia.jpg  used on input line 80.
-(pdftex.def)             Requested size: 227.61708pt x 142.26355pt.
-
-Overfull \hbox (5.82785pt too wide) in paragraph at lines 80--81
- [][] 
- []
-
-
-Overfull \hbox (31.1293pt too wide) in paragraph at lines 88--88
-|[]\OT1/cmr/bx/n/17.28 Un Sis-tema In-ter-ac-tivo Con Lec-tura de Movimiento
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
+ [7 <./Images/examplekinect.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 39--42
 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
- [9 <./Images/ClaseVirtual.jpg> <./Images/ClaseEnPandemia.jpg>]
+ []
 
-LaTeX Warning: Citation `esposito2005shorts' on page 10 undefined on input line
- 92.
-
-) [10]
+) [8]
 \openout2 = `Marco_Teorico.aux'.
 
  (Marco_Teorico.tex
 Chapter 5.
-) [11
+) [9
 
 
 
@@ -882,7 +824,7 @@ Chapter 5.
 
  (Alternativas.tex
 Chapter 6.
-) [12
+) [10
 
 
 
@@ -891,17 +833,18 @@ Chapter 6.
 
  (Metodologia.tex
 Chapter 7.
-) [13
+) [11
 
 
+
+] [12
 
 ]
 \openout2 = `Diseno.aux'.
 
  (Diseno.tex
 Chapter 8.
-) [14
-
+) [13
 
 
 ]
@@ -909,7 +852,7 @@ Chapter 8.
 
  (PlanActividades.tex
 Chapter 9.
-) [15
+) [14
 
 
 
@@ -918,7 +861,7 @@ Chapter 9.
 
  (Evaluacion_Financiera.tex
 Chapter 10.
-) [16
+) [15
 
 
 
@@ -927,11 +870,11 @@ Chapter 10.
 
  (Conclusiones.tex
 Chapter 11.
-) [17
+) [16
 
 
 
-] (Informe_Practica.bbl) [18
+] (Informe_Practica.bbl) [17
 
 
 ]
@@ -939,7 +882,7 @@ Chapter 11.
 
  (Recomendaciones.tex
 Chapter 12.
-) [19
+) [18
 
 
 ]
@@ -947,7 +890,7 @@ Chapter 12.
 
  (Anexos.tex
 Chapter 13.
-) [20
+) [19
 
 
 
@@ -955,28 +898,24 @@ Chapter 13.
 (Introduccion.aux) (Objetivos.aux) (EstudioDiagnostico.aux) (Marco_Teorico.aux)
 (Alternativas.aux) (Metodologia.aux) (Diseno.aux) (PlanActividades.aux)
 (Evaluacion_Financiera.aux) (Conclusiones.aux) (Recomendaciones.aux)
-(Anexos.aux))
-
-LaTeX Warning: There were undefined references.
-
- ) 
+(Anexos.aux)) ) 
 Here is how much of TeX's memory you used:
- 4925 strings out of 493305
- 74818 string characters out of 3129801
- 141818 words of memory out of 3000000
- 8285 multiletter control sequences out of 15000+200000
- 10757 words of font info for 40 fonts, out of 3000000 for 9000
+ 4906 strings out of 493305
+ 74336 string characters out of 3129801
+ 141778 words of memory out of 3000000
+ 8268 multiletter control sequences out of 15000+200000
+ 10457 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,41p,1157b,469s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmr10.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/human/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/human/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Informe_Practica.pdf (23 pages, 827898 bytes).
+ 41i,7n,41p,1157b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/human/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/human/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/human
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Informe_Practica.pdf (22 pages, 215557 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
+ 95 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
