@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.19)  10 NOV 2020 22:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.19)  11 NOV 2020 23:21
 entering extended mode
 **./Informe_Practica.tex
 (Informe_Practica.tex
@@ -526,10 +526,16 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 
 ("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.
 cfg")) (Informe_Practica.aux (Tapa_Anterior.aux) (Resumen.aux)
-(Introduccion.aux) (Objetivos.aux) (EstudioDiagnostico.aux) (Marco_Teorico.aux)
-(Alternativas.aux) (Metodologia.aux) (Diseno.aux) (PlanActividades.aux)
-(Evaluacion_Financiera.aux) (Conclusiones.aux) (Recomendaciones.aux)
-(Anexos.aux))
+(Introduccion.aux) (Objetivos.aux) (EstudioDiagnostico.aux
+
+LaTeX Warning: Label `jkachamp' multiply defined.
+
+
+LaTeX Warning: Label `jkachamp' multiply defined.
+
+) (Marco_Teorico.aux) (Alternativas.aux) (Metodologia.aux) (Diseno.aux)
+(PlanActividades.aux) (Evaluacion_Financiera.aux) (Conclusiones.aux)
+(Recomendaciones.aux) (Anexos.aux))
 \openout1 = `Informe_Practica.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
@@ -770,52 +776,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-<./Images/examplekinect.jpg, id=30, 1244.65pt x 816.04875pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+[6]
+<./Images/examplekinect.jpg, id=33, 1244.65pt x 816.04875pt>
 File: ./Images/examplekinect.jpg Graphic file (type jpg)
 <use ./Images/examplekinect.jpg>
-Package pdftex.def Info: ./Images/examplekinect.jpg  used on input line 24.
+Package pdftex.def Info: ./Images/examplekinect.jpg  used on input line 28.
 (pdftex.def)             Requested size: 227.61678pt x 142.26279pt.
-[6]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 29.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 38.
  ("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
+
+ []
+
+[7 <./Images/examplekinect.jpg>]
+<./Images/rehabilitacionexample.jpg, id=39, 272.01625pt x 186.6975pt>
+File: ./Images/rehabilitacionexample.jpg Graphic file (type jpg)
+<use ./Images/rehabilitacionexample.jpg>
+Package pdftex.def Info: ./Images/rehabilitacionexample.jpg  used on input line
+ 45.
+(pdftex.def)             Requested size: 227.6329pt x 142.27045pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--50
 
  []
 
 
-Underfull \vbox (badness 2237) has occurred while \output is active []
-
- [7 <./Images/examplekinect.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 39--42
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-) [8]
+[8 <./Images/rehabilitacionexample.jpg>]
+<./Images/kinectexampleschool.jpg, id=43, 451.6875pt x 339.2675pt>
+File: ./Images/kinectexampleschool.jpg Graphic file (type jpg)
+<use ./Images/kinectexampleschool.jpg>
+Package pdftex.def Info: ./Images/kinectexampleschool.jpg  used on input line 6
+2.
+(pdftex.def)             Requested size: 227.62827pt x 142.2636pt.
+) [9 <./Images/kinectexampleschool.jpg>]
 \openout2 = `Marco_Teorico.aux'.
 
  (Marco_Teorico.tex
 Chapter 5.
-) [9
+) [10
 
 
 
@@ -824,27 +851,47 @@ Chapter 5.
 
  (Alternativas.tex
 Chapter 6.
-) [10
+
+Overfull \hbox (5.00134pt too wide) in paragraph at lines 3--3
+|[]\OT1/cmr/bx/n/17.28 Analisis de Al-ter-na-ti-vas ac-tual-mente disponibles
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+[11
 
 
 
-]
+]) [12]
 \openout2 = `Metodologia.aux'.
 
  (Metodologia.tex
 Chapter 7.
-) [11
+) [13
 
 
 
-] [12
+] [14
 
 ]
 \openout2 = `Diseno.aux'.
 
  (Diseno.tex
 Chapter 8.
-) [13
+) [15
 
 
 ]
@@ -852,7 +899,7 @@ Chapter 8.
 
  (PlanActividades.tex
 Chapter 9.
-) [14
+) [16
 
 
 
@@ -861,7 +908,7 @@ Chapter 9.
 
  (Evaluacion_Financiera.tex
 Chapter 10.
-) [15
+) [17
 
 
 
@@ -870,11 +917,11 @@ Chapter 10.
 
  (Conclusiones.tex
 Chapter 11.
-) [16
+) [18
 
 
 
-] (Informe_Practica.bbl) [17
+] (Informe_Practica.bbl) [19
 
 
 ]
@@ -882,7 +929,7 @@ Chapter 11.
 
  (Recomendaciones.tex
 Chapter 12.
-) [18
+) [20
 
 
 ]
@@ -890,7 +937,7 @@ Chapter 12.
 
  (Anexos.tex
 Chapter 13.
-) [19
+) [21
 
 
 
@@ -898,24 +945,28 @@ Chapter 13.
 (Introduccion.aux) (Objetivos.aux) (EstudioDiagnostico.aux) (Marco_Teorico.aux)
 (Alternativas.aux) (Metodologia.aux) (Diseno.aux) (PlanActividades.aux)
 (Evaluacion_Financiera.aux) (Conclusiones.aux) (Recomendaciones.aux)
-(Anexos.aux)) ) 
+(Anexos.aux))
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4906 strings out of 493305
- 74336 string characters out of 3129801
- 141778 words of memory out of 3000000
- 8268 multiletter control sequences out of 15000+200000
+ 4921 strings out of 493305
+ 74784 string characters out of 3129801
+ 141818 words of memory out of 3000000
+ 8281 multiletter control sequences out of 15000+200000
  10457 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,7n,41p,1157b,292s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmbx12.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/human/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/human/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/human
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Informe_Practica.pdf (22 pages, 215557 bytes).
+ 41i,7n,41p,1157b,294s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmr12.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/human/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/human/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Informe_Practica.pdf (24 pages, 258917 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
+ 103 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -5,19 +5,23 @@
 \contentsline {section}{\numberline {3.2}Objetivos Espec\IeC {\'\i }ficos}{4}
 \contentsline {chapter}{\numberline {4}Estudio de Diagn\IeC {\'o}stico}{5}
 \contentsline {section}{\numberline {4.1}Seguimiendo de la Pandemia}{5}
-\contentsline {section}{\numberline {4.2}Investigaci\IeC {\'o}n Sobre Los Efectos de Sistemas Interactivos con Lectura de Movimiento en las Personas}{6}
-\contentsline {subsection}{\numberline {4.2.1}\IeC {\'A}mbito M\IeC {\'e}dico}{7}
-\contentsline {subsection}{\numberline {4.2.2}\IeC {\'A}mbito Educativo}{8}
-\contentsline {subsection}{\numberline {4.2.3}\IeC {\'A}mbito Entrenamiento}{8}
-\contentsline {subsection}{\numberline {4.2.4}\IeC {\'A}mbito Entretenimiento}{8}
-\contentsline {section}{\numberline {4.3}}{8}
-\contentsline {chapter}{\numberline {5}Marco Te\IeC {\'o}rico}{9}
-\contentsline {section}{\numberline {5.1}Antecedentes}{9}
-\contentsline {chapter}{\numberline {6}Estudio de alternativas}{10}
-\contentsline {chapter}{\numberline {7}Metodolog\IeC {\'\i }a}{11}
-\contentsline {chapter}{\numberline {8}Dise\IeC {\~n}o del Proyecto}{13}
-\contentsline {chapter}{\numberline {9}Plan de Actividades}{14}
-\contentsline {chapter}{\numberline {10}Evaluaci\IeC {\'o}n Financiera Comparada}{15}
-\contentsline {chapter}{\numberline {11}Conclusiones}{16}
-\contentsline {chapter}{\numberline {12}Recomendaciones}{18}
-\contentsline {chapter}{\numberline {13}Anexos}{19}
+\contentsline {section}{\numberline {4.2}Investigaci\IeC {\'o}n Sobre Los Sistemas Interactivos con Body Tracking}{6}
+\contentsline {subsection}{\numberline {4.2.1}\IeC {\'A}mbito Cl\IeC {\'\i }nico}{7}
+\contentsline {subsection}{\numberline {4.2.2}\IeC {\'A}mbito Pedag\IeC {\'o}gico}{8}
+\contentsline {chapter}{\numberline {5}Marco Te\IeC {\'o}rico}{10}
+\contentsline {section}{\numberline {5.1}Antecedentes}{10}
+\contentsline {chapter}{\numberline {6}Estudio de alternativas}{11}
+\contentsline {section}{\numberline {6.1}An\IeC {\'a}lisis de Alternativas actualmente disponibles en el mercado}{11}
+\contentsline {subsection}{\numberline {6.1.1}Entretenimiento}{11}
+\contentsline {subsubsection}{Just Dance}{11}
+\contentsline {subsection}{\numberline {6.1.2}Analizadores M\IeC {\'e}dicos}{12}
+\contentsline {subsubsection}{TensorFlow}{12}
+\contentsline {subsubsection}{wrnch}{12}
+\contentsline {subsection}{\numberline {6.1.3}borrar esta parte}{12}
+\contentsline {chapter}{\numberline {7}Metodolog\IeC {\'\i }a}{13}
+\contentsline {chapter}{\numberline {8}Dise\IeC {\~n}o del Proyecto}{15}
+\contentsline {chapter}{\numberline {9}Plan de Actividades}{16}
+\contentsline {chapter}{\numberline {10}Evaluaci\IeC {\'o}n Financiera Comparada}{17}
+\contentsline {chapter}{\numberline {11}Conclusiones}{18}
+\contentsline {chapter}{\numberline {12}Recomendaciones}{20}
+\contentsline {chapter}{\numberline {13}Anexos}{21}
