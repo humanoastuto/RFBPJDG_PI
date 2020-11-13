@@ -1,4 +1,10 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{7934445}
+X.~{Chang}, Z.~{Ma}, M.~{Lin}, Y.~{Yang}, and A.~G. {Hauptmann}.
+\newblock Feature interaction augmented sparse learning for fast kinect motion
+  detection.
+\newblock {\em IEEE Transactions on Image Processing}, 26(8):3911--3920, 2017.
 
 \bibitem{Chen}
 N.~George H. Peter A. Barbara L.~Fuzhong Chen~P., L.~Mao.
@@ -15,12 +21,24 @@ Andy~J Daly-Smith, Stephen Zwolinsky, Jim McKenna, Phillip~D Tomporowski,
   performance and classroom behaviour: understanding critical design features.
 \newblock {\em BMJ open sport \& exercise medicine}, 4(1), 2018.
 
+\bibitem{grest2005nonlinear}
+Daniel Grest, Jan Woetzel, and Reinhard Koch.
+\newblock Nonlinear body pose estimation from depth images.
+\newblock In {\em Joint Pattern Recognition Symposium}, pages 285--292.
+  Springer, 2005.
+
 \bibitem{herz2013nintendo}
 Nathan~B Herz, Shyamal~H Mehta, Kapil~D Sethi, Paula Jackson, Patricia Hall,
   and John~C Morgan.
 \newblock Nintendo wii rehabilitation (“wii-hab”) provides benefits in
   parkinson's disease.
 \newblock {\em Parkinsonism \& related disorders}, 19(11):1039--1042, 2013.
+
+\bibitem{juraj2016kinect}
+MIHAL’OV Juraj and Marek DUFALA.
+\newblock Kinect: From entertainment to scientific research on virtual
+  movement.
+\newblock {\em Technical University of Ko{\v{s}}ice}, 2016.
 
 \bibitem{lange2011markerless}
 Belinda Lange, A~Rizzo, Chien-Yen Chang, Evan~A Suma, and Mark Bolas.
@@ -53,5 +71,12 @@ Debbie Rand, Rachel Kizony, and Patrice Tamar~L Weiss.
 \newblock The sony playstation ii eyetoy: low-cost virtual reality for use in
   rehabilitation.
 \newblock {\em Journal of neurologic physical therapy}, 32(4):155--163, 2008.
+
+\bibitem{siddiqui2010human}
+Matheen Siddiqui and G{\'e}rard Medioni.
+\newblock Human pose estimation from a single view point, real-time range
+  sensor.
+\newblock In {\em 2010 IEEE Computer Society Conference on Computer Vision and
+  Pattern Recognition-Workshops}, pages 1--8. IEEE, 2010.
 
 \end{thebibliography}
