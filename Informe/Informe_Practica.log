@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.19)  13 NOV 2020 01:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.19)  13 NOV 2020 21:49
 entering extended mode
 **./Informe_Practica.tex
 (Informe_Practica.tex
@@ -1100,20 +1100,20 @@ cfg")) (Informe_Practica.aux (Tapa_Anterior.aux) (Resumen.aux)
 (Anexos.aux))
 \openout1 = `Informe_Practica.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 ("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
 ii"
@@ -1150,7 +1150,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
  ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box43
-Package hyperref Info: Link coloring OFF on input line 18.
+Package hyperref Info: Link coloring OFF on input line 19.
 
 ("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.s
 ty"
@@ -1166,9 +1166,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count159
 )
-LaTeX Info: Redefining \ref on input line 18.
-LaTeX Info: Redefining \pageref on input line 18.
-LaTeX Info: Redefining \nameref on input line 18.
+LaTeX Info: Redefining \ref on input line 19.
+LaTeX Info: Redefining \pageref on input line 19.
+LaTeX Info: Redefining \nameref on input line 19.
  (Informe_Practica.out) (Informe_Practica.out)
 \@outlinefile=\write4
 \openout4 = `Informe_Practica.out'.
@@ -1221,7 +1221,7 @@ Package titlesec Warning: You are using an old interface for page styles
 \openout2 = `Tapa_Anterior.aux'.
 
  (Tapa_Anterior.tex
-<./Images/Logo_Upb.png, id=110, 224.33812pt x 108.405pt>
+<./Images/Logo_Upb.png, id=118, 224.33812pt x 108.405pt>
 File: ./Images/Logo_Upb.png Graphic file (type png)
 <use ./Images/Logo_Upb.png>
 Package pdftex.def Info: ./Images/Logo_Upb.png  used on input line 8.
@@ -1260,7 +1260,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 \include{Resumen}
+l.31 \include{Resumen}
                        [1
 
 ]
@@ -1272,7 +1272,7 @@ Chapter 1.
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.30 \include{Resumen}
+l.31 \include{Resumen}
                        [2
 
 
@@ -1285,7 +1285,7 @@ Chapter 2.
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 \include{Introduccion}
+l.32 \include{Introduccion}
                             [3
 
 
@@ -1299,7 +1299,7 @@ Chapter 3.
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.32 \include{Objetivos}
+l.33 \include{Objetivos}
                          [4
 
 
@@ -1354,7 +1354,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
  []
 
 [6]
-<./Images/examplekinect.jpg, id=198, 1244.65pt x 816.04875pt>
+<./Images/examplekinect.jpg, id=208, 1244.65pt x 816.04875pt>
 File: ./Images/examplekinect.jpg Graphic file (type jpg)
 <use ./Images/examplekinect.jpg>
 Package pdftex.def Info: ./Images/examplekinect.jpg  used on input line 28.
@@ -1376,7 +1376,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--41
  []
 
 [7 <./Images/examplekinect.jpg>]
-<./Images/rehabilitacionexample.jpg, id=212, 272.01625pt x 186.6975pt>
+<./Images/rehabilitacionexample.jpg, id=222, 272.01625pt x 186.6975pt>
 File: ./Images/rehabilitacionexample.jpg Graphic file (type jpg)
 <use ./Images/rehabilitacionexample.jpg>
 Package pdftex.def Info: ./Images/rehabilitacionexample.jpg  used on input line
@@ -1398,7 +1398,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
  []
 
 [8 <./Images/rehabilitacionexample.jpg>]
-<./Images/kinectexampleschool.jpg, id=225, 451.6875pt x 339.2675pt>
+<./Images/kinectexampleschool.jpg, id=235, 451.6875pt x 339.2675pt>
 File: ./Images/kinectexampleschool.jpg Graphic file (type jpg)
 <use ./Images/kinectexampleschool.jpg>
 Package pdftex.def Info: ./Images/kinectexampleschool.jpg  used on input line 6
@@ -1419,23 +1419,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
 
 ]
-<./Images/ejemplotensorflow.jpg, id=239, 2938.98pt x 1222.5675pt>
+<./Images/ejemplotensorflow.jpg, id=249, 2938.98pt x 1222.5675pt>
 File: ./Images/ejemplotensorflow.jpg Graphic file (type jpg)
 <use ./Images/ejemplotensorflow.jpg>
 Package pdftex.def Info: ./Images/ejemplotensorflow.jpg  used on input line 19.
 
 (pdftex.def)             Requested size: 369.88293pt x 142.2619pt.
-<./Images/openposet1.png, id=241, 171.64125pt x 296.10625pt>
+<./Images/openposet1.png, id=251, 171.64125pt x 296.10625pt>
 File: ./Images/openposet1.png Graphic file (type png)
 <use ./Images/openposet1.png>
 Package pdftex.def Info: ./Images/openposet1.png  used on input line 38.
 (pdftex.def)             Requested size: 85.35683pt x 113.80922pt.
-<./Images/openposet2.png, id=242, 348.8232pt x 607.5498pt>
+<./Images/openposet2.png, id=252, 348.8232pt x 607.5498pt>
 File: ./Images/openposet2.png Graphic file (type png)
 <use ./Images/openposet2.png>
 Package pdftex.def Info: ./Images/openposet2.png  used on input line 44.
 (pdftex.def)             Requested size: 85.35863pt x 113.80406pt.
-<./Images/posenetexa.jpg, id=244, 602.25pt x 604.2575pt>
+<./Images/posenetexa.jpg, id=254, 602.25pt x 604.2575pt>
 File: ./Images/posenetexa.jpg Graphic file (type jpg)
 <use ./Images/posenetexa.jpg>
 Package pdftex.def Info: ./Images/posenetexa.jpg  used on input line 50.
@@ -1491,6 +1491,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  (Metodologia.tex
 Chapter 7.
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 4.
+
 ) [15
 
 
@@ -1602,24 +1606,24 @@ Chapter 13.
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
  (Informe_Practica.aux (Tapa_Anterior.aux) (Resumen.aux)
 (Introduccion.aux) (Objetivos.aux) (EstudioDiagnostico.aux) (Marco_Teorico.aux)
 (Alternativas.aux) (Metodologia.aux) (Diseno.aux) (PlanActividades.aux)
 (Evaluacion_Financiera.aux) (Conclusiones.aux) (Recomendaciones.aux)
 (Anexos.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 47.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 47.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
 Package rerunfilecheck Info: File `Informe_Practica.out' has not changed.
-(rerunfilecheck)             Checksum: 22822968F00097CB49F6536FE2E95094;1716.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
+(rerunfilecheck)             Checksum: 0B43F5AD698523A3371BE90163994582;1867.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 48.
  ) 
 Here is how much of TeX's memory you used:
- 20925 strings out of 493305
- 412322 string characters out of 3129801
- 513711 words of memory out of 3000000
- 23877 multiletter control sequences out of 15000+200000
+ 20929 strings out of 493305
+ 412390 string characters out of 3129801
+ 513719 words of memory out of 3000000
+ 23879 multiletter control sequences out of 15000+200000
  10757 words of font info for 40 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,9n,87p,1157b,829s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1630,9 +1634,9 @@ nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/human/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/human/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/human/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Informe_Practica.pdf (29 pages, 975741 bytes).
+Output written on Informe_Practica.pdf (29 pages, 976749 bytes).
 PDF statistics:
- 359 PDF objects out of 1000 (max. 8388607)
- 80 named destinations out of 1000 (max. 500000)
- 261 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 369 PDF objects out of 1000 (max. 8388607)
+ 82 named destinations out of 1000 (max. 500000)
+ 277 words of extra memory for PDF output out of 10000 (max. 10000000)
 
