@@ -6,7 +6,9 @@ En cambio, se tiene la expectativa de ofrecer al nivel de Open source del proyec
 
 El desarrollo del proyecto empleara los recursos disponibles y al alcance de cualquier desarrollador, por tanto, no tomara en cuenta el manejo de cámaras de profundidad, esta aclaración es necesaria, ya que la calidad del producto final puede ser muy variable al de proyectos similares y es una característica más por la que sobresaldría este proyecto, ya que reduciría el presupuesto necesario para el consumidor.\\
 
-A continuación, se debe mencionar factores importantes sobre la implementación del proyecto, como las propiedades del Body Tracking, la verdadera forma que tiene esta herramienta que tiene para ofrecer al software, por que no sobra mencionar las distinciones entre una cámara normal y una de profundidad, así como un breve vistazo a la legalidad que sigue rígidamente el proyecto.
+A continuación, se debe mencionar factores importantes sobre la implementación del proyecto, como las propiedades del Body Tracking, la verdadera forma que tiene esta herramienta que tiene para ofrecer al software, por que no sobra mencionar las distinciones entre una cámara normal y una de profundidad.
+
+
 
 \section{Body Tracking/Motion Capture}
 
@@ -27,31 +29,43 @@ La estimación de las poses humanas representan una problemática compleja de so
 
 Empleando las herramientas de seguimiento del Esqueleto, sensores de profundidad y sensores RGB, a medida que el tiempo corre, la necesidad de herramientas como los sensores va volviéndose obsoleta con el nacer de herramientas como PoseNet y OpenPose, que con el apoyo del Hardware mínimo necesario, son capaces de proporcionar la misma calidad de seguimiento corporal.
 
-
+\begin{figure}
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=8cm,height=7cm,]{./Images/examplebodytracking.jpg}
+		\caption{Ejemplo 1}
+		\label{bodyexa1}
+	\end{subfigure}%
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=8cm,height=7cm,]{./Images/examplekinect.jpg}
+		\caption{Ejemplo 2}
+		\label{bodyexa2}
+	\end{subfigure}
+	\caption{Ejemplos de Body Tracking}
+	\label{bodyexafigure}
+\end{figure}
 \subsection{Skeletical Tracking}
 
 Este fue una innovación brindada por el controlador Kinect al mercado comercial, Su demanda fue elevada en la época y hasta el día de hoy sigue siendo empleado, el reconocimiento de una persona desde cualquier angulo o distancia, tomando en cuenta su figura, tamaño, colo, cabello, ropa y el ambiente. Se emplea el escaneo de la imagen para reconocer puntos importantes del cuerpo que representan al cuerpo, tales como la cabeza, cuello, hombros, brazos, piernas y otros 10 a 20 puntos dependiendo la herramienta de reconocimiento que se emplee.
+
+
 \begin{figure}[ht]
 	\centering
-	\begin{subfigure}{.3\textwidth}
+	\begin{subfigure}{.5\textwidth}
 		\centering
 		\includegraphics[width=3cm,height=4cm]{./Images/openposet1.png}
 		\caption{Reconocimiento OpenPose Tipo BODY\_25}
 		\label{open1}
 	\end{subfigure}%
-	\begin{subfigure}{.3\textwidth}
+	\begin{subfigure}{.5\textwidth}
 		\centering
 		\includegraphics[width=3cm,height=4cm]{./Images/openposet2.png}
 		\caption{Reconocimiento OpenPose Tipo COCO}
 		\label{open2}
-	\end{subfigure}%
-	\begin{subfigure}{.3\textwidth}
-		\centering
-		\includegraphics[width=3cm,height=4cm]{./Images/posenetexa.jpg}
-		\caption{Reconocimiento PoseNet }
-		\label{posenet1}
 	\end{subfigure}
-	\caption{Diversos Tipos de Seguimiento al Esqueleto}
+	\caption{Diversos Tipos de Seguimiento al Esqueleto seleccionados por OpenPose para el desarrollo del proyecto}
 	\label{exampleesqueletotrack}
 \end{figure}
 

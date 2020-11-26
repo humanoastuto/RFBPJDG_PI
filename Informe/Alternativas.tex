@@ -33,7 +33,37 @@ Una herramienta de calidad para el desarrollo de aplicaciones con Body Tracking,
 
 
 
+Tensorflow
 
+\href{https://www.tensorflow.org/lite/models/pose_estimation/overview}{Tensorflow}
+
+
+Posenet parece ser la herramienta por defecto puesto que tiene mucho soporte por Google y la comunidad hizo muchos trabajos de body tracking con PoseNet de Tensorflow asi que documentacion hay de sobra, los incovenientes serian que es bastante pesado para la computadora y la instalacion no es nada sencilla.
+
+wrnch
+https://wrnch.ai/
+Son uno de los mas avanzados en este ambito, hay varias demos en las que se puede ver un gran potencial, tienen el tipico esqueleto que sigue tus movimientos con una camara pero tambien tienen un proyecto con Multi-Cam que es capaz de seguir el movimiento de los dedos al mismo tiempo que el cuerpo completo casi en tiempo real, claro que esto ultimo depende mucho del hardware, aun asi es una gran posible herramienta para lograr nuestro objetivo.
+
+Openpose
+https://github.com/CMU-Perceptual-Computing-Lab/openpose
+Similar a Posenet es gratis y tiene bastantes implementaciones, sigue en constante actualizacion, tiene APIs para python y C++ aunque es un poco complicado instalarlas, un plugin para Unity algo desactualizado, no solo reconoce la postura sino que cuenta con opciones para reconocer el rostro y manos.
+
+DeepMotion
+https://deepmotion.com/3d-body-tracking
+Lo especial de este producto es que no necesita muchos requerimientos de hardware y parece ser bastante preciso, lamentablemente no es muy facil emplear esta tecnologia puesto que no es gratis, se intento comunicar con ellos pero lamentablemente la compañia sigue sin responer nuestra solicitud.
+
+Unity kinect
+Es una opcion con la que resulta más sencilla dearrollar la aplicacion porque no es necesario hacer un escaneo muy complicado del cuerpo por las herramientas que ya posee kinect, pero no es muy comun tener un kinect hoy en dia porque la misma Xbox (desarrolladora del kinect) dejo de darle apoyo al punto que sus ultimas consolas de videojuegos ya no incluyen el adaptador para este dispositivo olvidado.
+
+Azure kinect
+https://azure.microsoft.com/en-us/services/kinect-dk/
+Es un muy sofisticado dispositivo con multiples sensores que detectan los bojetos con mayor presicion que un kinect normal, seria una alternativa excelente si no fuera por el precio del Azure Kinect DK que son unos 400dolares, y aunque consigamos uno para el desarrollo de la aplicación el cliente tendria que invertir mucho para jugar un solo juego.
+
+Trajes con sensores de movimiento
+Que mejor para detectar los movimientos que muchos sensores pegados a tu cuerpo, estos trajes con sensores son muy utilizados en el desarrollo de videojuegos pero en la etapa de desarrollo y no es muy comun ponerse a jugar con ellos, hay muchas alternativas en este campo como Xsens, Holosuit, Teslasuit, etc. Son más precisos que un programa que usa una camara o incluso un kinect, el incoveniente otra vez es el precio y que en muchos casos el traje tendria que ser hecho a medida ya que es poco probable que todos los clientes tengan las mismas tallas.
+
+Crear software propio para la captura de momvimiento
+Si lo hicieramos por cuenta propia entenderiamos como funciona a la perfeccion, lo que puede facilitar el manejo de posible herramienta aunque tomaria mas tiempo, no estaria tan refinado como las otras alternativas ya que tienen la experiencia que nos falta y no estariamos implementando lo aprendido en Ingenieria de Software.
 
 
 
