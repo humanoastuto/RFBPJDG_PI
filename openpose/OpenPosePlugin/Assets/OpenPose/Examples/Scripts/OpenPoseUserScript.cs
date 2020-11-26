@@ -84,6 +84,8 @@ namespace OpenPose.Example {
 
             // Start OpenPose
             OPWrapper.OPRun();
+
+            CustomStart();
         }
 
         // Parameters can be set here
@@ -151,6 +153,11 @@ namespace OpenPose.Example {
             // Configure and start
             UserConfigureOpenPose();
             OPWrapper.OPRun();
+        }
+
+        private void CustomStart()
+        {
+
         }
 
         private void Update() {
