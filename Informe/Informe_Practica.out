@@ -12,21 +12,29 @@
 \BOOKMARK [2][-]{subsection.4.2.4}{\301mbito Pedag\363gico}{section.4.2}% 12
 \BOOKMARK [2][-]{subsection.4.2.5}{\301mbito De Entretenimiento y Entrenamiento}{section.4.2}% 13
 \BOOKMARK [0][-]{chapter.5}{Marco Te\363rico}{}% 14
-\BOOKMARK [1][-]{section.5.1}{Body Tracking/Motion Capture}{chapter.5}% 15
-\BOOKMARK [2][-]{subsection.5.1.1}{Skeletical Tracking}{section.5.1}% 16
-\BOOKMARK [0][-]{chapter.6}{Estudio de alternativas}{}% 17
-\BOOKMARK [1][-]{section.6.1}{An\341lisis de Alternativas actualmente disponibles en el mercado}{chapter.6}% 18
-\BOOKMARK [2][-]{subsection.6.1.1}{Entretenimiento}{section.6.1}% 19
-\BOOKMARK [2][-]{subsection.6.1.2}{Analizadores M\351dicos}{section.6.1}% 20
-\BOOKMARK [1][-]{section.6.2}{An\341lisis de Alternativas En Herramientas Disponibles Para el Desarrollo}{chapter.6}% 21
-\BOOKMARK [2][-]{subsection.6.2.1}{borrar esta parte}{section.6.2}% 22
-\BOOKMARK [0][-]{chapter.7}{Metodolog\355a}{}% 23
-\BOOKMARK [1][-]{subsection.7.0.1}{Gr\341fica Burn-Up}{chapter.7}% 24
-\BOOKMARK [2][-]{subsection.7.0.2}{Gr\341fica Burn-Down}{subsection.7.0.1}% 25
-\BOOKMARK [0][-]{chapter.8}{Dise\361o del Proyecto}{}% 26
-\BOOKMARK [0][-]{chapter.9}{Plan de Actividades}{}% 27
-\BOOKMARK [1][-]{subsection.9.0.1}{Cronograma}{chapter.9}% 28
-\BOOKMARK [0][-]{chapter.10}{Evaluaci\363n Financiera Comparada}{}% 29
-\BOOKMARK [0][-]{chapter.11}{Conclusiones}{}% 30
-\BOOKMARK [0][-]{chapter.12}{Recomendaciones}{}% 31
-\BOOKMARK [0][-]{chapter.13}{Anexos}{}% 32
+\BOOKMARK [1][-]{section.5.1}{Base Teorica}{chapter.5}% 15
+\BOOKMARK [2][-]{subsection.5.1.1}{Glosario}{section.5.1}% 16
+\BOOKMARK [2][-]{subsection.5.1.2}{}{section.5.1}% 17
+\BOOKMARK [1][-]{section.5.2}{Body Tracking/Motion Capture}{chapter.5}% 18
+\BOOKMARK [2][-]{subsection.5.2.1}{Skeletical Tracking}{section.5.2}% 19
+\BOOKMARK [0][-]{chapter.6}{Estudio de alternativas}{}% 20
+\BOOKMARK [1][-]{section.6.1}{An\341lisis de Alternativas actualmente disponibles en el mercado}{chapter.6}% 21
+\BOOKMARK [2][-]{subsection.6.1.1}{Entretenimiento}{section.6.1}% 22
+\BOOKMARK [1][-]{section.6.2}{An\341lisis de Alternativas En Herramientas Disponibles Para el Desarrollo}{chapter.6}% 23
+\BOOKMARK [2][-]{subsection.6.2.1}{Trajes con sensores de movimiento}{section.6.2}% 24
+\BOOKMARK [2][-]{subsection.6.2.2}{TensorFlow}{section.6.2}% 25
+\BOOKMARK [2][-]{subsection.6.2.3}{Posenet}{section.6.2}% 26
+\BOOKMARK [2][-]{subsection.6.2.4}{Wrnch}{section.6.2}% 27
+\BOOKMARK [2][-]{subsection.6.2.5}{OpenPose}{section.6.2}% 28
+\BOOKMARK [2][-]{subsection.6.2.6}{DeepMotion}{section.6.2}% 29
+\BOOKMARK [2][-]{subsection.6.2.7}{Unity y Kinect}{section.6.2}% 30
+\BOOKMARK [0][-]{chapter.7}{Metodolog\355a}{}% 31
+\BOOKMARK [1][-]{subsection.7.0.1}{Gr\341fica Burn-Up}{chapter.7}% 32
+\BOOKMARK [2][-]{subsection.7.0.2}{Gr\341fica Burn-Down}{subsection.7.0.1}% 33
+\BOOKMARK [0][-]{chapter.8}{Dise\361o del Proyecto}{}% 34
+\BOOKMARK [0][-]{chapter.9}{Plan de Actividades}{}% 35
+\BOOKMARK [1][-]{subsection.9.0.1}{Cronograma}{chapter.9}% 36
+\BOOKMARK [0][-]{chapter.10}{Evaluaci\363n Financiera Comparada}{}% 37
+\BOOKMARK [0][-]{chapter.11}{Conclusiones}{}% 38
+\BOOKMARK [0][-]{chapter.12}{Recomendaciones}{}% 39
+\BOOKMARK [0][-]{chapter.13}{Anexos}{}% 40

@@ -1,5 +1,12 @@
 \begin{thebibliography}{10}
 
+\bibitem{abadi2016tensorflow}
+Mart{\'\i}n Abadi, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen,
+  Craig Citro, Greg~S Corrado, Andy Davis, Jeffrey Dean, Matthieu Devin, et~al.
+\newblock Tensorflow: Large-scale machine learning on heterogeneous distributed
+  systems.
+\newblock {\em arXiv preprint arXiv:1603.04467}, 2016.
+
 \bibitem{7934445}
 X.~{Chang}, Z.~{Ma}, M.~{Lin}, Y.~{Yang}, and A.~G. {Hauptmann}.
 \newblock Feature interaction augmented sparse learning for fast kinect motion
@@ -34,6 +41,13 @@ Nathan~B Herz, Shyamal~H Mehta, Kapil~D Sethi, Paula Jackson, Patricia Hall,
   parkinson's disease.
 \newblock {\em Parkinsonism \& related disorders}, 19(11):1039--1042, 2013.
 
+\bibitem{kendall2015posenet}
+Alex Kendall, Matthew Grimes, and Roberto Cipolla.
+\newblock Posenet: A convolutional network for real-time 6-dof camera
+  relocalization.
+\newblock In {\em Proceedings of the IEEE international conference on computer
+  vision}, pages 2938--2946, 2015.
+
 \bibitem{lange2011markerless}
 Belinda Lange, A~Rizzo, Chien-Yen Chang, Evan~A Suma, and Mark Bolas.
 \newblock Markerless full body tracking: Depth-sensing technology within
@@ -48,6 +62,11 @@ Belinda Lange, Evan~A Suma, Brad Newman, Thai Phan, Chien-Yen Chang, Albert
   characters for game-based rehabilitation.
 \newblock In {\em International Conference on Virtual and Mixed Reality}, pages
   243--252. Springer, 2011.
+
+\bibitem{oved2018real}
+D~Oved, I~Alvarado, and A~Gallo.
+\newblock Real-time human pose estimation in the browser with tensorflow. js.
+\newblock {\em TensorFlow Medium, May}, 2018.
 
 \bibitem{pirie1995meaning}
 Bruce Pirie.

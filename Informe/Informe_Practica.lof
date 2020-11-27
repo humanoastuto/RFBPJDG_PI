@@ -3,16 +3,19 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Ejemplo de un Kinect y su Uso en el Sistema Interactivo Kinect Sports\relax }}{7}{figure.caption.4}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Ejemplo de un Kinect y su Uso en el Sistema Interactivo Kinect Sports\relax }}{8}{figure.caption.5}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Ejemplo de Rehabilitaci\IeC {\'o}n empleando Body Tracking\relax }}{9}{figure.caption.6}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Ejemplo de Clase de Educaci\IeC {\'o}n F\IeC {\'\i }sica empleando Body Tracking\relax }}{10}{figure.caption.7}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Sistema De Clasificaci\IeC {\'o}n PEGI\relax }}{11}{figure.caption.10}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Sistema De Clasificaci\IeC {\'o}n ESRB\relax }}{12}{figure.caption.12}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Dispositivo Azure Kinect de Microsoft\relax }}{8}{figure.caption.6}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Distintos Dispositivos Espec\IeC {\'\i }ficos para Body Tracking\relax }}{8}{figure.caption.7}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Ejemplo de Rehabilitaci\IeC {\'o}n empleando Body Tracking\relax }}{9}{figure.caption.8}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Ejemplo de Clase de Educaci\IeC {\'o}n F\IeC {\'\i }sica empleando Body Tracking\relax }}{10}{figure.caption.9}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Sistema De Clasificaci\IeC {\'o}n PEGI\relax }}{11}{figure.caption.12}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Sistema De Clasificaci\IeC {\'o}n ESRB\relax }}{12}{figure.caption.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Ejemplo de Clasificaci\IeC {\'o}n de imagen de TensorFlow\relax }}{14}{figure.caption.13}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Ejemplos de Body Tracking\relax }}{15}{figure.caption.14}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Diversos Tipos de Seguimiento al Esqueleto seleccionados por OpenPose para el desarrollo del proyecto\relax }}{15}{figure.caption.15}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Ejemplo de Clasificaci\IeC {\'o}n de imagen de TensorFlow\relax }}{15}{figure.caption.15}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Ejemplos de Body Tracking\relax }}{16}{figure.caption.16}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Diversos Tipos de Seguimiento al Esqueleto seleccionados por OpenPose para el desarrollo del proyecto\relax }}{17}{figure.caption.17}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Traje con Sensores de Movimiento\relax }}{20}{figure.caption.21}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Ejemplos de Datos en la Base de Datos COCO para la estimaci\IeC {\'o}n de pose\relax }}{21}{figure.caption.23}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
