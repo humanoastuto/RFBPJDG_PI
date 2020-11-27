@@ -571,6 +571,7 @@ MonoBehaviour:
   timeRemaining: 0
   timerIsRunning: 0
   timeText: {fileID: 98632505}
+  videoPlay: {fileID: 1073130973}
 --- !u!114 &98632505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3243,15 +3244,15 @@ VideoPlayer:
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
-  - 0.543
+  - 0.103
   m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
 --- !u!1 &1076286106
 GameObject:
