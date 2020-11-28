@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.19)  27 NOV 2020 02:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.19)  27 NOV 2020 22:00
 entering extended mode
 **./Informe_Practica.tex
 (Informe_Practica.tex
@@ -1475,61 +1475,65 @@ Package pdftex.def Info: ./Images/esrb.jpg  used on input line 167.
 (Marco_Teorico.tex
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
-
- []
+LaTeX Warning: Citation `councill2001definition' on page 14 undefined on input 
+line 9.
 
 [14
 
 
 
-]
-<./Images/ejemplotensorflow.jpg, id=360, 2938.98pt x 1222.5675pt>
+] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+[16]
+<./Images/ejemplotensorflow.jpg, id=380, 2938.98pt x 1222.5675pt>
 File: ./Images/ejemplotensorflow.jpg Graphic file (type jpg)
 <use ./Images/ejemplotensorflow.jpg>
-Package pdftex.def Info: ./Images/ejemplotensorflow.jpg  used on input line 72.
+Package pdftex.def Info: ./Images/ejemplotensorflow.jpg  used on input line 93.
 
 (pdftex.def)             Requested size: 369.88293pt x 142.2619pt.
- [15 <./Images/ejemplotensorflow.jpg>]
-<./Images/examplebodytracking.jpg, id=369, 1284.8pt x 722.7pt>
+<./Images/examplebodytracking.jpg, id=382, 1284.8pt x 722.7pt>
 File: ./Images/examplebodytracking.jpg Graphic file (type jpg)
 <use ./Images/examplebodytracking.jpg>
-Package pdftex.def Info: ./Images/examplebodytracking.jpg  used on input line 8
-7.
+Package pdftex.def Info: ./Images/examplebodytracking.jpg  used on input line 1
+08.
 (pdftex.def)             Requested size: 227.60759pt x 199.16766pt.
 
-Overfull \hbox (5.81836pt too wide) in paragraph at lines 87--88
+Overfull \hbox (5.81836pt too wide) in paragraph at lines 108--109
  [][] 
  []
 
-<./Images/examplekinect.jpg, id=370, 903.375pt x 511.9125pt>
+<./Images/examplekinect.jpg, id=383, 903.375pt x 511.9125pt>
 File: ./Images/examplekinect.jpg Graphic file (type jpg)
 <use ./Images/examplekinect.jpg>
-Package pdftex.def Info: ./Images/examplekinect.jpg  used on input line 93.
+Package pdftex.def Info: ./Images/examplekinect.jpg  used on input line 114.
 (pdftex.def)             Requested size: 227.62138pt x 199.1686pt.
 
-Overfull \hbox (5.83215pt too wide) in paragraph at lines 93--94
+Overfull \hbox (5.83215pt too wide) in paragraph at lines 114--115
  [][] 
  []
 
-<./Images/openposet1.png, id=371, 171.64125pt x 296.10625pt>
+<./Images/openposet1.png, id=384, 171.64125pt x 296.10625pt>
 File: ./Images/openposet1.png Graphic file (type png)
 <use ./Images/openposet1.png>
-Package pdftex.def Info: ./Images/openposet1.png  used on input line 109.
+Package pdftex.def Info: ./Images/openposet1.png  used on input line 130.
 (pdftex.def)             Requested size: 85.35683pt x 113.80922pt.
-<./Images/openposet2.png, id=372, 348.8232pt x 607.5498pt>
+<./Images/openposet2.png, id=385, 348.8232pt x 607.5498pt>
 File: ./Images/openposet2.png Graphic file (type png)
 <use ./Images/openposet2.png>
-Package pdftex.def Info: ./Images/openposet2.png  used on input line 115.
+Package pdftex.def Info: ./Images/openposet2.png  used on input line 136.
 (pdftex.def)             Requested size: 85.35863pt x 113.80406pt.
-[16 <./Images/examplebodytracking.jpg> <./Images/examplekinect.jpg>]
-Overfull \hbox (55.24297pt too wide) in paragraph at lines 127--130
+[17 <./Images/ejemplotensorflow.jpg>]
+Overfull \hbox (55.24297pt too wide) in paragraph at lines 148--151
 []\OT1/cmr/m/n/12 Como dato, los vec-tores analogos body[]keypoints[]3d, face[
 ]keypoints[]3d, hand[]left[]keypoints[]2d
  []
 
-
-Overfull \hbox (19.99123pt too wide) in paragraph at lines 133--139
+[18 <./Images/examplebodytracking.jpg> <./Images/examplekinect.jpg> <./Images/o
+penposet1.png> <./Images/openposet2.png>]
+Overfull \hbox (19.99123pt too wide) in paragraph at lines 154--160
 \OT1/cmr/m/n/12 "LShoul-der"\OMS/cmsy/m/n/12 g\OT1/cmr/m/n/12 , \OMS/cmsy/m/n/1
 2 f\OT1/cmr/m/n/12 6, "LEl-bow"\OMS/cmsy/m/n/12 g\OT1/cmr/m/n/12 , \OMS/cmsy/m/
 n/12 f\OT1/cmr/m/n/12 7, "LWrist"\OMS/cmsy/m/n/12 g\OT1/cmr/m/n/12 , \OMS/cmsy/
@@ -1538,7 +1542,7 @@ sy/m/n/12 f\OT1/cmr/m/n/12 9, "RHip"\OMS/cmsy/m/n/12 g\OT1/cmr/m/n/12 , \OMS/cm
 sy/m/n/12 f\OT1/cmr/m/n/12 10, "RKnee"\OMS/cmsy/m/n/12 g\OT1/cmr/m/n/12 ,
  []
 
-) [17 <./Images/openposet1.png> <./Images/openposet2.png>]
+) [19]
 \openout2 = `Alternativas.aux'.
 
  (Alternativas.tex
@@ -1563,7 +1567,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--16
 
  []
 
-[18
+[20
 
 
 
@@ -1579,24 +1583,24 @@ Overfull \hbox (0.92386pt too wide) in paragraph at lines 26--29
  del cuerpo y reco-gen movimien-
  []
 
-<./Images/trajesensor.jpg, id=390, 1284.8pt x 722.7pt>
+<./Images/trajesensor.jpg, id=409, 1284.8pt x 722.7pt>
 File: ./Images/trajesensor.jpg Graphic file (type jpg)
 <use ./Images/trajesensor.jpg>
 Package pdftex.def Info: ./Images/trajesensor.jpg  used on input line 32.
 (pdftex.def)             Requested size: 256.07324pt x 113.80379pt.
-[19] [20 <./Images/trajesensor.jpg>]
-<./Images/posenetcocoexample.png, id=410, 948.54375pt x 584.1825pt>
+[21] [22 <./Images/trajesensor.jpg>]
+<./Images/posenetcocoexample.png, id=430, 948.54375pt x 584.1825pt>
 File: ./Images/posenetcocoexample.png Graphic file (type png)
 <use ./Images/posenetcocoexample.png>
 Package pdftex.def Info: ./Images/posenetcocoexample.png  used on input line 70
 .
 (pdftex.def)             Requested size: 199.17111pt x 142.26576pt.
-<./Images/posenetexample2.png, id=411, 804.00375pt x 630.355pt>
+<./Images/posenetexample2.png, id=431, 804.00375pt x 630.355pt>
 File: ./Images/posenetexample2.png Graphic file (type png)
 <use ./Images/posenetexample2.png>
 Package pdftex.def Info: ./Images/posenetexample2.png  used on input line 76.
 (pdftex.def)             Requested size: 199.16023pt x 142.25658pt.
- [21 <./Images/posenetcocoexample.png> <./Images/posenetexample2.png>]) [22]
+ [23 <./Images/posenetcocoexample.png> <./Images/posenetexample2.png>]) [24]
 \openout2 = `Metodologia.aux'.
 
  (Metodologia.tex
@@ -1605,18 +1609,18 @@ Chapter 7.
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 4.
 
-) [23
+) [25
 
 
 
-] [24
+] [26
 
 ]
 \openout2 = `Diseno.aux'.
 
  (Diseno.tex
 Chapter 8.
-) [25
+) [27
 
 
 ]
@@ -1624,7 +1628,7 @@ Chapter 8.
 
  (PlanActividades.tex
 Chapter 9.
-[26
+[28
 
 
 
@@ -1671,7 +1675,7 @@ Overfull \hbox (31.5449pt too wide) in paragraph at lines 29--30
 [] 
  []
 
-[27
+[29
 
 
 
@@ -1680,7 +1684,7 @@ Overfull \hbox (31.5449pt too wide) in paragraph at lines 29--30
 
  (Evaluacion_Financiera.tex
 Chapter 10.
-) [28
+) [30
 
 
 
@@ -1691,19 +1695,19 @@ Chapter 10.
 
  (Conclusiones.tex
 Chapter 11.
-) [29
+) [31
 
 
 
-] (Informe_Practica.bbl [30
+] (Informe_Practica.bbl [32
 
 
-]) [31]
+]) [33]
 \openout2 = `Recomendaciones.aux'.
 
  (Recomendaciones.tex
 Chapter 12.
-) [32
+) [34
 
 
 ]
@@ -1711,7 +1715,7 @@ Chapter 12.
 
  (Anexos.tex
 Chapter 13.
-) [33
+) [35
 
 
 
@@ -1726,7 +1730,10 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
 Package rerunfilecheck Info: File `Informe_Practica.out' has not changed.
-(rerunfilecheck)             Checksum: 7E79A438127682DE6F9D9EA077BFDA34;2807.
+(rerunfilecheck)             Checksum: 1294115BC18E5595A2FE0072763702B4;2836.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1734,10 +1741,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 48.
  ) 
 Here is how much of TeX's memory you used:
- 21055 strings out of 493305
- 414775 string characters out of 3129801
- 515919 words of memory out of 3000000
- 23960 multiletter control sequences out of 15000+200000
+ 21069 strings out of 493305
+ 414995 string characters out of 3129801
+ 515998 words of memory out of 3000000
+ 23962 multiletter control sequences out of 15000+200000
  10926 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,9n,87p,1157b,829s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1750,9 +1757,9 @@ iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/human/AppData/Local
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:
 /Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mtt12.pfb>
-Output written on Informe_Practica.pdf (37 pages, 4250249 bytes).
+Output written on Informe_Practica.pdf (39 pages, 4256958 bytes).
 PDF statistics:
- 526 PDF objects out of 1000 (max. 8388607)
- 115 named destinations out of 1000 (max. 500000)
+ 547 PDF objects out of 1000 (max. 8388607)
+ 127 named destinations out of 1000 (max. 500000)
  428 words of extra memory for PDF output out of 10000 (max. 10000000)
 

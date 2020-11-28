@@ -15,12 +15,16 @@ The style file: plain.bst
 A level-1 auxiliary file: Recomendaciones.aux
 A level-1 auxiliary file: Anexos.aux
 Database file #1: bibliografia.bib
+Warning--entry type for "hardwaredef" isn't style-file defined
+--line 146 of file bibliografia.bib
+Warning--I didn't find a database entry for "councill2001definition"
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
 while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
 while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
 while executing---line 1049 of file plain.bst
+Warning--to sort, need author or key in hardwaredef
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
 while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen

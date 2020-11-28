@@ -1,5 +1,8 @@
 \begin{thebibliography}{10}
 
+\bibitem{hardwaredef}
+Hardware definition.
+
 \bibitem{abadi2016tensorflow}
 Mart{\'\i}n Abadi, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen,
   Craig Citro, Greg~S Corrado, Andy Davis, Jeffrey Dean, Matthieu Devin, et~al.

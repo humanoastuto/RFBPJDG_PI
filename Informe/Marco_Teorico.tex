@@ -2,50 +2,7 @@
 
 \section{Base Teorica}
 
-\subsection{Glosario}
 
-Software
-inferencia (definición?)
-Hardware
-sistemas
-Animación
-interfaz
-decodificador (de poses)
-algoritmo
-
-\subsection{}
-
-Comandos de Voz 
-
-Sensores Depth y RGB
-
-
-Machine Learning
-
-Inteligencia artifical
-
-Red neuronal
-
-Deep learning
-
-
-
-
-
-deep neural network models
-
-estimación de poses
-
-
-Multi-Cam
-
-Cmake, Cuda
-
-(C++ Python Unity como lenguajes o IDEs, lo que sea que sean)
-
-computer vision
-
-physics simulation
 
 
 
@@ -138,13 +95,49 @@ Se empleara el API de BODY\_25 para mostrar el esqueleto, que consiste en mostra
 \{25, "Background"\}
 
 
-En cuanto al resultado, este se puede guardar en formatos estándar (JSON, XML, PNG, JPG,...), existen suficientes herramientas de uso libre para leerlos, por tanto cargar los datos y cargar las imagenes, no debería representar un desafio.
+En cuanto al resultado, este se puede guardar en formatos estándar (JSON, XML, PNG, JPG,...), existen suficientes herramientas de uso libre para leerlos, por tanto cargar los datos y cargar las imágenes, no debería representar un desafió.
+
+\subsection{Cámara y Desambiguación}
+
+Una cámara se define como un dispositivo que permite el registro y reproducción de imágenes. A través del tiempo, se desarrollaron muchos tipos de cámara, por tanto es necesario determinar el tipo de cámara del cual se dispone para la elaboración del proyecto, siendo el selecto la cámara Web. Sin embargo, en la mayoría de proyectos relacionados al Body Tracking, se menciona el termino Depth of Field (DOF), mención a una cámara de profundidad de campo.
+
+La cámara web es un modelo pequeño de una cámara digital conectada a una computadora. Tiene la capacidad de capturar imágenes y transmitirlas a través de Internet. Un punto importante es que pueden ser empleadas para el desarrollo de aplicaciones y programas de cierta índole. 
+
+\subsubsection{Depth of Field (DOF)}
+
+La profundidad de campo es el producto del deseo de producir una imagen más clara del objeto o escenario deseado. Normalmente, una cámara debe enfocar su lente para tener mayor precisión, por tanto, se adjuntaron formas para ajustar el lente. Actualmente, se desarrollaron sistemas automáticos para el ajuste del lente, los cuales incluyen la medición de la distancia al objetivo, empleando esta para ajustar el lente y obtener mayor claridad \cite{madsen2000depth}. 
+
+\subsubsection{Sensores de Profundidad} 
+
+En contexto, los sensores de profundidad son una adición a los dispositivos como Kinect, PlayStation Camera y otros. El sensor de profundidad cumple la funcion de proyectar luz infrarroja y un sensor infrarrojo. 
+
+Se divide en dos pasos, la proyección de rayos de luz infrarroja, los cuales rebotan en el ambiente en el que se encuentra y posteriormente son detectados por el sensor de infrarrojo. Esta información es decodificada y enviada al usuario para poder emplearla como se lo estime.
+\\
+En el desarrollo del proyecto, no se empleara un sensor de profundidad, ya que una cámara Web carece de ello.
+
+
+\subsubsection{Sensor RGB}
+
+El RBG es un modelo de colores basado en la obtención de un color empleando una mezcla entre otros colores, todas ellas con los colores primarios que son el rojo, verde y azul. 
+El sensor RBG
 
 
 
-\subsubsection{Normalización de Imagenes}
+Machine Learning
+Inteligencia artificial
+Red neuronal
+Deep learning
+deep neural network models
+estimación de poses (diferencia a body tracking)
+Cmake, Cuda
+(C++ Python Unity como lenguajes o IDEs, lo que sea que sean)
+computer vision
 
-En espera, todavía no hay nada para saber como comparar imagenes
+
+
+
+
+
 
 
 
