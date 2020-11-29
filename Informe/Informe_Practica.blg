@@ -16,7 +16,37 @@ A level-1 auxiliary file: Recomendaciones.aux
 A level-1 auxiliary file: Anexos.aux
 Database file #1: bibliografia.bib
 Warning--entry type for "hardwaredef" isn't style-file defined
---line 146 of file bibliografia.bib
+--line 194 of file bibliografia.bib
+Warning--entry type for "azurekinect" isn't style-file defined
+--line 255 of file bibliografia.bib
+Warning--entry type for "cameraex" isn't style-file defined
+--line 264 of file bibliografia.bib
+Warning--entry type for "ejemplotensorflow" isn't style-file defined
+--line 271 of file bibliografia.bib
+Warning--entry type for "esrb" isn't style-file defined
+--line 278 of file bibliografia.bib
+Warning--entry type for "examplebodytracking" isn't style-file defined
+--line 285 of file bibliografia.bib
+Warning--entry type for "examplekinect" isn't style-file defined
+--line 292 of file bibliografia.bib
+Warning--entry type for "eyeex" isn't style-file defined
+--line 299 of file bibliografia.bib
+Warning--entry type for "eyeexuse" isn't style-file defined
+--line 306 of file bibliografia.bib
+Warning--entry type for "kinectex" isn't style-file defined
+--line 312 of file bibliografia.bib
+Warning--entry type for "kinectexampleschool" isn't style-file defined
+--line 319 of file bibliografia.bib
+Warning--entry type for "kinectexuse" isn't style-file defined
+--line 326 of file bibliografia.bib
+Warning--entry type for "pegi" isn't style-file defined
+--line 334 of file bibliografia.bib
+Warning--entry type for "rehabilitacionexample" isn't style-file defined
+--line 342 of file bibliografia.bib
+Warning--entry type for "trajesensor" isn't style-file defined
+--line 349 of file bibliografia.bib
+Warning--entry type for "rgbandDepth" isn't style-file defined
+--line 356 of file bibliografia.bib
 Warning--I didn't find a database entry for "councill2001definition"
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
 while executing---line 1049 of file plain.bst
@@ -24,7 +54,18 @@ Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L
 while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
 while executing---line 1049 of file plain.bst
-Warning--to sort, need author or key in hardwaredef
+Warning--to sort, need author or key in kinectex
+Warning--to sort, need author or key in cameraex
+Warning--to sort, need author or key in azurekinect
+Warning--to sort, need author or key in eyeex
+Warning--to sort, need author or key in eyeexuse
+Warning--to sort, need author or key in rehabilitacionexample
+Warning--to sort, need author or key in pegi
+Warning--to sort, need author or key in esrb
+Warning--to sort, need author or key in examplebodytracking
+Warning--to sort, need author or key in examplekinect
+Warning--to sort, need author or key in RGBandDepth
+Warning--to sort, need author or key in trajesensor
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
 while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen

@@ -1,7 +1,68 @@
 \begin{thebibliography}{10}
 
-\bibitem{hardwaredef}
-Hardware definition.
+\bibitem{esrb}
+Esbr game ratings.
+\newblock \url{https://www.esrb.org/}, 1994.
+
+\bibitem{pegi}
+Las etiquetas de edad pegi.
+\newblock \url{https://pegi.info/es}, 2003.
+
+\bibitem{eyeexuse}
+The eye of judgment (ps3).
+\newblock
+  \url{https://forum.gamesaktuell.de/blogs/imperatcore/361571-augen-zu-und-durch-prev.html},
+  2007.
+
+\bibitem{kinectex}
+Holiday gaming gift guide: Xbox 360 kinect.
+\newblock
+  \url{https://owtk.com/2011/11/holiday-gaming-gife-guide-xbox-360-kinect/},
+  2011.
+
+\bibitem{trajesensor}
+The last of us - motion capture.
+\newblock \url{https://www.youtube.com/watch?v=9TxJWy19xxk}, 2013.
+
+\bibitem{rehabilitacionexample}
+Crearon una tÉcnica de rehabilitaciÓn virtual para pacientes con
+  discapacidad.
+\newblock
+  \url{https://www.elfederal.com.ar/crearon-una-tecnica-de-rehabilitacion-virtual-para-pacientes-con-discapacidad/},
+  2016.
+
+\bibitem{cameraex}
+Playstation camera.
+\newblock
+  \url{https://www.playstation.com/en-us/accessories/playstation-camera/},
+  2016.
+
+\bibitem{eyeex}
+Sony eye-camera, ps3 cámara web 640 x 480 pixeles usb 2.0.
+\newblock
+  \url{https://icecat.biz/es/p/sony/9473459/webcams-eye-camera-+ps3-1269549.html},
+  2016.
+
+\bibitem{RGBandDepth}
+Intel lanza dos cámaras realsense con sensor de profundidad: visión en 3d
+  para cualquier dispositivo.
+\newblock
+  \url{https://www.xataka.com/realidad-virtual-aumentada/intel-lanza-dos-camaras-realsense-con-sensor-de-profundidad-vision-en-3d-para-cualquier-dispositivo},
+  2018.
+
+\bibitem{examplebodytracking}
+[visual body tracking].
+\newblock \url{https://www.youtube.com/watch?v=olWRrjsOm8o&app=desktop}, 2018.
+
+\bibitem{azurekinect}
+Azure kinect dk.
+\newblock \url{developer.microsoft.com/en-us/mixed-reality/}, 2020.
+
+\bibitem{examplekinect}
+Working with the azure kinect developer kit.
+\newblock
+  \url{https://www.infoworld.com/article/3562738/working-with-the-azure-kinect-developer-kit.html},
+  2020.
 
 \bibitem{abadi2016tensorflow}
 Mart{\'\i}n Abadi, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen,
@@ -9,6 +70,18 @@ Mart{\'\i}n Abadi, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen,
 \newblock Tensorflow: Large-scale machine learning on heterogeneous distributed
   systems.
 \newblock {\em arXiv preprint arXiv:1603.04467}, 2016.
+
+\bibitem{8765346}
+Z.~{Cao}, G.~{Hidalgo Martinez}, T.~{Simon}, S.~{Wei}, and Y.~A. {Sheikh}.
+\newblock Openpose: Realtime multi-person 2d pose estimation using part
+  affinity fields.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  2019.
+
+\bibitem{cao2017realtime}
+Zhe Cao, Tomas Simon, Shih-En Wei, and Yaser Sheikh.
+\newblock Realtime multi-person 2d pose estimation using part affinity fields.
+\newblock In {\em CVPR}, 2017.
 
 \bibitem{7934445}
 X.~{Chang}, Z.~{Ma}, M.~{Lin}, Y.~{Yang}, and A.~G. {Hauptmann}.
@@ -23,6 +96,11 @@ N.~George H. Peter A. Barbara L.~Fuzhong Chen~P., L.~Mao.
 \newblock {\em Journal of sport and health science}, 9(2):103--104, February
   2020.
 
+\bibitem{hardwaredef}
+Christensson.
+\newblock Hardware definition.
+\newblock \url{https://techterms.com/definition/hardware}, 2020.
+
 \bibitem{daly2018systematic}
 Andy~J Daly-Smith, Stephen Zwolinsky, Jim McKenna, Phillip~D Tomporowski,
   Margaret~Anne Defeyter, and Andrew Manley.
@@ -30,6 +108,31 @@ Andy~J Daly-Smith, Stephen Zwolinsky, Jim McKenna, Phillip~D Tomporowski,
   movement breaks on children’s physical activity, cognition, academic
   performance and classroom behaviour: understanding critical design features.
 \newblock {\em BMJ open sport \& exercise medicine}, 4(1), 2018.
+
+\bibitem{dobrev2012definition}
+Dimiter Dobrev.
+\newblock A definition of artificial intelligence.
+\newblock {\em arXiv preprint arXiv:1210.1568}, 2012.
+
+\bibitem{kinectexampleschool}
+Dominic.
+\newblock Kinect como profesor de educación física: Vicent gadea, profesores
+  innovadores.
+\newblock
+  \url{https://tecnousuariostv.wordpress.com/2016/01/13/kinect-como-profesor-de-educacion-fisica-vicent-gadea-profesores-innovadores/},
+  2016.
+
+\bibitem{gallant1993neural}
+Stephen~I Gallant and Stephen~I Gallant.
+\newblock {\em Neural network learning and expert systems}.
+\newblock MIT press, 1993.
+
+\bibitem{kinectexuse}
+Julen~Zaballa García.
+\newblock Euskadi será el escenario de la presentación en primicia de kinect.
+\newblock
+  \url{https://www.videojuegosvascos.com/eventos-de-videojuegos/euskadi-primicia-kinect/},
+  2010.
 
 \bibitem{grest2005nonlinear}
 Daniel Grest, Jan Woetzel, and Reinhard Koch.
@@ -43,6 +146,13 @@ Nathan~B Herz, Shyamal~H Mehta, Kapil~D Sethi, Paula Jackson, Patricia Hall,
 \newblock Nintendo wii rehabilitation (“wii-hab”) provides benefits in
   parkinson's disease.
 \newblock {\em Parkinsonism \& related disorders}, 19(11):1039--1042, 2013.
+
+\bibitem{jia2014caffe}
+Yangqing Jia, Evan Shelhamer, Jeff Donahue, Sergey Karayev, Jonathan Long, Ross
+  Girshick, Sergio Guadarrama, and Trevor Darrell.
+\newblock Caffe: Convolutional architecture for fast feature embedding.
+\newblock In {\em Proceedings of the 22nd ACM international conference on
+  Multimedia}, pages 675--678, 2014.
 
 \bibitem{kendall2015posenet}
 Alex Kendall, Matthew Grimes, and Roberto Cipolla.
@@ -66,6 +176,29 @@ Belinda Lange, Evan~A Suma, Brad Newman, Thai Phan, Chien-Yen Chang, Albert
 \newblock In {\em International Conference on Virtual and Mixed Reality}, pages
   243--252. Springer, 2011.
 
+\bibitem{lin2014microsoft}
+Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva
+  Ramanan, Piotr Doll{\'a}r, and C~Lawrence Zitnick.
+\newblock Microsoft coco: Common objects in context.
+\newblock In {\em European conference on computer vision}, pages 740--755.
+  Springer, 2014.
+
+\bibitem{litomisky2012consumer}
+Krystof Litomisky.
+\newblock Consumer rgb-d cameras and their applications.
+\newblock {\em Rapport technique, University of California}, 20, 2012.
+
+\bibitem{madsen2000depth}
+Ricky~J Madsen, Jon~A Holmes, and Trygve~D Peterson.
+\newblock Depth-of-field indicator for a camera, June~27 2000.
+\newblock US Patent 6,081,670.
+
+\bibitem{murdoch2019interpretable}
+W~James Murdoch, Chandan Singh, Karl Kumbier, Reza Abbasi-Asl, and Bin Yu.
+\newblock Interpretable machine learning: definitions, methods, and
+  applications.
+\newblock {\em arXiv preprint arXiv:1901.04592}, 2019.
+
 \bibitem{oved2018real}
 D~Oved, I~Alvarado, and A~Gallo.
 \newblock Real-time human pose estimation in the browser with tensorflow. js.
@@ -88,11 +221,35 @@ Debbie Rand, Rachel Kizony, and Patrice Tamar~L Weiss.
   rehabilitation.
 \newblock {\em Journal of neurologic physical therapy}, 32(4):155--163, 2008.
 
+\bibitem{ejemplotensorflow}
+Pulkit Sharma.
+\newblock Image classification vs. object detection vs. image segmentation.
+\newblock
+  \url{https://medium.com/analytics-vidhya/image-classification-vs-object-detection-vs-image-segmentation-f36db85fe81},
+  2019.
+
 \bibitem{siddiqui2010human}
 Matheen Siddiqui and G{\'e}rard Medioni.
 \newblock Human pose estimation from a single view point, real-time range
   sensor.
 \newblock In {\em 2010 IEEE Computer Society Conference on Computer Vision and
   Pattern Recognition-Workshops}, pages 1--8. IEEE, 2010.
+
+\bibitem{simon2017hand}
+Tomas Simon, Hanbyul Joo, Iain Matthews, and Yaser Sheikh.
+\newblock Hand keypoint detection in single images using multiview
+  bootstrapping.
+\newblock In {\em CVPR}, 2017.
+
+\bibitem{wang2003artificial}
+Sun-Chong Wang.
+\newblock Artificial neural network.
+\newblock In {\em Interdisciplinary computing in java programming}, pages
+  81--100. Springer, 2003.
+
+\bibitem{wei2016cpm}
+Shih-En Wei, Varun Ramakrishna, Takeo Kanade, and Yaser Sheikh.
+\newblock Convolutional pose machines.
+\newblock In {\em CVPR}, 2016.
 
 \end{thebibliography}
