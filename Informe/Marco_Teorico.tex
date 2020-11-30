@@ -84,7 +84,7 @@ La herramienta seleccionada para el proyecto es OpenPose empleando este modelo d
 Además de la existencia de los vectores face\_keypoints\_2d, hand\_left\_keypoints\_2d y hand\_right\_keypoints\_2d, análogos a pose\_keypoints\_2d, los cuales debido a la masiva carga de memoria que requieren y la falta de ella (mínimo 4GB de Memoria dedicada estimada, contando solo con 2GB en el equipo proporcionado) serán ignorados, pero empleando pose\_keypoints\_2d.
 
 Como dato, los vectores análogos body\_keypoints\_3d, face\_keypoints\_3d,
-hand\_left\_keypoints\_2d y hand\_right\_keypoints\_2d (si --3d flag se habilitase), en vez de 
+hand\_left\_keypoints\_2d y hand\_right\_keypoints\_2d (si se habilitase), en vez de 
 x1,y1,c1,x2,y2,c2,..., el formato sería x1,y1,z1,c1,x2,y2,z2,c2,..., donde c sería 1 o 0 dependiendo si la reconstrucción 3D es exitosa.
 
 Se empleara el modelo BODY\_25 de Caffe, para mostrar el esqueleto, que consiste en mostrar 25 puntos del esqueleto, cada uno con su conexión en los siguientes puntos clave:
