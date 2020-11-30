@@ -159,6 +159,8 @@ namespace OpenPose.Example {
         {
             ToggleRenderBgImg();
             ToggleRenderBgImg();
+           // PoseMap sn = GameObject.GetComponent<PoseMap>();
+            //sn.ShowFiles();
         }
 
         private void Update() {

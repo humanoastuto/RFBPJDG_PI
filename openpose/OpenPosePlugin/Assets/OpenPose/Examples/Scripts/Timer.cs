@@ -1,28 +1,63 @@
 ﻿using System.Collections;
+using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
+
 public class Timer : MonoBehaviour
 {
     public float timeRemaining = 10;
+    private float totalTime = 0;
     public bool timerIsRunning = false;
     public Text timeText;
     public VideoPlayer videoPlay;
+    public Button playButton;
+    private double[] arrayx = new double[25];
+    private double[] arrayy = new double[25];
+    private int startingFrame = 0;
 
     public void ToggleTimerStart()
     {
         Start();
         timerIsRunning = true;
         videoPlay.Play();
+        startingFrame = Time.frameCount;
+        playButton.gameObject.SetActive(false);
     }
 
     private void Start()
     {
         Debug.Log("Lets get it started");
         timeText.text = "00:00";
+        totalTime = (float)videoPlay.clip.length;
         timeRemaining = (float) videoPlay.clip.length;
+        videoPlay.url = "./Assets/OpenPose/Examples/Media/HanSoloLevel/video.mp4" ;
+    }
+
+    private void setArrays(int frame)
+    {
+      /*  DirectoryInfo dir = new DirectoryInfo("./Assets/OpenPose/Examples/Media/HanSoloLevel/output");
+        FileInfo[] info = dir.GetFiles("*.txt");
+        double[] videoCoord=new double[2];
+        foreach (FileInfo f in info)
+        {
+            using (StreamReader sr = f.OpenText())
+            {
+                var s = "";
+                while ((s = sr.ReadLine()) != null)
+                {
+                  //  videoCoord = s.Split(",");
+                   // arrayx[second*30] = double.Parse(videoCoord[0]);
+                    //arrayx[second*30] = double.Parse(videoCoord[1]);
+                   
+                }
+            }
+
+       //     Debug.Log(">>" + f);
+        }*/
+        Debug.Log(">>"+frame);
     }
 
     public double[] getArrayx()
@@ -42,7 +77,8 @@ public class Timer : MonoBehaviour
      
         if (timerIsRunning)
         {
-           
+            // setArrays(Mathf.FloorToInt(totalTime -timeRemaining));
+            setArrays((startingFrame - Time.frameCount));
             if (timeRemaining > 0)
             {
                 timeRemaining -= Time.deltaTime;
@@ -54,8 +90,10 @@ public class Timer : MonoBehaviour
                 timeRemaining = 0;
                 timerIsRunning = false;
                 timeText.text = "00:00";
+                playButton.gameObject.SetActive(true);
+
             }
-            
+
         }
     }
     private void DisplayTime(float timeToDisplay)
