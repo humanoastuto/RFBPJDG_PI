@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System;
+using System.Linq;
 using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,13 +16,18 @@ public class Timer : MonoBehaviour
     public Text timeText;
     public VideoPlayer videoPlay;
     public Button playButton;
-    private double[] arrayx = new double[25];
-    private double[] arrayy = new double[25];
-    private int startingFrame = 0;
+    private double[][] arrayx;
+    private double[][] arrayy;
+    public int startingFrame = 0;
+    private int videoLength = 0;
+    public int currentFrame = 0;
 
     public void ToggleTimerStart()
     {
-        Start();
+       //etArrays((startingFrame - Time.frameCount));
+        setArrays();
+        totalTime = (float)videoPlay.clip.length;
+        timeRemaining = (float)videoPlay.clip.length;
         timerIsRunning = true;
         videoPlay.Play();
         startingFrame = Time.frameCount;
@@ -29,47 +36,53 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Lets get it started");
         timeText.text = "00:00";
-        totalTime = (float)videoPlay.clip.length;
-        timeRemaining = (float) videoPlay.clip.length;
-        videoPlay.url = "./Assets/OpenPose/Examples/Media/HanSoloLevel/video.mp4" ;
+        videoPlay.url = "./Assets/OpenPose/Examples/Media/HanSoloLevel/video.mp4";
+        videoLength = Mathf.FloorToInt((float)videoPlay.clip.length);
+        arrayx = new double[videoLength][];//Body [0-25]
+        arrayy = new double[videoLength][];
     }
 
-    private void setArrays(int frame)
+    private void setArrays()
     {
-      /*  DirectoryInfo dir = new DirectoryInfo("./Assets/OpenPose/Examples/Media/HanSoloLevel/output");
-        FileInfo[] info = dir.GetFiles("*.txt");
-        double[] videoCoord=new double[2];
+        DirectoryInfo dir = new DirectoryInfo("./Assets/OpenPose/Examples/Media/HanSoloLevel/output");
+        FileInfo[] info = dir.GetFiles("*keypoints.txt");
+        string[] videoCoord=new string[2];
+        int fcount = 0;
+        int vcount = 0;
         foreach (FileInfo f in info)
         {
+            vcount = 0;
             using (StreamReader sr = f.OpenText())
             {
+                arrayx[fcount] = new double[25];
+                arrayy[fcount] = new double[25];
                 var s = "";
-                while ((s = sr.ReadLine()) != null)
+                while ( ! String.IsNullOrWhiteSpace((s = sr.ReadLine())))
                 {
-                  //  videoCoord = s.Split(",");
-                   // arrayx[second*30] = double.Parse(videoCoord[0]);
-                    //arrayx[second*30] = double.Parse(videoCoord[1]);
-                   
+                    videoCoord = s.Split(',');
+                    arrayx[fcount][vcount] = double.Parse(videoCoord[0]);
+                    arrayy[fcount][vcount] = double.Parse(videoCoord[1]);
+                    vcount++;
                 }
             }
-
-       //     Debug.Log(">>" + f);
-        }*/
-        Debug.Log(">>"+frame);
+            fcount++;
+        }
+        
     }
 
+    
+    //   return arrayx.GetRow(startingFrame - Time.frameCount);
     public double[] getArrayx()
     {
-        double[] arrayx = { 713.549, 717.589, 650.932, 560.829, 474.593, 789.967, 878.214, 964.378, 713.711, 676.377, 678.369, 668.569, 758.596, 743.08, 746.985, 698.038, 727.333, 682.286, 745.001, 792.074, 793.91, 739.089, 621.554, 621.554, 680.334 };
-        return arrayx;
+        double[] arrayTest = arrayx[currentFrame];
+        return arrayTest;
     }
 
     public double[] getArrayy()
     {
-        double[] arrayy = { 94.5737, 165.122, 165.16, 178.768, 180.826, 165.069, 165.17, 167.014, 378.593, 374.707, 511.872, 647.009, 380.551, 515.78, 646.956, 84.7163, 84.786, 96.5211, 100.351, 674.425, 666.537, 64.823, 668.531, 664.564, 656.804 };
-        return arrayy;
+        double[] arrayTest = arrayy[currentFrame];
+        return arrayTest;
     }
 
     void Update()
@@ -77,12 +90,13 @@ public class Timer : MonoBehaviour
      
         if (timerIsRunning)
         {
-            // setArrays(Mathf.FloorToInt(totalTime -timeRemaining));
-            setArrays((startingFrame - Time.frameCount));
             if (timeRemaining > 0)
             {
+                currentFrame = Time.frameCount - startingFrame;
+                Debug.Log(currentFrame);
                 timeRemaining -= Time.deltaTime;
                 DisplayTime(timeRemaining);
+                
             }
             else
             {

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class FPSTarget : MonoBehaviour
 {
-    public int target = 30;
+    public int target = 60;
 
     void Awake()
     {

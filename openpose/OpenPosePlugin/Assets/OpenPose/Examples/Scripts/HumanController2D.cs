@@ -37,7 +37,11 @@ namespace OpenPose.Example
             DrawHand(ref datum, bodyIndex, scoreThres);
             DrawFace(ref datum, bodyIndex, scoreThres);
             DrawRectangles(ref datum, bodyIndex);
-            GetScore(ref datum, bodyIndex);
+            var vp = GameObject.Find("Timer").GetComponent<Timer>().videoPlay;
+            if (vp.isPlaying)
+            {
+                GetScore(ref datum, bodyIndex);
+            }
         }
 
         public void GetScore(ref OPDatum datum, int bodyIndex)
@@ -57,14 +61,14 @@ namespace OpenPose.Example
                 double normalizedX = arrayx[7] - datum.poseKeypoints.Get(bodyIndex, 8, 0); //NormalizeTheMiddle
                 double normalizedY = arrayy[7] - datum.poseKeypoints.Get(bodyIndex, 8, 1);
 
-                for (int part = 0; part < poseJoints.Count; part++)
+                for (int part = 0; part < poseJoints.Count -1; part++)
                 {
                     promBody+= (double)(datum.poseKeypoints.Get(bodyIndex, part, 0)) + normalizedX;
                     promBody+= (double)(datum.poseKeypoints.Get(bodyIndex, part, 1)) + normalizedY;
                     expectedProm += arrayx[part] + arrayy[part];
                 }
-                promBody = promBody / poseJoints.Count;
-                expectedProm = expectedProm / poseJoints.Count;
+                promBody = promBody / poseJoints.Count - 1;
+                expectedProm = expectedProm / poseJoints.Count - 1;
                 score =  Mathf.Abs((float) (100 - ((promBody * 100) / expectedProm)));
                 GameObject.Find("ScoreText").GetComponent<Text>().text= "Accuracy\n"+score;
             }
