@@ -157,7 +157,8 @@ namespace OpenPose.Example {
 
         private void CustomStart()
         {
-
+            ToggleRenderBgImg();
+            ToggleRenderBgImg();
         }
 
         private void Update() {
@@ -177,8 +178,8 @@ namespace OpenPose.Example {
                 //Debug.Log("X2 " + outputSize.x + " Y2 " + outputSize.y);
                 //float scale = Mathf.Min(screenSize.x / outputSize.x, screenSize.y / outputSize.y);
                 float scale = Mathf.Min(720 / outputSize.x, 480/ outputSize.y);
-                float scalex = 480 / outputSize.x;
-                float scaley = 270 / outputSize.y;
+                float scalex = 420 / outputSize.x;
+                float scaley = 230 / outputSize.y;
                 outputTransform.localScale = new Vector3(scalex, scaley, scale);
 
                 // Update number of people in UI
@@ -205,7 +206,7 @@ namespace OpenPose.Example {
                 if (frameCounter >= queueMaxCount || frameTimeQueue.Count <= 5){ // update frame rate
                     frameCounter = 0;
                     avgFrameRate = frameTimeQueue.Count / (Time.time - frameTimeQueue.Peek());
-                    fpsText.text = avgFrameRate.ToString("F1") + " FPS";
+                    fpsText.text = avgFrameRate.ToString("F1") + "\nFPS";
                 }
             }
         }

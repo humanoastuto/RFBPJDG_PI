@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace OpenPose.Example
 {
@@ -43,6 +44,9 @@ namespace OpenPose.Example
 
         public void GetScore(ref OPDatum datum, int bodyIndex)
         {
+            Timer timerScript = GameObject.Find("Timer").GetComponent<Timer>();
+            double[] arrayx = timerScript.getArrayx();
+            double[] arrayy = timerScript.getArrayy();
             double promBody = 0;
             double expectedProm = 0;
             float score = 0;
@@ -62,6 +66,7 @@ namespace OpenPose.Example
                     expectedProm += arrayx[part] + arrayy[part];
                 }
                 score =  Mathf.Abs((float) (100 - ((promBody * 100) / expectedProm)));
+                GameObject.Find("ScoreText").GetComponent<Text>().text= "Accuracy\n"+score;
                 Debug.Log("You got " + score + " Accuracy");
             }
         }
