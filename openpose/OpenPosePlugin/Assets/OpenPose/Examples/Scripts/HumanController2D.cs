@@ -23,7 +23,8 @@ namespace OpenPose.Example {
         [SerializeField] RectTransform LHandRectangle;
         [SerializeField] RectTransform RHandRectangle;
         [SerializeField] RectTransform FaceRectangle;
-        private List<RectTransform> poseJoints = new List<RectTransform>();
+        //private List<RectTransform> poseJoints = new List<RectTransform>();
+        public List<RectTransform> poseJoints = new List<RectTransform>();
         private List<RectTransform> lHandJoints = new List<RectTransform>();
         private List<RectTransform> rHandJoints = new List<RectTransform>();
         private List<RectTransform> faceJoints = new List<RectTransform>();
