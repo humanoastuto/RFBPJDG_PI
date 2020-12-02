@@ -49,7 +49,7 @@ namespace OpenPose.Example
             Timer timerScript = GameObject.Find("Timer").GetComponent<Timer>();
             double[] arrayx = timerScript.getArrayx();
             double[] arrayy = timerScript.getArrayy();
-            double promBody = 0;
+            float promBody = 0;
             double expectedProm = 0;
             float score = 0;
             if (datum.poseKeypoints == null || bodyIndex >= datum.poseKeypoints.GetSize(0))
@@ -58,14 +58,16 @@ namespace OpenPose.Example
             }
             else
             {
-                double normalizedX = arrayx[7] - datum.poseKeypoints.Get(bodyIndex, 8, 0); //NormalizeTheMiddle
-                double normalizedY = arrayy[7] - datum.poseKeypoints.Get(bodyIndex, 8, 1);
+                float normalizedX = (float)arrayx[7] - datum.poseKeypoints.Get(bodyIndex, 8, 0); //NormalizeTheMiddle
+                float normalizedY = (float)arrayy[7] - datum.poseKeypoints.Get(bodyIndex, 8, 1);
 
                 for (int part = 0; part < poseJoints.Count -1; part++)
                 {
-                    promBody+= (double)(datum.poseKeypoints.Get(bodyIndex, part, 0)) + normalizedX;
-                    promBody+= (double)(datum.poseKeypoints.Get(bodyIndex, part, 1)) + normalizedY;
+                    promBody+= (datum.poseKeypoints.Get(bodyIndex, part, 0)) + normalizedX;
+                    promBody+= (datum.poseKeypoints.Get(bodyIndex, part, 1)) + normalizedY;
                     expectedProm += arrayx[part] + arrayy[part];
+
+                    Debug.Log("Compare This: "+ ((datum.poseKeypoints.Get(bodyIndex, part, 0)) + normalizedX)+" : "+ arrayx[part]);
                 }
                 promBody = promBody / poseJoints.Count - 1;
                 expectedProm = expectedProm / poseJoints.Count - 1;

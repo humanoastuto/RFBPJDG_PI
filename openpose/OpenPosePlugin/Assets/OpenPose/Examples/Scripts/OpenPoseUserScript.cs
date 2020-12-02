@@ -68,7 +68,11 @@ namespace OpenPose.Example {
         private float avgFrameRate = 0f;
         private int frameCounter = 0;
 
-        private void Start() {
+        IEnumerator ExampleCoroutine()
+        {
+          
+            yield return new WaitForSeconds((float)0.1);
+
             // Register callbacks
             OPWrapper.OPRegisterCallbacks();
             // Enable OpenPose log to unity (default true)
@@ -86,6 +90,16 @@ namespace OpenPose.Example {
             OPWrapper.OPRun();
 
             CustomStart();
+        }
+
+        private void Start() {
+            if (!GameObject.Find("Timer").GetComponent<Timer>().videoPlay.isPlaying)
+            {
+                Timer timerScript = GameObject.Find("Timer").GetComponent<Timer>();
+                timerScript.ToggleTimerStart();
+            }
+            StartCoroutine(ExampleCoroutine());
+           
         }
 
         // Parameters can be set here
@@ -119,7 +133,7 @@ namespace OpenPose.Example {
             OPWrapper.OPConfigureInput(
                 /* producerType */ inputType, /* producerString */ producerString,
                 /* frameFirst */ 0, /* frameStep */ 1, /* frameLast */ ulong.MaxValue,
-                /* realTimeProcessing */ false, /* frameFlip */ false,
+                /* realTimeProcessing */ true, /* frameFlip */ true,
                 /* frameRotate */ 0, /* framesRepeat */ false,
                 /* cameraResolution */ null, /* cameraParameterPath */ null,
                 /* undistortImage */ false, /* numberViews */ -1);
@@ -159,11 +173,10 @@ namespace OpenPose.Example {
         {
             ToggleRenderBgImg();
             ToggleRenderBgImg();
-           // PoseMap sn = GameObject.GetComponent<PoseMap>();
-            //sn.ShowFiles();
         }
 
         private void Update() {
+
             // Update state in UI
             stateText.text = OPWrapper.state.ToString();
 
@@ -180,8 +193,8 @@ namespace OpenPose.Example {
                 //Debug.Log("X2 " + outputSize.x + " Y2 " + outputSize.y);
                 //float scale = Mathf.Min(screenSize.x / outputSize.x, screenSize.y / outputSize.y);
                 float scale = Mathf.Min(720 / outputSize.x, 480/ outputSize.y);
-                float scalex = 420 / outputSize.x;
-                float scaley = 230 / outputSize.y;
+                float scalex = 368 / outputSize.x;
+                float scaley = 207 / outputSize.y;
                 outputTransform.localScale = new Vector3(scalex, scaley, scale);
 
                 // Update number of people in UI

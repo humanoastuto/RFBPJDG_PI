@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour
 
     public void ToggleTimerStart()
     {
-       //etArrays((startingFrame - Time.frameCount));
+        //etArrays((startingFrame - Time.frameCount));
         setArrays();
         totalTime = (float)videoPlay.clip.length;
         timeRemaining = (float)videoPlay.clip.length;
@@ -75,13 +75,13 @@ public class Timer : MonoBehaviour
     //   return arrayx.GetRow(startingFrame - Time.frameCount);
     public double[] getArrayx()
     {
-        double[] arrayTest = arrayx[currentFrame];
+        double[] arrayTest = arrayx[Mathf.FloorToInt(totalTime - timeRemaining)];
         return arrayTest;
     }
 
     public double[] getArrayy()
     {
-        double[] arrayTest = arrayy[currentFrame];
+        double[] arrayTest = arrayy[Mathf.FloorToInt(totalTime - timeRemaining)];
         return arrayTest;
     }
 
@@ -93,7 +93,7 @@ public class Timer : MonoBehaviour
             if (timeRemaining > 0)
             {
                 currentFrame = Time.frameCount - startingFrame;
-                Debug.Log(currentFrame);
+                //Debug.Log(currentFrame);
                 timeRemaining -= Time.deltaTime;
                 DisplayTime(timeRemaining);
                 
