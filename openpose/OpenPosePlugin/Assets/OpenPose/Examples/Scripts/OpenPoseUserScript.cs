@@ -106,7 +106,7 @@ namespace OpenPose.Example {
         private void UserConfigureOpenPose(){
             OPWrapper.OPConfigurePose(
                 /* poseMode */ PoseMode.Enabled, /* netInputSize */ netResolution, /* outputSize */ null,
-                /* keypointScaleMode */ ScaleMode.InputResolution,
+                /* keypointScaleMode */ /*ScaleMode.InputResolution*/ ScaleMode.ZeroToOne ,
                 /* gpuNumber */ -1, /* gpuNumberStart */ 0, /* scalesNumber */ 1, /* scaleGap */ 0.25f,
                 /* renderMode */ RenderMode.Auto, /* poseModel */ PoseModel.BODY_25,
                 /* blendOriginalFrame */ true, /* alphaKeypoint */ 0.6f, /* alphaHeatMap */ 0.7f,

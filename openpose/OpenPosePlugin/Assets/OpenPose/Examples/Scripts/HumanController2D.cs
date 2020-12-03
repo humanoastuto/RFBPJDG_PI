@@ -33,24 +33,28 @@ namespace OpenPose.Example
     
         public void DrawHuman(ref OPDatum datum, int bodyIndex, float scoreThres = 0)
         {
+            var ts = GameObject.Find("Timer").GetComponent<Timer>();
+            if (ts.videoPlay.isPlaying)
+            {
+                if (ts.currentFrame % 30 == 0)
+                {
+                     GetScore(ref datum, bodyIndex);
+                }
+            }
             DrawBody(ref datum, bodyIndex, scoreThres);
             DrawHand(ref datum, bodyIndex, scoreThres);
             DrawFace(ref datum, bodyIndex, scoreThres);
             DrawRectangles(ref datum, bodyIndex);
-            var vp = GameObject.Find("Timer").GetComponent<Timer>().videoPlay;
-            if (vp.isPlaying)
-            {
-                GetScore(ref datum, bodyIndex);
-            }
+            
         }
 
         public void GetScore(ref OPDatum datum, int bodyIndex)
         {
             Timer timerScript = GameObject.Find("Timer").GetComponent<Timer>();
-            double[] arrayx = timerScript.getArrayx();
-            double[] arrayy = timerScript.getArrayy();
+            float[] arrayx = timerScript.getArrayx();
+            float[] arrayy = timerScript.getArrayy();
             float promBody = 0;
-            double expectedProm = 0;
+            float expectedProm = 0;
             float score = 0;
             if (datum.poseKeypoints == null || bodyIndex >= datum.poseKeypoints.GetSize(0))
             {
@@ -58,16 +62,16 @@ namespace OpenPose.Example
             }
             else
             {
-                float normalizedX = (float)arrayx[7] - datum.poseKeypoints.Get(bodyIndex, 8, 0); //NormalizeTheMiddle
-                float normalizedY = (float)arrayy[7] - datum.poseKeypoints.Get(bodyIndex, 8, 1);
+                float normalizedX = arrayx[7] - datum.poseKeypoints.Get(bodyIndex, 7, 0); //NormalizeTheMiddle
+                float normalizedY = arrayy[7] - datum.poseKeypoints.Get(bodyIndex, 7, 1);
 
                 for (int part = 0; part < poseJoints.Count -1; part++)
                 {
-                    promBody+= (datum.poseKeypoints.Get(bodyIndex, part, 0)) + normalizedX;
-                    promBody+= (datum.poseKeypoints.Get(bodyIndex, part, 1)) + normalizedY;
-                    expectedProm += arrayx[part] + arrayy[part];
-
-                    Debug.Log("Compare This: "+ ((datum.poseKeypoints.Get(bodyIndex, part, 0)) + normalizedX)+" : "+ arrayx[part]);
+                    promBody+= Mathf.Round((datum.poseKeypoints.Get(bodyIndex, part, 0) + normalizedX)*100);
+                    promBody+= Mathf.Round((datum.poseKeypoints.Get(bodyIndex, part, 1) + normalizedY)*100);
+                    expectedProm += Mathf.Round((arrayx[part] + arrayy[part])*100);
+                    Debug.Log("CHECKING VALUES: " + part + " ::: "+ Mathf.Round((datum.poseKeypoints.Get(bodyIndex, part, 0) + normalizedX) * 100) + " : " + Mathf.Round(arrayx[part]*100) + " = "+ Mathf.Round(datum.poseKeypoints.Get(bodyIndex, part, 0)*100));
+                  //  Debug.Log("Compare This: "+ ((datum.poseKeypoints.Get(bodyIndex, part, 0)) + normalizedX)+" : "+ arrayx[part]);
                 }
                 promBody = promBody / poseJoints.Count - 1;
                 expectedProm = expectedProm / poseJoints.Count - 1;

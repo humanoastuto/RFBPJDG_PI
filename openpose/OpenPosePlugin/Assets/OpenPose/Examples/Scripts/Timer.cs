@@ -16,8 +16,8 @@ public class Timer : MonoBehaviour
     public Text timeText;
     public VideoPlayer videoPlay;
     public Button playButton;
-    private double[][] arrayx;
-    private double[][] arrayy;
+    private float[][] arrayx;
+    private float[][] arrayy;
     public int startingFrame = 0;
     private int videoLength = 0;
     public int currentFrame = 0;
@@ -39,8 +39,8 @@ public class Timer : MonoBehaviour
         timeText.text = "00:00";
         videoPlay.url = "./Assets/OpenPose/Examples/Media/HanSoloLevel/video.mp4";
         videoLength = Mathf.FloorToInt((float)videoPlay.clip.length);
-        arrayx = new double[videoLength][];//Body [0-25]
-        arrayy = new double[videoLength][];
+        arrayx = new float[videoLength][];//Body [0-25]
+        arrayy = new float[videoLength][];
     }
 
     private void setArrays()
@@ -55,14 +55,14 @@ public class Timer : MonoBehaviour
             vcount = 0;
             using (StreamReader sr = f.OpenText())
             {
-                arrayx[fcount] = new double[25];
-                arrayy[fcount] = new double[25];
+                arrayx[fcount] = new float[25];
+                arrayy[fcount] = new float[25];
                 var s = "";
                 while ( ! String.IsNullOrWhiteSpace((s = sr.ReadLine())))
                 {
                     videoCoord = s.Split(',');
-                    arrayx[fcount][vcount] = double.Parse(videoCoord[0]);
-                    arrayy[fcount][vcount] = double.Parse(videoCoord[1]);
+                    arrayx[fcount][vcount] = float.Parse(videoCoord[0]);
+                    arrayy[fcount][vcount] = float.Parse(videoCoord[1]);
                     vcount++;
                 }
             }
@@ -73,15 +73,15 @@ public class Timer : MonoBehaviour
 
     
     //   return arrayx.GetRow(startingFrame - Time.frameCount);
-    public double[] getArrayx()
+    public float[] getArrayx()
     {
-        double[] arrayTest = arrayx[Mathf.FloorToInt(totalTime - timeRemaining)];
+        float[] arrayTest = arrayx[Mathf.FloorToInt(totalTime - timeRemaining)];
         return arrayTest;
     }
 
-    public double[] getArrayy()
+    public float[] getArrayy()
     {
-        double[] arrayTest = arrayy[Mathf.FloorToInt(totalTime - timeRemaining)];
+        float[] arrayTest = arrayy[Mathf.FloorToInt(totalTime - timeRemaining)];
         return arrayTest;
     }
 
