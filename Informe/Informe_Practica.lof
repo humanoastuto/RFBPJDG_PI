@@ -1,8 +1,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Dispositivo Kinect y un Ejemplo de su Uso en un Videojuego de Volleyball\relax }}{5}{figure.caption.5}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Dispositivos Azure Kinect y PlayStation C\IeC {\'a}mara\relax }}{6}{figure.caption.7}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Ejemplo de un PlayStation Eye y su uso con un v\IeC {\'\i }deo juego "The Eye Of The Judgement"\relax }}{6}{figure.caption.8}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Dispositivos Azure Kinect y PlayStation Camera\relax }}{6}{figure.caption.7}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Ejemplo de un PlayStation Eye y su uso con un videojuego "The Eye Of The Judgement"\relax }}{6}{figure.caption.8}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo de Rehabilitaci\IeC {\'o}n empleando Body Tracking\relax }}{7}{figure.caption.9}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Ejemplo de Clase de Educaci\IeC {\'o}n F\IeC {\'\i }sica empleando Body Tracking\relax }}{8}{figure.caption.10}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Sistema De Clasificaci\IeC {\'o}n PEGI\relax }}{9}{figure.caption.13}
@@ -11,9 +11,15 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Ejemplo de Clasificaci\IeC {\'o}n de imagen de TensorFlow\relax }}{13}{figure.caption.18}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Ejemplos de Body Tracking\relax }}{14}{figure.caption.19}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Diversos Tipos de Seguimiento al Esqueleto seleccionados por OpenPose para el desarrollo del proyecto\relax }}{15}{figure.caption.21}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Ejemplo de Visi\IeC {\'o}n de una C\IeC {\'a}mara con sensores RGB-D\relax }}{17}{figure.caption.25}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Ejemplo de Neural Network\relax }}{20}{figure.caption.31}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Ejemplo de Visi\IeC {\'o}n de una C\IeC {\'a}mara con sensores RGB-D\relax }}{17}{figure.caption.26}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Ejemplo de Neural Network\relax }}{20}{figure.caption.32}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Traje con Sensores de Movimiento\relax }}{23}{figure.caption.34}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Ejemplos de Datos en la Base de Datos COCO para la estimaci\IeC {\'o}n de pose\relax }}{24}{figure.caption.36}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Traje con Sensores de Movimiento\relax }}{23}{figure.caption.35}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Ejemplos de Datos en la Base de Datos COCO para la estimaci\IeC {\'o}n de pose\relax }}{24}{figure.caption.37}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Ejemplo de Clasificaci\IeC {\'o}n de imagen de TensorFlow\relax }}{27}{figure.caption.38}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -1,7 +1,5 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Informe_Practica.aux
 A level-1 auxiliary file: Tapa_Anterior.aux
-A level-1 auxiliary file: Resumen.aux
-A level-1 auxiliary file: Introduccion.aux
 A level-1 auxiliary file: Objetivos.aux
 A level-1 auxiliary file: EstudioDiagnostico.aux
 A level-1 auxiliary file: Marco_Teorico.aux
@@ -9,7 +7,6 @@ A level-1 auxiliary file: Alternativas.aux
 A level-1 auxiliary file: Metodologia.aux
 A level-1 auxiliary file: Diseno.aux
 A level-1 auxiliary file: PlanActividades.aux
-A level-1 auxiliary file: Evaluacion_Financiera.aux
 A level-1 auxiliary file: Conclusiones.aux
 The style file: plain.bst
 A level-1 auxiliary file: Recomendaciones.aux
@@ -47,6 +44,10 @@ Warning--entry type for "trajesensor" isn't style-file defined
 --line 349 of file bibliografia.bib
 Warning--entry type for "rgbandDepth" isn't style-file defined
 --line 356 of file bibliografia.bib
+"," immediately follows a field name---line 368 of file bibliografia.bib
+ : @article{carrizo2018metodo,rizo2018metodo
+ :                                          ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "councill2001definition"
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
 while executing---line 1049 of file plain.bst
@@ -66,10 +67,17 @@ Warning--to sort, need author or key in examplebodytracking
 Warning--to sort, need author or key in examplekinect
 Warning--to sort, need author or key in RGBandDepth
 Warning--to sort, need author or key in trajesensor
+Warning--to sort, need author or key in carrizo2018metodo
+Warning--empty author in carrizo2018metodo
+Warning--empty title in carrizo2018metodo
+Warning--empty journal in carrizo2018metodo
+Warning--empty year in carrizo2018metodo
+Warning--empty journal in beck2001manifiesto
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
 while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
 while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
 while executing---line 1090 of file plain.bst
-(There were 6 error messages)
+Warning--empty note in scrumdiapo
+(There were 7 error messages)

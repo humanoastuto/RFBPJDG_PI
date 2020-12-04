@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.19)  29 NOV 2020 21:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.19)  4 DEC 2020 02:16
 entering extended mode
 **./Informe_Practica.tex
 (Informe_Practica.tex
@@ -1103,7 +1103,8 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 ("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry.
 cfg")) (Informe_Practica.aux (Tapa_Anterior.aux) (Objetivos.aux)
 (EstudioDiagnostico.aux) (Marco_Teorico.aux) (Alternativas.aux)
-(PlanActividades.aux))
+(Metodologia.aux) (Diseno.aux) (PlanActividades.aux) (Conclusiones.aux)
+(Recomendaciones.aux) (Anexos.aux))
 \openout1 = `Informe_Practica.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
@@ -1227,7 +1228,7 @@ Package titlesec Warning: You are using an old interface for page styles
 \openout2 = `Tapa_Anterior.aux'.
 
  (Tapa_Anterior.tex
-<./Images/Logo_Upb.png, id=126, 224.33812pt x 108.405pt>
+<./Images/Logo_Upb.png, id=186, 224.33812pt x 108.405pt>
 File: ./Images/Logo_Upb.png Graphic file (type png)
 <use ./Images/Logo_Upb.png>
 Package pdftex.def Info: ./Images/Logo_Upb.png  used on input line 8.
@@ -1254,15 +1255,15 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 ("C:\Users\human\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+) [3])
 \tf@toc=\write5
 \openout5 = `Informe_Practica.toc'.
 
- [3] (Informe_Practica.lot)
+ [4] (Informe_Practica.lot)
 \tf@lot=\write6
 \openout6 = `Informe_Practica.lot'.
 
- [4
+ [5
 
 ] (Informe_Practica.lof)
 \tf@lof=\write7
@@ -1348,17 +1349,17 @@ been already used, duplicate ignored
                    \relax 
 l.24 
       [4]
-<./Images/kinectex.jpg, id=238, 441.65pt x 281.05pt>
+<./Images/kinectex.jpg, id=319, 441.65pt x 281.05pt>
 File: ./Images/kinectex.jpg Graphic file (type jpg)
 <use ./Images/kinectex.jpg>
 Package pdftex.def Info: ./Images/kinectex.jpg  used on input line 33.
 (pdftex.def)             Requested size: 170.71304pt x 85.35774pt.
-<./Images/kinectexuse.jpg, id=239, 963.6pt x 681.29532pt>
+<./Images/kinectexuse.jpg, id=320, 963.6pt x 681.29532pt>
 File: ./Images/kinectexuse.jpg Graphic file (type jpg)
 <use ./Images/kinectexuse.jpg>
 Package pdftex.def Info: ./Images/kinectexuse.jpg  used on input line 39.
 (pdftex.def)             Requested size: 170.70569pt x 113.8019pt.
-<./Images/azurekinect.png, id=242, 2007.5pt x 2007.5pt>
+<./Images/azurekinect.png, id=323, 2007.5pt x 2007.5pt>
 File: ./Images/azurekinect.png Graphic file (type png)
 <use ./Images/azurekinect.png>
 Package pdftex.def Info: ./Images/azurekinect.png  used on input line 56.
@@ -1368,22 +1369,27 @@ Overfull \hbox (5.8061pt too wide) in paragraph at lines 56--57
  [][] 
  []
 
-<./Images/cameraex.jpg, id=244, 1049.9225pt x 492.84125pt>
+<./Images/cameraex.jpg, id=325, 1049.9225pt x 492.84125pt>
 File: ./Images/cameraex.jpg Graphic file (type jpg)
 <use ./Images/cameraex.jpg>
 Package pdftex.def Info: ./Images/cameraex.jpg  used on input line 62.
 (pdftex.def)             Requested size: 199.16693pt x 113.80981pt.
-<./Images/eyeex.jpg, id=247, 96.36pt x 103.587pt>
+<./Images/eyeex.jpg, id=328, 96.36pt x 103.587pt>
 File: ./Images/eyeex.jpg Graphic file (type jpg)
 <use ./Images/eyeex.jpg>
 Package pdftex.def Info: ./Images/eyeex.jpg  used on input line 83.
 (pdftex.def)             Requested size: 142.26353pt x 142.27528pt.
-<./Images/eyeexuse.jpg, id=248, 687.56876pt x 301.125pt>
+<./Images/eyeexuse.jpg, id=329, 687.56876pt x 301.125pt>
 File: ./Images/eyeexuse.jpg Graphic file (type jpg)
 <use ./Images/eyeexuse.jpg>
 Package pdftex.def Info: ./Images/eyeexuse.jpg  used on input line 89.
 (pdftex.def)             Requested size: 170.71672pt x 113.81297pt.
-[5 <./Images/kinectex.jpg> <./Images/kinectexuse.jpg>]
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.97 
+      [5 <./Images/kinectex.jpg> <./Images/kinectexuse.jpg>]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 101.
 
 
@@ -1403,7 +1409,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
 
-<./Images/rehabilitacionexample.jpg, id=273, 272.01625pt x 186.6975pt>
+<./Images/rehabilitacionexample.jpg, id=353, 272.01625pt x 186.6975pt>
 File: ./Images/rehabilitacionexample.jpg Graphic file (type jpg)
 <use ./Images/rehabilitacionexample.jpg>
 Package pdftex.def Info: ./Images/rehabilitacionexample.jpg  used on input line
@@ -1424,7 +1430,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
-<./Images/kinectexampleschool.jpg, id=291, 451.6875pt x 339.2675pt>
+<./Images/kinectexampleschool.jpg, id=371, 451.6875pt x 339.2675pt>
 File: ./Images/kinectexampleschool.jpg Graphic file (type jpg)
 <use ./Images/kinectexampleschool.jpg>
 Package pdftex.def Info: ./Images/kinectexampleschool.jpg  used on input line 1
@@ -1434,7 +1440,7 @@ Package pdftex.def Info: ./Images/kinectexampleschool.jpg  used on input line 1
 Underfull \vbox (badness 2521) has occurred while \output is active []
 
  [8 <./Images/kinectexampleschool.jpg>]
-<./Images/pegi.png, id=300, 859.21pt x 199.74625pt>
+<./Images/pegi.png, id=381, 859.21pt x 199.74625pt>
 File: ./Images/pegi.png Graphic file (type png)
 <use ./Images/pegi.png>
 Package pdftex.def Info: ./Images/pegi.png  used on input line 156.
@@ -1455,7 +1461,7 @@ Overfull \hbox (8.41284pt too wide) in paragraph at lines 164--177
  []
 
 [9 <./Images/pegi.png (PNG copy)>]
-<./Images/esrb.jpg, id=313, 642.4pt x 481.8pt>
+<./Images/esrb.jpg, id=393, 642.4pt x 481.8pt>
 File: ./Images/esrb.jpg Graphic file (type jpg)
 <use ./Images/esrb.jpg>
 Package pdftex.def Info: ./Images/esrb.jpg  used on input line 194.
@@ -1476,13 +1482,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
 
 ]
-<./Images/ejemplotensorflow.jpg, id=336, 2938.98pt x 1222.5675pt>
+<./Images/ejemplotensorflow.jpg, id=416, 2938.98pt x 1222.5675pt>
 File: ./Images/ejemplotensorflow.jpg Graphic file (type jpg)
 <use ./Images/ejemplotensorflow.jpg>
 Package pdftex.def Info: ./Images/ejemplotensorflow.jpg  used on input line 21.
 
 (pdftex.def)             Requested size: 369.88293pt x 142.2619pt.
-<./Images/examplebodytracking.jpg, id=339, 1284.8pt x 722.7pt>
+<./Images/examplebodytracking.jpg, id=419, 1284.8pt x 722.7pt>
 File: ./Images/examplebodytracking.jpg Graphic file (type jpg)
 <use ./Images/examplebodytracking.jpg>
 Package pdftex.def Info: ./Images/examplebodytracking.jpg  used on input line 3
@@ -1493,7 +1499,7 @@ Overfull \hbox (5.81836pt too wide) in paragraph at lines 37--38
  [][] 
  []
 
-<./Images/examplekinect.jpg, id=340, 903.375pt x 511.9125pt>
+<./Images/examplekinect.jpg, id=420, 903.375pt x 511.9125pt>
 File: ./Images/examplekinect.jpg Graphic file (type jpg)
 <use ./Images/examplekinect.jpg>
 Package pdftex.def Info: ./Images/examplekinect.jpg  used on input line 43.
@@ -1504,12 +1510,12 @@ Overfull \hbox (5.83215pt too wide) in paragraph at lines 43--44
  []
 
 [13 <./Images/ejemplotensorflow.jpg>]
-<./Images/openposet1.png, id=352, 171.64125pt x 296.10625pt>
+<./Images/openposet1.png, id=432, 171.64125pt x 296.10625pt>
 File: ./Images/openposet1.png Graphic file (type png)
 <use ./Images/openposet1.png>
 Package pdftex.def Info: ./Images/openposet1.png  used on input line 67.
 (pdftex.def)             Requested size: 113.80998pt x 170.72061pt.
-<./Images/openposet2.png, id=353, 348.8232pt x 607.5498pt>
+<./Images/openposet2.png, id=433, 348.8232pt x 607.5498pt>
 File: ./Images/openposet2.png Graphic file (type png)
 <use ./Images/openposet2.png>
 Package pdftex.def Info: ./Images/openposet2.png  used on input line 73.
@@ -1520,31 +1526,30 @@ Overfull \hbox (55.24297pt too wide) in paragraph at lines 86--89
 ]keypoints[]3d, hand[]left[]keypoints[]2d
  []
 
-[14 <./Images/examplebodytracking.jpg> <./Images/examplekinect.jpg>] [15 <./Ima
-ges/openposet1.png> <./Images/openposet2.png>]
-<./Images/RGBandDepth.jpg, id=376, 338.76563pt x 203.25937pt>
+[14 <./Images/examplebodytracking.jpg> <./Images/examplekinect.jpg>]
+Underfull \vbox (badness 4024) has occurred while \output is active []
+
+ [15 <./Images/openposet1.png> <./Images/openposet2.png>] [16]
+<./Images/RGBandDepth.jpg, id=463, 338.76563pt x 203.25937pt>
 File: ./Images/RGBandDepth.jpg Graphic file (type jpg)
 <use ./Images/RGBandDepth.jpg>
-Package pdftex.def Info: ./Images/RGBandDepth.jpg  used on input line 147.
+Package pdftex.def Info: ./Images/RGBandDepth.jpg  used on input line 152.
 (pdftex.def)             Requested size: 284.53532pt x 170.72119pt.
- [16] [17 <./Images/RGBandDepth.jpg>]
-Overfull \hbox (10.70868pt too wide) in paragraph at lines 191--193
+ [17 <./Images/RGBandDepth.jpg>] [18]
+Overfull \hbox (10.70868pt too wide) in paragraph at lines 196--198
 \OT1/cmr/m/n/12 EL mod-elo COCO es un Dataset re-ciente del a~no 2014, de-sar-r
 ol-lado para el re-conocimiento
  []
 
 
-Underfull \vbox (badness 1968) has occurred while \output is active []
-
- [18]
-Underfull \hbox (badness 10000) in paragraph at lines 198--200
+Underfull \hbox (badness 10000) in paragraph at lines 203--205
 
  []
 
-<./Images/neuralnetwork.png, id=409, 2055.68pt x 1246.6575pt>
+<./Images/neuralnetwork.png, id=490, 2055.68pt x 1246.6575pt>
 File: ./Images/neuralnetwork.png Graphic file (type png)
 <use ./Images/neuralnetwork.png>
-Package pdftex.def Info: ./Images/neuralnetwork.png  used on input line 208.
+Package pdftex.def Info: ./Images/neuralnetwork.png  used on input line 213.
 (pdftex.def)             Requested size: 312.98103pt x 142.24979pt.
 ) [19] [20 <./Images/neuralnetwork.png>]
 \openout2 = `Alternativas.aux'.
@@ -1587,29 +1592,57 @@ Overfull \hbox (0.92386pt too wide) in paragraph at lines 26--29
  del cuerpo y reco-gen movimien-
  []
 
-<./Images/trajesensor.jpg, id=431, 962.09438pt x 544.28343pt>
+<./Images/trajesensor.jpg, id=512, 962.09438pt x 544.28343pt>
 File: ./Images/trajesensor.jpg Graphic file (type jpg)
 <use ./Images/trajesensor.jpg>
 Package pdftex.def Info: ./Images/trajesensor.jpg  used on input line 32.
 (pdftex.def)             Requested size: 256.0695pt x 113.80458pt.
 [22] [23 <./Images/trajesensor.jpg>]
-<./Images/posenetcocoexample.png, id=452, 948.54375pt x 584.1825pt>
+<./Images/posenetcocoexample.png, id=533, 948.54375pt x 584.1825pt>
 File: ./Images/posenetcocoexample.png Graphic file (type png)
 <use ./Images/posenetcocoexample.png>
 Package pdftex.def Info: ./Images/posenetcocoexample.png  used on input line 71
 .
 (pdftex.def)             Requested size: 199.17111pt x 142.26576pt.
-<./Images/posenetexample2.png, id=453, 804.00375pt x 630.355pt>
+<./Images/posenetexample2.png, id=534, 804.00375pt x 630.355pt>
 File: ./Images/posenetexample2.png Graphic file (type png)
 <use ./Images/posenetexample2.png>
 Package pdftex.def Info: ./Images/posenetexample2.png  used on input line 77.
 (pdftex.def)             Requested size: 199.16023pt x 142.25658pt.
  [24 <./Images/posenetcocoexample.png> <./Images/posenetexample2.png>]) [25]
+\openout2 = `Metodologia.aux'.
+
+ (Metodologia.tex
+Chapter 5.
+<./Images/manifiesto.png, id=558, 358.33875pt x 267.24844pt>
+File: ./Images/manifiesto.png Graphic file (type png)
+<use ./Images/manifiesto.png>
+Package pdftex.def Info: ./Images/manifiesto.png  used on input line 14.
+(pdftex.def)             Requested size: 312.99886pt x 227.6312pt.
+[26
+
+
+
+]
+
+LaTeX Warning: Reference `futurediagramaderequisitos' on page 27 undefined on i
+nput line 41.
+
+[27 <./Images/manifiesto.png>]) [28] [29]
+\openout2 = `Diseno.aux'.
+
+ (Diseno.tex
+Chapter 6.
+) [30
+
+
+
+]
 \openout2 = `PlanActividades.aux'.
 
  (PlanActividades.tex
-Chapter 5.
-[26
+Chapter 7.
+[31
 
 
 
@@ -1656,142 +1689,177 @@ Overfull \hbox (31.5449pt too wide) in paragraph at lines 29--30
 [] 
  []
 
-[27
+[32
 
 
 
-]) (Informe_Practica.bbl
-Underfull \hbox (badness 5652) in paragraph at lines 12--16
+])
+\openout2 = `Conclusiones.aux'.
+
+ (Conclusiones.tex
+Chapter 8.
+) [33
+
+
+
+
+
+] (Informe_Practica.bbl
+Underfull \hbox (badness 5652) in paragraph at lines 15--19
 []\OT1/cmr/m/n/12 The eye of judg-ment (ps3).  []$\OT1/cmtt/m/n/12 https : / / 
 forum . gamesaktuell . de / blogs /
  []
 
 
-Underfull \hbox (badness 2626) in paragraph at lines 24--26
+Underfull \hbox (badness 2626) in paragraph at lines 27--29
 []\OT1/cmr/m/n/12 The last of us - mo-tion cap-ture.  []$\OT1/cmtt/m/n/12 https
  : / / www . youtube . com / watch ? v =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--33
+Underfull \hbox (badness 10000) in paragraph at lines 31--36
 []\OT1/cmr/m/n/12 Crearon una t[]Ecnica de re-ha-bil-itaci[]On vir-tual para pa
 -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--33
+Underfull \hbox (badness 10000) in paragraph at lines 31--36
 \OT1/cmr/m/n/12 cientes con dis-capaci-dad.  []$\OT1/cmtt/m/n/12 https : / / ww
 w . elfederal . com . ar /
  []
 
 
-Overfull \hbox (69.98814pt too wide) in paragraph at lines 28--33
+Overfull \hbox (69.98814pt too wide) in paragraph at lines 31--36
 \OT1/cmtt/m/n/12 crearon-[]una-[]tecnica-[]de-[]rehabilitacion-[]virtual-[]para
 -[]pacientes-[]con-[]discapacidad/$[]\OT1/cmr/m/n/12 ,
  []
 
 
-Underfull \hbox (badness 4441) in paragraph at lines 35--39
+Underfull \hbox (badness 4441) in paragraph at lines 38--42
 []\OT1/cmr/m/n/12 Playstation cam-era.  []$\OT1/cmtt/m/n/12 https : / / www . p
 laystation . com / en-[]us / accessories /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--52
+Underfull \hbox (badness 10000) in paragraph at lines 50--55
 []\OT1/cmr/m/n/12 Intel lanza dos camaras re-alsense con sen-sor de pro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--52
+Underfull \hbox (badness 10000) in paragraph at lines 50--55
 \OT1/cmr/m/n/12 fun-di-dad: vision en 3d para cualquier dis-pos-i-tivo.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--52
+Underfull \hbox (badness 10000) in paragraph at lines 50--55
 []$\OT1/cmtt/m/n/12 https : / / www . xataka . com / realidad-[]virtual-[]aumen
 tada /
  []
 
 
-Overfull \hbox (202.16321pt too wide) in paragraph at lines 47--52
+Overfull \hbox (202.16321pt too wide) in paragraph at lines 50--55
 \OT1/cmtt/m/n/12 intel-[]lanza-[]dos-[]camaras-[]realsense-[]con-[]sensor-[]de-
 []profundidad-[]vision-[]en-[]3d-[]para-[]cualquier-[]dispositivo$[]\OT1/cmr/m/
 n/12 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--66
+Underfull \hbox (badness 10000) in paragraph at lines 65--69
 \OT1/cmtt/m/n/12 article / 3562738 / working-[]with-[]the-[]azure-[]kinect-[]de
 veloper-[]kit . html$[]\OT1/cmr/m/n/12 ,
  []
 
-[28
-
-
+[34
 
 
 ]
-Underfull \hbox (badness 1221) in paragraph at lines 100--103
+Underfull \hbox (badness 1221) in paragraph at lines 109--112
 []\OT1/cmr/m/n/12 Christensson.  Hard-ware def-i-ni-tion.  []$\OT1/cmtt/m/n/12 
 https : / / techterms . com / definition /
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 113--116
+Underfull \hbox (badness 2285) in paragraph at lines 122--125
 []\OT1/cmr/m/n/12 Dimiter Do-brev.  A def-i-ni-tion of ar-ti-fi-cial in-tel-li-
 gence.  \OT1/cmr/m/it/12 arXiv preprint
  []
 
 
-Underfull \hbox (badness 1540) in paragraph at lines 118--124
+Underfull \hbox (badness 1540) in paragraph at lines 127--133
 \OT1/cmr/m/n/12 sores in-no-vadores.  []$\OT1/cmtt/m/n/12 https : / / tecnousua
 riostv . wordpress . com / 2016 / 01 / 13 /
  []
 
 
-Overfull \hbox (63.81314pt too wide) in paragraph at lines 118--124
+Overfull \hbox (63.81314pt too wide) in paragraph at lines 127--133
 \OT1/cmtt/m/n/12 kinect-[]como-[]profesor-[]de-[]educacion-[]fisica-[]vicent-[]
 gadea-[]profesores-[]innovadores/$[]\OT1/cmr/m/n/12 ,
  []
 
-[29] [30]
-Underfull \hbox (badness 10000) in paragraph at lines 225--230
+[35] [36]
+Underfull \hbox (badness 10000) in paragraph at lines 238--243
 []\OT1/cmr/m/n/12 Pulkit Sharma.  Im-age clas-si-fi-ca-tion vs. ob-ject de-tec-
 tion vs.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--230
+Underfull \hbox (badness 10000) in paragraph at lines 238--243
 \OT1/cmr/m/n/12 im-age seg-men-ta-tion.  []$\OT1/cmtt/m/n/12 https : / / medium
  . com / analytics-[]vidhya /
  []
 
 
-Overfull \hbox (44.78813pt too wide) in paragraph at lines 225--230
+Overfull \hbox (44.78813pt too wide) in paragraph at lines 238--243
 \OT1/cmtt/m/n/12 image-[]classification-[]vs-[]object-[]detection-[]vs-[]image-
 []segmentation-[]f36db85fe81$[]\OT1/cmr/m/n/12 ,
  []
 
-) [31]
+) [37]
+\openout2 = `Recomendaciones.aux'.
+
+ (Recomendaciones.tex
+Chapter 9.
+) [38
+
+
+]
+\openout2 = `Anexos.aux'.
+
+ (Anexos.tex
+Chapter 10.
+
+LaTeX Warning: Citation `councill2001definition' on page 39 undefined on input 
+line 5.
+
+[39
+
+
+
+]) [40] [41]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
  (Informe_Practica.aux (Tapa_Anterior.aux) (Objetivos.aux)
 (EstudioDiagnostico.aux) (Marco_Teorico.aux) (Alternativas.aux)
-(PlanActividades.aux))
+(Metodologia.aux) (Diseno.aux) (PlanActividades.aux) (Conclusiones.aux)
+(Recomendaciones.aux) (Anexos.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
 Package rerunfilecheck Info: File `Informe_Practica.out' has not changed.
-(rerunfilecheck)             Checksum: C4C6FB9DD48447620CE6DC3090DB490D;2285.
+(rerunfilecheck)             Checksum: 2F1FF334741065DB8098595D06127F25;3231.
+
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 50.
  ) 
 Here is how much of TeX's memory you used:
- 21101 strings out of 493305
- 414449 string characters out of 3129801
- 514815 words of memory out of 3000000
- 24025 multiletter control sequences out of 15000+200000
+ 21228 strings out of 493305
+ 417147 string characters out of 3129801
+ 517115 words of memory out of 3000000
+ 24055 multiletter control sequences out of 15000+200000
  10926 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,13n,87p,1157b,829s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,13n,87p,1158b,829s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmbx12.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmr10.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fo
@@ -1801,9 +1869,9 @@ iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/human/AppData/Local
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:
 /Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mtt12.pfb>
-Output written on Informe_Practica.pdf (35 pages, 4494960 bytes).
+Output written on Informe_Practica.pdf (46 pages, 4844753 bytes).
 PDF statistics:
- 587 PDF objects out of 1000 (max. 8388607)
- 144 named destinations out of 1000 (max. 500000)
- 358 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 765 PDF objects out of 1000 (max. 8388607)
+ 205 named destinations out of 1000 (max. 500000)
+ 483 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,5 +1,8 @@
 \begin{thebibliography}{10}
 
+\bibitem{carrizo2018metodo}
+
+
 \bibitem{esrb}
 Esbr game ratings.
 \newblock \url{https://www.esrb.org/}, 1994.
@@ -70,6 +73,12 @@ Mart{\'\i}n Abadi, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen,
 \newblock Tensorflow: Large-scale machine learning on heterogeneous distributed
   systems.
 \newblock {\em arXiv preprint arXiv:1603.04467}, 2016.
+
+\bibitem{beck2001manifiesto}
+Kent Beck, Mike Beedle, Arie van Bennekum, Alistair Cockburn, Ward Cunningham,
+  Martin Fowler, and D~Thomas.
+\newblock Manifiesto por el desarrollo {\'a}gil de software.
+\newblock 2001.
 
 \bibitem{8765346}
 Z.~{Cao}, G.~{Hidalgo Martinez}, T.~{Simon}, S.~{Wei}, and Y.~A. {Sheikh}.
@@ -187,6 +196,10 @@ Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva
 Krystof Litomisky.
 \newblock Consumer rgb-d cameras and their applications.
 \newblock {\em Rapport technique, University of California}, 20, 2012.
+
+\bibitem{scrumdiapo}
+Marcelo Lopez.
+\newblock Metodología scrum.
 
 \bibitem{madsen2000depth}
 Ricky~J Madsen, Jon~A Holmes, and Trygve~D Peterson.
