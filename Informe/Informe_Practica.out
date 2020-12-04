@@ -1,28 +1,30 @@
-\BOOKMARK [0][-]{chapter.1}{Resumen}{}% 1
-\BOOKMARK [0][-]{chapter.2}{Introducci\363n}{}% 2
-\BOOKMARK [0][-]{chapter.3}{Objetivos}{}% 3
-\BOOKMARK [1][-]{section.3.1}{Objetivo General}{chapter.3}% 4
-\BOOKMARK [1][-]{section.3.2}{Objetivos Espec\355ficos}{chapter.3}% 5
-\BOOKMARK [0][-]{chapter.4}{Estudio de Diagn\363stico}{}% 6
-\BOOKMARK [1][-]{section.4.1}{Seguimiento de la Pandemia}{chapter.4}% 7
-\BOOKMARK [1][-]{section.4.2}{Investigaci\363n Sobre Los Sistemas Interactivos con Body Tracking}{chapter.4}% 8
-\BOOKMARK [2][-]{subsection.4.2.1}{\301mbito Cl\355nico}{section.4.2}% 9
-\BOOKMARK [2][-]{subsection.4.2.2}{\301mbito Pedag\363gico}{section.4.2}% 10
-\BOOKMARK [0][-]{chapter.5}{Marco Te\363rico}{}% 11
-\BOOKMARK [1][-]{section.5.1}{Body Tracking/Motion Capture}{chapter.5}% 12
-\BOOKMARK [2][-]{subsection.5.1.1}{Skeletical Tracking}{section.5.1}% 13
-\BOOKMARK [0][-]{chapter.6}{Estudio de alternativas}{}% 14
-\BOOKMARK [1][-]{section.6.1}{An\341lisis de Alternativas actualmente disponibles en el mercado}{chapter.6}% 15
-\BOOKMARK [2][-]{subsection.6.1.1}{Entretenimiento}{section.6.1}% 16
-\BOOKMARK [2][-]{subsection.6.1.2}{Analizadores M\351dicos}{section.6.1}% 17
-\BOOKMARK [2][-]{subsection.6.1.3}{borrar esta parte}{section.6.1}% 18
-\BOOKMARK [0][-]{chapter.7}{Metodolog\355a}{}% 19
-\BOOKMARK [1][-]{subsection.7.0.1}{Gr\341fica Burn-Up}{chapter.7}% 20
-\BOOKMARK [2][-]{subsection.7.0.2}{Gr\341fica Burn-Down}{subsection.7.0.1}% 21
-\BOOKMARK [0][-]{chapter.8}{Dise\361o del Proyecto}{}% 22
-\BOOKMARK [0][-]{chapter.9}{Plan de Actividades}{}% 23
-\BOOKMARK [1][-]{subsection.9.0.1}{Cronograma}{chapter.9}% 24
-\BOOKMARK [0][-]{chapter.10}{Evaluaci\363n Financiera Comparada}{}% 25
-\BOOKMARK [0][-]{chapter.11}{Conclusiones}{}% 26
-\BOOKMARK [0][-]{chapter.12}{Recomendaciones}{}% 27
-\BOOKMARK [0][-]{chapter.13}{Anexos}{}% 28
+\BOOKMARK [0][-]{chapter.1}{Objetivos}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Objetivo General}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Objetivos Espec\355ficos}{chapter.1}% 3
+\BOOKMARK [0][-]{chapter.2}{Estudio de Diagn\363stico}{}% 4
+\BOOKMARK [1][-]{section.2.1}{Seguimiento de la Pandemia}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.2}{Investigaci\363n Sobre Los Dispositivos Pioneros en el \341rea de Body Tracking}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.2.1}{Kinect desarrollado por Microsoft}{section.2.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.2}{PlayStation Camera desarrollado por Sony Computer Entertainment}{section.2.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.3}{\301mbito Cl\355nico}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.4}{\301mbito Pedag\363gico}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.5}{\301mbito De Entretenimiento y Entrenamiento}{section.2.2}% 11
+\BOOKMARK [0][-]{chapter.3}{Marco Te\363rico}{}% 12
+\BOOKMARK [1][-]{section.3.1}{Body Tracking/Motion Capture}{chapter.3}% 13
+\BOOKMARK [2][-]{subsection.3.1.1}{Skeletical Tracking}{section.3.1}% 14
+\BOOKMARK [1][-]{section.3.2}{Base Te\363rica}{chapter.3}% 15
+\BOOKMARK [2][-]{subsection.3.2.1}{C\341mara y Desambiguaci\363n}{section.3.2}% 16
+\BOOKMARK [2][-]{subsection.3.2.2}{Inteligencia Artificial \(IA\)}{section.3.2}% 17
+\BOOKMARK [0][-]{chapter.4}{Estudio de alternativas}{}% 18
+\BOOKMARK [1][-]{section.4.1}{An\341lisis de Alternativas actualmente disponibles en el mercado}{chapter.4}% 19
+\BOOKMARK [2][-]{subsection.4.1.1}{Entretenimiento}{section.4.1}% 20
+\BOOKMARK [1][-]{section.4.2}{An\341lisis de Alternativas En Herramientas Disponibles Para el Desarrollo}{chapter.4}% 21
+\BOOKMARK [2][-]{subsection.4.2.1}{Trajes con sensores de movimiento}{section.4.2}% 22
+\BOOKMARK [2][-]{subsection.4.2.2}{TensorFlow}{section.4.2}% 23
+\BOOKMARK [2][-]{subsection.4.2.3}{PoseNet}{section.4.2}% 24
+\BOOKMARK [2][-]{subsection.4.2.4}{Wrnch}{section.4.2}% 25
+\BOOKMARK [2][-]{subsection.4.2.5}{OpenPose}{section.4.2}% 26
+\BOOKMARK [2][-]{subsection.4.2.6}{DeepMotion}{section.4.2}% 27
+\BOOKMARK [2][-]{subsection.4.2.7}{Unity y Kinect}{section.4.2}% 28
+\BOOKMARK [0][-]{chapter.5}{Plan de Actividades}{}% 29
+\BOOKMARK [1][-]{subsection.5.0.1}{Cronograma}{chapter.5}% 30
