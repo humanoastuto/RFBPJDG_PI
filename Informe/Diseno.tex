@@ -1,16 +1,34 @@
-\chapter{Análisis  y Desarrollo del Diseño del Proyecto}
+\chapter{Análisis  y Desarrollo del Diseño del Sistema Interactivo}
 
 El diseño propuesto es elaborado a partir de los requerimientos recopilados por parte del cliente y Product Owner (ya que tanto el cliente como el rol es asignado a la misma persona).
 
 El objetivo de la propuesta es satisfacer las necesidades del usuario que emplee el resultado de la investigación e implementación de este sistema interactivo. La propuesta será diseñada a partir de las bases de la ingeniería de Requerimientos aplicada en la metodología ágil SCRUM.
 
-La Ingeniería de Requerimintos del proyecto busca establecer lo que el cliente y usuario requiere de un Sistema o Aplicación de Software
+La Ingeniería de requerimientos del proyecto implica establecer lo que el cliente y usuario requiere del sistema interactivo \cite{scrumdiapo}, implica además cual es la funcionalidad esperada del proyecto, se debe definir, especificar y validar los requerimientos para poder aprobar su elaboración.
+
+De la siguiente manera la solicitud del cliente inicia con un pedido ambiguo y coloquial por parte del instructor de artes marciales de uno de los integrantes del grupo al compartir su idea con el, los que anotaron sus pensamientos con las siguientes palabras: "Me gustaría un juego con el cual pueda entrenar las poses y técnicas básicas de Karate siguiendo lo que hace en la pantalla y que me diga si lo hago bien o mal, pero no tengo un Kinect o una consola para jugar, solo mi laptop", a lo cual el estudiante añadió "Pero también sería genial que puedas bailar e imitar lo que hace la gente, si va por esa línea, podrías generalizarlo para atraer más público". Es de conocimiento general que las ideas suelen venir de lugares inesperados, en este caso, fue una conversación coloquial entre dos conocidos lo que inspiro el proyecto, a partir de esas palabras, se determino la base del proyecto, por tanto, se debe recabar entre las frases.
+
+\section{Recolección de Requerimientos}
+
+La recolección de requerimientos consiste en escuchar y entender los pedidos y necesidades que el cliente requiere realmente, por tanto, vamos a desarmar la interacción dada por el instructor y el estudiante.
+
+"Me gustaria un juego con el cual pueda entrenar las poses y técnicas básicas de Karate", esto define que la solicitud del cliente busca un sistema interactivo, en el cual pueda de una u otra forma interactuar con el para poder realizar movimientos de Karate, sin embargo, no es suficiente. 
+
+"siguiendo lo que hace en la pantalla", este es un punto importante, pues si bien antes requeria de un sistema interactivo, ahora se conoce la forma básica que se requerirá
+
 
 
 \section{Análisis de Requerimientos}
 
+En un principio, se esta desarrollando un sistema interactivo que permite al usuario crear mapas propios y además poder ejecutar distintos niveles creados por otras personas o si mismo previamente, para ello se requieren dos funciones fundamentales.
 
-\subsection{Recolección de Requerimientos}
+\begin{itemize}
+	\item Play: Refiere al acto de entrar a una lista de mapas de usuario, donde se seleccionará un mapa y se realizará el seguimiento de las acciones provistas por el sistema interactivo a imitar.	
+	\item Editor: Término dado al modo de creación de mapas, donde el usuario provee un vídeo que quiera convertir en un mapa del sistema interactivo.
+\end{itemize}
+
+Además se requiere una manera dentro del sistema para poder reducir o aumentar el volumen del audio.
+
 
 
 \subsection{Requerimientos Funcionales}

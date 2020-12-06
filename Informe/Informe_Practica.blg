@@ -7,8 +7,8 @@ A level-1 auxiliary file: Metodologia.aux
 A level-1 auxiliary file: Diseno.aux
 A level-1 auxiliary file: PlanActividades.aux
 A level-1 auxiliary file: Conclusiones.aux
-The style file: plain.bst
 A level-1 auxiliary file: Recomendaciones.aux
+The style file: plain.bst
 A level-1 auxiliary file: Anexos.aux
 Database file #1: bibliografia.bib
 Warning--entry type for "hardwaredef" isn't style-file defined
@@ -43,10 +43,6 @@ Warning--entry type for "trajesensor" isn't style-file defined
 --line 349 of file bibliografia.bib
 Warning--entry type for "rgbandDepth" isn't style-file defined
 --line 356 of file bibliografia.bib
-"," immediately follows a field name---line 368 of file bibliografia.bib
- : @article{carrizo2018metodo,rizo2018metodo
- :                                          ,
-I'm skipping whatever remains of this entry
 Repeated entry---line 385 of file bibliografia.bib
  : @online{rgbandDepth
  :                    ,
@@ -73,11 +69,6 @@ Warning--to sort, need author or key in examplebodytracking
 Warning--to sort, need author or key in examplekinect
 Warning--to sort, need author or key in RGBandDepth
 Warning--to sort, need author or key in trajesensor
-Warning--to sort, need author or key in carrizo2018metodo
-Warning--empty author in carrizo2018metodo
-Warning--empty title in carrizo2018metodo
-Warning--empty journal in carrizo2018metodo
-Warning--empty year in carrizo2018metodo
 Warning--empty journal in beck2001manifiesto
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
 while executing---line 1090 of file plain.bst
@@ -86,4 +77,4 @@ while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
 while executing---line 1090 of file plain.bst
 Warning--empty note in scrumdiapo
-(There were 8 error messages)
+(There were 7 error messages)

@@ -223,19 +223,19 @@ Una nube de puntos o en inglés como es comúnmente conocido, es una colección 
 
 En el proyecto, este es relevante para el almacenamiento del Skeletical Tracking que se requerirá en el proyecto, donde se guardan los 25 puntos del modelo CAFFE en una Point Cloud.
 
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=15cm,height=5cm,]{./Images/driftexample.jpg}
+	\caption{Ejemplo de Point Set Registration}
+	\footnotesize Fuente: \cite{ravikumar2017generalised}
+	\label{pointdriftexample}
+\end{figure}
+
 \subsubsection{Point Cloud Registration}
 
 Registro de nubes de puntos o Point Cloud Registration es un componente clave para el proyecto, consiste en asignar la correspondencia entre dos sets de puntos y así recuperar la forma de un mapa transformando las dimensiones de una Point Cloud a las dimensiones del otra. Normalmente es empleado cuando se tienen distintos objetos del mismo tipo pero en distintos tamaños y se desea ajustar su escala a una sola.
 
 Suelen existir múltiples factores que considerar al realizar esta comparación, por lo que es una labor con un margen de error que se define en base al proyecto que se desea realizar y existen varios algoritmos que generalizan la comparación, sin embargo, para el proyecto, se tomará solo el concepto básico y a partir de los datos de la herramienta que se seleccione, se usará un calculo propio \cite{myronenko2010point}.
-
-\begin{figure}[t!]
-	\centering
-	\includegraphics[width=15cm,height=5cm,]{./Images/driftexample.jpg}
-	\caption{Ejemplo de }
-	\footnotesize Fuente: \cite{ravikumar2017generalised}
-	\label{pointdriftexample}
-\end{figure}
 
 
 \section{Objetivos}

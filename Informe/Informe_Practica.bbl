@@ -1,8 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{carrizo2018metodo}
-
-
 \bibitem{esrb}
 Esbr game ratings.
 \newblock \url{https://www.esrb.org/}, 1994.
@@ -98,6 +95,13 @@ Z.~{Cao}, G.~{Hidalgo Martinez}, T.~{Simon}, S.~{Wei}, and Y.~A. {Sheikh}.
 Zhe Cao, Tomas Simon, Shih-En Wei, and Yaser Sheikh.
 \newblock Realtime multi-person 2d pose estimation using part affinity fields.
 \newblock In {\em CVPR}, 2017.
+
+\bibitem{carrizo2018metodo}
+Dante Carrizo and Andres Alfaro.
+\newblock M{\'e}todo de aseguramiento de la calidad en una metodolog{\'\i}a de
+  desarrollo de software: un enfoque pr{\'a}ctico.
+\newblock {\em Ingeniare. Revista chilena de ingenier{\'\i}a}, 26(1):114--129,
+  2018.
 
 \bibitem{7934445}
 X.~{Chang}, Z.~{Ma}, M.~{Lin}, Y.~{Yang}, and A.~G. {Hauptmann}.
