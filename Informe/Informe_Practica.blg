@@ -1,6 +1,5 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Informe_Practica.aux
 A level-1 auxiliary file: Tapa_Anterior.aux
-A level-1 auxiliary file: Objetivos.aux
 A level-1 auxiliary file: EstudioDiagnostico.aux
 A level-1 auxiliary file: Marco_Teorico.aux
 A level-1 auxiliary file: Alternativas.aux
@@ -48,7 +47,14 @@ Warning--entry type for "rgbandDepth" isn't style-file defined
  : @article{carrizo2018metodo,rizo2018metodo
  :                                          ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "councill2001definition"
+Repeated entry---line 385 of file bibliografia.bib
+ : @online{rgbandDepth
+ :                    ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "pointcloud" isn't style-file defined
+--line 392 of file bibliografia.bib
+Warning--entry type for "pointcloudexample" isn't style-file defined
+--line 400 of file bibliografia.bib
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
 while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
@@ -80,4 +86,4 @@ while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
 while executing---line 1090 of file plain.bst
 Warning--empty note in scrumdiapo
-(There were 7 error messages)
+(There were 8 error messages)
