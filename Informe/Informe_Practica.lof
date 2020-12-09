@@ -1,28 +1,40 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Dispositivo Kinect y un Ejemplo de su Uso en un Videojuego de Volleyball\relax }}{4}{figure.caption.5}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Dispositivos Azure Kinect y PlayStation Camera\relax }}{5}{figure.caption.7}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Ejemplo de un PlayStation Eye y su uso con un videojuego "The Eye Of The Judgement"\relax }}{5}{figure.caption.8}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Ejemplo de Rehabilitaci\IeC {\'o}n empleando Body Tracking\relax }}{6}{figure.caption.9}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Ejemplo de Clase de Educaci\IeC {\'o}n F\IeC {\'\i }sica empleando Body Tracking\relax }}{7}{figure.caption.10}
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Sistema De Clasificaci\IeC {\'o}n PEGI\relax }}{8}{figure.caption.13}
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Sistema De Clasificaci\IeC {\'o}n ESRB\relax }}{9}{figure.caption.16}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Ejemplo de Clasificaci\IeC {\'o}n de imagen de TensorFlow\relax }}{12}{figure.caption.18}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Ejemplos de Body Tracking\relax }}{12}{figure.caption.19}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Diversos Tipos de Seguimiento al Esqueleto seleccionados por OpenPose para el desarrollo del proyecto\relax }}{13}{figure.caption.20}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo de Visi\IeC {\'o}n de una C\IeC {\'a}mara con sensores RGB-D\relax }}{15}{figure.caption.25}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Ejemplo de Neural Network\relax }}{17}{figure.caption.28}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Ejemplo de un Point Cloud\relax }}{19}{figure.caption.32}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Ejemplo de \relax }}{19}{figure.caption.33}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Traje con Sensores de Movimiento\relax }}{23}{figure.caption.37}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Ejemplos de Datos en la Base de Datos COCO para la estimaci\IeC {\'o}n de pose\relax }}{24}{figure.caption.39}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Ejemplo de Clasificaci\IeC {\'o}n de imagen de TensorFlow\relax }}{28}{figure.caption.40}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Dispositivo Kinect y un Ejemplo de su Uso en un Videojuego de Volleyball\relax }}{6}{figure.caption.5}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Dispositivos Azure Kinect y PlayStation Camera\relax }}{7}{figure.caption.7}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Ejemplo de un PlayStation Eye y su uso con un videojuego "The Eye Of The Judgement"\relax }}{7}{figure.caption.8}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Ejemplo de Rehabilitaci\IeC {\'o}n empleando Body Tracking\relax }}{8}{figure.caption.9}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Ejemplo de Clase de Educaci\IeC {\'o}n F\IeC {\'\i }sica empleando Body Tracking\relax }}{9}{figure.caption.10}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Sistema De Clasificaci\IeC {\'o}n PEGI\relax }}{10}{figure.caption.13}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Sistema De Clasificaci\IeC {\'o}n ESRB\relax }}{11}{figure.caption.16}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Ejemplo de Clasificaci\IeC {\'o}n de Imagen de TensorFlow\relax }}{14}{figure.caption.18}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Ejemplos de Body Tracking\relax }}{14}{figure.caption.19}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Diversos Tipos de Seguimiento al Esqueleto seleccionados por OpenPose para el desarrollo del proyecto\relax }}{15}{figure.caption.20}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Ejemplo de Visi\IeC {\'o}n de una C\IeC {\'a}mara con sensores RGB-D\relax }}{17}{figure.caption.25}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Ejemplo de Neural Network\relax }}{19}{figure.caption.28}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Ejemplo de un Point Cloud\relax }}{21}{figure.caption.32}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Ejemplo de Point Set Registration\relax }}{21}{figure.caption.33}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Traje con Sensores de Movimiento\relax }}{25}{figure.caption.37}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Ejemplos de Datos en la Base de Datos COCO para la estimaci\IeC {\'o}n de pose\relax }}{26}{figure.caption.39}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Ejemplo de Clasificaci\IeC {\'o}n de imagen de TensorFlow\relax }}{29}{figure.caption.40}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Ilustraci\IeC {\'o}n de Requerimientos en la GUI\relax }}{41}{figure.caption.57}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Diagrama de Datos de Flujo\relax }}{42}{figure.caption.58}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Sprint Backlog del d\IeC {\'\i }a 5 de Noviembre\relax }}{47}{figure.caption.54}
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Tarea de la Sprint 2, Mostrar Acciones a Copiar\relax }}{48}{figure.caption.55}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {13.1}{\ignorespaces Elecci\IeC {\'o}n Personal del Estudiante para Configurar Visual Studio 2019\relax }}{60}{figure.caption.72}
+\contentsline {figure}{\numberline {13.2}{\ignorespaces Gr\IeC {\'a}fico Burn-Up\relax }}{61}{figure.caption.73}
+\contentsline {figure}{\numberline {13.3}{\ignorespaces Gr\IeC {\'a}fico Burn-Down\relax }}{61}{figure.caption.74}
+\contentsline {figure}{\numberline {13.4}{\ignorespaces Version Deseada de Unity Encerrada en Rojo\relax }}{62}{figure.caption.75}
+\contentsline {figure}{\numberline {13.5}{\ignorespaces Captura de Pantalla de la Configuraci\IeC {\'o}n Inicial de OpenPose Plug-in\relax }}{62}{figure.caption.76}
+\contentsline {figure}{\numberline {13.6}{\ignorespaces Sprint 1 concluida\relax }}{63}{figure.caption.77}
+\contentsline {figure}{\numberline {13.7}{\ignorespaces Sprint Backlog del d\IeC {\'\i }a 5 de Noviembre\relax }}{64}{figure.caption.78}
+\contentsline {figure}{\numberline {13.8}{\ignorespaces Tarea de la Sprint 2, Mostrar Acciones a Copiar\relax }}{65}{figure.caption.79}

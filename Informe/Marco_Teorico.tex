@@ -12,17 +12,17 @@ A continuación, se debe mencionar factores importantes sobre la implementación
 
 El seguimiento corporal del cuerpo en tiempo real, normalmente conocido como Body Tracking o Motion Capture hace referencia al seguimiento del cuerpo humano a través de una cámara, existen dos acercamientos a este estudio, el enfoque de ajuste del modelo y el enfoque de aprendizaje. El enfoque de ajuste del modelo involucra ajustar el modelo formulado según imágenes previas cargadas, estimando parámetros de puntos especificados de la imagen, sin embargo, es demasiado dependiente de extremos locales y la inicialización adecuada, lo cual lo vuelve inservible en ambientes nuevos. Este modelo comparte una similitud al método Monte Carlo basados en cadenas de Markov \cite{siddiqui2010human}.
 
-En cambio, el enfoque de aprendizaje requiere de grandes cantidades de imágenes con notas y especificaciones del esqueleto, incrementando las dimensiones de espacio y memoria requerido. Un ejemplo de este tipo de reconocimiento es la herramienta PoseNet, derivado de TensorFlow, empleado para identificar objetos a partir de una base de datos propia que clasifique los elementos que se buscan identificar con silueta y nombre.
+En cambio, el enfoque de aprendizaje requiere de grandes cantidades de imágenes con notas y especificaciones del esqueleto, incrementando las dimensiones de espacio y memoria requerido. Un ejemplo de este tipo de reconocimiento es la herramienta PoseNet, derivado de TensorFlow, empleado para identificar objetos a partir de una Dataset que clasifique los elementos que se buscan identificar con silueta y nombre.
 
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=13cm,height=5cm,]{./Images/ejemplotensorflow.jpg}
-	\caption{Ejemplo de Clasificación de imagen de TensorFlow}
+	\caption{Ejemplo de Clasificación de Imagen de TensorFlow}
 	\footnotesize Fuente: \cite{ejemplotensorflow}
 	\label{tensorfl}
 \end{figure}
 
-Finalmente se empleo la iteración del punto más cercano \cite{grest2005nonlinear} el cual usa un enfoque de inicialización del esqueleto a través de fotogramas subsecuentes, clasificándolos con vértices y segmentos en un modelo 3D para este propósito.
+Finalmente, la iteración del punto más cercano \cite{grest2005nonlinear}, el cual dispone de un enfoque de inicialización del esqueleto a través de fotogramas subsecuentes, clasificándolos con vértices y segmentos en un modelo 3D para este propósito.
 
 La estimación de las poses humanas representan una problemática compleja de solucionar, el cual tuvo un largo trayecto hasta salir a la luz. La complejidad se centra en las múltiples limitantes, como las mascotas, los objetos del área, las personas de alrededor, la variación del escenario, los parámetros del cuerpo (el tamaño, longitud de las extremidades, torso y otras partes del cuerpo) y la iluminación.
 
@@ -70,7 +70,7 @@ Este fue una innovación brindada por el controlador Kinect al mercado comercial
 	\footnotesize Fuente: OpenPose Models Image Output \cite{cao2017realtime} \cite{8765346}
 \end{figure}
 
-La herramienta seleccionada para el proyecto es OpenPose empleando este modelo de \href{https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/output.md}{Formato de salida}, para los datos del seguimiento del esqueleto es emplear la flag write\_json para guardar la información dentro un JSON, el cual contiene un objeto de esqueleto de persona dentro, que contiene un vector pose\_keypoints\_2d con puntos 2D para localizar y detectar cada punto de unión x1,y1,c1,x2,y2,c2,.... Las coordenadas x y y en el rango de [0,1], [-1,1].
+La herramienta seleccionada para el proyecto es OpenPose empleando este modelo de \href{https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/output.md}{Formato de salida}, para los datos del seguimiento del esqueleto es emplear la flag write\_json para guardar la información dentro un JSON, el cual contiene un objeto de esqueleto de persona dentro, que contiene un vector pose\_keypoints\_2d con puntos 2D para localizar y detectar cada punto de unión x1,y1,c1,x2,y2,c2,.... Las coordenadas x,y en el rango de [0,1], [-1,1].
 
 Además de la existencia de los vectores face\_keypoints\_2d, hand\_left\_keypoints\_2d y hand\_right\_keypoints\_2d, análogos a pose\_keypoints\_2d, los cuales debido a la masiva carga de memoria que requieren y la falta de ella (mínimo 4GB de Memoria dedicada estimada, contando solo con 2GB en el equipo proporcionado) serán ignorados, pero empleando pose\_keypoints\_2d.
 
@@ -83,10 +83,10 @@ Se empleará el modelo BODY\_25 de Caffe, para mostrar el esqueleto, que consist
 \begin{table}[t]
 	\begin{center}
 		\begin{tabular}{| c | c | c | c | }
-			\hline Pos. & Punto Clave & Pos. & Punto Clave \\ \hline
+			\hline Posición & Punto Clave & Posición & Punto Clave \\ \hline
 			0 & Nariz&13 & Rodilla Izquierda \\ \hline
 			1 & Cuello &14 & Tobillo Izquierdo \\ \hline
-			2 & Hombro Derecho& 15 & Ojo Derecho \\ \hline
+			2 & Hombro Derecho & 15 & Ojo Derecho \\ \hline
 			3 & Codo Derecho & 16 & Ojo Izquierdo \\ \hline
 			4 & Muñeca Derecha & 17 & Oreja Derecha \\ \hline
 			5 & Hombro Izquierdo & 18 & Oreja \\ \hline
@@ -112,14 +112,9 @@ Se podría mencionar que su diferencia parte también de las palabras que lo con
 
 \section{Base Teórica}
 
-
-
-
-
-
 \subsubsection{Depth of Field (DOF)}
 
-La profundidad de campo es el producto del deseo de producir una imagen más clara del objeto o escenario deseado. Normalmente, una cámara debe enfocar su lente para tener mayor precisión, por tanto, se adjuntaron formas para ajustar el lente. Actualmente, se desarrollaron sistemas automáticos para el ajuste del lente, los cuales incluyen la medición de la distancia al objetivo, empleando esta para ajustar el lente y obtener mayor claridad \cite{madsen2000depth}. 
+La profundidad de campo es el producto del deseo de producir una imagen más clara del objeto o escenario deseado. Normalmente, una cámara debe enfocar su lente para tener mayor precisión, por tanto, se adjuntaron formas para ajustar la lente. Actualmente, se desarrollaron sistemas automáticos para el ajuste de la lente, los cuales incluyen la medición de la distancia al objetivo, empleando esta para ajustar la lente y obtener mayor claridad \cite{madsen2000depth}. 
 
 \subsubsection{Sensores RGB-D} 
 
@@ -155,7 +150,7 @@ Una faceta importante del proyecto, es la estimación de poses, elemento product
 \\
 La inteligencia artificial (IA) es una rama de la ciencia de computación, que se define como "Un programa que en un mundo arbitrario, no se las arregle peor que un humano"\cite{dobrev2012definition}. 
 Esta definición se somete a muchos factores, para empezar requiere de asumir tres factores importantes.
-El primer factor es que cualquier dispositivo de calculo puede ser modelado por un programa. El segundo factor es que el IA es un dispositivo que permite ingresar información de afuera y dar una respuesta de acuerdo a ello. El tercer factor es asumir que la IA, al estar en contacto con el mundo este recibe información que da una respuesta interactiva con el mundo. Se asume que el mundo en que se encuentre será influenciado por la IA\cite{dobrev2012definition}. El mundo se considera como el ambiente con el que la IA tiene interacción, aquel que proporciona los valores que la IA procesará y aquel que reaccionará a las acciones y/o valores de salida de la IA, en un proceso de emisión y recepción continuo.
+El primer factor es que cualquier dispositivo de cálculo puede ser modelado por un programa. El segundo factor es que el IA es un dispositivo que permite ingresar información de afuera y dar una respuesta de acuerdo a ello. El tercer factor es asumir que la IA, al estar en contacto con el mundo este recibe información que da una respuesta interactiva con el mundo. Se asume que el mundo en que se encuentre será influenciado por la IA\cite{dobrev2012definition}. El mundo se considera como el ambiente con el que la IA tiene interacción, aquel que proporciona los valores que la IA procesará y aquel que reaccionará a las acciones y/o valores de salida de la IA, en un proceso de emisión y recepción continuo.
 
 \subsubsection{Machine Learning (ML)}
 
@@ -194,18 +189,18 @@ En el desarrollo del proyecto se hace mención al modelo CAFFE y COCO, los cuale
 
 \subsubsection{Modelo DL CAFFE}
 
-El modelo CAFFE es un Framework opensource trabajado con las librerias C++ y CUDA para Deep Learning, tiene interfaces en Command Line, Python y MathLab, incluye soporte en problemas con el modelo, tiene referencias, demos y herramientas para poder usarlo, además de la caracteristica de usarse con CPU y GPU\cite{jia2014caffe}.
+El modelo CAFFE es un Framework opensource trabajado con las librerias C++ y CUDA para Deep Learning, tiene interfaces en Command Line, Python y MathLab, incluye soporte en problemas con el modelo, tiene referencias, demos y herramientas para poder usarlo, además de la característica de usarse con CPU y GPU\cite{jia2014caffe}.
 
-Además de poseer una comunidad abierta a ampliar el desarrollo y trabajar con la herramienta, ventaja caracteristica del codigo open source. 
+Además de poseer una comunidad abierta a ampliar el desarrollo y trabajar con la herramienta, ventaja caracteristica del código open source. 
 El modelo CAFFE ofrece el poder definir modelos, optimizar opciones para el desarrollo y pre-entrenar para poder realizar el aprendizaje.
 
 En la sección del proyecto, CAFFE realizo sus estudios para poder guardar Dataset de miles de cuerpos humanos, otorgándole puntos clave para formar el esqueleto. 
-La herramienta OpenPose selecta hace uso de la CMU Panoptic Dataset, que junto a  sus miles de miles de esqueletos 3D permite estimar la pose humana, produciendo el Modelo BODY\_25 visto previamente en la figura \ref{open1}.
+La herramienta OpenPose selecta hace uso de la CMU Panoptic Dataset, que junto a sus miles de miles de esqueletos 3D permite estimar la pose humana, produciendo el Modelo BODY\_25 visto previamente en la figura \ref{open1}.
 
 \subsubsection{Modelo DL COCO}
 
 EL modelo COCO es un Dataset reciente del año 2014, desarrollado para el reconocimiento de objetos en el contexto requerido, a través de la obtención de imágenes complejas que contengan la información requerida en su estado natural.
-En su mayoría, posee objetos reconocibles por niños pequeños, tiene 2.5 millones de etiquetas en mas de 300000 imágenes.
+En su mayoría, posee objetos reconocibles por niños pequeños, tiene 2.5 millones de etiquetas en más de 300000 imágenes.
 
 En el contexto, el modelo COCO posee miles de imágenes relacionadas a la identificación del cuerpo humano y la construcción de su esqueleto, marcando con etiquetas sus puntos claves del cuerpo y la confiabilidad de esos datos\cite{lin2014microsoft}.
 

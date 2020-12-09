@@ -1,5 +1,23 @@
 \chapter{Recomendaciones}
-Indicación de recomendaciones con relación a la
-implementación futura de la solución propuesta o
-de mejoras posibles relacionadas a la
-implementación (si es que ésta se llevó a cabo)
+
+Durante el desarrollo del sistema interactivo, se descubrieron varias limitantes que considerar en ciertas facetas de la elaboración del proyecto. Además del seguimiento que se realizo a la elaboración del sistema interactivo.
+
+\subsubsection{Requerimientos de los equipos de desarrollo y usuario}
+
+Si bien, una de las características del proyecto, es no requerir una cámara de profundidad de campo, como el Kinect o la PlayStation Camera, termina siendo una de sus debilidades en cuanto a equipo se refiere, ya que termina requiriendo un mínimo de 2 GB de GPU. Se recomienda modificar el requerimiento mínimo de GPU a CPU, de tal manera que los requerimientos del equipo sean dirigidos a la CPU y no a la GPU, ya que existen dispositivos que están a la altura de procesamiento, pero no cuentan con una tarjeta gráfica lo suficientemente potente, ya sea por ser un equipo diseñado para trabajo de administración o no haya sido pensada para procesar gráficos de alta calidad.
+
+Otra recomendación sería expandir el rango de sistemas operativos en los cuales se puede ejecutar el sistema interactivo, la herramienta OpenPose puede ser empleada en Linux y Mac, así mismo, Unity cuenta con soporte en Mac, por tanto, sería viable considerar esta posibilidad.
+
+Se recomienda que a medida que salgan futuras actualizaciones de las herramientas de Body Tracking (OpenPose) se vaya actualizando el programa, ya que esta se encuentra en desarrollo y mejora continua. 
+
+\subsubsection{Uso del sistema interactivo}
+
+Se recomienda la integración o mejora de la interfaz de usuario para la facilidad de la creación y edición de mapas creados por el usuario. Además, se desea que en el futuro, el reconocimiento de las poses mejore considerablemente con el tiempo, para que la necesidad de tener un ambiente preparado donde jugar reduzca sus condiciones y se permita en un mayor rango de ambientes.
+
+
+
+\subsubsection{Desarrollo completo del prototipo}
+
+Si bien el prototipo cumple con el producto mínimo viable, también se observaron otras posibles funciones para aumentar la satisfacción del cliente, tales opciones mencionadas en delimitación que son una playlist de mapas y el observar a un jugador experimentado realizar el mapa, incluso mostrar sus puntuaciones pasadas para compararlas con las siguientes.
+
+Además, se recomienda ver posibles modificaciones a la forma en que se realiza el Point Set Registration para la calificación de movimientos, ya que esta todavía tiene muchas variaciones y algoritmos posibles para su mejora.
