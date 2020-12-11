@@ -26,14 +26,15 @@ namespace OpenPose.Example {
         //HumanController2D humancopy = null;
         //List<RectTransform> humancopy = null;
         [SerializeField] RectTransform outputTransform2;
-        [SerializeField] ImageRenderer bgImageRenderer2;
-        [SerializeField] Transform humanContainer2;
         [SerializeField] LineRenderer linea1;
         [SerializeField] LineRenderer linea2;
         [SerializeField] LineRenderer linea3;
+        [SerializeField] LineRenderer linea4;
         List<(float, float)> humancopy = new List<(float, float)>();
         string[] poses = null;
         int npose;
+        float timer;
+        float capturado;
 
         // Output
         private OPDatum datum;
@@ -71,7 +72,6 @@ namespace OpenPose.Example {
         public void ToggleRenderBgImg(){
             renderBgImg = !renderBgImg;
             bgImageRenderer.FadeInOut(renderBgImg);
-            bgImageRenderer2.FadeInOut(renderBgImg);
         }
 
         // Number of people
@@ -103,6 +103,8 @@ namespace OpenPose.Example {
             poses = System.IO.File.ReadAllLines(@"C:\Users\bramo\Desktop\RFBPJDG_PI\openpose\OpenPosePlugin\Assets\Media\prueba.txt");
             npose = 0;
             //Capture();
+            timer = 0;
+            capturado = (float) 0.5;
         }
 
         // Parameters can be set here
@@ -200,8 +202,7 @@ namespace OpenPose.Example {
                 }
                 npose++;
             }
-        }
-        
+        }       
         private float Distance(Vector2 p1, Vector2 p2)
         {
             return (float)System.Math.Sqrt(System.Math.Pow((p2.x - p1.x), 2) + System.Math.Pow((p2.y - p1.y), 2));
@@ -256,7 +257,6 @@ namespace OpenPose.Example {
 
                 // Update background image
                 bgImageRenderer.UpdateImage(datum.cvInputData);
-                bgImageRenderer2.UpdateImage(datum.cvInputData);
 
                 // Rescale output UI
                 Vector2 outputSize = outputTransform.sizeDelta;
@@ -286,32 +286,44 @@ namespace OpenPose.Example {
                     human.DrawHuman(ref datum, i++, renderThreshold);
                     Debug.Log(linea1.positionCount);
 
+                    float x = 225;
+                    float y = 75;
+                    float z = 7;
                     //This draws the esquelet to copy
                     if (humancopy.Count > 24)
                     {
-                        linea1.SetPosition(0, new Vector3(225 - humancopy[0].Item1 / 6, 100 - humancopy[0].Item2 / 6, -1));
-                        linea1.SetPosition(1, new Vector3(225 - humancopy[1].Item1 / 6, 100 - humancopy[1].Item2 / 6, -1));
-                        linea1.SetPosition(2, new Vector3(225 - humancopy[8].Item1 / 6, 100 - humancopy[8].Item2 / 6, -1));
-
-                        linea2.SetPosition(0, new Vector3(225 - humancopy[4].Item1 / 6, 100 - humancopy[4].Item2 / 6, -1));
-                        linea2.SetPosition(1, new Vector3(225 - humancopy[3].Item1 / 6, 100 - humancopy[3].Item2 / 6, -1));
-                        linea2.SetPosition(2, new Vector3(225 - humancopy[2].Item1 / 6, 100 - humancopy[2].Item2 / 6, -1));
-                        linea2.SetPosition(3, new Vector3(225 - humancopy[1].Item1 / 6, 100 - humancopy[1].Item2 / 6, -1));
-                        linea2.SetPosition(4, new Vector3(225 - humancopy[5].Item1 / 6, 100 - humancopy[5].Item2 / 6, -1));
-                        linea2.SetPosition(5, new Vector3(225 - humancopy[6].Item1 / 6, 100 - humancopy[6].Item2 / 6, -1));
-                        linea2.SetPosition(6, new Vector3(225 - humancopy[7].Item1 / 6, 100 - humancopy[7].Item2 / 6, -1));
-                        
-                        linea3.SetPosition(0, new Vector3(225 - humancopy[23].Item1 / 6, 100 - humancopy[23].Item2 / 6, -1));
-                        linea3.SetPosition(1, new Vector3(225 - humancopy[11].Item1 / 6, 100 - humancopy[11].Item2 / 6, -1));
-                        linea3.SetPosition(2, new Vector3(225 - humancopy[10].Item1 / 6, 100 - humancopy[10].Item2 / 6, -1));
-                        linea3.SetPosition(3, new Vector3(225 - humancopy[9].Item1 / 6, 100 - humancopy[9].Item2 / 6, -1));
-                        linea3.SetPosition(4, new Vector3(225 - humancopy[8].Item1 / 6, 100 - humancopy[8].Item2 / 6, -1));
-                        linea3.SetPosition(5, new Vector3(225 - humancopy[12].Item1 / 6, 100 - humancopy[12].Item2 / 6, -1));
-                        linea3.SetPosition(6, new Vector3(225 - humancopy[13].Item1 / 6, 100 - humancopy[13].Item2 / 6, -1));
-                        linea3.SetPosition(7, new Vector3(225 - humancopy[14].Item1 / 6, 100 - humancopy[14].Item2 / 6, -1));
-                        linea3.SetPosition(8, new Vector3(225 - humancopy[20].Item1 / 6, 100 - humancopy[20].Item2 / 6, -1));
+                        linea1.SetPosition(0, new Vector3(x - humancopy[0].Item1 / z, y - humancopy[0].Item2 / z, -1));
+                        linea1.SetPosition(1, new Vector3(x - humancopy[1].Item1 / z, y - humancopy[1].Item2 / z, -1));
+                        linea1.SetPosition(2, new Vector3(x - humancopy[8].Item1 / z, y - humancopy[8].Item2 / z, -1));
+                        linea2.SetPosition(0, new Vector3(x - humancopy[4].Item1 / z, y - humancopy[4].Item2 / z, -1));
+                        linea2.SetPosition(1, new Vector3(x - humancopy[3].Item1 / z, y - humancopy[3].Item2 / z, -1));
+                        linea2.SetPosition(2, new Vector3(x - humancopy[2].Item1 / z, y - humancopy[2].Item2 / z, -1));
+                        linea2.SetPosition(3, new Vector3(x - humancopy[1].Item1 / z, y - humancopy[1].Item2 / z, -1));
+                        linea2.SetPosition(4, new Vector3(x - humancopy[5].Item1 / z, y - humancopy[5].Item2 / z, -1));
+                        linea2.SetPosition(5, new Vector3(x - humancopy[6].Item1 / z, y - humancopy[6].Item2 / z, -1));
+                        linea2.SetPosition(6, new Vector3(x - humancopy[7].Item1 / z, y - humancopy[7].Item2 / z, -1));
+                        linea3.SetPosition(0, new Vector3(x - humancopy[23].Item1 / z, y - humancopy[23].Item2 / z, -1));
+                        linea3.SetPosition(1, new Vector3(x - humancopy[11].Item1 / z, y - humancopy[11].Item2 / z, -1));
+                        linea3.SetPosition(2, new Vector3(x - humancopy[10].Item1 / z, y - humancopy[10].Item2 / z, -1));
+                        linea3.SetPosition(3, new Vector3(x - humancopy[9].Item1 / z, y - humancopy[9].Item2 / z, -1));
+                        linea3.SetPosition(4, new Vector3(x - humancopy[8].Item1 / z, y - humancopy[8].Item2 / z, -1));
+                        linea3.SetPosition(5, new Vector3(x - humancopy[12].Item1 / z, y - humancopy[12].Item2 / z, -1));
+                        linea3.SetPosition(6, new Vector3(x - humancopy[13].Item1 / z, y - humancopy[13].Item2 / z, -1));
+                        linea3.SetPosition(7, new Vector3(x - humancopy[14].Item1 / z, y - humancopy[14].Item2 / z, -1));
+                        linea3.SetPosition(8, new Vector3(x - humancopy[20].Item1 / z, y - humancopy[20].Item2 / z, -1));
+                        linea4.SetPosition(0, new Vector3(x - humancopy[17].Item1 / z, y - humancopy[17].Item2 / z, -1));
+                        linea4.SetPosition(1, new Vector3(x - humancopy[15].Item1 / z, y - humancopy[15].Item2 / z, -1));
+                        linea4.SetPosition(2, new Vector3(x - humancopy[0].Item1 / z, y - humancopy[0].Item2 / z, -1));
+                        linea4.SetPosition(3, new Vector3(x - humancopy[16].Item1 / z, y - humancopy[16].Item2 / z, -1));
+                        linea4.SetPosition(4, new Vector3(x - humancopy[18].Item1 / z, y - humancopy[18].Item2 / z, -1));
                     }
                     difText.text = Difference(human.poseJoints, humancopy);
+                    //timer += Time.deltaTime;
+                    //difText.text = timer.ToString();
+                    //if (0.5 < timer && timer < 2 && timer > capturado) {
+                    //    Capture();
+                    //    capturado += (float) 0.05;
+                    //}
                 }
 
                 // Update framerate in UI
@@ -329,32 +341,3 @@ namespace OpenPose.Example {
         }
     }
 }
-/*private string Difference(List<RectTransform> human1, List<RectTransform> human2)
-        {
-            float dif = 0;
-            if (human2.Count > 0)
-            {
-                float difx = human1[0].anchoredPosition.x - human2[0].anchoredPosition.x;
-                float dify = human1[0].anchoredPosition.y - human2[0].anchoredPosition.y;
-                float col1 = 1;
-                float col2 = 1;
-                if (human1[1].anchoredPosition.x > 0 && human1[8].anchoredPosition.y > 0 && human2[1].anchoredPosition.x > 0 && human2[8].anchoredPosition.y > 0)
-                {
-                    col1 = Distance(human1[1].anchoredPosition, human1[8].anchoredPosition);
-                    col2 = Distance(human2[1].anchoredPosition, human2[8].anchoredPosition);
-                }
-                for (int i = 0; i < 25; i++)
-                {
-                    if (human2[i].anchoredPosition.x > 0 && human2[i].anchoredPosition.y > 0)
-                    {
-                        dif += System.Math.Abs(human1[i].anchoredPosition.x / col1 - human2[i].anchoredPosition.x / col2 - difx);
-                        dif += System.Math.Abs(human1[i].anchoredPosition.y / col1 - human2[i].anchoredPosition.y / col2 - dify);
-                    }
-                }
-                return dif + " DIF";
-            }
-            else
-            {
-                return "NADA QUE COMPARAR";
-            }
-        }*/
