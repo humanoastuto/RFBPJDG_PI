@@ -34,35 +34,32 @@
 \BOOKMARK [2][-]{subsection.5.2.5}{OpenPose}{section.5.2}% 34
 \BOOKMARK [2][-]{subsection.5.2.6}{DeepMotion}{section.5.2}% 35
 \BOOKMARK [2][-]{subsection.5.2.7}{Unity y Kinect}{section.5.2}% 36
-\BOOKMARK [0][-]{chapter.6}{Metodolog\355a}{}% 37
-\BOOKMARK [1][-]{section.6.1}{Metodolog\355a \301gil}{chapter.6}% 38
-\BOOKMARK [1][-]{section.6.2}{Metodolog\355a SCRUM}{chapter.6}% 39
-\BOOKMARK [2][-]{subsection.6.2.1}{Componentes de SCRUM}{section.6.2}% 40
-\BOOKMARK [0][-]{chapter.7}{An\341lisis y Desarrollo del Dise\361o del Sistema Interactivo}{}% 41
-\BOOKMARK [1][-]{section.7.1}{An\341lisis de Requerimientos}{chapter.7}% 42
-\BOOKMARK [2][-]{subsection.7.1.1}{Requerimientos Funcionales}{section.7.1}% 43
-\BOOKMARK [2][-]{subsection.7.1.2}{Requerimientos No Funcionales}{section.7.1}% 44
-\BOOKMARK [2][-]{subsection.7.1.3}{Funcionalidad Esperada del Sistema Interactivo}{section.7.1}% 45
-\BOOKMARK [2][-]{subsection.7.1.4}{Diagrama de Flujo de Datos}{section.7.1}% 46
-\BOOKMARK [1][-]{section.7.2}{Dise\361o De GUI}{chapter.7}% 47
+\BOOKMARK [2][-]{subsection.5.2.8}{Resumen de Accesibilidad de las Alternativas}{section.5.2}% 37
+\BOOKMARK [0][-]{chapter.6}{Metodolog\355a}{}% 38
+\BOOKMARK [1][-]{section.6.1}{Metodolog\355a \301gil}{chapter.6}% 39
+\BOOKMARK [1][-]{section.6.2}{Metodolog\355a SCRUM}{chapter.6}% 40
+\BOOKMARK [2][-]{subsection.6.2.1}{Componentes de SCRUM}{section.6.2}% 41
+\BOOKMARK [0][-]{chapter.7}{An\341lisis y Desarrollo del Dise\361o del Sistema Interactivo}{}% 42
+\BOOKMARK [1][-]{section.7.1}{An\341lisis de Requerimientos}{chapter.7}% 43
+\BOOKMARK [2][-]{subsection.7.1.1}{Requerimientos Funcionales}{section.7.1}% 44
+\BOOKMARK [2][-]{subsection.7.1.2}{Requerimientos No Funcionales}{section.7.1}% 45
+\BOOKMARK [2][-]{subsection.7.1.3}{Funcionalidad Esperada del Sistema Interactivo}{section.7.1}% 46
+\BOOKMARK [2][-]{subsection.7.1.4}{Diagrama de Flujo de Datos}{section.7.1}% 47
 \BOOKMARK [0][-]{chapter.8}{Desarrollo e Implementaci\363n del Sistema Interactivo}{}% 48
 \BOOKMARK [1][-]{section.8.1}{Funcionamiento Base}{chapter.8}% 49
 \BOOKMARK [2][-]{subsection.8.1.1}{Configuraci\363n del Entorno}{section.8.1}% 50
 \BOOKMARK [2][-]{subsection.8.1.2}{Creaci\363n del Men\372}{section.8.1}% 51
-\BOOKMARK [2][-]{subsection.8.1.3}{Visualizar Movimientos del Usuario y Poses a Imitar}{section.8.1}% 52
+\BOOKMARK [2][-]{subsection.8.1.3}{Creaci\363n de un Mapa Inicial}{section.8.1}% 52
 \BOOKMARK [2][-]{subsection.8.1.4}{Comparaci\363n entre dos Poses}{section.8.1}% 53
 \BOOKMARK [2][-]{subsection.8.1.5}{Control de Tiempo del Mapa}{section.8.1}% 54
 \BOOKMARK [1][-]{section.8.2}{Conversi\363n de un V\355deo a un Mapa}{chapter.8}% 55
-\BOOKMARK [0][-]{chapter.9}{Plan de Actividades}{}% 56
-\BOOKMARK [1][-]{subsection.9.0.1}{Cronograma}{chapter.9}% 57
-\BOOKMARK [0][-]{chapter.10}{Evaluaci\363n Financiera}{}% 58
-\BOOKMARK [1][-]{section.10.1}{Competencia Frente a Otras Alternativas}{chapter.10}% 59
-\BOOKMARK [1][-]{section.10.2}{Marco Legal}{chapter.10}% 60
-\BOOKMARK [2][-]{subsection.10.2.1}{Menci\363n de licencias}{section.10.2}% 61
-\BOOKMARK [2][-]{subsection.10.2.2}{Reconocimiento a los Derechos de Autor}{section.10.2}% 62
-\BOOKMARK [0][-]{chapter.11}{Conclusiones}{}% 63
-\BOOKMARK [0][-]{chapter.12}{Recomendaciones}{}% 64
-\BOOKMARK [0][-]{chapter.13}{Anexos}{}% 65
-\BOOKMARK [1][-]{section.13.1}{Glosario}{chapter.13}% 66
-\BOOKMARK [1][-]{section.13.2}{Proceso de Instalaci\363n de OpenPose y Unity para el Desarrollo del Proyecto}{chapter.13}% 67
-\BOOKMARK [1][-]{section.13.3}{Secci\363n de gr\341ficos anexados}{chapter.13}% 68
+\BOOKMARK [1][-]{section.8.3}{Dise\361o De GUI}{chapter.8}% 56
+\BOOKMARK [0][-]{chapter.9}{Plan de Actividades}{}% 57
+\BOOKMARK [1][-]{subsection.9.0.1}{Cronograma}{chapter.9}% 58
+\BOOKMARK [0][-]{chapter.10}{Conclusiones}{}% 59
+\BOOKMARK [0][-]{chapter.11}{Recomendaciones}{}% 60
+\BOOKMARK [0][-]{chapter.12}{Anexos}{}% 61
+\BOOKMARK [1][-]{section.12.1}{Glosario}{chapter.12}% 62
+\BOOKMARK [1][-]{section.12.2}{Proceso de Instalaci\363n de OpenPose y Unity para el Desarrollo del Proyecto}{chapter.12}% 63
+\BOOKMARK [1][-]{section.12.3}{}{chapter.12}% 64
+\BOOKMARK [1][-]{section.12.4}{Secci\363n de Gr\341ficos}{chapter.12}% 65

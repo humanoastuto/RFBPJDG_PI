@@ -1,10 +1,13 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Informe_Practica.aux
 A level-1 auxiliary file: Tapa_Anterior.aux
+A level-1 auxiliary file: Resumen.aux
+A level-1 auxiliary file: Introduccion.aux
 A level-1 auxiliary file: EstudioDiagnostico.aux
 A level-1 auxiliary file: Marco_Teorico.aux
 A level-1 auxiliary file: Alternativas.aux
 A level-1 auxiliary file: Metodologia.aux
 A level-1 auxiliary file: Diseno.aux
+A level-1 auxiliary file: Desarrollo_de_Sistema_nteractivo.aux
 A level-1 auxiliary file: PlanActividades.aux
 A level-1 auxiliary file: Conclusiones.aux
 A level-1 auxiliary file: Recomendaciones.aux
@@ -14,43 +17,45 @@ Database file #1: bibliografia.bib
 Warning--entry type for "hardwaredef" isn't style-file defined
 --line 194 of file bibliografia.bib
 Warning--entry type for "azurekinect" isn't style-file defined
---line 255 of file bibliografia.bib
+--line 254 of file bibliografia.bib
 Warning--entry type for "cameraex" isn't style-file defined
---line 264 of file bibliografia.bib
+--line 263 of file bibliografia.bib
 Warning--entry type for "ejemplotensorflow" isn't style-file defined
---line 271 of file bibliografia.bib
+--line 270 of file bibliografia.bib
 Warning--entry type for "esrb" isn't style-file defined
---line 278 of file bibliografia.bib
+--line 277 of file bibliografia.bib
 Warning--entry type for "examplebodytracking" isn't style-file defined
---line 285 of file bibliografia.bib
+--line 284 of file bibliografia.bib
 Warning--entry type for "examplekinect" isn't style-file defined
---line 292 of file bibliografia.bib
+--line 291 of file bibliografia.bib
 Warning--entry type for "eyeex" isn't style-file defined
---line 299 of file bibliografia.bib
+--line 298 of file bibliografia.bib
 Warning--entry type for "eyeexuse" isn't style-file defined
---line 306 of file bibliografia.bib
+--line 305 of file bibliografia.bib
 Warning--entry type for "kinectex" isn't style-file defined
---line 312 of file bibliografia.bib
+--line 311 of file bibliografia.bib
 Warning--entry type for "kinectexampleschool" isn't style-file defined
---line 319 of file bibliografia.bib
+--line 318 of file bibliografia.bib
 Warning--entry type for "kinectexuse" isn't style-file defined
---line 326 of file bibliografia.bib
+--line 325 of file bibliografia.bib
 Warning--entry type for "pegi" isn't style-file defined
---line 334 of file bibliografia.bib
+--line 333 of file bibliografia.bib
 Warning--entry type for "rehabilitacionexample" isn't style-file defined
---line 342 of file bibliografia.bib
+--line 341 of file bibliografia.bib
 Warning--entry type for "trajesensor" isn't style-file defined
---line 349 of file bibliografia.bib
+--line 348 of file bibliografia.bib
 Warning--entry type for "rgbandDepth" isn't style-file defined
---line 356 of file bibliografia.bib
-Repeated entry---line 385 of file bibliografia.bib
+--line 355 of file bibliografia.bib
+Repeated entry---line 384 of file bibliografia.bib
  : @online{rgbandDepth
  :                    ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "pointcloud" isn't style-file defined
---line 392 of file bibliografia.bib
+--line 391 of file bibliografia.bib
 Warning--entry type for "pointcloudexample" isn't style-file defined
---line 400 of file bibliografia.bib
+--line 399 of file bibliografia.bib
+Warning--entry type for "cinematiccaptures" isn't style-file defined
+--line 424 of file bibliografia.bib
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
 while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen

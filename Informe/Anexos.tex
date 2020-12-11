@@ -18,6 +18,8 @@
 
 \textbf{Dataset}: Un dataset es una tabla dentro de una base de datos, en la cual se representa una variable particular en la primera columna, y cada fila es un componente del conjunto de datos.
 
+\textbf{DLL} Una biblioteca de enlace dinámico (Dynamic-Link-Library o DLL) es un archivo con código ejecutable para poder utilizar programas por el sistema operativo.
+
 \textbf{Decodificador}: El decodificador es una herramienta que permite descifrar un mensaje codificado. Se refiere a la actividad inversa de la codificación, implica la recepción de un código y de acuerdo al conjunto de normas establecidas para su traducción, se lo interpreta y se obtiene el mensaje inicial que se deseaba recibir.
 
 \textbf{Frame}: Las grabaciones o serie de dibujos están compuestas por cuadros o Frames en ingles, que son una imagen individual de la secuencia de imágenes que componen la animación para dar la sensación de movimiento. La mayoría de las animaciones emplean de 24 a 30 Frames per second (FPS). 
@@ -46,6 +48,7 @@ Una interfaz de usuario (UI) tiene la función de otorgar al usuario el control 
 \textbf{Pixel}: El pixel es la unidad mínima homogénea en color que en su conjunto da forma a una imagen digital.
 
 \textbf{Plug-in}: Un plugin o complemento es un Software o Aplicación con un grupo de características y funciones especificas para interactuar por medio de una API.
+\textbf{RAM}: La memoria de acceso aleatoria (RAM), se emplea para guardar los datos de trabajo temporal de la computadora y demás para el sistema operativo, el Software y los programas que se ejecutan, la RAM carga con todas las instrucciones que ejecuta el CPU para trabajar con los distintos programas.
 
 \textbf{Shell}: Shell es un interprete de comandos para acceder y emplear los servicios del sistema operativo, son necesarios para ejecutar los programas de una computadora.
 
@@ -64,20 +67,24 @@ La instalación de Unity inicia vistiando su pagina oficial de descargas  \href{
 En la página oficial de versiones existentes \href{https://unity3d.com/get-unity/download/archive}{unity3d.com/get-unity/download/archive}, se seleccionara la versión Unity 2019.4.14 y se selecciona la opción "Unity Hub", finalmente se acepta instalar la versión correcta, si se siguieron correctamente los pasos, se tendrá la instalación de la figura \ref{installunity} de la sección de anexos al finalizar.
 
 La herramienta de Body Tracking OpenPose tiene requisitos elevados para su instalación y desarrollo, si bien instalar el programa para modificar el código fuente original puede realizarse siguiendo las instrucciones de  \href{https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/installation/README.md}{openpose/doc/installation/README.md} guardado en el repositorio principal de GitHub (CMU-Perceptual-Computing-Lab/openpose). Sin embargo, se empleara su plug-in de Unity almacenado en el repositorio  \href{https://github.com/CMU-Perceptual-Computing-Lab/openpose\_unity\_plugin}{CMU-Perceptual-Computing-Lab/openpose\_unity\_plugin} de GitHub.
-Se deben realizar x pasos para instalarlo, básicamente seguir las instrucciones de su documentación de instalación. Primero descargar el repositorio de GitHub, ejecutar el archivo "getPlugins.bat", "getModels.bat" y "testBinary.bat" dentro de la carpeta, para descargar los modelos, los archivos binarios de OpenPose y una demo con la cual realizar pruebas. Finalmente se abre la escena "Demo.Unity" localizada en ./OpenPosePlugin/Assets/OpenPose/Examples/Scenes/ en Unity y ejecutarla, si se realizaron todos los paso correctamente, se le pedirán aceptar dos problemas debido al versionamiento y será dirigido a la siguiente pantalla de Unity de la figura \ref{unitydemo} de la sección de anexos. 
+Se deben realizar x pasos para instalarlo, básicamente seguir las instrucciones de su documentación de instalación. Primero descargar el repositorio de GitHub, ejecutar el archivo "getPlugins.bat", "getModels.bat" y "testBinary.bat" dentro de la carpeta, para descargar los modelos, los archivos binarios de OpenPose y una demo con la cual realizar pruebas. 
+Finalmente se abre la escena "Demo.Unity" localizada en ./OpenPosePlugin/Assets/OpenPose/Examples/Scenes/ en Unity y ejecutarla, si se realizaron todos los paso correctamente, se le pedirán aceptar dos problemas debido al versionamiento y será dirigido a la siguiente pantalla de Unity de las figuras \ref{unitydemo} y \ref{unitydemoexample} de la sección de gráficos.
 
-\section{Sección de gráficos anexados}
+\section{}
 
+\section{Sección de Gráficos}
 
+\newpage
 \begin{figure}[b!]
 	\centering
-	\includegraphics[width=11cm,height=18cm,]{./Images/eleccionesvsinstall.png}
+	\includegraphics[width=11cm,height=20cm,]{./Images/eleccionesvsinstall.png}
 	\caption{Elección Personal del Estudiante para Configurar Visual Studio 2019}
 	\footnotesize Fuente: Instalador de Visual Studio.
 	\label{vsinstall}
 \end{figure}
 
 
+\newpage
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=14cm,height=8cm,]{./Images/graficoburnup.png}
@@ -85,7 +92,6 @@ Se deben realizar x pasos para instalarlo, básicamente seguir las instrucciones
 	\footnotesize Fuente: Elaboración Propia
 	\label{burnup}
 \end{figure}
-
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=14cm,height=8cm,]{./Images/graficoburnup.png}
@@ -94,6 +100,7 @@ Se deben realizar x pasos para instalarlo, básicamente seguir las instrucciones
 	\label{burndown}
 \end{figure}
 
+\newpage
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=14cm,height=10cm,]{./Images/installunity.png}
@@ -101,7 +108,6 @@ Se deben realizar x pasos para instalarlo, básicamente seguir las instrucciones
 	\footnotesize Fuente: Captura de Pantalla de Installs de Unity Hub.
 	\label{installunity}
 \end{figure}
-
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=14cm,height=7cm,]{./Images/unitydemo.png}
@@ -110,6 +116,23 @@ Se deben realizar x pasos para instalarlo, básicamente seguir las instrucciones
 	\label{unitydemo}
 \end{figure}
 
+\newpage
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=14cm,height=7cm,]{./Images/ejemploopenunity.png}
+	\caption{Prueba de Ejecución de Demo de OpenPose}
+	\footnotesize Fuente: \cite{8765346}\cite{cao2017realtime}\cite{simon2017hand}\cite{wei2016cpm}
+	\label{unitydemoexample}
+\end{figure}
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=16cm,height=9cm,]{./Images/JSONandJPGexample.png}
+	\caption{Archivos Generados por la Conversión usando el Script con OpenPoseDemo}
+	\footnotesize Fuente: \cite{8765346}\cite{cao2017realtime}\cite{simon2017hand}\cite{wei2016cpm}
+	\label{videotojsonpjg}
+\end{figure}
+
+\newpage
 \begin{landscape}
 
 \begin{figure}[t!]
@@ -130,6 +153,7 @@ Se deben realizar x pasos para instalarlo, básicamente seguir las instrucciones
 
 \end{landscape}
 
+\newpage
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=15cm,height=20cm,]{./Images/tareaexample.jpg}
