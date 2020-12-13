@@ -93,11 +93,11 @@ namespace OpenPose.Example {
         }
 
         private void Start() {
-            if (!GameObject.Find("Timer").GetComponent<Timer>().videoPlay.isPlaying)
-            {
-                Timer timerScript = GameObject.Find("Timer").GetComponent<Timer>();
-                timerScript.ToggleTimerStart();
-            }
+           // if (!GameObject.Find("Timer").GetComponent<Timer>().videoPlay.isPlaying)
+            //{
+             //   Timer timerScript = GameObject.Find("Timer").GetComponent<Timer>();
+              //  timerScript.ToggleTimerStart();
+           // }
             StartCoroutine(ExampleCoroutine());
            
         }

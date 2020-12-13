@@ -5902,8 +5902,8 @@ MonoBehaviour:
   fpsText: {fileID: 360185006}
   peopleText: {fileID: 940128901}
   stateText: {fileID: 1528161358}
-  inputType: 3
-  producerString: .\Assets\OpenPose\Examples\Media\HanSoloLevel\video.mp4
+  inputType: 4
+  producerString: -1
   maxPeople: 1
   renderThreshold: 0.05
   handEnabled: 0
