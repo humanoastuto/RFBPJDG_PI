@@ -23,16 +23,18 @@ namespace OpenPose.Example {
         [SerializeField] Text difText;
 
         //I don't know what is this
+        //HumanController2D humancopy = null;
+        //List<RectTransform> humancopy = null;
         [SerializeField] RectTransform outputTransform2;
         [SerializeField] LineRenderer linea1;
         [SerializeField] LineRenderer linea2;
         [SerializeField] LineRenderer linea3;
         [SerializeField] LineRenderer linea4;
-        private List<(float, float)> humancopy = new List<(float, float)>();
-        private string[] poses = null;
-        private int npose;
-        private float timer;
-        private float capturado;
+        List<(float, float)> humancopy = new List<(float, float)>();
+        string[] poses = null;
+        int npose;
+        float timer;
+        float capturado;
 
         // Output
         private OPDatum datum;
