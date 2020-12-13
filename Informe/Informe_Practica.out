@@ -1,65 +1,68 @@
-\BOOKMARK [0][-]{chapter.1}{Resumen}{}% 1
-\BOOKMARK [0][-]{chapter.2}{Introducci\363n}{}% 2
-\BOOKMARK [1][-]{section.2.1}{Antecedentes}{chapter.2}% 3
-\BOOKMARK [1][-]{section.2.2}{Descripci\363n del Problema}{chapter.2}% 4
-\BOOKMARK [1][-]{section.2.3}{Justificaci\363n}{chapter.2}% 5
-\BOOKMARK [1][-]{section.2.4}{Delimitaci\363n}{chapter.2}% 6
-\BOOKMARK [2][-]{subsection.2.4.1}{Producto M\355nimo Viable \(MVP\)}{section.2.4}% 7
-\BOOKMARK [0][-]{chapter.3}{Estudio de Diagn\363stico}{}% 8
-\BOOKMARK [1][-]{section.3.1}{Seguimiento de la Pandemia}{chapter.3}% 9
-\BOOKMARK [1][-]{section.3.2}{Investigaci\363n Sobre Los Dispositivos Pioneros en el \341rea de Body Tracking}{chapter.3}% 10
-\BOOKMARK [2][-]{subsection.3.2.1}{Kinect desarrollado por Microsoft}{section.3.2}% 11
-\BOOKMARK [2][-]{subsection.3.2.2}{PlayStation Camera desarrollado por Sony Computer Entertainment}{section.3.2}% 12
-\BOOKMARK [2][-]{subsection.3.2.3}{\301mbito Cl\355nico}{section.3.2}% 13
-\BOOKMARK [2][-]{subsection.3.2.4}{\301mbito Pedag\363gico}{section.3.2}% 14
-\BOOKMARK [2][-]{subsection.3.2.5}{\301mbito De Entretenimiento y Entrenamiento}{section.3.2}% 15
-\BOOKMARK [0][-]{chapter.4}{Marco Te\363rico}{}% 16
-\BOOKMARK [1][-]{section.4.1}{Body Tracking/Motion Capture}{chapter.4}% 17
-\BOOKMARK [2][-]{subsection.4.1.1}{Skeletical Tracking}{section.4.1}% 18
-\BOOKMARK [1][-]{section.4.2}{Base Te\363rica}{chapter.4}% 19
-\BOOKMARK [2][-]{subsection.4.2.1}{C\341mara y Desambiguaci\363n}{section.4.2}% 20
-\BOOKMARK [2][-]{subsection.4.2.2}{Inteligencia Artificial \(IA\)}{section.4.2}% 21
-\BOOKMARK [2][-]{subsection.4.2.3}{Point Cloud}{section.4.2}% 22
-\BOOKMARK [1][-]{section.4.3}{Objetivos}{chapter.4}% 23
-\BOOKMARK [2][-]{subsection.4.3.1}{Objetivo General}{section.4.3}% 24
-\BOOKMARK [2][-]{subsection.4.3.2}{Objetivos Espec\355ficos}{section.4.3}% 25
-\BOOKMARK [0][-]{chapter.5}{Estudio de alternativas}{}% 26
-\BOOKMARK [1][-]{section.5.1}{An\341lisis de Alternativas actualmente disponibles en el mercado}{chapter.5}% 27
-\BOOKMARK [2][-]{subsection.5.1.1}{Entretenimiento}{section.5.1}% 28
-\BOOKMARK [1][-]{section.5.2}{An\341lisis de Alternativas En Herramientas Disponibles Para el Desarrollo}{chapter.5}% 29
-\BOOKMARK [2][-]{subsection.5.2.1}{Trajes con sensores de movimiento}{section.5.2}% 30
-\BOOKMARK [2][-]{subsection.5.2.2}{TensorFlow}{section.5.2}% 31
-\BOOKMARK [2][-]{subsection.5.2.3}{PoseNet}{section.5.2}% 32
-\BOOKMARK [2][-]{subsection.5.2.4}{Wrnch}{section.5.2}% 33
-\BOOKMARK [2][-]{subsection.5.2.5}{OpenPose}{section.5.2}% 34
-\BOOKMARK [2][-]{subsection.5.2.6}{DeepMotion}{section.5.2}% 35
-\BOOKMARK [2][-]{subsection.5.2.7}{Unity y Kinect}{section.5.2}% 36
-\BOOKMARK [2][-]{subsection.5.2.8}{Resumen de Accesibilidad de las Alternativas}{section.5.2}% 37
-\BOOKMARK [0][-]{chapter.6}{Metodolog\355a}{}% 38
-\BOOKMARK [1][-]{section.6.1}{Metodolog\355a \301gil}{chapter.6}% 39
-\BOOKMARK [1][-]{section.6.2}{Metodolog\355a SCRUM}{chapter.6}% 40
-\BOOKMARK [2][-]{subsection.6.2.1}{Componentes de SCRUM}{section.6.2}% 41
-\BOOKMARK [0][-]{chapter.7}{An\341lisis y Desarrollo del Dise\361o del Sistema Interactivo}{}% 42
-\BOOKMARK [1][-]{section.7.1}{An\341lisis de Requerimientos}{chapter.7}% 43
-\BOOKMARK [2][-]{subsection.7.1.1}{Requerimientos Funcionales}{section.7.1}% 44
-\BOOKMARK [2][-]{subsection.7.1.2}{Requerimientos No Funcionales}{section.7.1}% 45
-\BOOKMARK [2][-]{subsection.7.1.3}{Funcionalidad Esperada del Sistema Interactivo}{section.7.1}% 46
-\BOOKMARK [2][-]{subsection.7.1.4}{Diagrama de Flujo de Datos}{section.7.1}% 47
-\BOOKMARK [0][-]{chapter.8}{Desarrollo e Implementaci\363n del Sistema Interactivo}{}% 48
-\BOOKMARK [1][-]{section.8.1}{Funcionamiento Base}{chapter.8}% 49
-\BOOKMARK [2][-]{subsection.8.1.1}{Configuraci\363n del Entorno}{section.8.1}% 50
-\BOOKMARK [2][-]{subsection.8.1.2}{Creaci\363n del Men\372}{section.8.1}% 51
-\BOOKMARK [2][-]{subsection.8.1.3}{Creaci\363n de un Mapa Inicial}{section.8.1}% 52
-\BOOKMARK [2][-]{subsection.8.1.4}{Comparaci\363n entre dos Poses}{section.8.1}% 53
-\BOOKMARK [2][-]{subsection.8.1.5}{Control de Tiempo del Mapa}{section.8.1}% 54
-\BOOKMARK [1][-]{section.8.2}{Conversi\363n de un V\355deo a un Mapa}{chapter.8}% 55
-\BOOKMARK [1][-]{section.8.3}{Dise\361o De GUI}{chapter.8}% 56
-\BOOKMARK [0][-]{chapter.9}{Plan de Actividades}{}% 57
-\BOOKMARK [1][-]{subsection.9.0.1}{Cronograma}{chapter.9}% 58
-\BOOKMARK [0][-]{chapter.10}{Conclusiones}{}% 59
-\BOOKMARK [0][-]{chapter.11}{Recomendaciones}{}% 60
-\BOOKMARK [0][-]{chapter.12}{Anexos}{}% 61
-\BOOKMARK [1][-]{section.12.1}{Glosario}{chapter.12}% 62
-\BOOKMARK [1][-]{section.12.2}{Proceso de Instalaci\363n de OpenPose y Unity para el Desarrollo del Proyecto}{chapter.12}% 63
-\BOOKMARK [1][-]{section.12.3}{}{chapter.12}% 64
-\BOOKMARK [1][-]{section.12.4}{Secci\363n de Gr\341ficos}{chapter.12}% 65
+\BOOKMARK [0][-]{chapter.1}{Introducci\363n}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Antecedentes}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Descripci\363n del Problema}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Justificaci\363n}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Delimitaci\363n}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Estudio de Diagn\363stico}{}% 6
+\BOOKMARK [1][-]{section.2.1}{Seguimiento de la Pandemia}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{Investigaci\363n Sobre Los Dispositivos Pioneros en el \341rea de Body Tracking}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.1}{Kinect desarrollado por Microsoft}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.2}{PlayStation Camera desarrollado por Sony Computer Entertainment}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.3}{\301mbito Cl\355nico}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.4}{\301mbito Pedag\363gico}{section.2.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.5}{\301mbito De Entretenimiento y Entrenamiento}{section.2.2}% 13
+\BOOKMARK [0][-]{chapter.3}{Marco Te\363rico}{}% 14
+\BOOKMARK [1][-]{section.3.1}{Body Tracking/Motion Capture}{chapter.3}% 15
+\BOOKMARK [2][-]{subsection.3.1.1}{Skeletical Tracking}{section.3.1}% 16
+\BOOKMARK [1][-]{section.3.2}{Base Te\363rica}{chapter.3}% 17
+\BOOKMARK [2][-]{subsection.3.2.1}{C\341mara y Desambiguaci\363n}{section.3.2}% 18
+\BOOKMARK [2][-]{subsection.3.2.2}{Inteligencia Artificial \(IA\)}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.3}{Point Cloud}{section.3.2}% 20
+\BOOKMARK [0][-]{chapter.4}{Estudio de alternativas}{}% 21
+\BOOKMARK [1][-]{section.4.1}{An\341lisis de Alternativas actualmente disponibles en el mercado}{chapter.4}% 22
+\BOOKMARK [2][-]{subsection.4.1.1}{Entretenimiento}{section.4.1}% 23
+\BOOKMARK [1][-]{section.4.2}{An\341lisis de Alternativas En Herramientas Disponibles Para el Desarrollo}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.2.1}{Trajes con sensores de movimiento}{section.4.2}% 25
+\BOOKMARK [2][-]{subsection.4.2.2}{TensorFlow}{section.4.2}% 26
+\BOOKMARK [2][-]{subsection.4.2.3}{PoseNet}{section.4.2}% 27
+\BOOKMARK [2][-]{subsection.4.2.4}{Wrnch}{section.4.2}% 28
+\BOOKMARK [2][-]{subsection.4.2.5}{OpenPose}{section.4.2}% 29
+\BOOKMARK [2][-]{subsection.4.2.6}{DeepMotion}{section.4.2}% 30
+\BOOKMARK [2][-]{subsection.4.2.7}{Unity y Kinect}{section.4.2}% 31
+\BOOKMARK [2][-]{subsection.4.2.8}{Resumen de Accesibilidad de las Alternativas}{section.4.2}% 32
+\BOOKMARK [0][-]{chapter.5}{Objetivos}{}% 33
+\BOOKMARK [1][-]{section.5.1}{Objetivo General}{chapter.5}% 34
+\BOOKMARK [1][-]{section.5.2}{Objetivos Espec\355ficos}{chapter.5}% 35
+\BOOKMARK [0][-]{chapter.6}{Metodolog\355a}{}% 36
+\BOOKMARK [1][-]{section.6.1}{Metodolog\355a \301gil}{chapter.6}% 37
+\BOOKMARK [1][-]{section.6.2}{Metodolog\355a SCRUM}{chapter.6}% 38
+\BOOKMARK [2][-]{subsection.6.2.1}{Componentes de SCRUM}{section.6.2}% 39
+\BOOKMARK [0][-]{chapter.7}{An\341lisis y Desarrollo del Dise\361o del Sistema Interactivo}{}% 40
+\BOOKMARK [1][-]{section.7.1}{An\341lisis de Requerimientos}{chapter.7}% 41
+\BOOKMARK [2][-]{subsection.7.1.1}{Requerimientos Funcionales}{section.7.1}% 42
+\BOOKMARK [2][-]{subsection.7.1.2}{Requerimientos No Funcionales}{section.7.1}% 43
+\BOOKMARK [2][-]{subsection.7.1.3}{Funcionalidad Esperada del Sistema Interactivo}{section.7.1}% 44
+\BOOKMARK [2][-]{subsection.7.1.4}{Diagrama de Flujo de Datos}{section.7.1}% 45
+\BOOKMARK [0][-]{chapter.8}{Desarrollo e Implementaci\363n del Sistema Interactivo}{}% 46
+\BOOKMARK [1][-]{section.8.1}{Funcionamiento Base}{chapter.8}% 47
+\BOOKMARK [2][-]{subsection.8.1.1}{Configuraci\363n del Entorno}{section.8.1}% 48
+\BOOKMARK [2][-]{subsection.8.1.2}{Creaci\363n del Men\372}{section.8.1}% 49
+\BOOKMARK [2][-]{subsection.8.1.3}{Creaci\363n de un Mapa}{section.8.1}% 50
+\BOOKMARK [2][-]{subsection.8.1.4}{Comparaci\363n entre dos Poses}{section.8.1}% 51
+\BOOKMARK [1][-]{section.8.2}{Normalizaci\363n de Puntos Clave/Point Set Registration}{chapter.8}% 52
+\BOOKMARK [1][-]{section.8.3}{Dise\361o De GUI}{chapter.8}% 53
+\BOOKMARK [0][-]{chapter.9}{Plan de Actividades}{}% 54
+\BOOKMARK [1][-]{subsection.9.0.1}{Cronograma}{chapter.9}% 55
+\BOOKMARK [0][-]{chapter.10}{Conclusiones}{}% 56
+\BOOKMARK [0][-]{chapter.11}{Recomendaciones}{}% 57
+\BOOKMARK [0][-]{chapter.12}{Anexos}{}% 58
+\BOOKMARK [1][-]{section.12.1}{Lista de Abreviaturas}{chapter.12}% 59
+\BOOKMARK [1][-]{section.12.2}{Glosario}{chapter.12}% 60
+\BOOKMARK [1][-]{section.12.3}{Anexo: Control de Sprint}{chapter.12}% 61
+\BOOKMARK [1][-]{section.12.4}{Anexo: Product Backlog}{chapter.12}% 62
+\BOOKMARK [1][-]{section.12.5}{Anexo: Gr\341fico Burn-Up Burn-Down}{chapter.12}% 63
+\BOOKMARK [1][-]{section.12.6}{Anexo: Proceso de Instalaci\363n de OpenPose y Unity para el Desarrollo del Proyecto}{chapter.12}% 64
+\BOOKMARK [1][-]{section.12.7}{Anexo: Archivos Generados}{chapter.12}% 65
+\BOOKMARK [1][-]{section.12.8}{Anexo: Mensajes de Error}{chapter.12}% 66
+\BOOKMARK [1][-]{section.12.9}{Anexo: C\341lculos de Comparaci\363n de Poses}{chapter.12}% 67
+\BOOKMARK [2][-]{subsection.12.9.1}{Normalizaci\363n Basada en el Centro de la Cadera}{section.12.9}% 68

@@ -16,18 +16,18 @@ La elaboración de este proyecto es realizada en 3 dispositivos distintos, dos l
 
 Para las cámaras de los dispositivos se emplean en el caso de las laptops, las cámaras de fábrica, que emplea la configuración genérica USB2.0 HD UVC WebCam y HD Webcam, en cuanto a la cámara de la computadora de escritorio, se emplea una cámara web genérica de orígenes desconocidos según el estudiante que la adquirió. 
 
-El Body Tracking esta implementado por la Demo.unity de manera estándar, para poder ejecutarlo en todos los dispositivos de trabajo, se debe modificar el valor de una variable que cambie la resolución del OpenPose de net\_resolution -1x176, caso contrario saltara el error más común de OpenPose \ref{erroroutofmemory}.
+El Body Tracking esta implementado por la Demo.unity de manera estándar, para poder ejecutarlo en todos los dispositivos de trabajo, se debe modificar el valor de una variable que cambie la resolución del OpenPose de net\_resolution -1x176, caso contrario saltara el error más común de OpenPose \ref{erroroutofmemory} en el \ztitleref{anexoerrores}.
 
 
 \subsubsection{Configuración Inicial de las SDK y herramientas}
 
 El desarrollo de la aplicación emplea Unity y Visual Studio, ya que Visual Studio es una SDK que permite programar en C sharp, que tiene una biblioteca disponible para el desarrollo en Unity. Además se empleará la herramienta selecta, que es el plug-in de OpenPose para poder desarrollar, el proceso de instalación se explicará en la sección de anexos. Las versiones instaladas son Unity 2019.4.14f1, Visual Studio 2019 y OpenPose 1.5.0 (la versión del plug-in de Unity, por tanto no existen más opciones disponibles actualmente).
 \\
-Las configuraciones son necesarias para disponer de los archivos dentro de la carpeta openpose\_plugin\textbackslash OpenPosePlugin\textbackslash Assets, en su interior se encuentran las carpetas StreamingAssets y OpenPose, dentro de la carpeta StreamingAssets se encuentran los modelos BODY\_25 y COCO, que serán necesarios para la estimación de poses. Dentro la carpeta OpenPose están las carpetas de Plugins, que contiene todas los DLL necesarios para ejecutar OpenPose, de Scripts, contiene archivos para traducir los modelos e importar los DLL respectivos y la más importante Examples, que contiene Scenes y Scripts, siendo los más relevantes. Dentro de Scripts se encuentra el código fuente del plug-in, que es modificable por el usuario y en Scenes se encuentra el Demo.unity, que provee el formato de la figura \ref{unitydemo}.
+Las configuraciones son necesarias para disponer de los archivos dentro de la carpeta openpose\_plugin\textbackslash OpenPosePlugin\textbackslash Assets, en su interior se encuentran las carpetas StreamingAssets y OpenPose, dentro de la carpeta StreamingAssets se encuentran los modelos BODY\_25 y COCO, que serán necesarios para la estimación de poses. Dentro la carpeta OpenPose están las carpetas de Plugins, que contiene todas los DLL necesarios para ejecutar OpenPose, de Scripts, contiene archivos para traducir los modelos e importar los DLL respectivos y la más importante Examples, que contiene Scenes y Scripts, siendo los más relevantes. Dentro de Scripts se encuentra el código fuente del plug-in, que es modificable por el usuario y en Scenes se encuentra el Demo.unity, que provee el formato de la figura \ref{unitydemo} en \ztitleref{anexoinstalacion}.
 
-Una vez inicializada la Demo.unity, se abre también el proyecto en C sharp, abierto por defecto en Visual Studio 2019. Con ello, se tienen las herramientas para desarrollar el proyecto.
+Una vez inicializada la Demo.unity, se abre también el proyecto en C Sharp, abierto por defecto en Visual Studio 2019. Con ello, se tienen las herramientas para desarrollar el proyecto.
 
-Siendo el primer paso la creación de un nuevo archivo.unity para el proyecto, copiando los objetos básicos del demo.unity y relacionando la configuración de los Scripts para tener la base, se puede empezar su modificación.
+Siendo el primer paso la creación de un nuevo archivo.unity para el proyecto, copiando los objetos básicos del Demo.unity y relacionando la configuración de los Scripts para tener la base, se puede empezar su modificación.
 
 
 \subsection{Creación del Menú}
@@ -48,7 +48,7 @@ El menú de opciones tiene dos funciones:
 	\item Una opción para modificar las resoluciones, Unity permite un número de resoluciones que están registradas en su documentación, se mostraran las disponibles con el método Screen.resolutions;, su función es cambiar el largo y ancho del sistema interactivo.
 \end{itemize}
 
-\subsection{Creación de un Mapa Inicial}
+\subsection{Creación de un Mapa}
 
 La idea original sobre la creación de mapas es que el proceso de creación sea externo al sistema interactivo, de tal forma que solo tenga que añadir una carpeta con el contenido del mapa, fácilmente comprensible para el usuario que los creo y disponible para compartir entre los demás.
 
@@ -62,18 +62,34 @@ El método para la creación inicial de los mapas consta en 6 pasos necesarios y
 	\label{pasosaseguir}
 \end{figure}
 
-
-
-
 \subsubsection{Conversión de Vídeo a JSON y JPG}
 
-El primer paso es la conversión de un vídeo grabado para la creación de un mapa y emplear un Script para ejecutar la Demo,
-\subsubsection{Conversión de JSON a .txt}
+El primer paso es la conversión de un vídeo grabado para la creación de un mapa y emplear un Script para ejecutar la OpenPoseDemo con la opción --write\_json output/, --number\_people\_max 1, --write\_images output\_images, --disable\_blending, --frame\_step 30 (por comodidad) y --video ./examples\_media\_hansolo.mp4, el resultado son dos carpetas llenas de archivos JSON y JPG como se ve en la figura \ref{videotojsonpjg} en el \ztitleref{anexogenerados}. 
+
+Las opciones empleadas por la herramienta OpenPoseDemo tienen las siguientes funciones:
+
+\begin{itemize}
+	\item --write\_json dirección: Guarda los 25 puntos clave del esqueleto en un archivo JSON, se debe definir la dirección de la carpeta donde se guardarán.
+	\item --write\_images dirección: Guarda los 25 puntos clave del esqueleto en un archivo JPG, se debe definir la dirección de la carpeta donde se guardarán (si no existe la carpeta donde guardar, no funcionará).
+	\item --number\_people\_max X: La cantidad X límite de personas que la herramienta va a reconocer, no se reconocerán más que X, pero si menos que X si no se los reconoce.
+	\item --disable\_blending: El vídeo grabado se torna negro, mostrando unicamente la pose que se reconoce.
+	\item --frame\_step X: Cada cuantos Frames se guarda un JSON y JPG de una pose.
+	\item --video dirección: Dirección del vídeo que se va a convertir.
+\end{itemize}
+
 \subsubsection{Eliminación de Poses}
 
+La eliminación de poses consiste en literalmente observar los archivos JSON y JPG de cada Frame guardado, ya que comparte el número del Frame elegido al final de su nombre, se observa la imagen JPG del Frame, si no es electo para el mapa, es eliminado el JSON y JPG. Este es un proceso lento y manual ejecutado por el creador de mapas, ya que el definirá la exactitud del mapa y de las poses que desea imitar en el nivel.
+
+\subsubsection{Conversión de JSON a txt y Almacenamiento}
+
+Independientemente si es previa o posterior a la eliminación de poses (de preferencia posterior, ya que existen menos archivos, por tanto, es más rápido), se ejecuta un Script diseñado para convertir los archivos JSON a un lenguaje más reconocible por el usuario. 
+\\
+Una vez realizada la conversión, el SCRUM Team vio dos alternativas para los archivos txt, los cuales almacenan una pose cada uno. Conservarlo como esta, siendo la carpeta donde se guardan los txt el recurso principal para recurrir a las poses del nivel o convertir todos los txt en uno solo, almacenando todas las poses en un solo txt empleando un Script, si bien almacenarlos en un solo Script es más fácil, puede que los creadores de mapas encuentren molesto la ejecución de un Script más.
+
+\subsubsection{Adición del Tiempo Límite para Realizar las Poses}
 
 
- y la decisión sobre como disminuir la cantidad de poses y eliminar las poses restantes, para solo tener las poses clave con las cuales comparar.
 
 \subsection{Comparación entre dos Poses}
 
@@ -84,28 +100,26 @@ Esta es considerada la tarea más compleja y laboriosa de elaborar, ya que requi
 
 La idea original consta de tres partes, observar desde el Output de la cámara al usuario y sus movimientos y mostrar al costado un vídeo cualquiera para copiar los movimientos, al estar apagada la cámara se verá en azul, como se nota en la figura \ref{primerintento}.  Se realizan modificaciones de GUI para lograrlo, este no será el producto final, es más dirigido a la facilidad de pruebas, para observar los movimientos del usuario del lado izquierdo y el vídeo a imitar del lado derecho.
 
+Adicionalmente a la visión del usuario y la pose a imitar, se debe visualizar la precisión que se tiene entre el usuario y la pose que se debe imitar, durante el desarrollo se lo empleará para revisar con los resultados de la normalización de los puntos clave la exactitud en tiempo real, calculo realizado en Normalización de Puntos Clave. 
 
-\subsubsection{Normalización de Puntos Clave/Point Set Registration}
+Posteriormente, durante la inclusión del tiempo límite, se visualizará solo una comparación, siendo o la precisión adecuada para una buena calificación o la última calificación antes de pasar a la siguiente pose.
 
-\subsubsection{Exhibir la Precisión de la Comparación al Usuario}
+Finalmente, una vez decidido el método de normalización y la valoración de la precisión, se mostrará al usuario unicamente si sus movimientos son perfectos, buenos, malos o erróneos.
 
-\subsection{Control de Tiempo del Mapa}
+\subsubsection{Control de Tiempo del Mapa}
 
-\subsubsection{Limite de Tiempo para realizar la posición}
+Se determina a través del limite de tiempo para realizar la posición que se asigno al crear el mapa, la serie de poses a imitar están en un orden específico del primero al final, por tanto el tiempo límite de cada pose es más sencillo de determinar. Durante el tiempo total del vídeo del mapa, el usuario va a poder ver una pequeña visualización de las imágenes JPG de las poses mientras ve el vídeo para poder llevar el ritmo de las poses a imitar.
 
-Se la califica y se debe proceder a la siguiente pose cuando el tiempo termine y así se mueva al nuevo tiempo limite de la nueva posición
-
-\subsubsection{Tiempo de Duración del Mapa}
-
+Se califica la posición en el tiempo respectivo y se debe proceder a la siguiente pose cuando termine y así se mueva al nuevo tiempo límite de la siguiente pose.
 
 
-\section{Conversión de un Vídeo a un Mapa}
+\section{Normalización de Puntos Clave/Point Set Registration}
 
-\subsubsection{Conversión de formato JSON a archivo .txt}
 
-\subsubsection{Eliminación de Archivos .txt}
+ 
 
-\subsubsection{Adición del límite de tiempo a las poses}
+
+
 
 
 \section{Diseño De GUI}

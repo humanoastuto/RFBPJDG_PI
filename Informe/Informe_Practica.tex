@@ -11,12 +11,20 @@
 \usepackage{Pgfgantt}
 \usepackage{pdflscape}
 \usepackage{array}
+\usepackage[user,titleref]{zref}
 \usepackage{hyperref}
 \usepackage{tikz}
 \usepackage{multirow}
+\usepackage{tabto}
 \usepackage{amssymb, amsmath}
 \usepackage{setspace}
 \usepackage{subcaption}
+
+\newcommand\summaryname{Abstract}
+\newenvironment{Abstract}%
+{\small\begin{center}%
+		\bfseries{\summaryname} \end{center}}
+
 \usepackage[left=3.50cm, right=2.50cm, top=2.50cm, bottom=2.50cm]{geometry}
 \author{Ricardo Fernández, Brami Prudencio, Juan Diego García}
 \title{Desarrollo de un Sistema Interactivo con Body Tracking}
@@ -35,22 +43,24 @@
 \listoffigures
 \pagenumbering{arabic}\setcounter{page}{1}
 \include{Resumen}
+
+
 \include{Introduccion}
 \include{EstudioDiagnostico}
 \include{Marco_Teorico}
-%\include{Objetivos}
 \include{Alternativas}
+\include{Objetivos}
 \include{Metodologia}
 \include{Diseno}
 \include{Desarrollo_de_Sistema_nteractivo}
 \include{PlanActividades}
-%\include{Evaluacion_Financiera}
 \include{Conclusiones}
 \include{Recomendaciones}
 \bibliographystyle{plain}
 \bibliography{bibliografia}
 \include{Anexos}
 
+%\include{Evaluacion_Financiera}
 
 \end{document}
 

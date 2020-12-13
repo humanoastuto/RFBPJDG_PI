@@ -17,7 +17,7 @@ La metodología ágil de desarrollo de Software se fundamenta en los 4 principio
 	\label{manifiesto}
 \end{figure}
 
-De las metodologías ágiles conocidas, la más apropiada para el proyecto es la metodología SCRUM, debido a su seguimiento y comunicación, forzando a los miembros a un reporte diario y a un avance continuo con resultados productivos, con la posibilidad de definir metas en un tiempo específico, maximizando la efectividad de los recursos humanos.
+De las metodologías ágiles conocidas, la más apropiada es la metodología SCRUM, debido a su seguimiento y comunicación, forzando un reporte diario y a un avance continuo con resultados productivos, con la posibilidad de definir metas en un tiempo específico, maximizando la efectividad de los recursos humanos.
 
 \section{Metodología SCRUM}
 
@@ -49,7 +49,7 @@ Un Sprint es también considerado una iteración y se organiza en la revisión d
 \subsubsection{Requerimientos}
 
 Los requisitos del usuario, también llamados requerimientos se los considera como un estatuto abstracto en alto nivel de un servicio. Además existen las restricciones del sistema para asegurar una funcionalidad detallada. Los requerimientos tienen las caracterizaras de ser completos, consistentes y precisos. 
-La definición de requerimientos tiene que involucrar al cliente, usuario y los roles distintivos (no requiere al SCRUM Team), se debe definir e incluir en un diagrama \ref{futurediagramaderequisitos} los requerimientos para que no existan conflictos entre los interesados y los desarrolladores del proyecto.
+La definición de requerimientos tiene que involucrar al cliente, usuario y los roles distintivos (no requiere al SCRUM Team), se debe definir e incluir en la documentación los requerimientos para que no existan conflictos entre los interesados y los desarrolladores del proyecto.
 La especificación de requerimientos se basa en la formalización y anotación escrita de los requerimientos, normalmente oficializa un contrato entre el cliente y el contratista sobre que se realizará específicamente en el proyecto para evitar demandas y huecos legales, debido a la mala interpretación o subjetividad de los requerimientos solicitados.
 Finalmente se realiza la especificación del Software, que es una descripción más detallada del Software, que servirá como base para el diseño e implementación de los requerimientos, esta es manejada por el SCRUM Team.
 
@@ -71,10 +71,10 @@ Durante el transcurso del proyecto, en las reuniones diarias realizadas a horas 
 
 El Sprint Backlog es una pizarra donde se muestran las tareas a realizar en el proyecto, para el proyecto, se definió el uso de la herramienta \href{https://hacknplan.com/}{HacknPlan}, que es una página web dedicada a la administración de proyectos, brinda un servicio excepcional para la creación de un Sprint Backlog de la metodología ágil SCRUM, la cual fue recomendada por el Docente de Ingeniería de Software.
 \\
-La Sprint Backlog tiene 4 secciones descritas en la tabla \ref{sprintbacklog} y visualmente representadas en las figuras \ref{sprintexample2} \ref{sprintexample} que se encuentra en la sección de anexos.
+La Sprint Backlog tiene 4 secciones descritas en la tabla \ref{sprintbacklog} y visualmente representadas en las figuras \ref{sprintexample2} y \ref{sprintexample} que se encuentra en el \ztitleref{anexosprint}.
 
 
-\begin{table}[t]
+\begin{table}[t!]
 	\begin{center}
 		\begin{tabular}{| m{3cm} | m{11cm} |  }
 			\hline Planificado & Las tareas traducidas para la facilidad del SCRUM Team y su resolución. \\ \hline
@@ -88,9 +88,9 @@ La Sprint Backlog tiene 4 secciones descritas en la tabla \ref{sprintbacklog} y 
 	\end{center}
 \end{table}
 
-Las tareas requieren de un formato para poder ser manejadas por el SCRUM Team y supervisadas por los demás roles, las secciones que componen una tarea son descritas en la tabla \ref{sprinttabla}. En la figura \ref{sprinttarea} de la sección de anexos, se puede observar un ejemplo de una tarea completada.
+Las tareas requieren de un formato para poder ser manejadas por el SCRUM Team y supervisadas por los demás roles, las secciones que componen una tarea son descritas en la tabla \ref{sprinttabla}. En la figura \ref{sprinttarea} de \ztitleref{anexosprint}, se puede observar un ejemplo de una tarea completada.
 
-\begin{table}[t]
+\begin{table}[t!]
 	\begin{center}
 		\begin{tabular}{| m{4cm} | m{10cm} |  }
 			\hline Titulo & El alias de la historia (tarea), se le asigna un nombre corto. \\ \hline
@@ -108,59 +108,7 @@ Las tareas requieren de un formato para poder ser manejadas por el SCRUM Team y 
 
 \subsubsection{Product Backlog}
 
-El Product Backlog es una lista de requisitos o tareas que representa la visión y expectativa del cliente respecto a objetivos y entregas del proyecto. Se debe mencionar el valor y el costo de su finalización. Se puede observar el Product Backlog en la tabla \ref{productbacklog}.
-
-En la tabla, se observan los campos:
-\begin{itemize}
-	\item ID como identificador de la tarea, debe ser único.
-	\item Tarea, que indica el título dado en Sprint Backlog para facilitar su comprensión.
-	\item Estado(Sprint), si ha de estar Planificada, En Proceso o Hecho (Sprint en que se realizo) o si fue Descartado.
-	\item Valor, el valor designado a cada actividad realizada, en total se asignan 1000 puntos a su finalización
-	\item Estimado Inicial, la valoración de las tareas que se mide en horas requeridas.
-	\item Factor Ajuste, determina el fallo que se debe aumentar al tiempo original, se le suma al Valor Estimado en función $Valor Estimado = Valor Estimado + Valor Estimado * Factor de Ajuste$
-	\item Ajustado, es la valoración de las tareas posteriormente al ser más realistas sobre el tiempo requerido para resolverlo.
-	\item Sprint, que señala el número de Sprint en que fue realizada
-	\item Prioridad, al ser una metodología ágil, se reconoce que las tareas pueden ser más relevantes unas que otras, en este caso, Baja, Normal y Alta.
-
-\end{itemize}
-La Tarea es el nombre dado a las tareas distribuidas al SCRUM Team, formuladas a partir de los requerimientos del cliente.
-El valor de las tareas se distribuirá de un valor total de 1000 puntos, se determinara una cuarta parte a la redacción del informe, una cuarta parte a la investigación dedicada requerido para poder hacer posible el proyecto y el resto lo determinará el rol de Product Owner.
-El Estimado Inicial es definido con la Estimación de Poker previamente mencionada.
-Redactar en la tabla \ref{productbacklog} engloba la redacción del informe y el tiempo estimado de cada tarea de redacción, el Redactar hace referencia a los títulos de cada parte del informe.
-En Redactar Parte 1, están los títulos de Objetivos, Estudio de Diagnóstico, Marco Teórico, Estudio de Alternativas, Plan de Actividades
-En Redactar Parte 2, están los títulos de Metodología, Diseño, Conclusiones, Recomendaciones, dentro de la metodología se lleva a cabo la tarea de Seguimiento de Product Owner.
-En Redactar Parte 3, están los títulos de Introducción, Anexos, Glosario, Revisión de ortografía y Resumen.
-\restoregeometry
-\newgeometry{left=0.5cm,bottom=.25cm}
-\begin{landscape}
-\begin{table}[t]
-	\begin{center}
-		\begin{tabular}{| c | c | c | c | c | c | c | c | c |}
-			\hline
-			\multicolumn{9}{ |c| }{Product Backlog} \\ \hline
-			ID & Tarea & Estado(Sprint) & Valor & Estimado Inicial (h)& Factor Ajuste & Ajustado(h) & Sprint & Prioridad \\ \hline
-			T-0 & Redactar Parte 1 & Hecho(1) & 50 & 18 & 1.5 & 40 & 1 & Normal \\ \hline
-			T-1 & Redactar Parte 2 & (2) & 100 & 20 &  &  & 2 & Normal \\ \hline
-			T-1 & Redactar Parte 3 & (3) & 100 & 9 &  &  & 3 & Normal \\ \hline
-			T-2 & Investigación de Herramientas & Hecho(1) & 250 & 24 & 3.0 & 96 &  1 & Normal \\ \hline
-			T-3 & Manipulación de Herramientas & Hecho(1) &  & 12 & 1.0 & 24 & 1 & Normal \\ \hline
-			T-4 & Modificación de GUI & Hecho(1) &  &  & &  & 1 & Baja \\ \hline
-			T-5 & Mostrar Vídeo a Copiar en la Pantalla & Hecho(1) &  &  & &  & 1 & Alta \\ \hline
-			T-6 & Lectura de Movimientos del Usuario & Hecho(1) &  &  & &  & 1 & Alta \\ \hline
-			T-7 & Redimension de Imagen para Comparar & Hecho(1) &  &  & &  & 1 & Alta \\ \hline
-			T-8 & Menú y Boton Play de Redireccionamiento & Hecho() &  &  & &  &  & Normal \\ \hline
-			T-9 & Calificación de Movimientos & Hecho(2) &  & 10 &  &  & 2 & Alta \\ \hline
-			T-10 & Mostrar acciones a copiar & Hecho() &  & 3 & &  &  & Alta \\ \hline
-			T-15 &  & Hecho() &  &  & &  &  & Normal \\ \hline
-			 & Entrega final & & 1000 &  &  & 900 &  &  \\ \hline
-		\end{tabular}
-		\caption{Product Backlog}
-		\label{productbacklog}
-		\footnotesize Fuente: Elaboración propia
-	\end{center}
-\end{table}
-\end{landscape}
-\restoregeometry
+El Product Backlog es una lista de requisitos o tareas que representa la visión y expectativa del cliente respecto a objetivos y entregas del proyecto. Se debe mencionar el valor y el costo de su finalización. Se puede observar el Product Backlog en la tabla \ref{productbacklog} de \ztitleref{anexoproduct} posterior a la finalización del proyecto.
 
 \subsubsection{Gráfica Burn-Up}
 
@@ -183,7 +131,7 @@ Para estimar la cantidad de horas de trabajo se empleará un calculo simple.
 
 La cantidad de horas estimadas se redondea a 800 horas, este es un calculo pesimista, tomando en cuenta que el desconocimiento inicial de las herramientas con las que se trabajan y el tiempo que tome resolver problemas sea muy elevado, que durante el desarrollo se demuestra que es necesario.
 
-El control de la gráfica es apreciado en la figura \ref{burnup} en la sección de gráficos anexados.
+El control de la gráfica es apreciado en la figura \ref{burnup} en el \ztitleref{anexoburn} posterior a la.
 
 \subsubsection{Gráfica Burn-Down}
 
@@ -196,7 +144,7 @@ Es una herramienta de seguimiento que se usa en la metodología ágil SCRUM, sir
 	\item Tareas Completadas: Tareas realizadas durante ese espacio de tiempo especifico. 
 \end{itemize}
 				
-El control de la gráfica es apreciado en la figura \ref{burndown} en la sección de gráficos anexados.
+El control de la gráfica es apreciado en la figura \ref{burndown} en el \ztitleref{anexoburn}.
 
 
 
