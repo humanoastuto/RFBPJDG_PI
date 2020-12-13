@@ -26,18 +26,21 @@
 \contentsline {figure}{\numberline {7.2}{\ignorespaces Diagrama de Datos de Flujo\relax }}{53}{figure.caption.60}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {8.1}{\ignorespaces Pasos a Seguir Para la Creaci\IeC {\'o}n de Mapas\relax }}{57}{figure.caption.64}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Primer GUI para el Desarrollo, Cambiada para el Dise\IeC {\~n}o de GUI Final\relax }}{60}{figure.caption.70}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Sobre posici\IeC {\'o}n de coordenadas de las poses al Centro\relax }}{62}{figure.caption.72}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Ejemplos de Datos en la Base de Datos COCO para la estimaci\IeC {\'o}n de pose\relax }}{63}{figure.caption.73}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {12.1}{\ignorespaces Sprint 1 concluida\relax }}{79}{figure.caption.75}
-\contentsline {figure}{\numberline {12.2}{\ignorespaces Sprint Backlog del d\IeC {\'\i }a 5 de Noviembre\relax }}{80}{figure.caption.76}
-\contentsline {figure}{\numberline {12.3}{\ignorespaces Tarea de la Sprint 2, Mostrar Acciones a Copiar\relax }}{81}{figure.caption.77}
-\contentsline {figure}{\numberline {12.4}{\ignorespaces Gr\IeC {\'a}fico Burn-Up\relax }}{85}{figure.caption.79}
-\contentsline {figure}{\numberline {12.5}{\ignorespaces Gr\IeC {\'a}fico Burn-Down\relax }}{85}{figure.caption.80}
-\contentsline {figure}{\numberline {12.6}{\ignorespaces Elecci\IeC {\'o}n Personal del Estudiante para Configurar Visual Studio 2019\relax }}{87}{figure.caption.81}
-\contentsline {figure}{\numberline {12.7}{\ignorespaces Version Deseada de Unity Encerrada en Rojo\relax }}{88}{figure.caption.82}
-\contentsline {figure}{\numberline {12.8}{\ignorespaces Captura de Pantalla de la Configuraci\IeC {\'o}n Inicial de OpenPose Plug-in\relax }}{88}{figure.caption.83}
-\contentsline {figure}{\numberline {12.9}{\ignorespaces Prueba de Ejecuci\IeC {\'o}n de Demo de OpenPose\relax }}{89}{figure.caption.84}
-\contentsline {figure}{\numberline {12.10}{\ignorespaces Archivos Generados por la Conversi\IeC {\'o}n usando el Script con OpenPoseDemo\relax }}{90}{figure.caption.85}
-\contentsline {figure}{\numberline {12.11}{\ignorespaces Archivos Generados por la Conversi\IeC {\'o}n usando el Script con OpenPoseDemo\relax }}{91}{figure.caption.86}
+\contentsline {figure}{\numberline {12.1}{\ignorespaces Sprint 1 concluida\relax }}{82}{figure.caption.78}
+\contentsline {figure}{\numberline {12.2}{\ignorespaces Sprint Backlog del d\IeC {\'\i }a 5 de Noviembre\relax }}{83}{figure.caption.79}
+\contentsline {figure}{\numberline {12.3}{\ignorespaces Tarea de la Sprint 2, Mostrar Acciones a Copiar\relax }}{84}{figure.caption.80}
+\contentsline {figure}{\numberline {12.4}{\ignorespaces Gr\IeC {\'a}fico Burn-Up\relax }}{88}{figure.caption.82}
+\contentsline {figure}{\numberline {12.5}{\ignorespaces Gr\IeC {\'a}fico Burn-Down\relax }}{88}{figure.caption.83}
+\contentsline {figure}{\numberline {12.6}{\ignorespaces Elecci\IeC {\'o}n Personal del Estudiante para Configurar Visual Studio 2019\relax }}{90}{figure.caption.84}
+\contentsline {figure}{\numberline {12.7}{\ignorespaces Version Deseada de Unity Encerrada en Rojo\relax }}{91}{figure.caption.85}
+\contentsline {figure}{\numberline {12.8}{\ignorespaces Captura de Pantalla de la Configuraci\IeC {\'o}n Inicial de OpenPose Plug-in\relax }}{91}{figure.caption.86}
+\contentsline {figure}{\numberline {12.9}{\ignorespaces Prueba de Ejecuci\IeC {\'o}n de Demo de OpenPose\relax }}{92}{figure.caption.87}
+\contentsline {figure}{\numberline {12.10}{\ignorespaces Archivos Generados por la Conversi\IeC {\'o}n usando el Script con OpenPoseDemo\relax }}{93}{figure.caption.88}
+\contentsline {figure}{\numberline {12.11}{\ignorespaces Archivos Generados por la Conversi\IeC {\'o}n usando el Script con OpenPoseDemo\relax }}{94}{figure.caption.89}

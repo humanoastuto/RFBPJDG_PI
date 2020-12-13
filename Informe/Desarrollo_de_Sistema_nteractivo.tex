@@ -100,6 +100,14 @@ Esta es considerada la tarea más compleja y laboriosa de elaborar, ya que requi
 
 La idea original consta de tres partes, observar desde el Output de la cámara al usuario y sus movimientos y mostrar al costado un vídeo cualquiera para copiar los movimientos, al estar apagada la cámara se verá en azul, como se nota en la figura \ref{primerintento}.  Se realizan modificaciones de GUI para lograrlo, este no será el producto final, es más dirigido a la facilidad de pruebas, para observar los movimientos del usuario del lado izquierdo y el vídeo a imitar del lado derecho.
 
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=12cm,height=7cm,]{./Images/primerintento.png}
+	\caption{Primer GUI para el Desarrollo, Cambiada para el Diseño de GUI Final}
+	\footnotesize Fuente: Elaboración Propia
+	\label{primerintento}
+\end{figure}
+
 Adicionalmente a la visión del usuario y la pose a imitar, se debe visualizar la precisión que se tiene entre el usuario y la pose que se debe imitar, durante el desarrollo se lo empleará para revisar con los resultados de la normalización de los puntos clave la exactitud en tiempo real, calculo realizado en Normalización de Puntos Clave. 
 
 Posteriormente, durante la inclusión del tiempo límite, se visualizará solo una comparación, siendo o la precisión adecuada para una buena calificación o la última calificación antes de pasar a la siguiente pose.
@@ -113,14 +121,61 @@ Se determina a través del limite de tiempo para realizar la posición que se as
 Se califica la posición en el tiempo respectivo y se debe proceder a la siguiente pose cuando termine y así se mueva al nuevo tiempo límite de la siguiente pose.
 
 
-\section{Normalización de Puntos Clave/Point Set Registration}
+\section{Normalización de Puntos Clave}
 
+Se requiere de desarrollar un método para comparar las poses del usuario en tiempo real con las poses del mapa, para ello se obtienen en tiempo real los puntos clave del cuerpo del usuario en tiempo real, pero todas las personas somos distintas, por mencionar el tamaño y aparte estamos en entornos distintos, algunos pueden alinearse a la cámara, otros suelen estar o muy cerca o muy lejos, sin mencionar el espacio que tienen para moverse, pero siempre y cuando se puedan observar todos los puntos claves necesarios, se puede realizar una comparación entre poses correcta. Se debe considerar que se debe igualar lo más posible el tamaño de las poses independientemente de la posición que tengan en la pantalla y el tamaño de la persona.
 
+El modelo BODY\_25 tiene un conjunto de puntos guardados en forma de coordenadas, lo cual se considera como un Point Cloud, por tanto, en concepto se tienen dos Point Cloud muy distintas, pero similares (ya que ambos representan un cuerpo humano) que se deben comparar, para eso existe el Point Set Registration. Durante la exploración de algoritmos inicial no se encontró ningún algoritmo para facilitar el desarrollo de la aplicación, por lo que se desarrollaron distintas formas de medir la similitud entre las poses y la precisión de los movimientos que se necesitan representar.
+
+El método presentado es la normalización de los puntos dentro de la Point Cloud de tres formas distintas (presentadas por cada integrante del equipo), de las cuales se definirá la más adecuada. La normalización involucra ajustar la distancia entre los puntos para que tengan distancias proporcionalmente correctas a su forma original y permitan su comparación entre dos Point CLouds distintas.
  
+ \subsection{Normalización a partir de la distancia entre dos puntos}
+ 
+La normalización a partir de la distancia entre dos puntos elige dos puntos del modelo BODY\_25 de la figura \ref{open2}, el punto del cuello (Punto 1) y el punto de la cadera (Punto 8), ya que conforman la línea principal del cuerpo que une extremidades inferiores y superiores. Su distancia se iguala a una variable constante $ \alpha = 300$, seleccionada arbitrariamente para la normalización.
+ 
+ 
+\subsection{Normalización a partir de un punto}
+
+La normalización a partir de un punto busca un punto clave como base para normalizar el resto de los puntos, del modelo BODY\_25 de la figura \ref{open2} se especifico el centro del cuerpo, la cintura para la medición. 
+
+Se mueve el punto clave (Punto 8) al centro de la imagen y se alinean los puntos de la persona de acuerdo a la distancia movida correspondiente como se ve en la figura \ref{overpose}. La debilidad de este método es que se requiere que las personas sean del mismo tamaño, por tanto, se debe normalizar la distancias de los puntos entre si.
+
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=14cm,height=6cm,]{./Images/overpose.png}
+	\caption{Sobre posición de coordenadas de las poses al Centro}
+	\footnotesize Fuente: Elaboración propia basado en \cite{8765346}
+	\label{overpose}
+\end{figure}
 
 
 
+Un ejemplo es desarrollado en el \ztitleref{anexocadera}, donde dadas 8 poses comparadas 
 
+
+\subsection{Normalización del Cuadro de Point Cloud}
+
+La normalización del cuadro de Point Cloud, se refiere a buscar los mínimos y los máximos de $(x,y)$ del conjunto de puntos en las Point Clouds del usuario y de la pose guardada en el mapa.
+Los mínimos y máximos se convierten en los bordes límitantes de un cuadro imaginario que los encierra, como se ve en la figura \ref{pointcloudtocuadro} otorgando un tamaño del conjunto de los puntos, con ello se puede redimensionar el Point Cloud de la pose del usuario al tamaño de la Point Cloud de la pose del mapa con que se compara como se ve en la figura \ref{redimensioncuadro}, para evaluar el desfase porcentual que existen en los ejes x,y de cada punto.
+
+\begin{figure}[t!]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=7cm,height=5cm,]{./Images/pointcloud.png}
+		\caption{Ejemplo de Point Cloud}
+		\label{pointcloud}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=7cm,height=5cm]{./Images/cuadropointcloud1.png}
+		\caption{Cuadro de la Point Cloud}
+		\label{cuadro}
+	\end{subfigure}
+	\caption{Ejemplos de Datos en la Base de Datos COCO para la estimación de pose}
+	\footnotesize Fuente: Elaboración propia basado en \cite{8765346}
+	\label{pointcloudtocuadro}
+\end{figure}
 
 \section{Diseño De GUI}
 
