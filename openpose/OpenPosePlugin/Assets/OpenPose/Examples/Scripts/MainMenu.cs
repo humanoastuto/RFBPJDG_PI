@@ -13,9 +13,9 @@ public class MainMenu : MonoBehaviour
         AudioSource.Play();
     }
 
-    public void PlayGame() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-    }
+  //  public void PlayGame() {
+  //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+ //   }
     public void QuitGame()
     {
         Debug.Log("Quit");
