@@ -83,7 +83,7 @@ La eliminación de poses consiste en literalmente observar los archivos JSON y J
 
 \subsubsection{Conversión de JSON a txt y Almacenamiento}
 
-Independientemente si es previa o posterior a la eliminación de poses (de preferencia posterior, ya que existen menos archivos, por tanto, es más rápido), se ejecuta un Script diseñado para convertir los archivos JSON a un lenguaje más reconocible por el usuario. 
+Independientemente si es previa o posterior a la eliminación de poses (de preferencia posterior, ya que existen menos archivos, por tanto, es más rápido), se ejecuta un Script diseñado para convertir los archivos JSON a un formato más reconocible por el usuario. 
 \\
 Una vez realizada la conversión, el SCRUM Team vio dos alternativas para los archivos txt, los cuales almacenan una pose cada uno. Conservarlo como esta, siendo la carpeta donde se guardan los txt el recurso principal para recurrir a las poses del nivel o convertir todos los txt en uno solo, almacenando todas las poses en un solo txt empleando un Script, si bien almacenarlos en un solo Script es más fácil, puede que los creadores de mapas encuentren molesto la ejecución de un Script más.
 
@@ -123,23 +123,18 @@ Se califica la posición en el tiempo respectivo y se debe proceder a la siguien
 
 \section{Normalización de Puntos Clave}
 
-Se requiere de desarrollar un método para comparar las poses del usuario en tiempo real con las poses del mapa, para ello se obtienen en tiempo real los puntos clave del cuerpo del usuario en tiempo real, pero todas las personas somos distintas, por mencionar el tamaño y aparte estamos en entornos distintos, algunos pueden alinearse a la cámara, otros suelen estar o muy cerca o muy lejos, sin mencionar el espacio que tienen para moverse, pero siempre y cuando se puedan observar todos los puntos claves necesarios, se puede realizar una comparación entre poses correcta. Se debe considerar que se debe igualar lo más posible el tamaño de las poses independientemente de la posición que tengan en la pantalla y el tamaño de la persona.
+Se requiere de desarrollar un método para comparar las poses del usuario en tiempo real con las poses del mapa, para ello se obtienen en tiempo real los puntos clave del cuerpo del usuario, pero todas las personas somos distintas, por mencionar el tamaño y aparte estamos en entornos distintos, algunos pueden alinearse a la cámara, otros suelen estar o muy cerca o muy lejos, sin mencionar el espacio que tienen para moverse, pero siempre y cuando se puedan observar todos los puntos claves necesarios, se puede realizar una comparación entre poses correcta. Se debe considerar que se debe igualar lo más posible el tamaño de las poses independientemente de la posición que tengan en la pantalla y el tamaño de la persona.
 
 El modelo BODY\_25 tiene un conjunto de puntos guardados en forma de coordenadas, lo cual se considera como un Point Cloud, por tanto, en concepto se tienen dos Point Cloud muy distintas, pero similares (ya que ambos representan un cuerpo humano) que se deben comparar, para eso existe el Point Set Registration. Durante la exploración de algoritmos inicial no se encontró ningún algoritmo para facilitar el desarrollo de la aplicación, por lo que se desarrollaron distintas formas de medir la similitud entre las poses y la precisión de los movimientos que se necesitan representar.
 
-El método presentado es la normalización de los puntos dentro de la Point Cloud de tres formas distintas (presentadas por cada integrante del equipo), de las cuales se definirá la más adecuada. La normalización involucra ajustar la distancia entre los puntos para que tengan distancias proporcionalmente correctas a su forma original y permitan su comparación entre dos Point CLouds distintas.
- 
- \subsection{Normalización a partir de la distancia entre dos puntos}
- 
-La normalización a partir de la distancia entre dos puntos elige dos puntos del modelo BODY\_25 de la figura \ref{open2}, el punto del cuello (Punto 1) y el punto de la cadera (Punto 8), ya que conforman la línea principal del cuerpo que une extremidades inferiores y superiores. Su distancia se iguala a una variable constante $ \alpha = 300$, seleccionada arbitrariamente para la normalización.
- 
- 
-\subsection{Normalización a partir de un punto}
+El método presentado es el calculo de la precisión a partir de la normalización de los puntos dentro de la Point Cloud de tres formas distintas (presentadas por cada integrante del equipo), de las cuales se definirá la más adecuada. La normalización involucra ajustar la distancia entre los puntos para que tengan distancias proporcionalmente correctas a su forma original y permitan su comparación entre dos Point CLouds distintas.
 
-La normalización a partir de un punto busca un punto clave como base para normalizar el resto de los puntos, del modelo BODY\_25 de la figura \ref{open2} se especifico el centro del cuerpo, la cintura para la medición. 
 
-Se mueve el punto clave (Punto 8) al centro de la imagen y se alinean los puntos de la persona de acuerdo a la distancia movida correspondiente como se ve en la figura \ref{overpose}. La debilidad de este método es que se requiere que las personas sean del mismo tamaño, por tanto, se debe normalizar la distancias de los puntos entre si.
+\subsection{Cálculo a partir de la Normalización de un punto}
 
+La normalización a partir de un punto busca un punto clave como base para normalizar el resto de los puntos, del modelo BODY\_25 de la figura \ref{open2} se especifico el centro del cuerpo, el punto de la cadera central.
+
+Se mueve el punto de la cadera central al centro de la imagen y se alinean los puntos de la persona de acuerdo a la distancia movida correspondiente como se ve en la figura \ref{overpose}. Se realizara una redimension previa de todos los puntos existentes dentro de cada txt de las poses del mapa, se emplea la resolución 1280x720 al guardar archivos txt, cada uno de ellos será normalizado, por tanto a cada punto de las coordenadas se les aplica las ecuaciones  \ref{equation1.1} \ref{equation1.2}, donde la constante $\beta = 24$ determinado por la cantidad de puntos clave, $A_x$ es el largo y $A_y$ la altura de la resolución, P es el vector de duplas que conforman las coordenadas de la Point Cloud de la pose del usuario y Q al de la pose del mapa.
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=14cm,height=6cm,]{./Images/overpose.png}
@@ -148,14 +143,64 @@ Se mueve el punto clave (Punto 8) al centro de la imagen y se alinean los puntos
 	\label{overpose}
 \end{figure}
 
+\begin{equation}
+P=\{(\frac{x_{p0}}{A_x},\frac{y_{p0}}{A_y}),...,(\frac{x_{p\beta}}{A_x},\frac{y_{p\beta}}{A_y})\}
+\label{equation1.1}
+\end{equation}
+\begin{equation}
+Q=\{(\frac{x_{q0}}{A_x},\frac{y_{q0}}{A_y}),...,(\frac{x_{q\beta}}{A_x},\frac{y_{q\beta}}{A_y})\}
+\label{equation1.2}
+\end{equation}
+
+Se calculará la distancia $N_x$ y $N_y$ \ref{equation2} que son la distancia que separa el punto de la cadera central de la otra, esos valores es la distancia que se debe recorrer en los ejes x,y para sobreponer las Point Cloud en el mismo espacio y el punto de la cadera central sobre el mismo.
+
+\begin{equation}
+N_x= x_{q8}-x_{p8} \hspace{15mm} N_y= y_{q8}-y_{p8}
+\label{equation2}
+\end{equation}
+Se calcula el promedio del porcentaje de la diferencia de la pose del usuario a la otra con la ecuación \ref{equation3}, donde se calcula el porcentaje de diferencia de cada punto en los ejes x,y y se divide el total por la cantidad de puntos clave. En la ecuación \ref{equation4} se calcula el promedio esperado de la pose del mapa.
+
+\begin{equation}
+Prom = [\sum_{n=0}^\beta (\left | (x_{pn}+N_x)*100\% \right |  +  \left |  (y_{pn}+N_y)*100\%  \right |) ]/\beta
+\label{equation3}
+\end{equation}
+
+\begin{equation}
+ExpProm = (\sum_{n=0}^\beta (\left | (x_{qn}+y_{qn})*100\% \right |))/\beta
+\label{equation4}
+\end{equation}
+
+Finalmente se calcula el porcentaje de error que existe entre las dos poses en la ecuación \ref{equation6}. 
+
+\begin{equation}
+Acurracy = 100 - (\frac{Prom}{ExpProm})*100 \%
+\label{equation6}
+\end{equation}
 
 
-Un ejemplo es desarrollado en el \ztitleref{anexocadera}, donde dadas 8 poses comparadas 
+
+Un ejemplo es desarrollado en el \ztitleref{anexocadera}, donde dadas 8 poses de 8 Frames de una grabación de prueba donde se realizan distintas pruebas, son comparadas y se concluye que calcular el promedio de diferencia entre dos poses no es una solución optima, pues un brazo puede estar totalmente fuera de lugar, pero al promediar todos los porcentajes de error se minimiza el efecto de la diferencia del brazo, que es muy importante. Por tanto este método de cálculo queda descartado.
 
 
-\subsection{Normalización del Cuadro de Point Cloud}
+\subsection{Cálculo a partir de la Normalización de Cuadro de Point Cloud}
 
-La normalización del cuadro de Point Cloud, se refiere a buscar los mínimos y los máximos de $(x,y)$ del conjunto de puntos en las Point Clouds del usuario y de la pose guardada en el mapa.
+Para la normalización del cuadro de Point Cloud, se busca los mínimos $X_min$ y los máximos $X_max$ del conjunto de puntos en las Point Clouds del usuario y de la pose guardada en el mapa \ref{equation12.max} \ref{equation12.min} \ref{equation14.max} \ref{equation14.min}.
+\begin{equation}
+X_{pmax} = Max(P(x_p)) \hspace{15mm} Y_{pmax} = Max(P(y_p))
+\label{equation12.max}
+\end{equation}
+\begin{equation}
+X_{pmin} = Min(P(x_p)) \hspace{15mm} Y_{pmin} = Min(P(y_p))
+\label{equation12.min}
+\end{equation}
+\begin{equation}
+X_{qmax} = Max(Q(x_q)) \hspace{15mm} Y_{qmax} = Max(Q(y_q))
+\label{equation14.max}
+\end{equation}
+\begin{equation}
+X_{qmin} = Min(Q(x_q)) \hspace{15mm} Y_{qmin} = Min(Q(y_q))
+\label{equation14.min}
+\end{equation}
 Los mínimos y máximos se convierten en los bordes límitantes de un cuadro imaginario que los encierra, como se ve en la figura \ref{pointcloudtocuadro} otorgando un tamaño del conjunto de los puntos, con ello se puede redimensionar el Point Cloud de la pose del usuario al tamaño de la Point Cloud de la pose del mapa con que se compara como se ve en la figura \ref{redimensioncuadro}, para evaluar el desfase porcentual que existen en los ejes x,y de cada punto.
 
 \begin{figure}[t!]
@@ -168,14 +213,117 @@ Los mínimos y máximos se convierten en los bordes límitantes de un cuadro ima
 	\end{subfigure}%
 	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=7cm,height=5cm]{./Images/cuadropointcloud1.png}
+		\includegraphics[width=5cm,height=5cm]{./Images/cuadropointcloud1.png}
 		\caption{Cuadro de la Point Cloud}
 		\label{cuadro}
 	\end{subfigure}
-	\caption{Ejemplos de Datos en la Base de Datos COCO para la estimación de pose}
-	\footnotesize Fuente: Elaboración propia basado en \cite{8765346}
+	\caption{Ejemplos de Encuadre de una Point Cloud}
+	\footnotesize Fuente: Elaboración propia
 	\label{pointcloudtocuadro}
 \end{figure}
+
+
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=14cm,height=6cm,]{./Images/redimensioncuadro.png}
+	\caption{Redimensionamiento de la Point Cloud A al tamaño de la Point Cloud B}
+	\footnotesize Fuente: Elaboración propia
+	\label{redimensioncuadro}
+\end{figure}
+
+Se calcula el límite entre los dos extremos en $x_size$ y $y_size$ de cada pose \ref{equation15.1} \ref{equation15.2} y se calcula una constante de proporción $\sigma$ y $\varphi$ \ref{equation16} para los ejes x,y que permitirá comparar la distancia de cada pose respecto a la de la otra pose.
+
+\begin{equation}
+(x_{psize},y_{psize}) = ((x_{pmax}-x_{pmin}),(y_{pmax}-y_{pmin}))
+\label{equation15.1}
+\end{equation}
+\begin{equation}
+(x_{qsize},y_{qize}) = ((x_{qmax}-x_{qmin}),(y_{qmax}-y_{qmin}))
+\label{equation15.2}
+\end{equation}
+\begin{equation}
+\sigma = \frac{x_{psize}}{x_{qsize}} \hspace{15mm} \varphi = \frac{y_{psize}}{y_{qsize}}  
+\label{equation16}
+\end{equation}
+
+Se calcula la precisión en la variable $Acurracy$ \ref{equation19}, la cual será la sumatoria del calculo de la diferencia porcentual de cada punto modificada para tener un valor exponencial de acuerdo al porcentaje de diferencia. Donde la constante $\beta = 24$ debido a la cantidad de puntos clave, $C$ \ref{equation18.1} y $D$ \ref{equation18.2} son la varianza exponencial de los valores $A$ \ref{equation17.1} y $B$ \ref{equation17.2}, que son el porcentaje de diferencia entre dos poses tomando en cuenta la proporcionalidad.
+
+\begin{equation}
+Acurracy = \sum_{n=0}^\beta (\left | C \right |  +  \left |  D \right |) 
+\label{equation19}
+\end{equation}
+
+\begin{equation}
+A=(\frac{x_{pn}-x_{qn}*\sigma}{x_{qsize}} *100 \% )
+\label{equation17.1}
+\end{equation}
+\begin{equation}
+B=(\frac{y_{pn}-y_{qn}*\varphi}{y_{qsize}} *100 \% )
+\label{equation17.2}
+\end{equation}
+
+\begin{equation}
+C=\left\{\begin{matrix}
+A^{\log A} , si \hspace{2mm} A \geq 1  \\
+A , si \hspace{2mm} A <  1
+\end{matrix}\right. 
+\label{equation18.1}
+\end{equation}
+
+\begin{equation}
+D=\left\{\begin{matrix}
+B^{\log B} , si \hspace{2mm} B \geq 1  \\
+B , si \hspace{2mm} B <  1
+\end{matrix}\right.
+\label{equation18.2}
+\end{equation}
+
+El rango de la precisión de cada punto sería de $0 \leq x \geq 10000$ para un total de $0 \leq x \geq 250000$ del valor de $Acurracy$, siendo el 0 la comparación entre dos poses iguales y 250000 siendo todos los puntos de una pose en un extremo y los de la otra pose en el otro extremo en ambos ejes, lo cual es imposible en el contexto. Sin embargo, la volatilidad al tener un error en un punto especifico no es lo suficientemente alta, por tanto, este método de cálculo fue descartado.
+
+ 
+\subsection{Cálculo a partir de la Normalización de la distancia entre dos puntos}
+
+La normalización a partir de la distancia cuenta con una constante $\beta = 24\text{ Key Points}$ (ya que va del 0 al 24)entre dos puntos elige dos puntos del modelo BODY\_25 de la figura \ref{open2}, el punto del cuello (Punto 1) y el punto de la cadera central (Punto 8), ya que conforman la línea principal del cuerpo que une extremidades inferiores y superiores. Se obtiene una constante a partir de la división de las distancias de ambas poses a comparar que permite acomodar la posición de los demás puntos 
+
+Se convertirá a las Point Cloud como un vector de duplas x,y de la siguiente forma $P=\{(x_{p0},y_{p0}),...,(x_{p\beta},y_{p\beta})\}$ y $Q=\{(x_{q0},y_{q0}),...,(x_{q\beta},y_{q\beta})\}$
+, donde P es el vector del usuario y Q es de la pose del mapa, $x_{pn}$ es un valor del vector, que respeta el  orden de la tabla \ref{openposevector}. Se debe calcular las distancias $d_p$ y $d_q$ que hay entre los puntos clave mencionados (cuello y cadera central) con la ecuación \ref{equation7.1} y \ref{equation7.2}.
+
+\begin{equation}
+d_p= distancia((x_{p1},y_{p1}),(x_{p8},y_{p8}))
+\label{equation7.1}
+\end{equation}
+
+\begin{equation}
+d_q= distancia((x_{q1},y_{q1}),(x_{q8},y_{q8}))
+\label{equation7.2}
+\end{equation}
+
+Se calcula una constante que determina la proporción entre las distancias entre el usuario respecto a la pose del mapa \ref{equation8}, esto nos permitirá definir la diferencia entre las distancias del punto del cuello de la pose del usuario respecto a la de la pose del mapa en las ecuaciones \ref{equation9.1} y \ref{equation9.2}. La distancia $D_x$ y $D_y$ determinan la lejanía del punto del cuello respecto al otro punto del cuello en el cuadro de la pose en base a sus proporciones.
+\begin{equation}
+\gamma = \frac{d_p}{d_q}
+\label{equation8}
+\end{equation}
+\begin{equation}
+D_x= (x_{p1}*\gamma - x_{q1})
+\label{equation9.1}
+\end{equation}
+\begin{equation}
+D_y= (y_{p1}*\gamma - y_{q1})
+\label{equation9.2}
+\end{equation}
+
+Finalmente, se calculará la diferencia que existe entre cada punto normalizado de la pose del usuario y los puntos de la pose del mapa, se resta $D_x$ y $D_y$ para sobreponer los ejes de las coordenadas de cada punto en la ecuación \ref{equation10} para obtener la diferencia entre una pose de otra. 
+\begin{equation}
+Acurracy = D_{sum} = \sum_{n=0}^\beta (\left | x_{pn}*\gamma -x_{qn}-D_x \right |+\left | y_{pn}*\gamma -y_{qn}-D_y \right |) 
+\label{equation10}
+\end{equation}
+
+El resultado varía bastante dependiendo de la resolución de la cámara. Se estima un rango de Acurracy entre $ 500 < x \geq 1000000$, al ser tan amplio el rango, cuando se mueve un punto fuera de lugar el cambio de la precisión es elevado, por tanto, este es el método de calculo seleccionado.
+
+
+
+
+
 
 \section{Diseño De GUI}
 

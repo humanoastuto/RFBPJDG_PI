@@ -275,8 +275,36 @@ Finalmente se abre la escena "Demo.Unity" localizada en ./OpenPosePlugin/Assets/
 \clearpage
 \section{Anexo: Cálculos de Comparación de Poses}\zlabel{anexocomparacion}
 
+\subsection{Ejemplo de Cálculo de Normalización Basada en el Centro de la Cadera}\zlabel{anexocadera}
 
-\subsection{Normalización Basada en el Centro de la Cadera}\zlabel{anexocadera}
+Se tiene un vídeo grabado por un estudiante a medida que la lectura de Frames es dada, se guardaron 8 Frames selectos de manera arbitraria para la comparación de poses ilustrados en las figuras \ref{checker1} y \ref{checker2}, los cuales tienen los puntos clave en las tablas \ref{checkeroriginalpart1} \ref{checkeroriginalpart2} \ref{checkeroriginalpart3} \ref{checkeroriginalpart4}.
 
+Los cálculos del porcentaje de semejanza entre el T Original con cada Frame selecto esta en las tablas \ref{checkerporcentage1} \ref{checkerporcentage2} \ref{checkerporcentage3} \ref{checkerporcentage4}, los cuales se emplearan para la ecuación \ref{equation3} dando los resultados de la tabla \ref{resultadoschecker}, donde T Original tiene un 100 \% de similitud y la diferencia independientemente de si es mayor o menor es la diferencia, como se puede ver solo hay un aproximado de 108 \% en el Frame 147 Dab, lo cual indica solo un aproximado de 8 \% de diferencia para poses tan distintas, convirtiendo este método de cálculo en uno muy inefectivo para poses distintas, pero bueno para poses similares en distintos lugares.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=12cm,height=7cm]{./Images/resultadoschecker.png}
+	\caption{Tabla de Diferencias entre Poses}
+	\footnotesize Fuente: Elaboración Propia
+	\label{resultadoschecker}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=16cm,height=10cm,]{./Images/checkerpart1.png}
+	\caption{Poses: T Original - Frame 80 - Frame 95 Curva - Frame 147 Dab}
+	\footnotesize Fuente: Elaboración Propia
+	\label{checker1}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=16cm,height=10cm]{./Images/checkerpart2.png}
+	\caption{Poses: Frame 155 Curva Cerrada - Frame 158 Curva Cerrada - Frame 72 Desfase - Frame 188 Desfase}
+	\footnotesize Fuente: Elaboración Propia
+	\label{checker2}
+\end{figure}
+
+\clearpage
 \input{TablasDeChecker}
 

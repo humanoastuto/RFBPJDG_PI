@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.19)  13 DEC 2020 11:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.11.19)  14 DEC 2020 01:49
 entering extended mode
 **./Informe_Practica.tex
 (Informe_Practica.tex
@@ -1421,17 +1421,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
  []
 
 [9]
-<./Images/kinectex.jpg, id=539, 441.65pt x 281.05pt>
+<./Images/kinectex.jpg, id=550, 441.65pt x 281.05pt>
 File: ./Images/kinectex.jpg Graphic file (type jpg)
 <use ./Images/kinectex.jpg>
 Package pdftex.def Info: ./Images/kinectex.jpg  used on input line 33.
 (pdftex.def)             Requested size: 170.71304pt x 85.35774pt.
-<./Images/kinectexuse.jpg, id=540, 963.6pt x 681.29532pt>
+<./Images/kinectexuse.jpg, id=551, 963.6pt x 681.29532pt>
 File: ./Images/kinectexuse.jpg Graphic file (type jpg)
 <use ./Images/kinectexuse.jpg>
 Package pdftex.def Info: ./Images/kinectexuse.jpg  used on input line 39.
 (pdftex.def)             Requested size: 170.70569pt x 113.8019pt.
-<./Images/azurekinect.png, id=543, 2007.5pt x 2007.5pt>
+<./Images/azurekinect.png, id=554, 2007.5pt x 2007.5pt>
 File: ./Images/azurekinect.png Graphic file (type png)
 <use ./Images/azurekinect.png>
 Package pdftex.def Info: ./Images/azurekinect.png  used on input line 56.
@@ -1441,18 +1441,18 @@ Overfull \hbox (5.8061pt too wide) in paragraph at lines 56--57
  [][] 
  []
 
-<./Images/cameraex.jpg, id=545, 1049.9225pt x 492.84125pt>
+<./Images/cameraex.jpg, id=556, 1049.9225pt x 492.84125pt>
 File: ./Images/cameraex.jpg Graphic file (type jpg)
 <use ./Images/cameraex.jpg>
 Package pdftex.def Info: ./Images/cameraex.jpg  used on input line 62.
 (pdftex.def)             Requested size: 199.16693pt x 113.80981pt.
 [10 <./Images/kinectex.jpg> <./Images/kinectexuse.jpg>]
-<./Images/eyeex.jpg, id=557, 96.36pt x 103.587pt>
+<./Images/eyeex.jpg, id=568, 96.36pt x 103.587pt>
 File: ./Images/eyeex.jpg Graphic file (type jpg)
 <use ./Images/eyeex.jpg>
 Package pdftex.def Info: ./Images/eyeex.jpg  used on input line 83.
 (pdftex.def)             Requested size: 142.26353pt x 142.27528pt.
-<./Images/eyeexuse.jpg, id=558, 687.56876pt x 301.125pt>
+<./Images/eyeexuse.jpg, id=569, 687.56876pt x 301.125pt>
 File: ./Images/eyeexuse.jpg Graphic file (type jpg)
 <use ./Images/eyeexuse.jpg>
 Package pdftex.def Info: ./Images/eyeexuse.jpg  used on input line 89.
@@ -1475,7 +1475,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
 
-<./Images/rehabilitacionexample.jpg, id=572, 272.01625pt x 186.6975pt>
+<./Images/rehabilitacionexample.jpg, id=583, 272.01625pt x 186.6975pt>
 File: ./Images/rehabilitacionexample.jpg Graphic file (type jpg)
 <use ./Images/rehabilitacionexample.jpg>
 Package pdftex.def Info: ./Images/rehabilitacionexample.jpg  used on input line
@@ -1503,7 +1503,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--122
 Underfull \vbox (badness 1824) has occurred while \output is active []
 
  [13 <./Images/rehabilitacionexample.jpg>]
-<./Images/kinectexampleschool.jpg, id=598, 451.6875pt x 339.2675pt>
+<./Images/kinectexampleschool.jpg, id=609, 451.6875pt x 339.2675pt>
 File: ./Images/kinectexampleschool.jpg Graphic file (type jpg)
 <use ./Images/kinectexampleschool.jpg>
 Package pdftex.def Info: ./Images/kinectexampleschool.jpg  used on input line 1
@@ -1513,7 +1513,7 @@ Package pdftex.def Info: ./Images/kinectexampleschool.jpg  used on input line 1
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14 <./Images/kinectexampleschool.jpg>]
-<./Images/pegi.png, id=606, 859.21pt x 199.74625pt>
+<./Images/pegi.png, id=617, 859.21pt x 199.74625pt>
 File: ./Images/pegi.png Graphic file (type png)
 <use ./Images/pegi.png>
 Package pdftex.def Info: ./Images/pegi.png  used on input line 156.
@@ -1534,7 +1534,7 @@ Overfull \hbox (8.41284pt too wide) in paragraph at lines 164--177
  []
 
 [15]
-<./Images/esrb.jpg, id=618, 642.4pt x 481.8pt>
+<./Images/esrb.jpg, id=629, 642.4pt x 481.8pt>
 File: ./Images/esrb.jpg Graphic file (type jpg)
 <use ./Images/esrb.jpg>
 Package pdftex.def Info: ./Images/esrb.jpg  used on input line 195.
@@ -1555,14 +1555,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
 
 ]
-<./Images/ejemplotensorflow.jpg, id=639, 2938.98pt x 1222.5675pt>
+<./Images/ejemplotensorflow.jpg, id=650, 2938.98pt x 1222.5675pt>
 File: ./Images/ejemplotensorflow.jpg Graphic file (type jpg)
 <use ./Images/ejemplotensorflow.jpg>
 Package pdftex.def Info: ./Images/ejemplotensorflow.jpg  used on input line 19.
 
 (pdftex.def)             Requested size: 369.88293pt x 142.2619pt.
  [19 <./Images/ejemplotensorflow.jpg>]
-<./Images/examplebodytracking.jpg, id=649, 1284.8pt x 722.7pt>
+<./Images/examplebodytracking.jpg, id=660, 1284.8pt x 722.7pt>
 File: ./Images/examplebodytracking.jpg Graphic file (type jpg)
 <use ./Images/examplebodytracking.jpg>
 Package pdftex.def Info: ./Images/examplebodytracking.jpg  used on input line 3
@@ -1573,7 +1573,7 @@ Overfull \hbox (5.81836pt too wide) in paragraph at lines 35--36
  [][] 
  []
 
-<./Images/examplekinect.jpg, id=650, 903.375pt x 511.9125pt>
+<./Images/examplekinect.jpg, id=661, 903.375pt x 511.9125pt>
 File: ./Images/examplekinect.jpg Graphic file (type jpg)
 <use ./Images/examplekinect.jpg>
 Package pdftex.def Info: ./Images/examplekinect.jpg  used on input line 41.
@@ -1583,12 +1583,12 @@ Overfull \hbox (5.83215pt too wide) in paragraph at lines 41--42
  [][] 
  []
 
-<./Images/openposet1.png, id=653, 171.64125pt x 296.10625pt>
+<./Images/openposet1.png, id=664, 171.64125pt x 296.10625pt>
 File: ./Images/openposet1.png Graphic file (type png)
 <use ./Images/openposet1.png>
 Package pdftex.def Info: ./Images/openposet1.png  used on input line 58.
 (pdftex.def)             Requested size: 113.80998pt x 170.72061pt.
-<./Images/openposet2.png, id=654, 348.8232pt x 607.5498pt>
+<./Images/openposet2.png, id=665, 348.8232pt x 607.5498pt>
 File: ./Images/openposet2.png Graphic file (type png)
 <use ./Images/openposet2.png>
 Package pdftex.def Info: ./Images/openposet2.png  used on input line 64.
@@ -1600,19 +1600,19 @@ Overfull \hbox (55.24297pt too wide) in paragraph at lines 77--80
  []
 
 [21 <./Images/openposet1.png> <./Images/openposet2.png>] [22]
-<./Images/RGBandDepth.jpg, id=684, 338.76563pt x 203.25937pt>
+<./Images/RGBandDepth.jpg, id=695, 338.76563pt x 203.25937pt>
 File: ./Images/RGBandDepth.jpg Graphic file (type jpg)
 <use ./Images/RGBandDepth.jpg>
-Package pdftex.def Info: ./Images/RGBandDepth.jpg  used on input line 135.
+Package pdftex.def Info: ./Images/RGBandDepth.jpg  used on input line 136.
 (pdftex.def)             Requested size: 284.53532pt x 170.72119pt.
  [23] [24 <./Images/RGBandDepth.jpg>]
-<./Images/neuralnetwork.png, id=703, 2055.68pt x 1246.6575pt>
+<./Images/neuralnetwork.png, id=714, 2055.68pt x 1246.6575pt>
 File: ./Images/neuralnetwork.png Graphic file (type png)
 <use ./Images/neuralnetwork.png>
-Package pdftex.def Info: ./Images/neuralnetwork.png  used on input line 169.
+Package pdftex.def Info: ./Images/neuralnetwork.png  used on input line 170.
 (pdftex.def)             Requested size: 312.98103pt x 142.24979pt.
  [25] [26 <./Images/neuralnetwork.png>]
-Overfull \hbox (10.70868pt too wide) in paragraph at lines 202--204
+Overfull \hbox (10.70868pt too wide) in paragraph at lines 203--205
 \OT1/cmr/m/n/12 EL mod-elo COCO es un Dataset re-ciente del a~no 2014, de-sar-r
 ol-lado para el re-conocimiento
  []
@@ -1621,18 +1621,18 @@ ol-lado para el re-conocimiento
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27]
-<./Images/pointcloudexample.jpg, id=731, 982.67125pt x 866.23625pt>
+<./Images/pointcloudexample.jpg, id=742, 982.67125pt x 866.23625pt>
 File: ./Images/pointcloudexample.jpg Graphic file (type jpg)
 <use ./Images/pointcloudexample.jpg>
-Package pdftex.def Info: ./Images/pointcloudexample.jpg  used on input line 209
+Package pdftex.def Info: ./Images/pointcloudexample.jpg  used on input line 210
 .
 (pdftex.def)             Requested size: 199.16977pt x 199.16406pt.
 
 [28 <./Images/pointcloudexample.jpg>]
-<./Images/driftexample.jpg, id=742, 398.48875pt x 127.47626pt>
+<./Images/driftexample.jpg, id=753, 398.48875pt x 127.47626pt>
 File: ./Images/driftexample.jpg Graphic file (type jpg)
 <use ./Images/driftexample.jpg>
-Package pdftex.def Info: ./Images/driftexample.jpg  used on input line 223.
+Package pdftex.def Info: ./Images/driftexample.jpg  used on input line 224.
 (pdftex.def)             Requested size: 426.81047pt x 142.27057pt.
 ) [29 <./Images/driftexample.jpg>]
 \openout2 = `Alternativas.aux'.
@@ -1675,19 +1675,19 @@ Overfull \hbox (0.92386pt too wide) in paragraph at lines 26--29
  []
 
 [31]
-<./Images/trajesensor.jpg, id=763, 962.09438pt x 544.28343pt>
+<./Images/trajesensor.jpg, id=774, 962.09438pt x 544.28343pt>
 File: ./Images/trajesensor.jpg Graphic file (type jpg)
 <use ./Images/trajesensor.jpg>
 Package pdftex.def Info: ./Images/trajesensor.jpg  used on input line 32.
 (pdftex.def)             Requested size: 256.0695pt x 113.80458pt.
  [32 <./Images/trajesensor.jpg>] [33]
-<./Images/posenetcocoexample.png, id=783, 948.54375pt x 584.1825pt>
+<./Images/posenetcocoexample.png, id=794, 948.54375pt x 584.1825pt>
 File: ./Images/posenetcocoexample.png Graphic file (type png)
 <use ./Images/posenetcocoexample.png>
 Package pdftex.def Info: ./Images/posenetcocoexample.png  used on input line 70
 .
 (pdftex.def)             Requested size: 199.17111pt x 142.26576pt.
-<./Images/posenetexample2.png, id=784, 804.00375pt x 630.355pt>
+<./Images/posenetexample2.png, id=795, 804.00375pt x 630.355pt>
 File: ./Images/posenetexample2.png Graphic file (type png)
 <use ./Images/posenetexample2.png>
 Package pdftex.def Info: ./Images/posenetexample2.png  used on input line 76.
@@ -1732,7 +1732,7 @@ Chapter 5.
 
  (Metodologia.tex
 Chapter 6.
-<./Images/manifiesto.png, id=825, 358.33875pt x 267.24844pt>
+<./Images/manifiesto.png, id=836, 358.33875pt x 267.24844pt>
 File: ./Images/manifiesto.png Graphic file (type png)
 <use ./Images/manifiesto.png>
 Package pdftex.def Info: ./Images/manifiesto.png  used on input line 14.
@@ -1773,7 +1773,7 @@ as las fun-cionas que tiene disponible
  []
 
 [49] [50] [51]
-<./Images/requerimientosgraficaposeit.png, id=929, 505.13719pt x 304.13625pt>
+<./Images/requerimientosgraficaposeit.png, id=940, 505.13719pt x 304.13625pt>
 File: ./Images/requerimientosgraficaposeit.png Graphic file (type png)
 <use ./Images/requerimientosgraficaposeit.png>
 Package pdftex.def Info: ./Images/requerimientosgraficaposeit.png  used on inpu
@@ -1785,7 +1785,7 @@ Overfull \hbox (11.67284pt too wide) in paragraph at lines 97--98
  []
 
 [52 <./Images/requerimientosgraficaposeit.png>]
-<./Images/futurediagramaderequisitos.png, id=934, 885.3075pt x 869.2475pt>
+<./Images/futurediagramaderequisitos.png, id=945, 885.3075pt x 869.2475pt>
 File: ./Images/futurediagramaderequisitos.png Graphic file (type png)
 <use ./Images/futurediagramaderequisitos.png>
 Package pdftex.def Info: ./Images/futurediagramaderequisitos.png  used on input
@@ -1801,7 +1801,7 @@ Chapter 8.
 
 
 ] [55] [56]
-<./Images/pasosaseguir.png, id=964, 820.56563pt x 362.10281pt>
+<./Images/pasosaseguir.png, id=975, 820.56563pt x 362.10281pt>
 File: ./Images/pasosaseguir.png Graphic file (type png)
 <use ./Images/pasosaseguir.png>
 Package pdftex.def Info: ./Images/pasosaseguir.png  used on input line 59.
@@ -1812,41 +1812,44 @@ Overfull \hbox (11.66554pt too wide) in paragraph at lines 59--60
  []
 
 [57 <./Images/pasosaseguir.png>] [58]
-<./Images/primerintento.png, id=978, 1077.02374pt x 598.235pt>
+<./Images/primerintento.png, id=989, 1077.02374pt x 598.235pt>
 File: ./Images/primerintento.png Graphic file (type png)
 <use ./Images/primerintento.png>
 Package pdftex.def Info: ./Images/primerintento.png  used on input line 105.
 (pdftex.def)             Requested size: 341.43356pt x 199.17079pt.
  [59] [60 <./Images/primerintento.png>]
-[61]
-<./Images/overpose.png, id=1000, 1285.05093pt x 505.89pt>
+<./Images/overpose.png, id=1007, 1285.05093pt x 505.89pt>
 File: ./Images/overpose.png Graphic file (type png)
 <use ./Images/overpose.png>
-Package pdftex.def Info: ./Images/overpose.png  used on input line 145.
+Package pdftex.def Info: ./Images/overpose.png  used on input line 140.
 (pdftex.def)             Requested size: 398.34207pt x 170.71892pt.
 
-
-LaTeX Warning: Reference `redimensioncuadro' on page 62 undefined on input line
- 159.
-
-<./Images/pointcloud.png, id=1003, 908.64468pt x 640.64343pt>
+[61] [62 <./Images/overpose.png>]
+<./Images/pointcloud.png, id=1035, 908.64468pt x 640.64343pt>
 File: ./Images/pointcloud.png Graphic file (type png)
 <use ./Images/pointcloud.png>
-Package pdftex.def Info: ./Images/pointcloud.png  used on input line 165.
+Package pdftex.def Info: ./Images/pointcloud.png  used on input line 210.
 (pdftex.def)             Requested size: 199.16762pt x 142.26167pt.
-<./Images/cuadropointcloud1.png, id=1004, 499.8675pt x 578.16pt>
+<./Images/cuadropointcloud1.png, id=1036, 499.8675pt x 578.16pt>
 File: ./Images/cuadropointcloud1.png Graphic file (type png)
 <use ./Images/cuadropointcloud1.png>
-Package pdftex.def Info: ./Images/cuadropointcloud1.png  used on input line 171
+Package pdftex.def Info: ./Images/cuadropointcloud1.png  used on input line 216
 .
-(pdftex.def)             Requested size: 199.16547pt x 142.26357pt.
-) [62 <./Images/overpose.png>] [63 <./Images/pointcloud.png> <./Images/cuadropo
-intcloud1.png>]
+(pdftex.def)             Requested size: 142.2654pt x 142.26357pt.
+<./Images/redimensioncuadro.png, id=1037, 1300.1072pt x 612.03656pt>
+File: ./Images/redimensioncuadro.png Graphic file (type png)
+<use ./Images/redimensioncuadro.png>
+Package pdftex.def Info: ./Images/redimensioncuadro.png  used on input line 228
+.
+(pdftex.def)             Requested size: 398.32745pt x 170.71533pt.
+ [63] [64 <./Images/pointcloud.png> <./Images/cuadropointcloud1.png> <./Images/
+redimensioncuadro.png>] [65] [66]) [67]
 \openout2 = `PlanActividades.aux'.
 
- (PlanActividades.tex
+
+(PlanActividades.tex
 Chapter 9.
-[64
+[68
 
 
 
@@ -1893,7 +1896,7 @@ Overfull \hbox (34.80815pt too wide) in paragraph at lines 30--31
 [] 
  []
 
-[65
+[69
 
 
 
@@ -1907,22 +1910,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-[66
+[70
 
 
 
 
 
-] [67]) [68]
+] [71]) [72]
 \openout2 = `Recomendaciones.aux'.
 
  (Recomendaciones.tex
 Chapter 11.
-[69
+[73
 
 
 
-]) [70] (Informe_Practica.bbl
+]) [74] (Informe_Practica.bbl
 Underfull \hbox (badness 5652) in paragraph at lines 12--16
 []\OT1/cmr/m/n/12 The eye of judg-ment (ps3).  []$\OT1/cmtt/m/n/12 https : / / 
 forum . gamesaktuell . de / blogs /
@@ -1981,7 +1984,7 @@ Overfull \hbox (202.16321pt too wide) in paragraph at lines 47--52
 n/12 ,
  []
 
-[71
+[75
 
 
 ]
@@ -2001,7 +2004,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--80
 uestions / 57089009 /
  []
 
-[72]
+[76]
 Underfull \hbox (badness 1221) in paragraph at lines 125--128
 []\OT1/cmr/m/n/12 Christensson.  Hard-ware def-i-ni-tion.  []$\OT1/cmtt/m/n/12 
 https : / / techterms . com / definition /
@@ -2025,7 +2028,7 @@ Overfull \hbox (63.81314pt too wide) in paragraph at lines 143--149
 gadea-[]profesores-[]innovadores/$[]\OT1/cmr/m/n/12 ,
  []
 
-[73] [74]
+[77] [78]
 Underfull \hbox (badness 10000) in paragraph at lines 272--277
 []\OT1/cmr/m/n/12 Pulkit Sharma.  Im-age clas-si-fi-ca-tion vs. ob-ject de-tec-
 tion vs.
@@ -2043,7 +2046,7 @@ Overfull \hbox (44.78813pt too wide) in paragraph at lines 272--277
 []segmentation-[]f36db85fe81$[]\OT1/cmr/m/n/12 ,
  []
 
-[75]) [76]
+[79]) [80]
 \openout2 = `Anexos.aux'.
 
  (Anexos.tex
@@ -2053,20 +2056,20 @@ Overfull \hbox (11.20279pt too wide) in paragraph at lines 7--8
 |   \OT1/cmr/m/n/12 Cross Plat-form Make (Make Mul-ti-plataforma) 
  []
 
-[77
+[81
 
 
-] [78] [79] [80] [81]
-<./Images/sprintexample2.png, id=1133, 1210.5225pt x 671.50874pt>
+] [82] [83] [84] [85]
+<./Images/sprintexample2.png, id=1213, 1210.5225pt x 671.50874pt>
 File: ./Images/sprintexample2.png Graphic file (type png)
 <use ./Images/sprintexample2.png>
 Package pdftex.def Info: ./Images/sprintexample2.png  used on input line 106.
 (pdftex.def)             Requested size: 569.05649pt x 341.43004pt.
- [82
+ [86
 
 
  <./Images/sprintexample2.png>]
-<./Images/hacknplanexample.jpg, id=1138, 1001.99344pt x 631.60968pt>
+<./Images/hacknplanexample.jpg, id=1218, 1001.99344pt x 631.60968pt>
 File: ./Images/hacknplanexample.jpg Graphic file (type jpg)
 <use ./Images/hacknplanexample.jpg>
 Package pdftex.def Info: ./Images/hacknplanexample.jpg  used on input line 115.
@@ -2080,26 +2083,26 @@ Overfull \hbox (1.73137pt too wide) in paragraph at lines 115--116
 
 LaTeX Warning: Float too large for page by 17.31593pt on input line 119.
 
-[83 <./Images/hacknplanexample.jpg>]
-<./Images/tareaexample.jpg, id=1143, 500.62032pt x 596.98032pt>
+[87 <./Images/hacknplanexample.jpg>]
+<./Images/tareaexample.jpg, id=1223, 500.62032pt x 596.98032pt>
 File: ./Images/tareaexample.jpg Graphic file (type jpg)
 <use ./Images/tareaexample.jpg>
 Package pdftex.def Info: ./Images/tareaexample.jpg  used on input line 126.
 (pdftex.def)             Requested size: 426.8126pt x 569.08655pt.
 
 
-LaTeX Warning: Text page 84 contains only floats.
+LaTeX Warning: Text page 88 contains only floats.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [84
+ [88
 
 
 
- <./Images/tareaexample.jpg>] [85
+ <./Images/tareaexample.jpg>] [89
 
-] [86]
+] [90]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: letterpaper
@@ -2137,8 +2140,8 @@ Overfull \hbox (84.45032pt too wide) in paragraph at lines 159--178
  [] 
  []
 
-[87]
-<./Images/graficoburnup.png, id=1163, 860.21375pt x 441.65pt>
+[91]
+<./Images/graficoburnup.png, id=1243, 860.21375pt x 441.65pt>
 File: ./Images/graficoburnup.png Graphic file (type png)
 <use ./Images/graficoburnup.png>
 Package pdftex.def Info: ./Images/graficoburnup.png  used on input line 191.
@@ -2147,7 +2150,7 @@ File: ./Images/graficoburnup.png Graphic file (type png)
 <use ./Images/graficoburnup.png>
 Package pdftex.def Info: ./Images/graficoburnup.png  used on input line 198.
 (pdftex.def)             Requested size: 398.3414pt x 227.62413pt.
- [88
+ [92
 
 
 
@@ -2155,7 +2158,7 @@ Package pdftex.def Info: ./Images/graficoburnup.png  used on input line 198.
 
 
  <./Images/graficoburnup.png>]
-<./Images/eleccionesvsinstall.png, id=1171, 281.55188pt x 557.08125pt>
+<./Images/eleccionesvsinstall.png, id=1251, 281.55188pt x 557.08125pt>
 File: ./Images/eleccionesvsinstall.png Graphic file (type png)
 <use ./Images/eleccionesvsinstall.png>
 Package pdftex.def Info: ./Images/eleccionesvsinstall.png  used on input line 2
@@ -2173,12 +2176,12 @@ Overfull \hbox (2.68634pt too wide) in paragraph at lines 223--224
 om/get-unity/download/archive[],
  []
 
-<./Images/installunity.png, id=1179, 911.65594pt x 569.12625pt>
+<./Images/installunity.png, id=1259, 911.65594pt x 569.12625pt>
 File: ./Images/installunity.png Graphic file (type png)
 <use ./Images/installunity.png>
 Package pdftex.def Info: ./Images/installunity.png  used on input line 230.
 (pdftex.def)             Requested size: 341.4389pt x 227.6204pt.
-<./Images/unitydemo.png, id=1180, 1235.36531pt x 506.6428pt>
+<./Images/unitydemo.png, id=1260, 1235.36531pt x 506.6428pt>
 File: ./Images/unitydemo.png Graphic file (type png)
 <use ./Images/unitydemo.png>
 Package pdftex.def Info: ./Images/unitydemo.png  used on input line 237.
@@ -2198,45 +2201,80 @@ tual-Computing-Lab/openpose).
 
 Underfull \vbox (badness 3229) has occurred while \output is active []
 
- [89]
-[90 <./Images/eleccionesvsinstall.png>] [91 <./Images/installunity.png> <./Imag
+ [93]
+[94 <./Images/eleccionesvsinstall.png>] [95 <./Images/installunity.png> <./Imag
 es/unitydemo.png>]
-<./Images/ejemploopenunity.png, id=1199, 873.2625pt x 599.23875pt>
+<./Images/ejemploopenunity.png, id=1278, 873.2625pt x 599.23875pt>
 File: ./Images/ejemploopenunity.png Graphic file (type png)
 <use ./Images/ejemploopenunity.png>
 Package pdftex.def Info: ./Images/ejemploopenunity.png  used on input line 247.
 
 (pdftex.def)             Requested size: 398.33443pt x 227.62166pt.
- [92
+ [96
 
  <./Images/ejemploopenunity.png>]
-<./Images/JSONandJPGexample.png, id=1206, 766.36313pt x 359.84438pt>
+<./Images/JSONandJPGexample.png, id=1286, 766.36313pt x 359.84438pt>
 File: ./Images/JSONandJPGexample.png Graphic file (type png)
 <use ./Images/JSONandJPGexample.png>
 Package pdftex.def Info: ./Images/JSONandJPGexample.png  used on input line 259
 .
 (pdftex.def)             Requested size: 625.98955pt x 341.46036pt.
- [93
+ [97
 
 
  <./Images/JSONandJPGexample.png>]
-<./Images/erroroutofmemory.png, id=1212, 661.72218pt x 93.34875pt>
+<./Images/erroroutofmemory.png, id=1292, 661.72218pt x 93.34875pt>
 File: ./Images/erroroutofmemory.png Graphic file (type png)
 <use ./Images/erroroutofmemory.png>
 Package pdftex.def Info: ./Images/erroroutofmemory.png  used on input line 268.
 
 (pdftex.def)             Requested size: 625.98708pt x 142.27043pt.
- [94
+ [98
 
- <./Images/erroroutofmemory.png>] (TablasDeChecker.tex
+ <./Images/erroroutofmemory.png>]
+Overfull \hbox (0.49437pt too wide) in paragraph at lines 278--278
+|[]\OT1/cmr/bx/n/14.4 Ejemplo de Calculo de Nor-mal-izacion Basada en el Cen-
+
+ []
+
+<./Images/resultadoschecker.png, id=1310, 511.9125pt x 309.40594pt>
+File: ./Images/resultadoschecker.png Graphic file (type png)
+<use ./Images/resultadoschecker.png>
+Package pdftex.def Info: ./Images/resultadoschecker.png  used on input line 286
+.
+(pdftex.def)             Requested size: 341.43298pt x 199.1758pt.
+<./Images/checkerpart1.png, id=1311, 771.63281pt x 327.47343pt>
+File: ./Images/checkerpart1.png Graphic file (type png)
+<use ./Images/checkerpart1.png>
+Package pdftex.def Info: ./Images/checkerpart1.png  used on input line 294.
+(pdftex.def)             Requested size: 455.23586pt x 284.52983pt.
+
+Overfull \hbox (11.65738pt too wide) in paragraph at lines 294--295
+ [][] 
+ []
+
+<./Images/checkerpart2.png, id=1312, 771.63281pt x 319.1925pt>
+File: ./Images/checkerpart2.png Graphic file (type png)
+<use ./Images/checkerpart2.png>
+Package pdftex.def Info: ./Images/checkerpart2.png  used on input line 302.
+(pdftex.def)             Requested size: 455.23586pt x 284.5285pt.
+
+Overfull \hbox (11.65738pt too wide) in paragraph at lines 302--303
+ [][] 
+ []
+
+[99
+
+
+ <./Images/resultadoschecker.png>] [100 <./Images/checkerpart1.png>]
+[101 <./Images/checkerpart2.png>] (TablasDeChecker.tex
 Overfull \hbox (70.28323pt too wide) in paragraph at lines 194--223
  [][] 
  []
 
-[95
+[102
 
-
-] [96] [97] [98] [99] [100]
+] [103] [104] [105] [106] [107]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: letterpaper
@@ -2294,7 +2332,7 @@ Overfull \hbox (20.84203pt too wide) in paragraph at lines 240--269
  [][] 
  []
 
-[101
+[108
 
 
 
@@ -2356,7 +2394,7 @@ Overfull \hbox (20.84203pt too wide) in paragraph at lines 287--316
  [][] 
  []
 
-[102
+[109
 
 
 
@@ -2372,11 +2410,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 65.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 65.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 65.
 Package rerunfilecheck Info: File `Informe_Practica.out' has not changed.
-(rerunfilecheck)             Checksum: B0BAD3A9EA1B5E8D6FA7A1F9952C6FA9;5469.
-
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: D510E68249CBED758135E8204CA58BC3;5553.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
  )
 (\end occurred inside a group at level 1)
@@ -2384,26 +2418,28 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
 ### semi simple group (level 1) entered at line 31 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 21873 strings out of 493305
- 429276 string characters out of 3129801
- 554016 words of memory out of 3000000
- 24495 multiletter control sequences out of 15000+200000
+ 21956 strings out of 493305
+ 430715 string characters out of 3129801
+ 556975 words of memory out of 3000000
+ 24539 multiletter control sequences out of 15000+200000
  10926 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,13n,87p,1290b,2553s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,13n,87p,1290b,2552s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmbx12.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/human/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/human/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/hum
-an/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C
-:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmti12.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Informe_Practica.pdf (109 pages, 6616353 bytes).
+fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/human/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/human/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/hu
+man/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+<C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr12.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr8.pfb><C:/Users/human/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/human/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/human/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Informe_Practica.pdf (116 pages, 7944612 bytes).
 PDF statistics:
- 1355 PDF objects out of 1440 (max. 8388607)
- 343 named destinations out of 1000 (max. 500000)
- 786 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1474 PDF objects out of 1728 (max. 8388607)
+ 378 named destinations out of 1000 (max. 500000)
+ 806 words of extra memory for PDF output out of 10000 (max. 10000000)
 

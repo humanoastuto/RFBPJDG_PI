@@ -87,25 +87,25 @@
 \contentsline {subsubsection}{Visualizar Movimientos del Usuario y Poses a Imitar}{59}{subsubsection*.69}
 \contentsline {subsubsection}{Control de Tiempo del Mapa}{60}{subsubsection*.71}
 \contentsline {section}{\numberline {8.2}Normalizaci\IeC {\'o}n de Puntos Clave}{60}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Normalizaci\IeC {\'o}n a partir de la distancia entre dos puntos}{61}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Normalizaci\IeC {\'o}n a partir de un punto}{61}{subsection.8.2.2}
-\contentsline {subsection}{\numberline {8.2.3}Normalizaci\IeC {\'o}n del Cuadro de Point Cloud}{62}{subsection.8.2.3}
-\contentsline {section}{\numberline {8.3}Dise\IeC {\~n}o De GUI}{62}{section.8.3}
-\contentsline {chapter}{\numberline {9}Plan de Actividades}{64}{chapter.9}
-\contentsline {subsection}{\numberline {9.0.1}Cronograma}{65}{subsection.9.0.1}
-\contentsline {chapter}{\numberline {10}Conclusiones}{66}{chapter.10}
-\contentsline {chapter}{\numberline {11}Recomendaciones}{69}{chapter.11}
-\contentsline {subsubsection}{Requerimientos de los equipos de desarrollo y usuario}{69}{subsubsection*.74}
-\contentsline {subsubsection}{Uso del sistema interactivo}{70}{subsubsection*.75}
-\contentsline {subsubsection}{Desarrollo completo del prototipo}{70}{subsubsection*.76}
-\contentsline {chapter}{\numberline {12}Anexos}{77}{chapter.12}
-\contentsline {section}{\numberline {12.1}Lista de Abreviaturas}{77}{section.12.1}
-\contentsline {section}{\numberline {12.2}Glosario}{78}{section.12.2}
-\contentsline {section}{\numberline {12.3}Anexo: Control de Sprint}{82}{section.12.3}
-\contentsline {section}{\numberline {12.4}Anexo: Product Backlog}{85}{section.12.4}
-\contentsline {section}{\numberline {12.5}Anexo: Gr\IeC {\'a}fico Burn-Up Burn-Down}{88}{section.12.5}
-\contentsline {section}{\numberline {12.6}Anexo: Proceso de Instalaci\IeC {\'o}n de OpenPose y Unity para el Desarrollo del Proyecto}{89}{section.12.6}
-\contentsline {section}{\numberline {12.7}Anexo: Archivos Generados}{93}{section.12.7}
-\contentsline {section}{\numberline {12.8}Anexo: Mensajes de Error}{94}{section.12.8}
-\contentsline {section}{\numberline {12.9}Anexo: C\IeC {\'a}lculos de Comparaci\IeC {\'o}n de Poses}{95}{section.12.9}
-\contentsline {subsection}{\numberline {12.9.1}Normalizaci\IeC {\'o}n Basada en el Centro de la Cadera}{95}{subsection.12.9.1}
+\contentsline {subsection}{\numberline {8.2.1}C\IeC {\'a}lculo a partir de la Normalizaci\IeC {\'o}n de un punto}{61}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}C\IeC {\'a}lculo a partir de la Normalizaci\IeC {\'o}n de Cuadro de Point Cloud}{63}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2.3}C\IeC {\'a}lculo a partir de la Normalizaci\IeC {\'o}n de la distancia entre dos puntos}{65}{subsection.8.2.3}
+\contentsline {section}{\numberline {8.3}Dise\IeC {\~n}o De GUI}{67}{section.8.3}
+\contentsline {chapter}{\numberline {9}Plan de Actividades}{68}{chapter.9}
+\contentsline {subsection}{\numberline {9.0.1}Cronograma}{69}{subsection.9.0.1}
+\contentsline {chapter}{\numberline {10}Conclusiones}{70}{chapter.10}
+\contentsline {chapter}{\numberline {11}Recomendaciones}{73}{chapter.11}
+\contentsline {subsubsection}{Requerimientos de los equipos de desarrollo y usuario}{73}{subsubsection*.75}
+\contentsline {subsubsection}{Uso del sistema interactivo}{74}{subsubsection*.76}
+\contentsline {subsubsection}{Desarrollo completo del prototipo}{74}{subsubsection*.77}
+\contentsline {chapter}{\numberline {12}Anexos}{81}{chapter.12}
+\contentsline {section}{\numberline {12.1}Lista de Abreviaturas}{81}{section.12.1}
+\contentsline {section}{\numberline {12.2}Glosario}{82}{section.12.2}
+\contentsline {section}{\numberline {12.3}Anexo: Control de Sprint}{86}{section.12.3}
+\contentsline {section}{\numberline {12.4}Anexo: Product Backlog}{89}{section.12.4}
+\contentsline {section}{\numberline {12.5}Anexo: Gr\IeC {\'a}fico Burn-Up Burn-Down}{92}{section.12.5}
+\contentsline {section}{\numberline {12.6}Anexo: Proceso de Instalaci\IeC {\'o}n de OpenPose y Unity para el Desarrollo del Proyecto}{93}{section.12.6}
+\contentsline {section}{\numberline {12.7}Anexo: Archivos Generados}{97}{section.12.7}
+\contentsline {section}{\numberline {12.8}Anexo: Mensajes de Error}{98}{section.12.8}
+\contentsline {section}{\numberline {12.9}Anexo: C\IeC {\'a}lculos de Comparaci\IeC {\'o}n de Poses}{99}{section.12.9}
+\contentsline {subsection}{\numberline {12.9.1}Ejemplo de C\IeC {\'a}lculo de Normalizaci\IeC {\'o}n Basada en el Centro de la Cadera}{99}{subsection.12.9.1}
