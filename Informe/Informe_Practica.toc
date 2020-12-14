@@ -1,48 +1,45 @@
-\contentsline {chapter}{\numberline {1}Resumen}{2}{chapter.1}
-\contentsline {chapter}{\numberline {2}Introducci\IeC {\'o}n}{3}{chapter.2}
-\contentsline {chapter}{\numberline {3}Objetivos}{4}{chapter.3}
-\contentsline {section}{\numberline {3.1}Objetivo General}{4}{section.3.1}
-\contentsline {section}{\numberline {3.2}Objetivos Espec\IeC {\'\i }ficos}{4}{section.3.2}
-\contentsline {chapter}{\numberline {4}Estudio de Diagn\IeC {\'o}stico}{5}{chapter.4}
-\contentsline {section}{\numberline {4.1}Seguimiento de la Pandemia}{5}{section.4.1}
-\contentsline {section}{\numberline {4.2}Investigaci\IeC {\'o}n Sobre Los Dispositivos Pioneros en el \IeC {\'a}rea de Body Tracking}{6}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Kinect desarrollado por Microsoft}{6}{subsection.4.2.1}
-\contentsline {subsubsection}{Azure Kinect}{7}{subsubsection*.5}
-\contentsline {subsection}{\numberline {4.2.2}PlayStation Camera desarrollado por Sony Computer Entertainment}{7}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}\IeC {\'A}mbito Cl\IeC {\'\i }nico}{8}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}\IeC {\'A}mbito Pedag\IeC {\'o}gico}{9}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}\IeC {\'A}mbito De Entretenimiento y Entrenamiento}{10}{subsection.4.2.5}
-\contentsline {subsubsection}{Clasificaci\IeC {\'o}n de Edades Para el Uso de Sistemas Interactivos de Entretenimiento y Entrenamiento}{10}{subsubsection*.10}
-\contentsline {subsubsection}{Sistema PEGI}{11}{subsubsection*.11}
-\contentsline {subsubsection}{Sistema ESRB}{12}{subsubsection*.13}
-\contentsline {chapter}{\numberline {5}Marco Te\IeC {\'o}rico}{14}{chapter.5}
-\contentsline {section}{\numberline {5.1}Base Teorica}{14}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Glosario}{14}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}}{14}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Body Tracking/Motion Capture}{15}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Skeletical Tracking}{16}{subsection.5.2.1}
-\contentsline {subsubsection}{Normalizaci\IeC {\'o}n de Imagenes}{17}{subsubsection*.18}
-\contentsline {chapter}{\numberline {6}Estudio de alternativas}{18}{chapter.6}
-\contentsline {section}{\numberline {6.1}An\IeC {\'a}lisis de Alternativas actualmente disponibles en el mercado}{18}{section.6.1}
-\contentsline {subsubsection}{Analizadores M\IeC {\'e}dicos}{18}{subsubsection*.19}
-\contentsline {subsection}{\numberline {6.1.1}Entretenimiento}{18}{subsection.6.1.1}
-\contentsline {subsubsection}{Just Dance}{19}{subsubsection*.20}
-\contentsline {section}{\numberline {6.2}An\IeC {\'a}lisis de Alternativas En Herramientas Disponibles Para el Desarrollo}{19}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Trajes con sensores de movimiento}{19}{subsection.6.2.1}
-\contentsline {subsubsection}{Creaci\IeC {\'o}n de Software propio para Body Tracking}{19}{subsubsection*.22}
-\contentsline {subsection}{\numberline {6.2.2}TensorFlow}{20}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Posenet}{20}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Wrnch}{21}{subsection.6.2.4}
-\contentsline {subsection}{\numberline {6.2.5}OpenPose}{22}{subsection.6.2.5}
-\contentsline {subsection}{\numberline {6.2.6}DeepMotion}{22}{subsection.6.2.6}
-\contentsline {subsection}{\numberline {6.2.7}Unity y Kinect}{22}{subsection.6.2.7}
-\contentsline {chapter}{\numberline {7}Metodolog\IeC {\'\i }a}{23}{chapter.7}
-\contentsline {subsection}{\numberline {7.0.1}Gr\IeC {\'a}fica Burn-Up}{23}{subsection.7.0.1}
-\contentsline {subsection}{\numberline {7.0.2}Gr\IeC {\'a}fica Burn-Down}{23}{subsection.7.0.2}
-\contentsline {chapter}{\numberline {8}Dise\IeC {\~n}o del Proyecto}{25}{chapter.8}
-\contentsline {chapter}{\numberline {9}Plan de Actividades}{26}{chapter.9}
-\contentsline {subsection}{\numberline {9.0.1}Cronograma}{27}{subsection.9.0.1}
-\contentsline {chapter}{\numberline {10}Evaluaci\IeC {\'o}n Financiera Comparada}{28}{chapter.10}
-\contentsline {chapter}{\numberline {11}Conclusiones}{29}{chapter.11}
-\contentsline {chapter}{\numberline {12}Recomendaciones}{32}{chapter.12}
-\contentsline {chapter}{\numberline {13}Anexos}{33}{chapter.13}
+\contentsline {chapter}{\numberline {1}Objetivos}{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}Objetivo General}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Objetivos Espec\IeC {\'\i }ficos}{2}{section.1.2}
+\contentsline {chapter}{\numberline {2}Estudio de Diagn\IeC {\'o}stico}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Seguimiento de la Pandemia}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Investigaci\IeC {\'o}n Sobre Los Dispositivos Pioneros en el \IeC {\'a}rea de Body Tracking}{4}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Kinect desarrollado por Microsoft}{4}{subsection.2.2.1}
+\contentsline {subsubsection}{Azure Kinect}{5}{subsubsection*.6}
+\contentsline {subsection}{\numberline {2.2.2}PlayStation Camera desarrollado por Sony Computer Entertainment}{5}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}\IeC {\'A}mbito Cl\IeC {\'\i }nico}{6}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}\IeC {\'A}mbito Pedag\IeC {\'o}gico}{7}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}\IeC {\'A}mbito De Entretenimiento y Entrenamiento}{8}{subsection.2.2.5}
+\contentsline {subsubsection}{Clasificaci\IeC {\'o}n de Edades Para el Uso de Sistemas Interactivos de Entretenimiento y Entrenamiento}{9}{subsubsection*.11}
+\contentsline {subsubsection}{Sistema PEGI}{9}{subsubsection*.12}
+\contentsline {subsubsection}{Sistema ESRB}{10}{subsubsection*.15}
+\contentsline {chapter}{\numberline {3}Marco Te\IeC {\'o}rico}{12}{chapter.3}
+\contentsline {section}{\numberline {3.1}Body Tracking/Motion Capture}{12}{section.3.1}
+\contentsline {subsubsection}{Estimaci\IeC {\'o}n de Poses}{13}{subsubsection*.20}
+\contentsline {subsection}{\numberline {3.1.1}Skeletical Tracking}{14}{subsection.3.1.1}
+\contentsline {section}{\numberline {3.2}Base Te\IeC {\'o}rica}{15}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}C\IeC {\'a}mara y Desambiguaci\IeC {\'o}n}{15}{subsection.3.2.1}
+\contentsline {subsubsection}{Depth of Field (DOF)}{15}{subsubsection*.23}
+\contentsline {subsubsection}{Sensores RGB-D}{16}{subsubsection*.24}
+\contentsline {subsection}{\numberline {3.2.2}Inteligencia Artificial (IA)}{17}{subsection.3.2.2}
+\contentsline {subsubsection}{Machine Learning (ML)}{17}{subsubsection*.26}
+\contentsline {subsubsection}{Deep Learning (DL)}{18}{subsubsection*.27}
+\contentsline {subsubsection}{Modelo DL CAFFE}{18}{subsubsection*.28}
+\contentsline {subsubsection}{Modelo DL COCO}{19}{subsubsection*.29}
+\contentsline {subsubsection}{Neural Network}{19}{subsubsection*.30}
+\contentsline {chapter}{\numberline {4}Estudio de alternativas}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}An\IeC {\'a}lisis de Alternativas actualmente disponibles en el mercado}{21}{section.4.1}
+\contentsline {subsubsection}{Analizadores M\IeC {\'e}dicos}{21}{subsubsection*.32}
+\contentsline {subsection}{\numberline {4.1.1}Entretenimiento}{21}{subsection.4.1.1}
+\contentsline {subsubsection}{Just Dance}{22}{subsubsection*.33}
+\contentsline {section}{\numberline {4.2}An\IeC {\'a}lisis de Alternativas En Herramientas Disponibles Para el Desarrollo}{22}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Trajes con sensores de movimiento}{22}{subsection.4.2.1}
+\contentsline {subsubsection}{Creaci\IeC {\'o}n de Software propio para Body Tracking}{22}{subsubsection*.35}
+\contentsline {subsection}{\numberline {4.2.2}TensorFlow}{23}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}PoseNet}{23}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Wrnch}{24}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}OpenPose}{25}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}DeepMotion}{25}{subsection.4.2.6}
+\contentsline {subsection}{\numberline {4.2.7}Unity y Kinect}{25}{subsection.4.2.7}
+\contentsline {chapter}{\numberline {5}Plan de Actividades}{26}{chapter.5}
+\contentsline {subsection}{\numberline {5.0.1}Cronograma}{27}{subsection.5.0.1}
