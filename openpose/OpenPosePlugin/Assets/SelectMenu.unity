@@ -790,9 +790,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e55001aeb2aa3454683826f8c5dd5d0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioSource: {fileID: 570963624}
+  audioSource: {fileID: 0}
   OptionMenu: {fileID: 0}
   ButtonMenu: {fileID: 0}
+  ButtonApply: {fileID: 0}
+  SliderVolume: {fileID: 0}
 --- !u!82 &570963624
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2524,7 +2526,7 @@ PrefabInstance:
     - target: {fileID: 9173190871937014241, guid: 9d2239df914a3c14d91019f4e35ab1a4,
         type: 3}
       propertyPath: m_Alpha
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9173190871937014244, guid: 9d2239df914a3c14d91019f4e35ab1a4,
         type: 3}
