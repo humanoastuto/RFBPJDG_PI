@@ -304,7 +304,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -265, y: 125}
+  m_AnchoredPosition: {x: -315.2, y: 125}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &141710159
@@ -420,6 +420,7 @@ GameObject:
   - component: {fileID: 170583708}
   - component: {fileID: 170583709}
   - component: {fileID: 170583710}
+  - component: {fileID: 170583711}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -489,6 +490,18 @@ MonoBehaviour:
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
+--- !u!225 &170583711
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170583707}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &279894217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,7 +1375,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -11, y: -128}
-  m_SizeDelta: {x: 717.7, y: 217.3}
+  m_SizeDelta: {x: 783.96, y: 217.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1140533721
 MonoBehaviour:
@@ -1600,7 +1613,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 265, y: 125}
+  m_AnchoredPosition: {x: 302.5, y: 125}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1327192418

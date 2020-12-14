@@ -42,7 +42,7 @@ public class ListGeneration : MonoBehaviour
     {
         GameObject g;
         levelList = new List<LevelData>();
-        DirectoryInfo root = new DirectoryInfo("./Assets/Custom/");
+        DirectoryInfo root = new DirectoryInfo("./Custom/");
         LevelData lvldat;
         foreach (DirectoryInfo dir in root.GetDirectories())
         {
