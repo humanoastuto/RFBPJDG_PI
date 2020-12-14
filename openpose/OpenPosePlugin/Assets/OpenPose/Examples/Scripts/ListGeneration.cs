@@ -9,6 +9,7 @@ using System.IO;
 using UnityEngine.Networking;
 
 
+
 public static class ButtonExtension
 {
     public static void AddEventListener<T1,T2,T3>(this Button button, T1 param, T2 param2, T3 param3, Action<T1,T2,T3> OnClick)
@@ -91,13 +92,12 @@ public class ListGeneration : MonoBehaviour
 
         if (File.Exists(location + "/preview.wav"))
         {
-            Debug.Log("File exists");
-
+           // Debug.Log("File exists");
             StartCoroutine(GetAudioClip(location + "/preview.wav"));
         }
         else
         {
-            Debug.Log("NOt exists");
+          //  Debug.Log("NOt exists");
             StartCoroutine(FadeOut(0.7f));
         }
     }

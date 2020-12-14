@@ -3,27 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
+
 
 public class MainMenu : MonoBehaviour
 {
     public AudioSource audioSource;
     public GameObject OptionMenu;
     public GameObject ButtonMenu;
-    public GameObject ButtonApply;
-    public GameObject SliderVolume;
+    public AudioMixer audioMixer;
+    public Slider VolumeSlider;
 
-    private float musicVolume =1f;
-    // Start is called before the first frame update
+    public void SetVolume (float volume)
+    {
+        audioMixer.SetFloat("MainVolume", Mathf.Log10(volume) * 20);
+        PlayerPrefs.SetFloat("MusicVolume", volume);
+    }
+    
     void Start()
     {
-       audioSource.Play();
-       ButtonApply.GetComponent<Button>().onClick.AddListener(ChangeVolume);
-    }
-
-    public void ChangeVolume()
-    {
-        musicVolume = SliderVolume.GetComponent<Slider>().value;
-        audioSource.volume = musicVolume;
+        audioSource.Play();
+        VolumeSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1f);
     }
 
     public void QuitGame()
@@ -31,20 +31,6 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(FadeOut(0.7f));
         Debug.Log("Quit");
         Application.Quit();
-    }
-    public void UpdateVolume(float volume) {
-        this.musicVolume = volume;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       // audioSource.volume = musicVolume;
-    }
-
-    public float getVolume()
-    {
-        return this.musicVolume;
     }
 
     IEnumerator FadeOut(float FadeTime)

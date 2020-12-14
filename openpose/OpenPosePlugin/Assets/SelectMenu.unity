@@ -793,8 +793,7 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   OptionMenu: {fileID: 0}
   ButtonMenu: {fileID: 0}
-  ButtonApply: {fileID: 0}
-  SliderVolume: {fileID: 0}
+  audioMixer: {fileID: 0}
 --- !u!82 &570963624
 AudioSource:
   m_ObjectHideFlags: 0
@@ -804,7 +803,8 @@ AudioSource:
   m_GameObject: {fileID: 570963621}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 6b4184b3536f71c47977ea908574e379,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 7fe5361ea9f4f584f8cc8455039a2ada, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.304
