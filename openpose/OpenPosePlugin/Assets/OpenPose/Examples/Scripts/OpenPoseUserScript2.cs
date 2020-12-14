@@ -8,7 +8,7 @@ namespace OpenPose.Example {
     /*
      * User example of using OPWrapper
      */
-    public class OpenPoseUserScript : MonoBehaviour {
+    public class OpenPoseUserScript2 : MonoBehaviour {
 
         // HumanController2D prefab
         [SerializeField] GameObject humanPrefab;
@@ -32,16 +32,14 @@ namespace OpenPose.Example {
         [SerializeField] LineRenderer copyGlasses;
         [SerializeField] Text scoreText;
         [SerializeField] Text timerText;
-        [SerializeField] Button start;
         private List<(float, float)> humancopy = new List<(float, float)>();
         private string[] poses = null;
         private int npose;
         private float timer;
-        private float timeToCompare;
-        private float timeStarted;
+        private float timeNextCapture;
         private float timeToStart;
-        private float timeToSkip;
-        private List<bool> points;
+        private float timeToRecord;
+        private float timeToCapture;
 
         // Output
         private OPDatum datum;
@@ -91,28 +89,16 @@ namespace OpenPose.Example {
         private int frameCounter = 0;
 
         private void LoadMap() {
-            poses = System.IO.File.ReadAllLines(@".\Assets\Levels\prueba2.txt");
-            npose = 0;
+            //poses = System.IO.File.ReadAllLines(@".\Assets\Levels\prueba.txt");
+            //npose = 0;
             timer = 0;
-            timeToCompare = (float) 0.5;
-            timeStarted = 0;
-            timeToStart = 3;
-            timeToSkip = 2;
-            points = new List<bool>();
-            for (int i = 0; i < poses.Length; i++) {
-                points.Add(false);
-            }
-            ChangePose();
+            timeToStart = (float) 10;
+            timeToRecord = (float) 20;
+            timeToCapture = (float) 0.5;
+            timeNextCapture = (float) 3;
         }
 
         private void Start() {
-            /*if (!GameObject.Find("Timer").GetComponent<Timer>().videoPlay.isPlaying)
-            {
-                Timer timerScript = GameObject.Find("Timer").GetComponent<Timer>();
-                timerScript.ToggleTimerStart();
-            }*/
-            //StartCoroutine(ExampleCoroutine());
-
             // Register callbacks
             OPWrapper.OPRegisterCallbacks();
             // Enable OpenPose log to unity (default true)
@@ -208,56 +194,27 @@ namespace OpenPose.Example {
             return (float)System.Math.Sqrt(System.Math.Pow((x1 - x2), 2) + System.Math.Pow((y1 - y2), 2));
         }
 
-        public void ChangePose() {
-            if (npose < poses.Length)
+        public void AddPose() {
+            humancopy.Clear();
+            foreach (RectTransform rectTransform in humanContainer.GetComponentsInChildren<HumanController2D>()[0].getPoseJoints())
             {
-                humancopy.Clear();
-                string[] pose = poses[npose].Split(' ');
-                for (int i = 0; i < 25; i++)
-                {
-                    humancopy.Add((float.Parse(pose[i * 2]), float.Parse(pose[i * 2 + 1])));
-                }
-                npose++;
+                humancopy.Add((rectTransform.anchoredPosition.x, rectTransform.anchoredPosition.y));
+            }
+            string pose = "";
+            float column = Distance(humancopy[1].Item1, humancopy[1].Item2, humancopy[8].Item1, humancopy[8].Item2);
+            float column2 = 300 / column;
+            for (int i = 0; i < 25; i++)
+            {
+                pose += (humancopy[i].Item1 * column2).ToString() + " " + (humancopy[i].Item2 * column2).ToString() + " ";
+            }
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@".\Assets\Levels\prueba2.txt", true)) {
+                file.WriteLine(pose);
             }
         }    
 
-        private void Compare(List<RectTransform> human1, List<(float, float)> human2)
-        {
-            float dif = 0;
-            if (human1.Count > 0)
-            {
-                float col1 = 1;
-                float col2 = 1;
-                if (human1[1].anchoredPosition.x > 0 && human1[8].anchoredPosition.y > 0 && human2[1].Item1 > 0 && human2[8].Item1 > 0)
-                {
-                    col1 = Distance(human1[1].anchoredPosition, human1[8].anchoredPosition);
-                    col2 = Distance(human2[1].Item1, human2[1].Item2, human2[8].Item1, human2[8].Item2);
-                }
-                float tam = col2 / col1;
-                float difx = human1[1].anchoredPosition.x * tam - human2[1].Item1;
-                float dify = human1[1].anchoredPosition.y * tam - human2[1].Item2;
-                for (int i = 0; i < 25; i++)
-                {
-                    if (human2[i].Item1 > 0 && human2[i].Item2 > 0)
-                    {
-                        dif += System.Math.Abs(human1[i].anchoredPosition.x * tam - human2[i].Item1 - difx);
-                        dif += System.Math.Abs(human1[i].anchoredPosition.y * tam - human2[i].Item2 - dify);
-                    }
-                }
-                if (dif < 1000) {
-                    points[npose] = true;
-                }
-                scoreText.text = CountPoints();
-            }
-            else
-            {
-                scoreText.text = "NADA QUE COMPARAR";
-            }
-        }
-
         private void DrawCopy() {
-            float x = 700;
-            float y = 50;
+            float x = 550;
+            float y = 30;
             float z = 3;
 
             copyTorso.SetPosition(0, new Vector3(x - humancopy[0].Item1 / z, y - humancopy[0].Item2 / z, -1));
@@ -323,26 +280,8 @@ namespace OpenPose.Example {
             humanGlasses.SetPosition(4, new Vector3(x - poseJoints[18].anchoredPosition.x / z, y - poseJoints[18].anchoredPosition.y / z, -1));
         }
 
-        public void StartGame() {
-            timeStarted = Time.captureDeltaTime + timeToStart;
-            timeToCompare = Time.captureDeltaTime + timeToStart;
-        }
+        private void StartRecord() {
 
-        private string CountPoints() {
-            int n = 0;
-            for (int i = 0; i < poses.Length; i++) {
-                if(points[i]) {
-                    n++;
-                }
-            }
-            if(n * 3 < poses.Length) {
-                return "mal" ;
-            } else if (n * 3 / 2 < poses.Length) {
-                return "bien";
-            } else {
-                return "perfecto";
-            }
-            //return n + " / " + poses.Length;
         }
 
         private void Update() {
@@ -359,8 +298,7 @@ namespace OpenPose.Example {
                 // Rescale output UI
                 Vector2 outputSize = outputTransform.sizeDelta;
                 Vector2 screenSize = Camera.main.pixelRect.size;
-                float scale = Mathf.Min(outputSize.x / (screenSize.x * 2), outputSize.y / (screenSize.y * 2));
-                //float scale = Mathf.Min(screenSize.x / outputSize.x, screenSize.y / outputSize.y);
+                float scale = Mathf.Min(screenSize.x / outputSize.x, screenSize.y / outputSize.y);
                 outputTransform.localScale = new Vector3(scale, scale, scale);
 
                 // Update number of people in UI
@@ -376,10 +314,9 @@ namespace OpenPose.Example {
                 foreach (var human in humanContainer.GetComponentsInChildren<HumanController2D>()) {
                     // When i >= no. of human, the human will be hidden
                     human.DrawHuman(ref datum, i++, renderThreshold);
-                    //if (human.getPoseJoints().Count > 0) {
+                    if (human.getPoseJoints().Count > 0) {
                         //DrawHuman(human.getPoseJoints());
-                    //}
-                    //Compare(human.getPoseJoints(), humancopy);
+                    }
                 }
 
                 // Update framerate in UI
@@ -396,19 +333,14 @@ namespace OpenPose.Example {
             }
 
             timer += Time.deltaTime;
-            timerText.text = ((int) (timer - timeStarted - timeToStart) / 60) + ":" + ((int) (timer - timeStarted - timeToStart) % 60);
-            if (timeStarted > 0) {
-                if (timer > timeToCompare) {
-                    timeToCompare += timeToSkip;
-                    ChangePose();
-                }
+            timerText.text = ((int) timer / 60) + ":" + ((int) timer % 60);
+            if (timeToStart < timer && timer < (timeToStart + timeToRecord) && timer > timeNextCapture) {
+                AddPose();
+                timeNextCapture += timeToCapture;
             }
             if (humancopy.Count == 25)
             {
                 DrawCopy();
-            }
-            if (humanContainer.GetComponentsInChildren<HumanController2D>().Length > 0) {
-                Compare(humanContainer.GetComponentsInChildren<HumanController2D>()[0].getPoseJoints(), humancopy);
             }
         }
     }
