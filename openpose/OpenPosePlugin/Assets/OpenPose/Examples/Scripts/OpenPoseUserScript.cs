@@ -75,7 +75,7 @@ namespace OpenPose.Example {
         }
 
         // Bg image
-        public bool renderBgImg = false;
+        public bool renderBgImg = false; //Start by default
         public void ToggleRenderBgImg(){
             renderBgImg = !renderBgImg;
             bgImageRenderer.FadeInOut(renderBgImg);
@@ -105,12 +105,19 @@ namespace OpenPose.Example {
             ChangePose();
         }
 
+        private void EnableCameraRender()
+        {
+            ToggleRenderBgImg();
+            ToggleRenderBgImg();
+        }
+
+        private void CustomInitialConfig()
+        {
+            EnableCameraRender();
+        }
+
+
         private void Start() {
-            /*if (!GameObject.Find("Timer").GetComponent<Timer>().videoPlay.isPlaying)
-            {
-                Timer timerScript = GameObject.Find("Timer").GetComponent<Timer>();
-                timerScript.ToggleTimerStart();
-            }*/
             //StartCoroutine(ExampleCoroutine());
 
             // Register callbacks
@@ -126,10 +133,13 @@ namespace OpenPose.Example {
             /* OPWrapper.OPConfigureAllInDefault(); */
             UserConfigureOpenPose();
 
+            CustomInitialConfig();
+
             // Start OpenPose
             OPWrapper.OPRun();
            
             LoadMap();
+     
         }
 
         // Parameters can be set here

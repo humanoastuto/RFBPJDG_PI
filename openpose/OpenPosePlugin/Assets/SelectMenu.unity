@@ -1179,7 +1179,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 138530633}
   m_HandleRect: {fileID: 138530632}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 1
   m_OnValueChanged:
@@ -2530,6 +2530,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Alpha
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173190871937014241, guid: 9d2239df914a3c14d91019f4e35ab1a4,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173190871937014241, guid: 9d2239df914a3c14d91019f4e35ab1a4,
+        type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9173190871937014244, guid: 9d2239df914a3c14d91019f4e35ab1a4,
         type: 3}

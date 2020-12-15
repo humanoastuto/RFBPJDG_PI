@@ -13,8 +13,12 @@ public class LevelLoader : MonoBehaviour
 
     void Start()
     {
-        Button btn = button.GetComponent<Button>();
-        btn.onClick.AddListener(TaskOnClick);
+        if(button != null)
+        {
+            Button btn = button.GetComponent<Button>();
+            btn.onClick.AddListener(TaskOnClick);
+        }
+       
     }
 
     void TaskOnClick()
