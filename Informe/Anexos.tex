@@ -135,15 +135,17 @@ En la tabla \ref{productbacklog} del Product Backlog, se observan los campos:
 \begin{itemize}
 	\item ID como identificador de la tarea, debe ser único.
 	\item Tarea, que indica el título dado en Sprint Backlog para facilitar su comprensión.
-	\item Estado(Sprint), si ha de estar Planificada, En Proceso o Hecho (Sprint en que se realizo) o si fue Descartado.
+	\item Estado(Sprint), si ha de estar Planificada, En Proceso o Hecho (Sprint en que se completo) o si fue Descartado.
 	\item Valor, el valor designado a cada actividad realizada, en total se asignan 1000 puntos a su finalización
 	\item Estimado Inicial, la valoración de las tareas que se mide en horas requeridas.
 	\item Factor Ajuste, determina el fallo que se debe aumentar al tiempo original, se le suma al Valor Estimado en función $Valor Estimado = Valor Estimado + Valor Estimado * Factor de Ajuste$
 	\item Ajustado, es la valoración de las tareas posteriormente al ser más realistas sobre el tiempo requerido para resolverlo.
 	\item Sprint, que señala el número de Sprint en que fue realizada
-	\item Prioridad, al ser una metodología ágil, se reconoce que las tareas pueden ser más relevantes unas que otras, en este caso, Baja, Normal y Alta.
-	
+	\item Prioridad, al ser una metodología ágil, se reconoce que las tareas pueden ser más relevantes unas que otras, en este caso, Baja, Normal y Alta.	
 \end{itemize}
+
+Como métrica para calcular el valor se empleará el Estimado Inicial y la Prioridad, se utilizarán cálculos matemáticos, donde el valor total a sumar para el resto de las tareas es 500, se asignara el valor de las prioridades como multiplicadores $Baja = 1$, $Normal = 1.5$, $Alta = 2$ a las horas de la Estimación inicial $EI$, de tal forma que la sumatoria de $EI*Prioridad$ se divida en 500 y se asignen los valores correspondientes.
+
 La Tarea es el nombre dado a las tareas distribuidas al SCRUM Team, formuladas a partir de los requerimientos del cliente.
 El valor de las tareas se distribuirá de un valor total de 1000 puntos, se determinara una cuarta parte a la redacción del informe, una cuarta parte a la investigación dedicada requerido para poder hacer posible el proyecto y el resto lo determinará el rol de Product Owner.
 El Estimado Inicial es definido con la Estimación de Poker previamente mencionada.
@@ -151,6 +153,9 @@ Redactar en la tabla \ref{productbacklog} engloba la redacción del informe y el
 En Redactar Parte 1, están los títulos de Objetivos, Estudio de Diagnóstico, Marco Teórico, Estudio de Alternativas, Plan de Actividades
 En Redactar Parte 2, están los títulos de Metodología, Diseño, Conclusiones, Recomendaciones, dentro de la metodología se lleva a cabo la tarea de Seguimiento de Product Owner.
 En Redactar Parte 3, están los títulos de Introducción, Anexos, Glosario, Revisión de ortografía y Resumen.
+
+\textbf{En caso de estar en blanco, considerar que todavía no se termino en su totalidad, se encuentra en fase de revisión o pruebas}. Al existir potenciales nuevas tareas, el valor puede variar en la siguiente entrega. Para simplificar la tabla, el proceso de corrección de errores es parte de la tarea correspondiente.
+
 \restoregeometry
 \newgeometry{left=0.5cm,bottom=.25cm}
 \begin{landscape}
@@ -160,19 +165,26 @@ En Redactar Parte 3, están los títulos de Introducción, Anexos, Glosario, Rev
 				\hline
 				\multicolumn{9}{ |c| }{Product Backlog} \\ \hline
 				ID & Tarea & Estado(Sprint) & Valor & Estimado Inicial (h)& Factor Ajuste & Ajustado(h) & Sprint & Prioridad \\ \hline
-				T-0 & Redactar Parte 1 & Hecho(1) & 50 & 18 & 1.5 & 40 & 1 & Normal \\ \hline
-				T-1 & Redactar Parte 2 & En proceso(2) & 100 & 20 &  &  & 2 & Normal \\ \hline
-				T-1 & Redactar Parte 3 & En proceso(3) & 100 & 9 &  &  & 3 & Normal \\ \hline
-				T-2 & Investigación de Herramientas & Hecho(1) & 250 & 24 & 3.0 & 96 &  1 & Normal \\ \hline
-				T-3 & Manipulación de Herramientas & Hecho(1) &  & 12 & 1.0 & 24 & 1 & Normal \\ \hline
-				T-4 & Modificación de GUI & Hecho(1) &  &  & &  & 1 & Baja \\ \hline
-				T-5 & Mostrar Vídeo a Copiar en la Pantalla & Hecho(1) &  &  & &  & 1 & Alta \\ \hline
-				T-6 & Lectura de Movimientos del Usuario & Hecho(1) &  &  & &  & 1 & Alta \\ \hline
-				T-7 & Redimension de Imagen para Comparar & Hecho(1) &  &  & &  & 1 & Alta \\ \hline
-				T-8 & Menú y Boton Play de Redireccionamiento & Hecho() &  &  & &  &  & Baja \\ \hline
-				T-9 & Calificación de Movimientos & Hecho(2) &  & 10 &  &  & 2 & Alta \\ \hline
-				T-10 & Mostrar acciones a imitar & Hecho(2) &  & 3 & &  &  & Alta \\ \hline
-				T-11 &  & &  &  & &  &  & Normal \\ \hline
+				T-0 & Redactar Parte 1 & Hecho(1) & 50 & 18 & 1.5 & 45 & 1 & Normal \\ \hline
+				T-1 & Redactar Parte 2 & Hecho(2) & 100 & 20 & 2 & 60 & 2 & Normal \\ \hline
+				T-1 & Redactar Parte 3 & En proceso(3) 	& 100 & 9 &  &  & 3 & Normal \\ \hline
+				T-2 & Investigación de Herramientas  	& Hecho(2) & 250 & 40 & 3.0 & 160 &  1 & Normal \\ \hline
+				T-3 & Manipulación de Herramientas 	 	& En Proceso(3) & 86 & 12 & 4.0 & 60 & 1 & Normal \\ \hline
+				T-4 & Modificación de GUI & Hecho(1) 	&  12  & 3 & 1.0 & 6 & 1 & Baja \\ \hline
+				T-5 & Mostrar Vídeo a Copiar en la Pantalla & Hecho(1) & 16 & 2 & 0.0 & 2 & 1 & Alta \\ \hline
+				T-6 & Lectura de Movimientos del Usuario 	& Hecho(1) & 8 & 1 & 4.0 & 5 & 1 & Alta \\ \hline
+				T-7 & Redimension de Imagen para Comparar	& Hecho(1) & 32 & 4 & 0.0 & 4 & 1 & Alta \\ \hline
+				T-8 & Menú y Botón Play de Redireccionamiento & Hecho(2) & 4 & 1 & 0.0 & 1 & 2 & Baja \\ \hline
+				T-9 & Calificación de Movimientos & Hecho(2)  & 80 & 10 & 4.0 & 50 & 2 & Alta \\ \hline
+				T-10 & Mostrar acciones a imitar & Hecho(2)   & 24 & 3 & 9.0 & 30 & 2 & Alta \\ \hline
+				T-11 & Asignar tiempo a las poses a imitar & Hecho(2) & 30 & 5 & 3.0 & 20 & 2 & Normal \\ \hline
+				T-12 & Diseño de GUI & Hecho(2) & 60 & 10 & 0.0 & 10 & 2 & Normal \\ \hline
+				T-13 & Creación de menú y visuales & Hecho(2) & 60 & 10 & 0.0 & 10 & 2 & Normal \\ \hline
+				T-14 & Funcionalidad de menú y menú de opciones & Hecho(2) & 12 & 2 & 0.5 & 3 & 2 & Normal \\ \hline
+				T-15 & Menú de lista de Mapas & Hecho(2) & 12 & 2 & 2.0 & 6 & 2 & Normal \\ \hline
+				T-16 & Modificación de UML & En proceso(2) & 4 & 1 &  &  & 2 & Baja \\ \hline
+				T-17 & Revisión de Código & Planificada(3) & 24 & 4 &  &  & 3 & Normal \\ \hline
+				T-18 & Revisión del Informe & Planificada(3) & 36 & 6 &  &  & 3 & Normal \\ \hline
 				& Entrega final & & 1000 &  &  &  &  &  \\ \hline
 			\end{tabular}
 			\caption{Product Backlog}
@@ -195,7 +207,7 @@ En Redactar Parte 3, están los títulos de Introducción, Anexos, Glosario, Rev
 \end{figure}
 \begin{figure}[b!]
 	\centering
-	\includegraphics[width=14cm,height=8cm,]{./Images/graficoburnup.png}
+	\includegraphics[width=14cm,height=8cm,]{./Images/graficoburndown.png}
 	\caption{Gráfico Burn-Down}
 	\footnotesize Fuente: Elaboración Propia
 	\label{burndown}
