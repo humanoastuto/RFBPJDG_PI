@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/hahastinky.unity
     guid: 2bb631f56e2c85b479c72f58d96c8802
+  - enabled: 1
+    path: Assets/hahastinky2.unity
+    guid: 039f83ba9188db04396460b107f95110
   m_configObjects: {}

@@ -794,6 +794,9 @@ MonoBehaviour:
   OptionMenu: {fileID: 0}
   ButtonMenu: {fileID: 0}
   audioMixer: {fileID: 0}
+  VolumeSlider: {fileID: 0}
+  FullScreenToggle: {fileID: 0}
+  resolutionDropdown: {fileID: 0}
 --- !u!82 &570963624
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2610,6 +2613,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d2239df914a3c14d91019f4e35ab1a4, type: 3}
+--- !u!95 &1963542605 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9173190871937014240, guid: 9d2239df914a3c14d91019f4e35ab1a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1963542604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1963542606 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9173190871827486876, guid: 9d2239df914a3c14d91019f4e35ab1a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1963542604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1963542607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963542606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3a9f9e38ab4b0f44ae7e970d009811a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transition: {fileID: 1963542605}
+  levelIndex: 2
+  transitionTime: 1
+  button: {fileID: 63281985}
 --- !u!1 &1994437481
 GameObject:
   m_ObjectHideFlags: 0
