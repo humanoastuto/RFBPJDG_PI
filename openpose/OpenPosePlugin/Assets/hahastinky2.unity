@@ -203,8 +203,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1795921008}
-        m_MethodName: StartGame
+      - m_Target: {fileID: 11500000, guid: 11215da4525138041b763d5a424bb53f, type: 3}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -689,7 +689,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1795921008}
+      - m_Target: {fileID: 0}
         m_MethodName: SetMaxPeople
         m_Mode: 0
         m_Arguments:
@@ -831,7 +831,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1795921008}
+      - m_Target: {fileID: 0}
         m_MethodName: SetFaceEnabled
         m_Mode: 0
         m_Arguments:
@@ -1687,7 +1687,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1795921008}
+      - m_Target: {fileID: 0}
         m_MethodName: ApplyChanges
         m_Mode: 1
         m_Arguments:
@@ -2566,7 +2566,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1795921008}
+      - m_Target: {fileID: 0}
         m_MethodName: SetRenderThreshold
         m_Mode: 0
         m_Arguments:
@@ -3125,7 +3125,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1795921008}
+      - m_Target: {fileID: 0}
         m_MethodName: SetFaceResX
         m_Mode: 0
         m_Arguments:
@@ -3719,7 +3719,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1795921008}
+      - m_Target: {fileID: 0}
         m_MethodName: SetFaceResY
         m_Mode: 0
         m_Arguments:
@@ -4192,7 +4192,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1795921008}
+      - m_Target: {fileID: 0}
         m_MethodName: ToggleRenderBgImg
         m_Mode: 1
         m_Arguments:
@@ -4333,7 +4333,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1795921008}
+      - m_Target: {fileID: 0}
         m_MethodName: SetHandResY
         m_Mode: 0
         m_Arguments:
@@ -4775,7 +4775,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1795921008}
+      - m_Target: {fileID: 0}
         m_MethodName: SetHandResX
         m_Mode: 0
         m_Arguments:
@@ -4926,7 +4926,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1795921008}
+      - m_Target: {fileID: 0}
         m_MethodName: SetPoseResY
         m_Mode: 0
         m_Arguments:
@@ -5748,7 +5748,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1795921008}
+      - m_Target: {fileID: 0}
         m_MethodName: SetHandEnabled
         m_Mode: 0
         m_Arguments:
@@ -5923,6 +5923,10 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   - {x: 0, y: 0, z: 1}
   - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 2
@@ -6014,7 +6018,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250, y: 0}
+  m_AnchoredPosition: {x: -200, y: 0}
   m_SizeDelta: {x: 600, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1675082012
@@ -6567,7 +6571,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1795921007}
   - component: {fileID: 1795921006}
-  - component: {fileID: 1795921008}
+  - component: {fileID: 1795921009}
   m_Layer: 0
   m_Name: OpenPose
   m_TagString: Untagged
@@ -6601,7 +6605,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1795921008
+--- !u!114 &1795921009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6610,7 +6614,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1795921005}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86ec4c4274a386c4fae2b8e7962ba208, type: 3}
+  m_Script: {fileID: 11500000, guid: 11215da4525138041b763d5a424bb53f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   humanPrefab: {fileID: 1275772725644782, guid: 831a1ca4df7dbba40a51933985fa4083,
@@ -6631,17 +6635,16 @@ MonoBehaviour:
   copyGlasses: {fileID: 799271455}
   scoreText: {fileID: 1618322990}
   timerText: {fileID: 1916017694}
-  start: {fileID: 3640528}
   inputType: 4
   producerString: -1
   maxPeople: 1
   renderThreshold: 0.05
   handEnabled: 0
   faceEnabled: 0
-  netResolution: {x: -1, y: 256}
+  netResolution: {x: -1, y: 368}
   handResolution: {x: 368, y: 368}
   faceResolution: {x: 368, y: 368}
-  renderBgImg: 1
+  renderBgImg: 0
 --- !u!1 &1820642227
 GameObject:
   m_ObjectHideFlags: 0
@@ -6813,7 +6816,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1795921008}
+      - m_Target: {fileID: 0}
         m_MethodName: SetPoseResX
         m_Mode: 0
         m_Arguments:
