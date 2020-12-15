@@ -21,28 +21,6 @@ namespace OpenPose.Example {
         [SerializeField] Text peopleText;
         [SerializeField] Text stateText;
 
-        //Created for us
-        [SerializeField] LineRenderer humanTorso;
-        [SerializeField] LineRenderer humanArms;
-        [SerializeField] LineRenderer humanLegs;
-        [SerializeField] LineRenderer humanGlasses;
-        [SerializeField] LineRenderer copyTorso;
-        [SerializeField] LineRenderer copyArms;
-        [SerializeField] LineRenderer copyLegs;
-        [SerializeField] LineRenderer copyGlasses;
-        [SerializeField] Text scoreText;
-        [SerializeField] Text timerText;
-        [SerializeField] Button start;
-        private List<(float, float)> humancopy = new List<(float, float)>();
-        private string[] poses = null;
-        private int npose;
-        private float timer;
-        private float timeToCompare;
-        private float timeStarted;
-        private float timeToStart;
-        private float timeToSkip;
-        private List<bool> points;
-
         // Output
         private OPDatum datum;
 
@@ -90,28 +68,10 @@ namespace OpenPose.Example {
         private float avgFrameRate = 0f;
         private int frameCounter = 0;
 
-        private void LoadMap() {
-            poses = System.IO.File.ReadAllLines(@".\Assets\Levels\prueba2.txt");
-            npose = 0;
-            timer = 0;
-            timeToCompare = (float) 0.5;
-            timeStarted = 0;
-            timeToStart = 3;
-            timeToSkip = 2;
-            points = new List<bool>();
-            for (int i = 0; i < poses.Length; i++) {
-                points.Add(false);
-            }
-            ChangePose();
-        }
-
-        private void Start() {
-            /*if (!GameObject.Find("Timer").GetComponent<Timer>().videoPlay.isPlaying)
-            {
-                Timer timerScript = GameObject.Find("Timer").GetComponent<Timer>();
-                timerScript.ToggleTimerStart();
-            }*/
-            //StartCoroutine(ExampleCoroutine());
+        IEnumerator ExampleCoroutine()
+        {
+          
+            yield return new WaitForSeconds((float)0.1);
 
             // Register callbacks
             OPWrapper.OPRegisterCallbacks();
@@ -128,15 +88,25 @@ namespace OpenPose.Example {
 
             // Start OpenPose
             OPWrapper.OPRun();
+
+            CustomStart();
+        }
+
+        private void Start() {
+           // if (!GameObject.Find("Timer").GetComponent<Timer>().videoPlay.isPlaying)
+            //{
+             //   Timer timerScript = GameObject.Find("Timer").GetComponent<Timer>();
+              //  timerScript.ToggleTimerStart();
+           // }
+            StartCoroutine(ExampleCoroutine());
            
-            LoadMap();
         }
 
         // Parameters can be set here
         private void UserConfigureOpenPose(){
             OPWrapper.OPConfigurePose(
                 /* poseMode */ PoseMode.Enabled, /* netInputSize */ netResolution, /* outputSize */ null,
-                /* keypointScaleMode */ ScaleMode.InputResolution,
+                /* keypointScaleMode */ /*ScaleMode.InputResolution*/ ScaleMode.ZeroToOne ,
                 /* gpuNumber */ -1, /* gpuNumberStart */ 0, /* scalesNumber */ 1, /* scaleGap */ 0.25f,
                 /* renderMode */ RenderMode.Auto, /* poseModel */ PoseModel.BODY_25,
                 /* blendOriginalFrame */ true, /* alphaKeypoint */ 0.6f, /* alphaHeatMap */ 0.7f,
@@ -163,7 +133,7 @@ namespace OpenPose.Example {
             OPWrapper.OPConfigureInput(
                 /* producerType */ inputType, /* producerString */ producerString,
                 /* frameFirst */ 0, /* frameStep */ 1, /* frameLast */ ulong.MaxValue,
-                /* realTimeProcessing */ false, /* frameFlip */ false,
+                /* realTimeProcessing */ true, /* frameFlip */ true,
                 /* frameRotate */ 0, /* framesRepeat */ false,
                 /* cameraResolution */ null, /* cameraParameterPath */ null,
                 /* undistortImage */ false, /* numberViews */ -1);
@@ -199,150 +169,10 @@ namespace OpenPose.Example {
             OPWrapper.OPRun();
         }
 
-        private float Distance(Vector2 p1, Vector2 p2)
+        private void CustomStart()
         {
-            return (float)System.Math.Sqrt(System.Math.Pow((p2.x - p1.x), 2) + System.Math.Pow((p2.y - p1.y), 2));
-        }
-
-        private float Distance(float x1, float y1, float x2, float y2) {
-            return (float)System.Math.Sqrt(System.Math.Pow((x1 - x2), 2) + System.Math.Pow((y1 - y2), 2));
-        }
-
-        public void ChangePose() {
-            if (npose < poses.Length)
-            {
-                humancopy.Clear();
-                string[] pose = poses[npose].Split(' ');
-                for (int i = 0; i < 25; i++)
-                {
-                    humancopy.Add((float.Parse(pose[i * 2]), float.Parse(pose[i * 2 + 1])));
-                }
-                npose++;
-            }
-        }    
-
-        private void Compare(List<RectTransform> human1, List<(float, float)> human2)
-        {
-            float dif = 0;
-            if (human1.Count > 0)
-            {
-                float col1 = 1;
-                float col2 = 1;
-                if (human1[1].anchoredPosition.x > 0 && human1[8].anchoredPosition.y > 0 && human2[1].Item1 > 0 && human2[8].Item1 > 0)
-                {
-                    col1 = Distance(human1[1].anchoredPosition, human1[8].anchoredPosition);
-                    col2 = Distance(human2[1].Item1, human2[1].Item2, human2[8].Item1, human2[8].Item2);
-                }
-                float tam = col2 / col1;
-                float difx = human1[1].anchoredPosition.x * tam - human2[1].Item1;
-                float dify = human1[1].anchoredPosition.y * tam - human2[1].Item2;
-                for (int i = 0; i < 25; i++)
-                {
-                    if (human2[i].Item1 > 0 && human2[i].Item2 > 0)
-                    {
-                        dif += System.Math.Abs(human1[i].anchoredPosition.x * tam - human2[i].Item1 - difx);
-                        dif += System.Math.Abs(human1[i].anchoredPosition.y * tam - human2[i].Item2 - dify);
-                    }
-                }
-                if (dif < 1000) {
-                    points[npose] = true;
-                }
-                scoreText.text = CountPoints();
-            }
-            else
-            {
-                scoreText.text = "NADA QUE COMPARAR";
-            }
-        }
-
-        private void DrawCopy() {
-            float x = 700;
-            float y = 50;
-            float z = 3;
-
-            copyTorso.SetPosition(0, new Vector3(x - humancopy[0].Item1 / z, y - humancopy[0].Item2 / z, -1));
-            copyTorso.SetPosition(1, new Vector3(x - humancopy[1].Item1 / z, y - humancopy[1].Item2 / z, -1));
-            copyTorso.SetPosition(2, new Vector3(x - humancopy[8].Item1 / z, y - humancopy[8].Item2 / z, -1));
-
-            copyArms.SetPosition(0, new Vector3(x - humancopy[4].Item1 / z, y - humancopy[4].Item2 / z, -1));
-            copyArms.SetPosition(1, new Vector3(x - humancopy[3].Item1 / z, y - humancopy[3].Item2 / z, -1));
-            copyArms.SetPosition(2, new Vector3(x - humancopy[2].Item1 / z, y - humancopy[2].Item2 / z, -1));
-            copyArms.SetPosition(3, new Vector3(x - humancopy[1].Item1 / z, y - humancopy[1].Item2 / z, -1));
-            copyArms.SetPosition(4, new Vector3(x - humancopy[5].Item1 / z, y - humancopy[5].Item2 / z, -1));
-            copyArms.SetPosition(5, new Vector3(x - humancopy[6].Item1 / z, y - humancopy[6].Item2 / z, -1));
-            copyArms.SetPosition(6, new Vector3(x - humancopy[7].Item1 / z, y - humancopy[7].Item2 / z, -1));
-            
-            copyLegs.SetPosition(0, new Vector3(x - humancopy[23].Item1 / z, y - humancopy[23].Item2 / z, -1));
-            copyLegs.SetPosition(1, new Vector3(x - humancopy[11].Item1 / z, y - humancopy[11].Item2 / z, -1));
-            copyLegs.SetPosition(2, new Vector3(x - humancopy[10].Item1 / z, y - humancopy[10].Item2 / z, -1));
-            copyLegs.SetPosition(3, new Vector3(x - humancopy[9].Item1 / z, y - humancopy[9].Item2 / z, -1));
-            copyLegs.SetPosition(4, new Vector3(x - humancopy[8].Item1 / z, y - humancopy[8].Item2 / z, -1));
-            copyLegs.SetPosition(5, new Vector3(x - humancopy[12].Item1 / z, y - humancopy[12].Item2 / z, -1));
-            copyLegs.SetPosition(6, new Vector3(x - humancopy[13].Item1 / z, y - humancopy[13].Item2 / z, -1));
-            copyLegs.SetPosition(7, new Vector3(x - humancopy[14].Item1 / z, y - humancopy[14].Item2 / z, -1));
-            copyLegs.SetPosition(8, new Vector3(x - humancopy[20].Item1 / z, y - humancopy[20].Item2 / z, -1));
-            
-            copyGlasses.SetPosition(0, new Vector3(x - humancopy[17].Item1 / z, y - humancopy[17].Item2 / z, -1));
-            copyGlasses.SetPosition(1, new Vector3(x - humancopy[15].Item1 / z, y - humancopy[15].Item2 / z, -1));
-            copyGlasses.SetPosition(2, new Vector3(x - humancopy[0].Item1 / z, y - humancopy[0].Item2 / z, -1));
-            copyGlasses.SetPosition(3, new Vector3(x - humancopy[16].Item1 / z, y - humancopy[16].Item2 / z, -1));
-            copyGlasses.SetPosition(4, new Vector3(x - humancopy[18].Item1 / z, y - humancopy[18].Item2 / z, -1));
-        }
-
-        private void DrawHuman(List<RectTransform> poseJoints) {
-            float x = -100;
-            float y = 50;
-            float z = (float) 0.1;
-
-            humanTorso.SetPosition(0, new Vector3(x - poseJoints[0].anchoredPosition.x / z, y - poseJoints[0].anchoredPosition.y / z, -1));
-            humanTorso.SetPosition(1, new Vector3(x - poseJoints[1].anchoredPosition.x / z, y - poseJoints[1].anchoredPosition.y / z, -1));
-            humanTorso.SetPosition(2, new Vector3(x - poseJoints[8].anchoredPosition.x / z, y - poseJoints[8].anchoredPosition.y / z, -1));
-
-            humanArms.SetPosition(0, new Vector3(x - poseJoints[4].anchoredPosition.x / z, y - poseJoints[4].anchoredPosition.y / z, -1));
-            humanArms.SetPosition(1, new Vector3(x - poseJoints[3].anchoredPosition.x / z, y - poseJoints[3].anchoredPosition.y / z, -1));
-            humanArms.SetPosition(2, new Vector3(x - poseJoints[2].anchoredPosition.x / z, y - poseJoints[2].anchoredPosition.y / z, -1));
-            humanArms.SetPosition(3, new Vector3(x - poseJoints[1].anchoredPosition.x / z, y - poseJoints[1].anchoredPosition.y / z, -1));
-            humanArms.SetPosition(4, new Vector3(x - poseJoints[5].anchoredPosition.x / z, y - poseJoints[5].anchoredPosition.y / z, -1));
-            humanArms.SetPosition(5, new Vector3(x - poseJoints[6].anchoredPosition.x / z, y - poseJoints[6].anchoredPosition.y / z, -1));
-            humanArms.SetPosition(6, new Vector3(x - poseJoints[7].anchoredPosition.x / z, y - poseJoints[7].anchoredPosition.y / z, -1));
-            
-            humanLegs.SetPosition(0, new Vector3(x - poseJoints[23].anchoredPosition.x / z, y - poseJoints[23].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(1, new Vector3(x - poseJoints[11].anchoredPosition.x / z, y - poseJoints[11].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(2, new Vector3(x - poseJoints[10].anchoredPosition.x / z, y - poseJoints[10].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(3, new Vector3(x - poseJoints[9].anchoredPosition.x / z, y - poseJoints[9].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(4, new Vector3(x - poseJoints[8].anchoredPosition.x / z, y - poseJoints[8].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(5, new Vector3(x - poseJoints[12].anchoredPosition.x / z, y - poseJoints[12].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(6, new Vector3(x - poseJoints[13].anchoredPosition.x / z, y - poseJoints[13].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(7, new Vector3(x - poseJoints[14].anchoredPosition.x / z, y - poseJoints[14].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(8, new Vector3(x - poseJoints[20].anchoredPosition.x / z, y - poseJoints[20].anchoredPosition.y / z, -1));
-            
-            humanGlasses.SetPosition(0, new Vector3(x - poseJoints[17].anchoredPosition.x / z, y - poseJoints[17].anchoredPosition.y / z, -1));
-            humanGlasses.SetPosition(1, new Vector3(x - poseJoints[15].anchoredPosition.x / z, y - poseJoints[15].anchoredPosition.y / z, -1));
-            humanGlasses.SetPosition(2, new Vector3(x - poseJoints[0].anchoredPosition.x / z, y - poseJoints[0].anchoredPosition.y / z, -1));
-            humanGlasses.SetPosition(3, new Vector3(x - poseJoints[16].anchoredPosition.x / z, y - poseJoints[16].anchoredPosition.y / z, -1));
-            humanGlasses.SetPosition(4, new Vector3(x - poseJoints[18].anchoredPosition.x / z, y - poseJoints[18].anchoredPosition.y / z, -1));
-        }
-
-        public void StartGame() {
-            timeStarted = Time.captureDeltaTime + timeToStart;
-            timeToCompare = Time.captureDeltaTime + timeToStart;
-        }
-
-        private string CountPoints() {
-            int n = 0;
-            for (int i = 0; i < poses.Length; i++) {
-                if(points[i]) {
-                    n++;
-                }
-            }
-            if(n * 3 < poses.Length) {
-                return "mal" ;
-            } else if (n * 3 / 2 < poses.Length) {
-                return "bien";
-            } else {
-                return "perfecto";
-            }
-            //return n + " / " + poses.Length;
+            ToggleRenderBgImg();
+            ToggleRenderBgImg();
         }
 
         private void Update() {
@@ -359,9 +189,13 @@ namespace OpenPose.Example {
                 // Rescale output UI
                 Vector2 outputSize = outputTransform.sizeDelta;
                 Vector2 screenSize = Camera.main.pixelRect.size;
-                float scale = Mathf.Min(outputSize.x / (screenSize.x * 2), outputSize.y / (screenSize.y * 2));
+                //Debug.Log("X1 " + screenSize.x + " Y1 " + screenSize.y);
+                //Debug.Log("X2 " + outputSize.x + " Y2 " + outputSize.y);
                 //float scale = Mathf.Min(screenSize.x / outputSize.x, screenSize.y / outputSize.y);
-                outputTransform.localScale = new Vector3(scale, scale, scale);
+                float scale = Mathf.Min(720 / outputSize.x, 480/ outputSize.y);
+                float scalex = 368 / outputSize.x;
+                float scaley = 207 / outputSize.y;
+                outputTransform.localScale = new Vector3(scalex, scaley, scale);
 
                 // Update number of people in UI
                 if (datum.poseKeypoints == null || datum.poseKeypoints.Empty()) numberPeople = 0;
@@ -376,10 +210,6 @@ namespace OpenPose.Example {
                 foreach (var human in humanContainer.GetComponentsInChildren<HumanController2D>()) {
                     // When i >= no. of human, the human will be hidden
                     human.DrawHuman(ref datum, i++, renderThreshold);
-                    //if (human.getPoseJoints().Count > 0) {
-                        //DrawHuman(human.getPoseJoints());
-                    //}
-                    //Compare(human.getPoseJoints(), humancopy);
                 }
 
                 // Update framerate in UI
@@ -391,32 +221,9 @@ namespace OpenPose.Example {
                 if (frameCounter >= queueMaxCount || frameTimeQueue.Count <= 5){ // update frame rate
                     frameCounter = 0;
                     avgFrameRate = frameTimeQueue.Count / (Time.time - frameTimeQueue.Peek());
-                    fpsText.text = avgFrameRate.ToString("F1") + " FPS";
+                    fpsText.text = avgFrameRate.ToString("F1") + "\nFPS";
                 }
-            }
-
-            timer += Time.deltaTime;
-            timerText.text = ((int) (timer - timeStarted - timeToStart) / 60) + ":" + ((int) (timer - timeStarted - timeToStart) % 60);
-            if (timeStarted > 0) {
-                if (timer > timeToCompare) {
-                    timeToCompare += timeToSkip;
-                    ChangePose();
-                }
-            }
-            if (humancopy.Count == 25)
-            {
-                DrawCopy();
-            }
-            if (humanContainer.GetComponentsInChildren<HumanController2D>().Length > 0) {
-                Compare(humanContainer.GetComponentsInChildren<HumanController2D>()[0].getPoseJoints(), humancopy);
             }
         }
     }
 }
-
-//Debug.Log("X1 " + screenSize.x + " Y1 " + screenSize.y);
-//Debug.Log("X2 " + outputSize.x + " Y2 " + outputSize.y);
-//float scale = Mathf.Min(720 / outputSize.x, 480/ outputSize.y);
-//float scalex = 368 / outputSize.x;
-//float scaley = 207 / outputSize.y;
-//outputTransform.localScale = new Vector3(scalex, scaley, scale);
