@@ -92,10 +92,10 @@ namespace OpenPose.Example {
             //poses = System.IO.File.ReadAllLines(@".\Assets\Levels\prueba.txt");
             //npose = 0;
             timer = 0;
-            timeToStart = (float) 10;
-            timeToRecord = (float) 20;
+            timeToStart = 10;
+            timeToRecord = 30;
             timeToCapture = (float) 0.5;
-            timeNextCapture = (float) 3;
+            timeNextCapture = 3;
         }
 
         private void Start() {
@@ -207,7 +207,7 @@ namespace OpenPose.Example {
             {
                 pose += (humancopy[i].Item1 * column2).ToString() + " " + (humancopy[i].Item2 * column2).ToString() + " ";
             }
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@".\Assets\Levels\prueba2.txt", true)) {
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@".\Assets\Levels\prueba3.txt", true)) {
                 file.WriteLine(pose);
             }
         }    
