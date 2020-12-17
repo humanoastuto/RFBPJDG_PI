@@ -1,6 +1,7 @@
 ﻿// OpenPose Unity Plugin v1.0.0alpha-1.5.0
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,6 +33,8 @@ namespace OpenPose.Example {
         [SerializeField] LineRenderer copyGlasses;
         [SerializeField] Text scoreText;
         [SerializeField] Text timerText;
+        [SerializeField] Toggle typeCapture;
+        [SerializeField] Dropdown videos;
         private List<(float, float)> humancopy = new List<(float, float)>();
         private string[] poses = null;
         private int npose;
@@ -40,13 +43,16 @@ namespace OpenPose.Example {
         private float timeToStart;
         private float timeToRecord;
         private float timeToCapture;
+        private float timeStarted;
+        private string[] options;
+        private bool pipo;
 
         // Output
         private OPDatum datum;
 
         // OpenPose settings
-        public ProducerType inputType = ProducerType.Webcam;
-        public string producerString = "-1";
+        private ProducerType inputType = ProducerType.Webcam;
+        private string producerString = "-1";
         public int maxPeople = -1;
         public float renderThreshold = 0.05f;
         public bool
@@ -88,14 +94,38 @@ namespace OpenPose.Example {
         private float avgFrameRate = 0f;
         private int frameCounter = 0;
 
-        private void LoadMap() {
-            //poses = System.IO.File.ReadAllLines(@".\Assets\Levels\prueba.txt");
-            //npose = 0;
+        private void LoadParameters() {
             timer = 0;
             timeToStart = 10;
-            timeToRecord = 30;
-            timeToCapture = (float) 0.5;
-            timeNextCapture = 3;
+            timeToRecord = 20;
+            timeToCapture = (float) 0.25;
+            timeNextCapture = float.MaxValue;
+            timeStarted = float.MaxValue;
+            options = System.IO.Directory.GetFiles("./Assets/Media/");
+            List<string> listoptions = new List<string>();
+            for (int i = 0; i < options.Length; i++) {
+                if (!options[i].Contains(".meta")) {
+                    listoptions.Add(options[i].Replace("./Assets/Media/", ""));
+                }
+            }
+            videos.ClearOptions();
+            videos.AddOptions(listoptions);
+            videos.enabled = false;
+            pipo = false;
+        }
+
+        public void SetInputType(bool isCamera) {
+            if (isCamera) {
+                inputType = ProducerType.Webcam;
+                producerString = "-1";
+                videos.enabled = false;
+                pipo = false;
+            } else {
+                inputType = ProducerType.Video;
+                videos.enabled = true;
+                Debug.Log("----" + producerString);
+                pipo = true;
+            }
         }
 
         private void Start() {
@@ -103,19 +133,22 @@ namespace OpenPose.Example {
             OPWrapper.OPRegisterCallbacks();
             // Enable OpenPose log to unity (default true)
             OPWrapper.OPEnableDebug(true);
-            // Enable OpenPose output to unity (default true)
+            // Enable OpenPose output to unity (default true)S
             OPWrapper.OPEnableOutput(true);
             // Enable receiving image (default false)
             OPWrapper.OPEnableImageOutput(true);
 
             // Configure OpenPose with default value, or using specific configuration for each
             /* OPWrapper.OPConfigureAllInDefault(); */
-            UserConfigureOpenPose();
+            //UserConfigureOpenPose();
 
             // Start OpenPose
-            OPWrapper.OPRun();
+            //OPWrapper.OPRun();
            
-            LoadMap();
+            LoadParameters();
+
+            ToggleRenderBgImg();
+            //ToggleRenderBgImg();
         }
 
         // Parameters can be set here
@@ -149,7 +182,7 @@ namespace OpenPose.Example {
             OPWrapper.OPConfigureInput(
                 /* producerType */ inputType, /* producerString */ producerString,
                 /* frameFirst */ 0, /* frameStep */ 1, /* frameLast */ ulong.MaxValue,
-                /* realTimeProcessing */ false, /* frameFlip */ false,
+                /* realTimeProcessing */ true, /* frameFlip */ pipo,
                 /* frameRotate */ 0, /* framesRepeat */ false,
                 /* cameraResolution */ null, /* cameraParameterPath */ null,
                 /* undistortImage */ false, /* numberViews */ -1);
@@ -200,15 +233,19 @@ namespace OpenPose.Example {
             {
                 humancopy.Add((rectTransform.anchoredPosition.x, rectTransform.anchoredPosition.y));
             }
-            string pose = "";
-            float column = Distance(humancopy[1].Item1, humancopy[1].Item2, humancopy[8].Item1, humancopy[8].Item2);
-            float column2 = 300 / column;
-            for (int i = 0; i < 25; i++)
-            {
-                pose += (humancopy[i].Item1 * column2).ToString() + " " + (humancopy[i].Item2 * column2).ToString() + " ";
-            }
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@".\Assets\Levels\prueba3.txt", true)) {
-                file.WriteLine(pose);
+            if (humancopy.Count == 25) {
+                string pose = "";
+                string filename = producerString.Replace("Media", "Levels").Replace("mp4", "txt");
+                float column = Distance(humancopy[1].Item1, humancopy[1].Item2, humancopy[8].Item1, humancopy[8].Item2);
+                float column2 = 300 / column;
+                for (int i = 0; i < 25; i++)
+                {
+                    pose += (humancopy[i].Item1 * column2).ToString() + " " + (humancopy[i].Item2 * column2).ToString() + " ";
+                }
+                using (System.IO.StreamWriter file = new System.IO.StreamWriter(@filename, true)) {
+                    file.WriteLine(pose);
+                }
+                DrawCopy();
             }
         }    
 
@@ -246,42 +283,13 @@ namespace OpenPose.Example {
             copyGlasses.SetPosition(4, new Vector3(x - humancopy[18].Item1 / z, y - humancopy[18].Item2 / z, -1));
         }
 
-        private void DrawHuman(List<RectTransform> poseJoints) {
-            float x = -100;
-            float y = 50;
-            float z = (float) 0.1;
-
-            humanTorso.SetPosition(0, new Vector3(x - poseJoints[0].anchoredPosition.x / z, y - poseJoints[0].anchoredPosition.y / z, -1));
-            humanTorso.SetPosition(1, new Vector3(x - poseJoints[1].anchoredPosition.x / z, y - poseJoints[1].anchoredPosition.y / z, -1));
-            humanTorso.SetPosition(2, new Vector3(x - poseJoints[8].anchoredPosition.x / z, y - poseJoints[8].anchoredPosition.y / z, -1));
-
-            humanArms.SetPosition(0, new Vector3(x - poseJoints[4].anchoredPosition.x / z, y - poseJoints[4].anchoredPosition.y / z, -1));
-            humanArms.SetPosition(1, new Vector3(x - poseJoints[3].anchoredPosition.x / z, y - poseJoints[3].anchoredPosition.y / z, -1));
-            humanArms.SetPosition(2, new Vector3(x - poseJoints[2].anchoredPosition.x / z, y - poseJoints[2].anchoredPosition.y / z, -1));
-            humanArms.SetPosition(3, new Vector3(x - poseJoints[1].anchoredPosition.x / z, y - poseJoints[1].anchoredPosition.y / z, -1));
-            humanArms.SetPosition(4, new Vector3(x - poseJoints[5].anchoredPosition.x / z, y - poseJoints[5].anchoredPosition.y / z, -1));
-            humanArms.SetPosition(5, new Vector3(x - poseJoints[6].anchoredPosition.x / z, y - poseJoints[6].anchoredPosition.y / z, -1));
-            humanArms.SetPosition(6, new Vector3(x - poseJoints[7].anchoredPosition.x / z, y - poseJoints[7].anchoredPosition.y / z, -1));
-            
-            humanLegs.SetPosition(0, new Vector3(x - poseJoints[23].anchoredPosition.x / z, y - poseJoints[23].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(1, new Vector3(x - poseJoints[11].anchoredPosition.x / z, y - poseJoints[11].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(2, new Vector3(x - poseJoints[10].anchoredPosition.x / z, y - poseJoints[10].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(3, new Vector3(x - poseJoints[9].anchoredPosition.x / z, y - poseJoints[9].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(4, new Vector3(x - poseJoints[8].anchoredPosition.x / z, y - poseJoints[8].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(5, new Vector3(x - poseJoints[12].anchoredPosition.x / z, y - poseJoints[12].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(6, new Vector3(x - poseJoints[13].anchoredPosition.x / z, y - poseJoints[13].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(7, new Vector3(x - poseJoints[14].anchoredPosition.x / z, y - poseJoints[14].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(8, new Vector3(x - poseJoints[20].anchoredPosition.x / z, y - poseJoints[20].anchoredPosition.y / z, -1));
-            
-            humanGlasses.SetPosition(0, new Vector3(x - poseJoints[17].anchoredPosition.x / z, y - poseJoints[17].anchoredPosition.y / z, -1));
-            humanGlasses.SetPosition(1, new Vector3(x - poseJoints[15].anchoredPosition.x / z, y - poseJoints[15].anchoredPosition.y / z, -1));
-            humanGlasses.SetPosition(2, new Vector3(x - poseJoints[0].anchoredPosition.x / z, y - poseJoints[0].anchoredPosition.y / z, -1));
-            humanGlasses.SetPosition(3, new Vector3(x - poseJoints[16].anchoredPosition.x / z, y - poseJoints[16].anchoredPosition.y / z, -1));
-            humanGlasses.SetPosition(4, new Vector3(x - poseJoints[18].anchoredPosition.x / z, y - poseJoints[18].anchoredPosition.y / z, -1));
-        }
-
-        private void StartRecord() {
-
+        public void StartRecord() {
+            producerString = "./Assets/Media/" + videos.options[videos.value].text;
+            UserConfigureOpenPose();
+            OPWrapper.OPRun();
+            timeStarted = Time.captureDeltaTime;
+            timeNextCapture = timeToStart + Time.captureDeltaTime;
+            typeCapture.enabled = false;
         }
 
         private void Update() {
@@ -298,7 +306,8 @@ namespace OpenPose.Example {
                 // Rescale output UI
                 Vector2 outputSize = outputTransform.sizeDelta;
                 Vector2 screenSize = Camera.main.pixelRect.size;
-                float scale = Mathf.Min(screenSize.x / outputSize.x, screenSize.y / outputSize.y);
+                //float scale = Mathf.Min(screenSize.x / outputSize.x, screenSize.y / outputSize.y);
+                float scale = Mathf.Min(screenSize.x / (outputSize.x * 2), screenSize.y / (outputSize.y * 2));
                 outputTransform.localScale = new Vector3(scale, scale, scale);
 
                 // Update number of people in UI
@@ -314,9 +323,6 @@ namespace OpenPose.Example {
                 foreach (var human in humanContainer.GetComponentsInChildren<HumanController2D>()) {
                     // When i >= no. of human, the human will be hidden
                     human.DrawHuman(ref datum, i++, renderThreshold);
-                    if (human.getPoseJoints().Count > 0) {
-                        //DrawHuman(human.getPoseJoints());
-                    }
                 }
 
                 // Update framerate in UI
@@ -333,14 +339,12 @@ namespace OpenPose.Example {
             }
 
             timer += Time.deltaTime;
-            timerText.text = ((int) timer / 60) + ":" + ((int) timer % 60);
-            if (timeToStart < timer && timer < (timeToStart + timeToRecord) && timer > timeNextCapture) {
-                AddPose();
-                timeNextCapture += timeToCapture;
-            }
-            if (humancopy.Count == 25)
-            {
-                DrawCopy();
+            if (humanContainer.GetComponentsInChildren<HumanController2D>().Length > 0) {
+                if (timer > timeNextCapture && timer < timeToStart + timeToRecord + timeStarted) {
+                    timerText.text = ((int) (timer - timeStarted - timeToStart) / 60) + ":" + ((int) (timer - timeStarted - timeToStart) % 60);
+                    timeNextCapture += timeToCapture;
+                    AddPose();
+                }
             }
         }
     }
