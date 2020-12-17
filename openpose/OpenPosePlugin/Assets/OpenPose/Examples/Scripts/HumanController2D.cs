@@ -54,7 +54,7 @@ namespace OpenPose.Example {
                     poseJoints[part].gameObject.SetActive(false);
                 } else {
                     poseJoints[part].gameObject.SetActive(true);
-                    Vector3 pos = new Vector3(datum.poseKeypoints.Get(bodyIndex, part, 0), datum.poseKeypoints.Get(bodyIndex, part, 1), 0f);
+                    Vector3 pos = new Vector3(datum.poseKeypoints.Get(bodyIndex, part, 0) , datum.poseKeypoints.Get(bodyIndex, part, 1), 0f);
                     poseJoints[part].localPosition = pos;
                 }
             }

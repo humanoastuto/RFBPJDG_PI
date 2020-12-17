@@ -37,10 +37,11 @@ namespace OpenPose.Example {
         private string[] poses = null;
         private int npose;
         private float timer;
-        private float timeToCompare;
-        private float timeStarted;
         private float timeToStart;
+        private float timeStarted;
         private float timeToSkip;
+        private float timeNextSkip;
+        
         private List<bool> points;
 
         // Output
@@ -75,7 +76,7 @@ namespace OpenPose.Example {
         }
 
         // Bg image
-        public bool renderBgImg = false;
+        public bool renderBgImg = false; //Start by default
         public void ToggleRenderBgImg(){
             renderBgImg = !renderBgImg;
             bgImageRenderer.FadeInOut(renderBgImg);
@@ -85,32 +86,38 @@ namespace OpenPose.Example {
         int numberPeople = 0;
 
         // Frame rate calculation
-        private int queueMaxCount = 20; 
+        private int queueMaxCount = 20;
         private Queue<float> frameTimeQueue = new Queue<float>();
         private float avgFrameRate = 0f;
         private int frameCounter = 0;
 
         private void LoadMap() {
-            poses = System.IO.File.ReadAllLines(@".\Assets\Levels\prueba2.txt");
+            poses = System.IO.File.ReadAllLines(@".\Assets\Levels\prueba.txt");
             npose = 0;
             timer = 0;
-            timeToCompare = (float) 0.5;
-            timeStarted = 0;
+            timeNextSkip = float.MaxValue;
             timeToStart = 3;
-            timeToSkip = 2;
+            timeToSkip = 1;
+            timeStarted = 0;
             points = new List<bool>();
             for (int i = 0; i < poses.Length; i++) {
                 points.Add(false);
             }
-            ChangePose();
         }
 
+        private void EnableCameraRender()
+        {
+            ToggleRenderBgImg();
+            ToggleRenderBgImg();
+        }
+
+        private void CustomInitialConfig()
+        {
+            EnableCameraRender();
+        }
+
+
         private void Start() {
-            /*if (!GameObject.Find("Timer").GetComponent<Timer>().videoPlay.isPlaying)
-            {
-                Timer timerScript = GameObject.Find("Timer").GetComponent<Timer>();
-                timerScript.ToggleTimerStart();
-            }*/
             //StartCoroutine(ExampleCoroutine());
 
             // Register callbacks
@@ -126,10 +133,13 @@ namespace OpenPose.Example {
             /* OPWrapper.OPConfigureAllInDefault(); */
             UserConfigureOpenPose();
 
+            CustomInitialConfig();
+
             // Start OpenPose
             OPWrapper.OPRun();
            
             LoadMap();
+     
         }
 
         // Parameters can be set here
@@ -246,8 +256,16 @@ namespace OpenPose.Example {
                 }
                 if (dif < 1000) {
                     points[npose] = true;
+                    if (dif < 600) {
+                        scoreText.text = "perfecto";
+                    } else {
+                        scoreText.text = "bien";
+                    }
+                } else {
+                    scoreText.text = "mal";
                 }
-                scoreText.text = CountPoints();
+                //scoreText.text = CountPoints();
+                
             }
             else
             {
@@ -289,43 +307,9 @@ namespace OpenPose.Example {
             copyGlasses.SetPosition(4, new Vector3(x - humancopy[18].Item1 / z, y - humancopy[18].Item2 / z, -1));
         }
 
-        private void DrawHuman(List<RectTransform> poseJoints) {
-            float x = -100;
-            float y = 50;
-            float z = (float) 0.1;
-
-            humanTorso.SetPosition(0, new Vector3(x - poseJoints[0].anchoredPosition.x / z, y - poseJoints[0].anchoredPosition.y / z, -1));
-            humanTorso.SetPosition(1, new Vector3(x - poseJoints[1].anchoredPosition.x / z, y - poseJoints[1].anchoredPosition.y / z, -1));
-            humanTorso.SetPosition(2, new Vector3(x - poseJoints[8].anchoredPosition.x / z, y - poseJoints[8].anchoredPosition.y / z, -1));
-
-            humanArms.SetPosition(0, new Vector3(x - poseJoints[4].anchoredPosition.x / z, y - poseJoints[4].anchoredPosition.y / z, -1));
-            humanArms.SetPosition(1, new Vector3(x - poseJoints[3].anchoredPosition.x / z, y - poseJoints[3].anchoredPosition.y / z, -1));
-            humanArms.SetPosition(2, new Vector3(x - poseJoints[2].anchoredPosition.x / z, y - poseJoints[2].anchoredPosition.y / z, -1));
-            humanArms.SetPosition(3, new Vector3(x - poseJoints[1].anchoredPosition.x / z, y - poseJoints[1].anchoredPosition.y / z, -1));
-            humanArms.SetPosition(4, new Vector3(x - poseJoints[5].anchoredPosition.x / z, y - poseJoints[5].anchoredPosition.y / z, -1));
-            humanArms.SetPosition(5, new Vector3(x - poseJoints[6].anchoredPosition.x / z, y - poseJoints[6].anchoredPosition.y / z, -1));
-            humanArms.SetPosition(6, new Vector3(x - poseJoints[7].anchoredPosition.x / z, y - poseJoints[7].anchoredPosition.y / z, -1));
-            
-            humanLegs.SetPosition(0, new Vector3(x - poseJoints[23].anchoredPosition.x / z, y - poseJoints[23].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(1, new Vector3(x - poseJoints[11].anchoredPosition.x / z, y - poseJoints[11].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(2, new Vector3(x - poseJoints[10].anchoredPosition.x / z, y - poseJoints[10].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(3, new Vector3(x - poseJoints[9].anchoredPosition.x / z, y - poseJoints[9].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(4, new Vector3(x - poseJoints[8].anchoredPosition.x / z, y - poseJoints[8].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(5, new Vector3(x - poseJoints[12].anchoredPosition.x / z, y - poseJoints[12].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(6, new Vector3(x - poseJoints[13].anchoredPosition.x / z, y - poseJoints[13].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(7, new Vector3(x - poseJoints[14].anchoredPosition.x / z, y - poseJoints[14].anchoredPosition.y / z, -1));
-            humanLegs.SetPosition(8, new Vector3(x - poseJoints[20].anchoredPosition.x / z, y - poseJoints[20].anchoredPosition.y / z, -1));
-            
-            humanGlasses.SetPosition(0, new Vector3(x - poseJoints[17].anchoredPosition.x / z, y - poseJoints[17].anchoredPosition.y / z, -1));
-            humanGlasses.SetPosition(1, new Vector3(x - poseJoints[15].anchoredPosition.x / z, y - poseJoints[15].anchoredPosition.y / z, -1));
-            humanGlasses.SetPosition(2, new Vector3(x - poseJoints[0].anchoredPosition.x / z, y - poseJoints[0].anchoredPosition.y / z, -1));
-            humanGlasses.SetPosition(3, new Vector3(x - poseJoints[16].anchoredPosition.x / z, y - poseJoints[16].anchoredPosition.y / z, -1));
-            humanGlasses.SetPosition(4, new Vector3(x - poseJoints[18].anchoredPosition.x / z, y - poseJoints[18].anchoredPosition.y / z, -1));
-        }
-
         public void StartGame() {
-            timeStarted = Time.captureDeltaTime + timeToStart;
-            timeToCompare = Time.captureDeltaTime + timeToStart;
+            timeStarted = timer;
+            timeNextSkip = timer + timeToStart;
         }
 
         private string CountPoints() {
@@ -336,13 +320,12 @@ namespace OpenPose.Example {
                 }
             }
             if(n * 3 < poses.Length) {
-                return "mal" ;
+                return "das asco" ;
             } else if (n * 3 / 2 < poses.Length) {
-                return "bien";
+                return "bien, sigue adelante";
             } else {
-                return "perfecto";
+                return "eres un pvto dios";
             }
-            //return n + " / " + poses.Length;
         }
 
         private void Update() {
@@ -376,10 +359,6 @@ namespace OpenPose.Example {
                 foreach (var human in humanContainer.GetComponentsInChildren<HumanController2D>()) {
                     // When i >= no. of human, the human will be hidden
                     human.DrawHuman(ref datum, i++, renderThreshold);
-                    //if (human.getPoseJoints().Count > 0) {
-                        //DrawHuman(human.getPoseJoints());
-                    //}
-                    //Compare(human.getPoseJoints(), humancopy);
                 }
 
                 // Update framerate in UI
@@ -396,19 +375,26 @@ namespace OpenPose.Example {
             }
 
             timer += Time.deltaTime;
-            timerText.text = ((int) (timer - timeStarted - timeToStart) / 60) + ":" + ((int) (timer - timeStarted - timeToStart) % 60);
-            if (timeStarted > 0) {
-                if (timer > timeToCompare) {
-                    timeToCompare += timeToSkip;
-                    ChangePose();
+            if (timer > timeNextSkip) {
+                timeNextSkip += timeToSkip;
+                ChangePose();
+            }
+            if (timeStarted > 0 ) {
+                if (timer - timeStarted - timeToStart > 0) {
+                    timerText.text = ((int) (timer - timeStarted - timeToStart) / 60) + ":" + ((int) (timer - timeStarted - timeToStart) % 60);
+                    if (humanContainer.GetComponentsInChildren<HumanController2D>().Length > 0) {
+                        Compare(humanContainer.GetComponentsInChildren<HumanController2D>()[0].getPoseJoints(), humancopy);
+                    }
                 }
             }
             if (humancopy.Count == 25)
             {
                 DrawCopy();
             }
-            if (humanContainer.GetComponentsInChildren<HumanController2D>().Length > 0) {
-                Compare(humanContainer.GetComponentsInChildren<HumanController2D>()[0].getPoseJoints(), humancopy);
+            
+            if (npose == poses.Length) {
+                timeStarted = 0;
+                scoreText.text = CountPoints();
             }
         }
     }
@@ -420,3 +406,42 @@ namespace OpenPose.Example {
 //float scalex = 368 / outputSize.x;
 //float scaley = 207 / outputSize.y;
 //outputTransform.localScale = new Vector3(scalex, scaley, scale);
+
+                    //if (human.getPoseJoints().Count > 0) {
+                        //DrawHuman(human.getPoseJoints());
+                    //}
+                    //Compare(human.getPoseJoints(), humancopy);
+
+/*        private void DrawHuman(List<RectTransform> poseJoints) {
+            float x = -100;
+            float y = 50;
+            float z = (float) 0.1;
+
+            humanTorso.SetPosition(0, new Vector3(x - poseJoints[0].anchoredPosition.x / z, y - poseJoints[0].anchoredPosition.y / z, -1));
+            humanTorso.SetPosition(1, new Vector3(x - poseJoints[1].anchoredPosition.x / z, y - poseJoints[1].anchoredPosition.y / z, -1));
+            humanTorso.SetPosition(2, new Vector3(x - poseJoints[8].anchoredPosition.x / z, y - poseJoints[8].anchoredPosition.y / z, -1));
+
+            humanArms.SetPosition(0, new Vector3(x - poseJoints[4].anchoredPosition.x / z, y - poseJoints[4].anchoredPosition.y / z, -1));
+            humanArms.SetPosition(1, new Vector3(x - poseJoints[3].anchoredPosition.x / z, y - poseJoints[3].anchoredPosition.y / z, -1));
+            humanArms.SetPosition(2, new Vector3(x - poseJoints[2].anchoredPosition.x / z, y - poseJoints[2].anchoredPosition.y / z, -1));
+            humanArms.SetPosition(3, new Vector3(x - poseJoints[1].anchoredPosition.x / z, y - poseJoints[1].anchoredPosition.y / z, -1));
+            humanArms.SetPosition(4, new Vector3(x - poseJoints[5].anchoredPosition.x / z, y - poseJoints[5].anchoredPosition.y / z, -1));
+            humanArms.SetPosition(5, new Vector3(x - poseJoints[6].anchoredPosition.x / z, y - poseJoints[6].anchoredPosition.y / z, -1));
+            humanArms.SetPosition(6, new Vector3(x - poseJoints[7].anchoredPosition.x / z, y - poseJoints[7].anchoredPosition.y / z, -1));
+            
+            humanLegs.SetPosition(0, new Vector3(x - poseJoints[23].anchoredPosition.x / z, y - poseJoints[23].anchoredPosition.y / z, -1));
+            humanLegs.SetPosition(1, new Vector3(x - poseJoints[11].anchoredPosition.x / z, y - poseJoints[11].anchoredPosition.y / z, -1));
+            humanLegs.SetPosition(2, new Vector3(x - poseJoints[10].anchoredPosition.x / z, y - poseJoints[10].anchoredPosition.y / z, -1));
+            humanLegs.SetPosition(3, new Vector3(x - poseJoints[9].anchoredPosition.x / z, y - poseJoints[9].anchoredPosition.y / z, -1));
+            humanLegs.SetPosition(4, new Vector3(x - poseJoints[8].anchoredPosition.x / z, y - poseJoints[8].anchoredPosition.y / z, -1));
+            humanLegs.SetPosition(5, new Vector3(x - poseJoints[12].anchoredPosition.x / z, y - poseJoints[12].anchoredPosition.y / z, -1));
+            humanLegs.SetPosition(6, new Vector3(x - poseJoints[13].anchoredPosition.x / z, y - poseJoints[13].anchoredPosition.y / z, -1));
+            humanLegs.SetPosition(7, new Vector3(x - poseJoints[14].anchoredPosition.x / z, y - poseJoints[14].anchoredPosition.y / z, -1));
+            humanLegs.SetPosition(8, new Vector3(x - poseJoints[20].anchoredPosition.x / z, y - poseJoints[20].anchoredPosition.y / z, -1));
+            
+            humanGlasses.SetPosition(0, new Vector3(x - poseJoints[17].anchoredPosition.x / z, y - poseJoints[17].anchoredPosition.y / z, -1));
+            humanGlasses.SetPosition(1, new Vector3(x - poseJoints[15].anchoredPosition.x / z, y - poseJoints[15].anchoredPosition.y / z, -1));
+            humanGlasses.SetPosition(2, new Vector3(x - poseJoints[0].anchoredPosition.x / z, y - poseJoints[0].anchoredPosition.y / z, -1));
+            humanGlasses.SetPosition(3, new Vector3(x - poseJoints[16].anchoredPosition.x / z, y - poseJoints[16].anchoredPosition.y / z, -1));
+            humanGlasses.SetPosition(4, new Vector3(x - poseJoints[18].anchoredPosition.x / z, y - poseJoints[18].anchoredPosition.y / z, -1));
+        }*/
