@@ -381,7 +381,7 @@ namespace OpenPose.Example {
             }
             if (timeStarted > 0 ) {
                 if (timer - timeStarted - timeToStart > 0) {
-                    timerText.text = ((int) (timer - timeStarted - timeToStart) / 60) + ":" + ((int) (timer - timeStarted - timeToStart) % 60);
+                    
                     if (humanContainer.GetComponentsInChildren<HumanController2D>().Length > 0) {
                         Compare(humanContainer.GetComponentsInChildren<HumanController2D>()[0].getPoseJoints(), humancopy);
                     }
