@@ -47,7 +47,7 @@ namespace OpenPose.Example {
         private float timeToCapture;
         private float timeStarted;
         private string[] options;
-        private bool pipo;
+        private bool flipScreen;
 
         // Output
         private OPDatum datum;
@@ -113,21 +113,20 @@ namespace OpenPose.Example {
             videos.ClearOptions();
             videos.AddOptions(listoptions);
             videos.enabled = false;
-            pipo = false;
+            flipScreen = false;
         }
 
         public void SetInputType(bool isCamera) {
             if (isCamera) {
                 inputType = ProducerType.Webcam;
-                producerString = "-1";
                 videos.enabled = false;
-                pipo = false;
+                flipScreen = false;
                 Debug.Log("Enabled by default");
             } else {
                 inputType = ProducerType.Video;
                 videos.enabled = true;
                 Debug.Log("----" + producerString);
-                pipo = true;
+                flipScreen = true;
             }
         }
 
@@ -186,7 +185,7 @@ namespace OpenPose.Example {
             OPWrapper.OPConfigureInput(
                 /* producerType */ inputType, /* producerString */ producerString,
                 /* frameFirst */ 0, /* frameStep */ 1, /* frameLast */ ulong.MaxValue,
-                /* realTimeProcessing */ true, /* frameFlip */ pipo,
+                /* realTimeProcessing */ true, /* frameFlip */ flipScreen,
                 /* frameRotate */ 0, /* framesRepeat */ false,
                 /* cameraResolution */ null, /* cameraParameterPath */ null,
                 /* undistortImage */ false, /* numberViews */ -1);
@@ -288,11 +287,14 @@ namespace OpenPose.Example {
         }
 
         public void StartRecord() {
-            if (pipo)
+            if (inputType == ProducerType.Video)
             {
                 producerString = "./Assets/Media/" + videos.options[videos.value].text;
             }
-            //producerString = "./Assets/Media/" + videos.options[videos.value].text;
+            else
+            {
+                producerString = "-1";
+            }
             UserConfigureOpenPose();
             OPWrapper.OPRun();
             timeStarted = Time.captureDeltaTime;

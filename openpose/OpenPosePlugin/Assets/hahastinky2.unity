@@ -2009,6 +2009,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 9173190871827486876, guid: 9d2239df914a3c14d91019f4e35ab1a4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9173190871827486877, guid: 9d2239df914a3c14d91019f4e35ab1a4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7923,6 +7928,8 @@ MonoBehaviour:
   timerText: {fileID: 1916017694}
   typeCapture: {fileID: 1702050808}
   videos: {fileID: 392888344}
+  exitbttn: {fileID: 0}
+  startbttn: {fileID: 0}
   maxPeople: 1
   renderThreshold: 0.05
   handEnabled: 0
