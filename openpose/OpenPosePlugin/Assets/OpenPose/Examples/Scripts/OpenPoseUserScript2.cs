@@ -35,6 +35,8 @@ namespace OpenPose.Example {
         [SerializeField] Text timerText;
         [SerializeField] Toggle typeCapture;
         [SerializeField] Dropdown videos;
+        [SerializeField] Button exitbttn;
+        [SerializeField] Button startbttn;
         private List<(float, float)> humancopy = new List<(float, float)>();
         private string[] poses = null;
         private int npose;
@@ -120,6 +122,7 @@ namespace OpenPose.Example {
                 producerString = "-1";
                 videos.enabled = false;
                 pipo = false;
+                Debug.Log("Enabled by default");
             } else {
                 inputType = ProducerType.Video;
                 videos.enabled = true;
@@ -127,6 +130,7 @@ namespace OpenPose.Example {
                 pipo = true;
             }
         }
+
 
         private void Start() {
             // Register callbacks
@@ -284,12 +288,19 @@ namespace OpenPose.Example {
         }
 
         public void StartRecord() {
-            producerString = "./Assets/Media/" + videos.options[videos.value].text;
+            if (pipo)
+            {
+                producerString = "./Assets/Media/" + videos.options[videos.value].text;
+            }
+            //producerString = "./Assets/Media/" + videos.options[videos.value].text;
             UserConfigureOpenPose();
             OPWrapper.OPRun();
             timeStarted = Time.captureDeltaTime;
             timeNextCapture = timeToStart + Time.captureDeltaTime;
             typeCapture.enabled = false;
+            videos.enabled = false;
+           // exitbttn.enabled = false;
+          //  startbttn.enabled = false;
         }
 
         private void Update() {

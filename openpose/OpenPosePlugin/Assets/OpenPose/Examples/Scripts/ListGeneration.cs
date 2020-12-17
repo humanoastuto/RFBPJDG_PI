@@ -49,7 +49,7 @@ public class ListGeneration : MonoBehaviour
         {
             FileInfo[] info = (dir.GetFiles("data.json"));
 
-            if (info.Length != 0)
+            if (info.Length != 0 && Directory.Exists((info[0].Directory + "/output")))
             {
                 string filein = File.ReadAllText(info[0].FullName);
                 lvldat = JsonUtility.FromJson<LevelData>(filein);
@@ -90,10 +90,10 @@ public class ListGeneration : MonoBehaviour
             selectedImage.sprite = sprite;
         }
 
-        if (File.Exists(location + "/preview.wav"))
+        if (File.Exists(location + "/preview.ogg"))
         {
            // Debug.Log("File exists");
-            StartCoroutine(GetAudioClip(location + "/preview.wav"));
+            StartCoroutine(GetAudioClip(location + "/preview.ogg"));
         }
         else
         {
