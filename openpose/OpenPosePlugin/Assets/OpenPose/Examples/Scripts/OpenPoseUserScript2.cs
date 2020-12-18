@@ -35,6 +35,8 @@ namespace OpenPose.Example {
         [SerializeField] Text timerText;
         [SerializeField] Toggle typeCapture;
         [SerializeField] Dropdown videos;
+        [SerializeField] Button exitbttn;
+        [SerializeField] Button startbttn;
         private List<(float, float)> humancopy = new List<(float, float)>();
         private string[] poses = null;
         private int npose;
@@ -45,7 +47,7 @@ namespace OpenPose.Example {
         private float timeToCapture;
         private float timeStarted;
         private string[] options;
-        private bool pipo;
+        private bool flipScreen;
 
         // Output
         private OPDatum datum;
@@ -111,22 +113,23 @@ namespace OpenPose.Example {
             videos.ClearOptions();
             videos.AddOptions(listoptions);
             videos.enabled = false;
-            pipo = false;
+            flipScreen = false;
         }
 
         public void SetInputType(bool isCamera) {
             if (isCamera) {
                 inputType = ProducerType.Webcam;
-                producerString = "-1";
                 videos.enabled = false;
-                pipo = false;
+                flipScreen = false;
+                Debug.Log("Enabled by default");
             } else {
                 inputType = ProducerType.Video;
                 videos.enabled = true;
                 Debug.Log("----" + producerString);
-                pipo = true;
+                flipScreen = true;
             }
         }
+
 
         private void Start() {
             // Register callbacks
@@ -182,7 +185,7 @@ namespace OpenPose.Example {
             OPWrapper.OPConfigureInput(
                 /* producerType */ inputType, /* producerString */ producerString,
                 /* frameFirst */ 0, /* frameStep */ 1, /* frameLast */ ulong.MaxValue,
-                /* realTimeProcessing */ true, /* frameFlip */ pipo,
+                /* realTimeProcessing */ true, /* frameFlip */ flipScreen,
                 /* frameRotate */ 0, /* framesRepeat */ false,
                 /* cameraResolution */ null, /* cameraParameterPath */ null,
                 /* undistortImage */ false, /* numberViews */ -1);
@@ -284,12 +287,22 @@ namespace OpenPose.Example {
         }
 
         public void StartRecord() {
-            producerString = "./Assets/Media/" + videos.options[videos.value].text;
+            if (inputType == ProducerType.Video)
+            {
+                producerString = "./Assets/Media/" + videos.options[videos.value].text;
+            }
+            else
+            {
+                producerString = "-1";
+            }
             UserConfigureOpenPose();
             OPWrapper.OPRun();
             timeStarted = Time.captureDeltaTime;
             timeNextCapture = timeToStart + Time.captureDeltaTime;
             typeCapture.enabled = false;
+            videos.enabled = false;
+           // exitbttn.enabled = false;
+          //  startbttn.enabled = false;
         }
 
         private void Update() {

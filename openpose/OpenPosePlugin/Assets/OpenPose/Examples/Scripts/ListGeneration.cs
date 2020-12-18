@@ -38,6 +38,7 @@ public class ListGeneration : MonoBehaviour
     public Text selectedCharter;
     public Image selectedImage;
     private List<LevelData> levelList;
+    private LevelData selectedItem;
 
     void Start()
     {
@@ -49,7 +50,7 @@ public class ListGeneration : MonoBehaviour
         {
             FileInfo[] info = (dir.GetFiles("data.json"));
 
-            if (info.Length != 0)
+            if (info.Length != 0 && Directory.Exists((info[0].Directory + "/output")))
             {
                 string filein = File.ReadAllText(info[0].FullName);
                 lvldat = JsonUtility.FromJson<LevelData>(filein);
@@ -81,25 +82,30 @@ public class ListGeneration : MonoBehaviour
     }
     void ItemClicked(LevelData lvldat, Sprite sprite, DirectoryInfo location)
     {
-        selectedName.text = lvldat.name;
-        selectedArtist.text = lvldat.artist;
-        selectedCharter.text = "Charted by: "+lvldat.charter;
-        selectedDance.text = "Moves by: "+lvldat.movement;
-        if (sprite != null)
+        if(selectedItem != lvldat)
         {
-            selectedImage.sprite = sprite;
-        }
+            selectedItem = lvldat;
+            selectedName.text = lvldat.name;
+            selectedArtist.text = lvldat.artist;
+            selectedCharter.text = "Charted by: " + lvldat.charter;
+            selectedDance.text = "Moves by: " + lvldat.movement;
+            if (sprite != null)
+            {
+                selectedImage.sprite = sprite;
+            }
 
-        if (File.Exists(location + "/preview.wav"))
-        {
-           // Debug.Log("File exists");
-            StartCoroutine(GetAudioClip(location + "/preview.wav"));
+            if (File.Exists(location + "/preview.ogg"))
+            {
+                // Debug.Log("File exists");
+                StartCoroutine(GetAudioClip(location + "/preview.ogg"));
+            }
+            else
+            {
+                //  Debug.Log("NOt exists");
+                StartCoroutine(FadeOut(0.7f));
+            }
         }
-        else
-        {
-          //  Debug.Log("NOt exists");
-            StartCoroutine(FadeOut(0.7f));
-        }
+        
     }
 
     IEnumerator GetAudioClip(String url)
