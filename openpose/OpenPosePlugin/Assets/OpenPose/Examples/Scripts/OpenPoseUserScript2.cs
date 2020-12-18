@@ -48,6 +48,7 @@ namespace OpenPose.Example {
         private float timeStarted;
         private string[] options;
         private bool flipScreen;
+        private string dancename;
 
         // Output
         private OPDatum datum;
@@ -103,17 +104,18 @@ namespace OpenPose.Example {
             timeToCapture = (float) 0.25;
             timeNextCapture = float.MaxValue;
             timeStarted = float.MaxValue;
-            options = System.IO.Directory.GetFiles("./Assets/Media/");
+            options = System.IO.Directory.GetFiles("./Media/");
             List<string> listoptions = new List<string>();
             for (int i = 0; i < options.Length; i++) {
                 if (!options[i].Contains(".meta")) {
-                    listoptions.Add(options[i].Replace("./Assets/Media/", ""));
+                    listoptions.Add(options[i].Replace("./Media/", ""));
                 }
             }
             videos.ClearOptions();
             videos.AddOptions(listoptions);
             videos.enabled = false;
             flipScreen = false;
+            dancename = "";
         }
 
         public void SetInputType(bool isCamera) {
@@ -238,7 +240,41 @@ namespace OpenPose.Example {
             }
             if (humancopy.Count == 25) {
                 string pose = "";
-                string filename = producerString.Replace("Media", "Levels").Replace("mp4", "txt");
+                if (dancename == "") {
+                    if (producerString == "-1") {
+                        dancename = "user";
+                        int i = 1;
+                        while (File.Exists("./Custom/" + dancename + i + "/data.json")) {
+                            i++;
+                        }
+                        dancename += i;
+                    } else {
+                        dancename = videos.options[videos.value].text.Replace(".mp4", "");
+                    }
+                }
+                string filename = "./Custom/" + dancename + "/" + dancename + ".txt";
+                if (!File.Exists("./Custom/" + dancename + "/data.json")) {
+                    string datafile = "./Custom/" + dancename + "/data.json";
+                    string[] data = {
+                        "{",
+                        "   \"artist\": \"" + dancename + "\",",
+                        "   \"name\": \"" + dancename + "\",",
+                        "   \"movement\": \"" + dancename + "\",",
+                        "   \"charter\": \"" + dancename + "\"",
+                        "}"
+                    };
+                    System.IO.Directory.CreateDirectory("./Custom/" + dancename);
+                    if (producerString == "-1") {
+                        //System.IO.File.Copy(producerString, filename.Replace(".txt", ".mp4"), true);
+                    } else {
+                        System.IO.File.Copy(producerString, filename.Replace(".txt", ".mp4"), true);
+                    }
+                    for (int i = 0; i < data.Length; i++) {
+                        using (System.IO.StreamWriter file = new System.IO.StreamWriter(@datafile, true)) {
+                            file.WriteLine(data[i]);
+                        }
+                    }
+                }
                 float column = Distance(humancopy[1].Item1, humancopy[1].Item2, humancopy[8].Item1, humancopy[8].Item2);
                 float column2 = 300 / column;
                 for (int i = 0; i < 25; i++)
@@ -289,12 +325,13 @@ namespace OpenPose.Example {
         public void StartRecord() {
             if (inputType == ProducerType.Video)
             {
-                producerString = "./Assets/Media/" + videos.options[videos.value].text;
+                producerString = "./Media/" + videos.options[videos.value].text;
             }
             else
             {
                 producerString = "-1";
             }
+            dancename = "";
             UserConfigureOpenPose();
             OPWrapper.OPRun();
             timeStarted = Time.captureDeltaTime;
@@ -359,6 +396,7 @@ namespace OpenPose.Example {
                     AddPose();
                 }
             }
+
         }
     }
 }
