@@ -35,8 +35,10 @@ namespace OpenPose.Example {
         [SerializeField] Text timerText;
         [SerializeField] Toggle typeCapture;
         [SerializeField] Dropdown videos;
+        [SerializeField] Dropdown timer2;
         [SerializeField] Button exitbttn;
         [SerializeField] Button startbttn;
+        [SerializeField] InputField enterTime;
         private List<(float, float)> humancopy = new List<(float, float)>();
         private string[] poses = null;
         private int npose;
@@ -48,7 +50,7 @@ namespace OpenPose.Example {
         private float timeStarted;
         private string[] options;
         private bool flipScreen;
-        private string dancename;
+        private string uname;
 
         // Output
         private OPDatum datum;
@@ -98,9 +100,10 @@ namespace OpenPose.Example {
         private int frameCounter = 0;
 
         private void LoadParameters() {
+            enterTime.characterValidation = InputField.CharacterValidation.Integer;
             timer = 0;
-            timeToStart = 10;
-            timeToRecord = 20;
+            timeToStart = 5;
+            timeToRecord = 10;
             timeToCapture = (float) 0.25;
             timeNextCapture = float.MaxValue;
             timeStarted = float.MaxValue;
@@ -115,7 +118,7 @@ namespace OpenPose.Example {
             videos.AddOptions(listoptions);
             videos.enabled = false;
             flipScreen = false;
-            dancename = "";
+            uname = "";
         }
 
         public void SetInputType(bool isCamera) {
@@ -240,30 +243,31 @@ namespace OpenPose.Example {
             }
             if (humancopy.Count == 25) {
                 string pose = "";
-                if (dancename == "") {
+                if (uname == "") {
                     if (producerString == "-1") {
-                        dancename = "user";
+                        uname = "user";
                         int i = 1;
-                        while (File.Exists("./Custom/" + dancename + i + "/data.json")) {
+                        while (File.Exists("./Custom/" + uname + i + "/data.json")) {
                             i++;
                         }
-                        dancename += i;
+                        uname += i;
                     } else {
-                        dancename = videos.options[videos.value].text.Replace(".mp4", "");
+                        uname = videos.options[videos.value].text.Replace(".mp4", "");
                     }
                 }
-                string filename = "./Custom/" + dancename + "/" + dancename + ".txt";
-                if (!File.Exists("./Custom/" + dancename + "/data.json")) {
-                    string datafile = "./Custom/" + dancename + "/data.json";
+                string filename = "./Custom/" + uname + "/" + uname + ".txt";
+                if (!File.Exists("./Custom/" + uname + "/data.json")) {
+                    string datafile = "./Custom/" + uname + "/data.json";
                     string[] data = {
                         "{",
-                        "   \"artist\": \"" + dancename + "\",",
-                        "   \"name\": \"" + dancename + "\",",
-                        "   \"movement\": \"" + dancename + "\",",
-                        "   \"charter\": \"" + dancename + "\"",
+                        "   \"artist\": \"" + uname + "\",",
+                        "   \"name\": \"" + uname + "\",",
+                        "   \"movement\": \"" + uname + "\",",
+                        "   \"charter\": \"" + uname + "\",",
+                        "   \"timer\": \"" + timeToCapture + "\"",
                         "}"
                     };
-                    System.IO.Directory.CreateDirectory("./Custom/" + dancename);
+                    System.IO.Directory.CreateDirectory("./Custom/" + uname);
                     if (producerString == "-1") {
                         //System.IO.File.Copy(producerString, filename.Replace(".txt", ".mp4"), true);
                     } else {
@@ -323,6 +327,26 @@ namespace OpenPose.Example {
         }
 
         public void StartRecord() {
+            if (enterTime.text.Length > 0) {
+                timeToRecord = float.Parse(enterTime.text);
+            }
+            switch (timer2.value) {
+                case 0:
+                    timeToCapture = (float) 0.5;
+                    break;
+                case 1:
+                    timeToCapture = 1;
+                    break;
+                case 2:
+                    timeToCapture = (float) 1.5;
+                    break;
+                case 3:
+                    timeToCapture = 2;
+                    break;
+                default:
+                    timeToCapture = 1;
+                    break;
+            }
             if (inputType == ProducerType.Video)
             {
                 producerString = "./Media/" + videos.options[videos.value].text;
@@ -331,7 +355,7 @@ namespace OpenPose.Example {
             {
                 producerString = "-1";
             }
-            dancename = "";
+            uname = "";
             UserConfigureOpenPose();
             OPWrapper.OPRun();
             timeStarted = Time.captureDeltaTime;
@@ -387,7 +411,7 @@ namespace OpenPose.Example {
                     fpsText.text = avgFrameRate.ToString("F1") + " FPS";
                 }
             }
-
+            Debug.Log(timeToCapture);
             timer += Time.deltaTime;
             if (humanContainer.GetComponentsInChildren<HumanController2D>().Length > 0) {
                 if (timer > timeNextCapture && timer < timeToStart + timeToRecord + timeStarted) {
