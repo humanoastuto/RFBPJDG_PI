@@ -38,7 +38,8 @@ namespace OpenPose.Example {
         [SerializeField] Dropdown timer2;
         [SerializeField] Button exitbttn;
         [SerializeField] Button startbttn;
-        [SerializeField] InputField enterTime;
+        [SerializeField] InputField enterTimeToRedord;
+        [SerializeField] InputField enterTimeToStart;
         private List<(float, float)> humancopy = new List<(float, float)>();
         private string[] poses = null;
         private int npose;
@@ -100,13 +101,13 @@ namespace OpenPose.Example {
         private int frameCounter = 0;
 
         private void LoadParameters() {
-            enterTime.characterValidation = InputField.CharacterValidation.Integer;
+            enterTimeToRedord.characterValidation = InputField.CharacterValidation.Integer;
             timer = 0;
-            timeToStart = 5;
+            timeToStart = 3;
             timeToRecord = 10;
             timeToCapture = (float) 0.25;
             timeNextCapture = float.MaxValue;
-            timeStarted = float.MaxValue;
+            timeStarted = float.MinValue;
             options = System.IO.Directory.GetFiles("./Media/");
             List<string> listoptions = new List<string>();
             for (int i = 0; i < options.Length; i++) {
@@ -327,8 +328,11 @@ namespace OpenPose.Example {
         }
 
         public void StartRecord() {
-            if (enterTime.text.Length > 0) {
-                timeToRecord = float.Parse(enterTime.text);
+            if (enterTimeToRedord.text.Length > 0) {
+                timeToRecord = float.Parse(enterTimeToRedord.text);
+            }
+            if (enterTimeToStart.text.Length > 0) {
+                timeToStart = float.Parse(enterTimeToStart.text);
             }
             switch (timer2.value) {
                 case 0:
@@ -358,10 +362,13 @@ namespace OpenPose.Example {
             uname = "";
             UserConfigureOpenPose();
             OPWrapper.OPRun();
-            timeStarted = Time.captureDeltaTime;
-            timeNextCapture = timeToStart + Time.captureDeltaTime;
+            timeStarted = timer;
+            timeNextCapture = timeToStart + timer;
             typeCapture.enabled = false;
             videos.enabled = false;
+            enterTimeToRedord.enabled = false;
+            enterTimeToStart.enabled = false;
+            timer2.enabled = false;
            // exitbttn.enabled = false;
           //  startbttn.enabled = false;
         }
@@ -413,14 +420,18 @@ namespace OpenPose.Example {
             }
             Debug.Log(timeToCapture);
             timer += Time.deltaTime;
-            if (humanContainer.GetComponentsInChildren<HumanController2D>().Length > 0) {
-                if (timer > timeNextCapture && timer < timeToStart + timeToRecord + timeStarted) {
+            if (humanContainer.GetComponentsInChildren<HumanController2D>().Length > 0 && timeStarted > 0) {
+                if (timer - timeStarted - timeToStart < 0) {
+                    timerText.text =  "-" + ((int) (timeStarted + timeToStart - timer) / 60) + ":" + ((int) (timeStarted + timeToStart - timer) % 60);
+                } else {
                     timerText.text = ((int) (timer - timeStarted - timeToStart) / 60) + ":" + ((int) (timer - timeStarted - timeToStart) % 60);
+                }
+                
+                if (timer > timeNextCapture && timer < timeStarted + timeToStart + timeToRecord) {
                     timeNextCapture += timeToCapture;
                     AddPose();
                 }
             }
-
         }
     }
 }
