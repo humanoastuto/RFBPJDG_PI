@@ -7,15 +7,11 @@ using UnityEngine.UI;
 
 namespace OpenPose.Example
 {
-    /*
-     * User example of using OPWrapper
-     */
     public class OpenPoseUserScript2 : MonoBehaviour
     {
 
         // HumanController2D prefab
         [SerializeField] GameObject humanPrefab;
-
         [SerializeField] Canvas canvas;
 
         // UI elements
@@ -26,7 +22,7 @@ namespace OpenPose.Example
         [SerializeField] Text peopleText;
         [SerializeField] Text stateText;
 
-        //Created for us
+        //Created by us
         [SerializeField] LineRenderer humanTorso;
         [SerializeField] LineRenderer humanArms;
         [SerializeField] LineRenderer humanLegs;
@@ -44,6 +40,8 @@ namespace OpenPose.Example
         [SerializeField] Button startbttn;
         [SerializeField] InputField enterTimeToRedord;
         [SerializeField] InputField enterTimeToStart;
+
+        //Private Values
         private List<(float, float)> humancopy = new List<(float, float)>();
         private string[] poses = null;
         private int npose;
@@ -56,8 +54,7 @@ namespace OpenPose.Example
         private string[] options;
         private bool flipScreen;
         private string uname;
-
-        private string chartname,artistname,movename,chartername = "";
+        private string chartname, artistname, movename, chartername = "";
         private bool saveCustomIcon = true;
 
         // Output
@@ -141,13 +138,11 @@ namespace OpenPose.Example
                 inputType = ProducerType.Webcam;
                 videos.enabled = false;
                 flipScreen = false;
-                Debug.Log("Enabled by default");
             }
             else
             {
                 inputType = ProducerType.Video;
                 videos.enabled = true;
-                Debug.Log("----" + producerString);
                 flipScreen = true;
             }
         }
@@ -156,7 +151,7 @@ namespace OpenPose.Example
         {
             saveCustomIcon = value;
         }
-    
+
         public void SetChartName(string value)
         {
             chartname = value;
@@ -183,18 +178,9 @@ namespace OpenPose.Example
             OPWrapper.OPEnableOutput(true);
             // Enable receiving image (default false)
             OPWrapper.OPEnableImageOutput(true);
-
-            // Configure OpenPose with default value, or using specific configuration for each
-            /* OPWrapper.OPConfigureAllInDefault(); */
-            //UserConfigureOpenPose();
-
-            // Start OpenPose
-            //OPWrapper.OPRun();
-
             LoadParameters();
 
             ToggleRenderBgImg();
-            //ToggleRenderBgImg();
         }
 
         // Parameters can be set here
@@ -309,7 +295,7 @@ namespace OpenPose.Example
                 {
                     string datafile = "./Custom/" + uname + "/data.json";
                     string[] data = {
-                        "{",          
+                        "{",
                         "   \"artist\": \"" + artistname + "\",",
                         "   \"name\": \"" + chartname + "\",",
                         "   \"movement\": \"" + movename + "\",",
@@ -365,7 +351,6 @@ namespace OpenPose.Example
             var tex = new Texture2D(250, 250, TextureFormat.RGB24, false);
 
             tex.ReadPixels(new Rect(startX, startY, 250, 250), 0, 0);
-            Debug.Log(startX + " : " + startY);
             tex.Apply();
 
             // Encode texture into PNG
@@ -477,7 +462,7 @@ namespace OpenPose.Example
                 Vector2 outputSize = outputTransform.sizeDelta;
                 Vector2 screenSize = Camera.main.pixelRect.size;
                 //float scale = Mathf.Min(screenSize.x / outputSize.x, screenSize.y / outputSize.y);
-                float scale = Mathf.Min(screenSize.x / (outputSize.x * 2), screenSize.y / (outputSize.y * 2));
+                float scale = Mathf.Min(screenSize.x / (outputSize.x * 2.3f) , screenSize.y / (outputSize.y * 2.3f)) ;
                 outputTransform.localScale = new Vector3(scale, scale, scale);
 
                 // Update number of people in UI
@@ -511,9 +496,9 @@ namespace OpenPose.Example
                     fpsText.text = avgFrameRate.ToString("F1") + " FPS";
                 }
             }
-            Debug.Log(timeToCapture);
+
             timer += Time.deltaTime;
-            if (humanContainer.GetComponentsInChildren<HumanController2D>().Length > 0 && timeStarted > 0)
+            if (humanContainer.GetComponentsInChildren<HumanController2D>().Length > 0 && timeStarted > 0 && OPWrapper.state != OPState.Ready)
             {
                 if (timer - timeStarted - timeToStart < 0)
                 {
@@ -529,20 +514,25 @@ namespace OpenPose.Example
                     timeNextCapture += timeToCapture;
                     AddPose();
                 }
+                if (((timer - timeStarted - timeToStart) >= timeToRecord))
+                {
+                    OPWrapper.OPShutdown();
+                    typeCapture.enabled = true;
+                    videos.enabled = true;
+                    enterTimeToRedord.enabled = true;
+                    enterTimeToStart.enabled = true;
+                    timer2.enabled = true;
+                }
             }
 
-            if(!(string.IsNullOrEmpty(chartname) && string.IsNullOrEmpty(artistname) &&string.IsNullOrEmpty(movename)&&string.IsNullOrEmpty(chartername))){
+            if (!(string.IsNullOrEmpty(chartname) && string.IsNullOrEmpty(artistname) && string.IsNullOrEmpty(movename) && string.IsNullOrEmpty(chartername)))
+            {
                 startbttn.enabled = true;
-            }else{
+            }
+            else
+            {
                 startbttn.enabled = false;
             }
         }
     }
 }
-
-//Debug.Log("X1 " + screenSize.x + " Y1 " + screenSize.y);
-//Debug.Log("X2 " + outputSize.x + " Y2 " + outputSize.y);
-//float scale = Mathf.Min(720 / outputSize.x, 480/ outputSize.y);
-//float scalex = 368 / outputSize.x;
-//float scaley = 207 / outputSize.y;
-//outputTransform.localScale = new Vector3(scalex, scaley, scale);
