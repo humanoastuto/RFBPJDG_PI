@@ -1,3 +1,4 @@
+\babel@toc {spanish}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Dispositivo Kinect y un Ejemplo de su Uso en un Videojuego de Volleyball\relax }}{10}{figure.caption.7}
@@ -8,17 +9,17 @@
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Sistema De Clasificaci\IeC {\'o}n PEGI\relax }}{16}{figure.caption.15}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Sistema De Clasificaci\IeC {\'o}n ESRB\relax }}{17}{figure.caption.18}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Ejemplo de Clasificaci\IeC {\'o}n de Imagen de TensorFlow\relax }}{19}{figure.caption.20}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Ejemplos de Body Tracking\relax }}{20}{figure.caption.21}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Diversos Tipos de Seguimiento al Esqueleto seleccionados por OpenPose para el desarrollo del proyecto\relax }}{21}{figure.caption.22}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Ejemplo de Visi\IeC {\'o}n de una C\IeC {\'a}mara con sensores RGB-D\relax }}{24}{figure.caption.27}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Ejemplo de Neural Network\relax }}{26}{figure.caption.30}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Ejemplo de un Point Cloud\relax }}{28}{figure.caption.34}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Ejemplo de Point Set Registration\relax }}{29}{figure.caption.35}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Traje con Sensores de Movimiento\relax }}{32}{figure.caption.39}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Ejemplos de Datos en la Base de Datos COCO para la estimaci\IeC {\'o}n de pose\relax }}{35}{figure.caption.41}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Ejemplo de Clasificaci\IeC {\'o}n de Imagen de TensorFlow\relax }}{20}{figure.caption.20}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Ejemplos de Body Tracking\relax }}{21}{figure.caption.21}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Diversos Tipos de Seguimiento al Esqueleto seleccionados por OpenPose para el desarrollo del proyecto\relax }}{22}{figure.caption.22}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Ejemplo de Visi\IeC {\'o}n de una C\IeC {\'a}mara con sensores RGB-D\relax }}{25}{figure.caption.27}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Ejemplo de Neural Network\relax }}{27}{figure.caption.30}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Ejemplo de un Point Cloud\relax }}{29}{figure.caption.34}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Ejemplo de Point Set Registration\relax }}{30}{figure.caption.35}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Traje con Sensores de Movimiento\relax }}{33}{figure.caption.39}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Ejemplos de Datos en la Base de Datos COCO para la estimaci\IeC {\'o}n de pose\relax }}{36}{figure.caption.41}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Ejemplo de Clasificaci\IeC {\'o}n de imagen de TensorFlow\relax }}{40}{figure.caption.43}
 \addvspace {10\p@ }
@@ -31,8 +32,8 @@
 \contentsline {figure}{\numberline {8.4}{\ignorespaces Ejemplos de Encuadre de una Point Cloud\relax }}{64}{figure.caption.73}
 \contentsline {figure}{\numberline {8.5}{\ignorespaces Redimensionamiento de la Point Cloud A al tama\IeC {\~n}o de la Point Cloud B\relax }}{64}{figure.caption.74}
 \contentsline {figure}{\numberline {8.6}{\ignorespaces Men\IeC {\'u} de el Sistema Interactivo POSE IT!\relax }}{67}{figure.caption.75}
-\contentsline {figure}{\numberline {8.7}{\ignorespaces \relax }}{68}{figure.caption.76}
-\contentsline {figure}{\numberline {8.8}{\ignorespaces Men\IeC {\'u} de Listas para Mapas de POSE IT!\relax }}{69}{figure.caption.77}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces Men\IeC {\'u} de Opciones\relax }}{68}{figure.caption.76}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces Men\IeC {\'u} de Listas para Mapas de POSE IT!\relax }}{68}{figure.caption.77}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

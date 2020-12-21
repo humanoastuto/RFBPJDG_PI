@@ -11,28 +11,28 @@
 \BOOKMARK [2][-]{subsection.2.2.3}{\301mbito Cl\355nico}{section.2.2}% 11
 \BOOKMARK [2][-]{subsection.2.2.4}{\301mbito Pedag\363gico}{section.2.2}% 12
 \BOOKMARK [2][-]{subsection.2.2.5}{\301mbito De Entretenimiento y Entrenamiento}{section.2.2}% 13
-\BOOKMARK [0][-]{chapter.3}{Marco Te\363rico}{}% 14
-\BOOKMARK [1][-]{section.3.1}{Body Tracking/Motion Capture}{chapter.3}% 15
-\BOOKMARK [2][-]{subsection.3.1.1}{Skeletical Tracking}{section.3.1}% 16
-\BOOKMARK [1][-]{section.3.2}{Base Te\363rica}{chapter.3}% 17
-\BOOKMARK [2][-]{subsection.3.2.1}{C\341mara y Desambiguaci\363n}{section.3.2}% 18
-\BOOKMARK [2][-]{subsection.3.2.2}{Inteligencia Artificial \(IA\)}{section.3.2}% 19
-\BOOKMARK [2][-]{subsection.3.2.3}{Point Cloud}{section.3.2}% 20
-\BOOKMARK [0][-]{chapter.4}{Estudio de alternativas}{}% 21
-\BOOKMARK [1][-]{section.4.1}{An\341lisis de Alternativas actualmente disponibles en el mercado}{chapter.4}% 22
-\BOOKMARK [2][-]{subsection.4.1.1}{Entretenimiento}{section.4.1}% 23
-\BOOKMARK [1][-]{section.4.2}{An\341lisis de Alternativas En Herramientas Disponibles Para el Desarrollo}{chapter.4}% 24
-\BOOKMARK [2][-]{subsection.4.2.1}{Trajes con sensores de movimiento}{section.4.2}% 25
-\BOOKMARK [2][-]{subsection.4.2.2}{TensorFlow}{section.4.2}% 26
-\BOOKMARK [2][-]{subsection.4.2.3}{PoseNet}{section.4.2}% 27
-\BOOKMARK [2][-]{subsection.4.2.4}{Wrnch}{section.4.2}% 28
-\BOOKMARK [2][-]{subsection.4.2.5}{OpenPose}{section.4.2}% 29
-\BOOKMARK [2][-]{subsection.4.2.6}{DeepMotion}{section.4.2}% 30
-\BOOKMARK [2][-]{subsection.4.2.7}{Unity y Kinect}{section.4.2}% 31
-\BOOKMARK [2][-]{subsection.4.2.8}{Resumen de Accesibilidad de las Alternativas}{section.4.2}% 32
-\BOOKMARK [0][-]{chapter.5}{Objetivos}{}% 33
-\BOOKMARK [1][-]{section.5.1}{Objetivo General}{chapter.5}% 34
-\BOOKMARK [1][-]{section.5.2}{Objetivos Espec\355ficos}{chapter.5}% 35
+\BOOKMARK [0][-]{chapter.3}{Objetivos}{}% 14
+\BOOKMARK [1][-]{section.3.1}{Objetivo General}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.2}{Objetivos Espec\355ficos}{chapter.3}% 16
+\BOOKMARK [0][-]{chapter.4}{Marco Te\363rico}{}% 17
+\BOOKMARK [1][-]{section.4.1}{Body Tracking/Motion Capture}{chapter.4}% 18
+\BOOKMARK [2][-]{subsection.4.1.1}{Skeletical Tracking}{section.4.1}% 19
+\BOOKMARK [1][-]{section.4.2}{Base Te\363rica}{chapter.4}% 20
+\BOOKMARK [2][-]{subsection.4.2.1}{C\341mara y Desambiguaci\363n}{section.4.2}% 21
+\BOOKMARK [2][-]{subsection.4.2.2}{Inteligencia Artificial \(IA\)}{section.4.2}% 22
+\BOOKMARK [2][-]{subsection.4.2.3}{Point Cloud}{section.4.2}% 23
+\BOOKMARK [0][-]{chapter.5}{Estudio de alternativas}{}% 24
+\BOOKMARK [1][-]{section.5.1}{An\341lisis de Alternativas actualmente disponibles en el mercado}{chapter.5}% 25
+\BOOKMARK [2][-]{subsection.5.1.1}{Entretenimiento}{section.5.1}% 26
+\BOOKMARK [1][-]{section.5.2}{An\341lisis de Alternativas En Herramientas Disponibles Para el Desarrollo}{chapter.5}% 27
+\BOOKMARK [2][-]{subsection.5.2.1}{Trajes con sensores de movimiento}{section.5.2}% 28
+\BOOKMARK [2][-]{subsection.5.2.2}{TensorFlow}{section.5.2}% 29
+\BOOKMARK [2][-]{subsection.5.2.3}{PoseNet}{section.5.2}% 30
+\BOOKMARK [2][-]{subsection.5.2.4}{Wrnch}{section.5.2}% 31
+\BOOKMARK [2][-]{subsection.5.2.5}{OpenPose}{section.5.2}% 32
+\BOOKMARK [2][-]{subsection.5.2.6}{DeepMotion}{section.5.2}% 33
+\BOOKMARK [2][-]{subsection.5.2.7}{Unity y Kinect}{section.5.2}% 34
+\BOOKMARK [2][-]{subsection.5.2.8}{Resumen de Accesibilidad de las Alternativas}{section.5.2}% 35
 \BOOKMARK [0][-]{chapter.6}{Metodolog\355a}{}% 36
 \BOOKMARK [1][-]{section.6.1}{Metodolog\355a \301gil}{chapter.6}% 37
 \BOOKMARK [1][-]{section.6.2}{Metodolog\355a SCRUM}{chapter.6}% 38
@@ -54,18 +54,19 @@
 \BOOKMARK [2][-]{subsection.8.2.2}{C\341lculo a partir de la Normalizaci\363n de Cuadro de Point Cloud}{section.8.2}% 54
 \BOOKMARK [2][-]{subsection.8.2.3}{C\341lculo a partir de la Normalizaci\363n de la distancia entre dos puntos}{section.8.2}% 55
 \BOOKMARK [1][-]{section.8.3}{Dise\361o De GUI}{chapter.8}% 56
-\BOOKMARK [0][-]{chapter.9}{Plan de Actividades}{}% 57
-\BOOKMARK [1][-]{subsection.9.0.1}{Cronograma}{chapter.9}% 58
-\BOOKMARK [0][-]{chapter.10}{Conclusiones}{}% 59
-\BOOKMARK [0][-]{chapter.11}{Recomendaciones}{}% 60
-\BOOKMARK [0][-]{chapter.12}{Anexos}{}% 61
-\BOOKMARK [1][-]{section.12.1}{Lista de Abreviaturas}{chapter.12}% 62
-\BOOKMARK [1][-]{section.12.2}{Glosario}{chapter.12}% 63
-\BOOKMARK [1][-]{section.12.3}{Anexo: Control de Sprint}{chapter.12}% 64
-\BOOKMARK [1][-]{section.12.4}{Anexo: Product Backlog}{chapter.12}% 65
-\BOOKMARK [1][-]{section.12.5}{Anexo: Gr\341fico Burn-Up Burn-Down}{chapter.12}% 66
-\BOOKMARK [1][-]{section.12.6}{Anexo: Proceso de Instalaci\363n de OpenPose y Unity para el Desarrollo del Proyecto}{chapter.12}% 67
-\BOOKMARK [1][-]{section.12.7}{Anexo: Archivos Generados}{chapter.12}% 68
-\BOOKMARK [1][-]{section.12.8}{Anexo: Mensajes de Error}{chapter.12}% 69
-\BOOKMARK [1][-]{section.12.9}{Anexo: C\341lculos de Comparaci\363n de Poses}{chapter.12}% 70
-\BOOKMARK [2][-]{subsection.12.9.1}{Ejemplo de C\341lculo de Normalizaci\363n Basada en el Centro de la Cadera}{section.12.9}% 71
+\BOOKMARK [1][-]{section.8.4}{Modificaci\363n de Requerimientos Adicionales debido a SCRUM}{chapter.8}% 57
+\BOOKMARK [0][-]{chapter.9}{Plan de Actividades}{}% 58
+\BOOKMARK [1][-]{subsection.9.0.1}{Cronograma}{chapter.9}% 59
+\BOOKMARK [0][-]{chapter.10}{Conclusiones}{}% 60
+\BOOKMARK [0][-]{chapter.11}{Recomendaciones}{}% 61
+\BOOKMARK [0][-]{chapter.12}{Anexos}{}% 62
+\BOOKMARK [1][-]{section.12.1}{Lista de Abreviaturas}{chapter.12}% 63
+\BOOKMARK [1][-]{section.12.2}{Glosario}{chapter.12}% 64
+\BOOKMARK [1][-]{section.12.3}{Anexo: Control de Sprint}{chapter.12}% 65
+\BOOKMARK [1][-]{section.12.4}{Anexo: Product Backlog}{chapter.12}% 66
+\BOOKMARK [1][-]{section.12.5}{Anexo: Gr\341fico Burn-Up Burn-Down}{chapter.12}% 67
+\BOOKMARK [1][-]{section.12.6}{Anexo: Proceso de Instalaci\363n de OpenPose y Unity para el Desarrollo del Proyecto}{chapter.12}% 68
+\BOOKMARK [1][-]{section.12.7}{Anexo: Archivos Generados}{chapter.12}% 69
+\BOOKMARK [1][-]{section.12.8}{Anexo: Mensajes de Error}{chapter.12}% 70
+\BOOKMARK [1][-]{section.12.9}{Anexo: C\341lculos de Comparaci\363n de Poses}{chapter.12}% 71
+\BOOKMARK [2][-]{subsection.12.9.1}{Ejemplo de C\341lculo de Normalizaci\363n Basada en el Centro de la Cadera}{section.12.9}% 72

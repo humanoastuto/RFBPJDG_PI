@@ -16,12 +16,12 @@ La elaboración de este proyecto es realizada en 3 dispositivos distintos, dos l
 
 Para las cámaras de los dispositivos se emplean en el caso de las laptops, las cámaras de fábrica, que emplea la configuración genérica USB2.0 HD UVC WebCam y HD Webcam, en cuanto a la cámara de la computadora de escritorio, se emplea una cámara web genérica de orígenes desconocidos según el estudiante que la adquirió. 
 
-El Body Tracking esta implementado por la Demo.unity de manera estándar, para poder ejecutarlo en todos los dispositivos de trabajo, se debe modificar el valor de una variable que cambie la resolución del OpenPose de net\_resolution -1x176, caso contrario saltara el error más común de OpenPose \ref{erroroutofmemory} en el \ztitleref{anexoerrores}.
+El Body Tracking está implementado por la Demo.unity de manera estándar, para poder ejecutarlo en todos los dispositivos de trabajo, se debe modificar el valor de una variable que cambie la resolución del OpenPose de net\_resolution -1x176, caso contrario saltara el error más común de OpenPose \ref{erroroutofmemory} en el \ztitleref{anexoerrores}.
 
 
 \subsubsection{Configuración Inicial de las SDK y herramientas}
 
-El desarrollo de la aplicación emplea Unity y Visual Studio, ya que Visual Studio es una SDK que permite programar en C sharp, que tiene una biblioteca disponible para el desarrollo en Unity. Además se empleará la herramienta selecta, que es el plug-in de OpenPose para poder desarrollar, el proceso de instalación se explicará en la sección de anexos. Las versiones instaladas son Unity 2019.4.14f1, Visual Studio 2019 y OpenPose 1.5.0 (la versión del plug-in de Unity, por tanto no existen más opciones disponibles actualmente).
+El desarrollo de la aplicación emplea Unity y Visual Studio, ya que Visual Studio es una SDK que permite programar en C Sharp, que tiene una biblioteca disponible para el desarrollo en Unity. Además se empleará la herramienta selecta, que es el plug-in de OpenPose para poder desarrollar, el proceso de instalación se explicará en la sección de anexos. Las versiones instaladas son Unity 2019.4.14f1, Visual Studio 2019 y OpenPose 1.5.0 (la versión del plug-in de Unity, por tanto no existen más opciones disponibles actualmente).
 \\
 Las configuraciones son necesarias para disponer de los archivos dentro de la carpeta openpose\_plugin\textbackslash OpenPosePlugin\textbackslash Assets, en su interior se encuentran las carpetas StreamingAssets y OpenPose, dentro de la carpeta StreamingAssets se encuentran los modelos BODY\_25 y COCO, que serán necesarios para la estimación de poses. Dentro la carpeta OpenPose están las carpetas de Plugins, que contiene todas los DLL necesarios para ejecutar OpenPose, de Scripts, contiene archivos para traducir los modelos e importar los DLL respectivos y la más importante Examples, que contiene Scenes y Scripts, siendo los más relevantes. Dentro de Scripts se encuentra el código fuente del plug-in, que es modificable por el usuario y en Scenes se encuentra el Demo.unity, que provee el formato de la figura \ref{unitydemo} en \ztitleref{anexoinstalacion}.
 
@@ -116,7 +116,7 @@ Finalmente, una vez decidido el método de normalización y la valoración de la
 
 \subsubsection{Control de Tiempo del Mapa}
 
-Se determina a través del limite de tiempo para realizar la posición que se asigno al crear el mapa, la serie de poses a imitar están en un orden específico del primero al final, por tanto el tiempo límite de cada pose es más sencillo de determinar. Durante el tiempo total del vídeo del mapa, el usuario va a poder ver una pequeña visualización de las imágenes JPG de las poses mientras ve el vídeo para poder llevar el ritmo de las poses a imitar.
+Se determina a través del límite de tiempo para realizar la posición que se asignó al crear el mapa, la serie de poses a imitar están en un orden específico del primero al final, por tanto el tiempo límite de cada pose es más sencillo de determinar. Durante el tiempo total del vídeo del mapa, el usuario va a poder ver una pequeña visualización de las imágenes JPG de las poses mientras ve el vídeo para poder llevar el ritmo de las poses a imitar.
 
 Se califica la posición en el tiempo respectivo y se debe proceder a la siguiente pose cuando termine y así se mueva al nuevo tiempo límite de la siguiente pose.
 
@@ -127,14 +127,14 @@ Se requiere de desarrollar un método para comparar las poses del usuario en tie
 
 El modelo BODY\_25 tiene un conjunto de puntos guardados en forma de coordenadas, lo cual se considera como un Point Cloud, por tanto, en concepto se tienen dos Point Cloud muy distintas, pero similares (ya que ambos representan un cuerpo humano) que se deben comparar, para eso existe el Point Set Registration. Durante la exploración de algoritmos inicial no se encontró ningún algoritmo para facilitar el desarrollo de la aplicación, por lo que se desarrollaron distintas formas de medir la similitud entre las poses y la precisión de los movimientos que se necesitan representar.
 
-El método presentado es el calculo de la precisión a partir de la normalización de los puntos dentro de la Point Cloud de tres formas distintas (presentadas por cada integrante del equipo), de las cuales se definirá la más adecuada. La normalización involucra ajustar la distancia entre los puntos para que tengan distancias proporcionalmente correctas a su forma original y permitan su comparación entre dos Point CLouds distintas.
+El método presentado es el calculo de la precisión a partir de la normalización de los puntos dentro de la Point Cloud de tres formas distintas (presentadas por cada integrante del equipo), de las cuales se definirá la más adecuada. La normalización involucra ajustar la distancia entre los puntos para que tengan distancias proporcionalmente correctas a su forma original y permitan su comparación entre dos Point Clouds distintas.
 
 
 \subsection{Cálculo a partir de la Normalización de un punto}
 
-La normalización a partir de un punto busca un punto clave como base para normalizar el resto de los puntos, del modelo BODY\_25 de la figura \ref{open2} se especifico el centro del cuerpo, el punto de la cadera central.
+La normalización a partir de un punto busca un punto clave como base para normalizar el resto de los puntos, del modelo BODY\_25 de la figura \ref{open2} se especificó el centro del cuerpo, el punto de la cadera central.
 
-Se mueve el punto de la cadera central al centro de la imagen y se alinean los puntos de la persona de acuerdo a la distancia movida correspondiente como se ve en la figura \ref{overpose}. Se realizara una redimension previa de todos los puntos existentes dentro de cada txt de las poses del mapa, se emplea la resolución 1280x720 al guardar archivos txt, cada uno de ellos será normalizado, por tanto a cada punto de las coordenadas se les aplica las ecuaciones  \ref{equation1.1} \ref{equation1.2}, donde la constante $\beta = 24$ determinado por la cantidad de puntos clave, $A_x$ es el largo y $A_y$ la altura de la resolución, P es el vector de duplas que conforman las coordenadas de la Point Cloud de la pose del usuario y Q al de la pose del mapa.
+Se mueve el punto de la cadera central al centro de la imagen y se alinean los puntos de la persona de acuerdo a la distancia movida correspondiente como se ve en la figura \ref{overpose}. Se realizara una redimensión previa de todos los puntos existentes dentro de cada txt de las poses del mapa, se emplea la resolución 1280x720 al guardar archivos txt, cada uno de ellos será normalizado, por tanto a cada punto de las coordenadas se les aplica las ecuaciones  \ref{equation1.1} \ref{equation1.2}, donde la constante $\beta = 24$ determinado por la cantidad de puntos clave, $A_x$ es el largo y $A_y$ la altura de la resolución, P es el vector de duplas que conforman las coordenadas de la Point Cloud de la pose del usuario y Q al de la pose del mapa.
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=14cm,height=6cm,]{./Images/overpose.png}
@@ -158,7 +158,7 @@ Se calculará la distancia $N_x$ y $N_y$ \ref{equation2} que son la distancia qu
 N_x= x_{q8}-x_{p8} \hspace{15mm} N_y= y_{q8}-y_{p8}
 \label{equation2}
 \end{equation}
-Se calcula el promedio del porcentaje de la diferencia de la pose del usuario a la otra con la ecuación \ref{equation3}, donde se calcula el porcentaje de diferencia de cada punto en los ejes x,y y se divide el total por la cantidad de puntos clave. En la ecuación \ref{equation4} se calcula el promedio esperado de la pose del mapa.
+Se calcula el promedio del porcentaje de la diferencia de la pose del usuario a la otra con la ecuación \ref{equation3}, donde se calcula el porcentaje de diferencia de cada punto en los ejes x,y se divide el total por la cantidad de puntos clave. En la ecuación \ref{equation4} se calcula el promedio esperado de la pose del mapa.
 
 \begin{equation}
 Prom = [\sum_{n=0}^\beta (\left | (x_{pn}+N_x)*100\% \right |  +  \left |  (y_{pn}+N_y)*100\%  \right |) ]/\beta
@@ -201,7 +201,7 @@ X_{qmax} = Max(Q(x_q)) \hspace{15mm} Y_{qmax} = Max(Q(y_q))
 X_{qmin} = Min(Q(x_q)) \hspace{15mm} Y_{qmin} = Min(Q(y_q))
 \label{equation14.min}
 \end{equation}
-Los mínimos y máximos se convierten en los bordes límitantes de un cuadro imaginario que los encierra, como se ve en la figura \ref{pointcloudtocuadro} otorgando un tamaño del conjunto de los puntos, con ello se puede redimensionar el Point Cloud de la pose del usuario al tamaño de la Point Cloud de la pose del mapa con que se compara como se ve en la figura \ref{redimensioncuadro}, para evaluar el desfase porcentual que existen en los ejes x,y de cada punto.
+Los mínimos y máximos se convierten en los bordes limitantes de un cuadro imaginario que los encierra, como se ve en la figura \ref{pointcloudtocuadro} otorgando un tamaño del conjunto de los puntos, con ello se puede redimensionar el Point Cloud de la pose del usuario al tamaño de la Point Cloud de la pose del mapa con que se compara como se ve en la figura \ref{redimensioncuadro}, para evaluar el desfase porcentual que existen en los ejes x,y de cada punto.
 
 \begin{figure}[t!]
 	\centering
@@ -246,7 +246,7 @@ Se calcula el límite entre los dos extremos en $x_size$ y $y_size$ de cada pose
 \label{equation16}
 \end{equation}
 
-Se calcula la precisión en la variable $Acurracy$ \ref{equation19}, la cual será la sumatoria del calculo de la diferencia porcentual de cada punto modificada para tener un valor exponencial de acuerdo al porcentaje de diferencia. Donde la constante $\beta = 24$ debido a la cantidad de puntos clave, $C$ \ref{equation18.1} y $D$ \ref{equation18.2} son la varianza exponencial de los valores $A$ \ref{equation17.1} y $B$ \ref{equation17.2}, que son el porcentaje de diferencia entre dos poses tomando en cuenta la proporcionalidad.
+Se calcula la precisión en la variable $Acurracy$ \ref{equation19}, la cual será la sumatoria del cálculo de la diferencia porcentual de cada punto modificada para tener un valor exponencial de acuerdo al porcentaje de diferencia. Donde la constante $\beta = 24$ debido a la cantidad de puntos clave, $C$ \ref{equation18.1} y $D$ \ref{equation18.2} son la varianza exponencial de los valores $A$ \ref{equation17.1} y $B$ \ref{equation17.2}, que son el porcentaje de diferencia entre dos poses tomando en cuenta la proporcionalidad.
 
 \begin{equation}
 Acurracy = \sum_{n=0}^\beta (\left | C \right |  +  \left |  D \right |) 
@@ -286,19 +286,9 @@ El rango de la precisión de cada punto sería de $0 \leq x \geq 10000$ para un 
 La normalización a partir de la distancia cuenta con una constante $\beta = 24\text{ Key Points}$ (ya que va del 0 al 24)entre dos puntos elige dos puntos del modelo BODY\_25 de la figura \ref{open2}, el punto del cuello (Punto 1) y el punto de la cadera central (Punto 8), ya que conforman la línea principal del cuerpo que une extremidades inferiores y superiores. Se obtiene una constante a partir de la división de las distancias de ambas poses a comparar que permite acomodar la posición de los demás puntos 
 
 Se convertirá a las Point Cloud como un vector de duplas x,y de la siguiente forma $P=\{(x_{p0},y_{p0}),...,(x_{p\beta},y_{p\beta})\}$ y $Q=\{(x_{q0},y_{q0}),...,(x_{q\beta},y_{q\beta})\}$
-, donde P es el vector del usuario y Q es de la pose del mapa, $x_{pn}$ es un valor del vector, que respeta el  orden de la tabla \ref{openposevector}. Se debe calcular las distancias $d_p$ y $d_q$ que hay entre los puntos clave mencionados (cuello y cadera central) con la ecuación \ref{equation7.1} y \ref{equation7.2}.
+, donde P es el vector del usuario y Q es de la pose del mapa, $x_{pn}$ es un valor del vector, que respeta el  orden de la tabla \ref{openposevector}. Se debe calcular las distancias $d_p$ y $d_q$ que hay entre los puntos clave mencionados (cuello y cadera central) con la ecuación $d_p= distancia((x_{p1},y_{p1}),(x_{p8},y_{p8}))$ y $d_q= distancia((x_{q1},y_{q1}),(x_{q8},y_{q8}))$.
 
-\begin{equation}
-d_p= distancia((x_{p1},y_{p1}),(x_{p8},y_{p8}))
-\label{equation7.1}
-\end{equation}
-
-\begin{equation}
-d_q= distancia((x_{q1},y_{q1}),(x_{q8},y_{q8}))
-\label{equation7.2}
-\end{equation}
-
-Se calcula una constante que determina la proporción entre las distancias entre el usuario respecto a la pose del mapa \ref{equation8}, esto nos permitirá definir la diferencia entre las distancias del punto del cuello de la pose del usuario respecto a la de la pose del mapa en las ecuaciones \ref{equation9.1} y \ref{equation9.2}. La distancia $D_x$ y $D_y$ determinan la lejanía del punto del cuello respecto al otro punto del cuello en el cuadro de la pose en base a sus proporciones.
+Se calcula una constante que determina la proporción entre las distancias entre el usuario respecto a la pose del mapa \ref{equation8}, esto nos permitirá definir la diferencia entre las distancias del punto del cuello de la pose del usuario respecto a la de la pose del mapa en las ecuaciones \ref{equation9.1} y \ref{equation9.2}. La distancia $D_x$ y $D_y$ determinan la lejanía del punto del cuello respecto al otro punto del cuello en el cuadro de la pose basándose en sus proporciones.
 \begin{equation}
 \gamma = \frac{d_p}{d_q}
 \label{equation8}
@@ -324,12 +314,12 @@ El resultado varía bastante dependiendo de la resolución de la cámara. Se est
 
 \section{Diseño De GUI}
 
-El diseño de la GUI de la figura \ref{requerimientosgrafico} en la fase de diseño se tomo en cuenta para su creación, donde se tienen los botones y funciones esperadas. Para el diseño también se toma en cuenta el principio KISS ("Keep it Simple, Stupid!"), que establece que gran parte de los sistemas son mejores si se mantienen simple que complejos, este se vuelve un objetivo clave para el diseño de la GUI.
+El diseño de la GUI de la figura \ref{requerimientosgrafico} en la fase de diseño se tomó en cuenta para su creación, donde se tienen los botones y funciones esperadas. Para el diseño también se toma en cuenta el principio KISS ("Keep it Simple, Stupid!"), que establece que gran parte de los sistemas son mejores si se mantienen simple que complejos, este se vuelve un objetivo clave para el diseño de la GUI.
 \\
 La licencia de OpenPose específica la necesidad de mantener en claro que el uso de la API esta dirigido a investigación y desarrollo privado, perteneciendo a su creador todos los programas desarrollados con su uso.
-Se resalta también que a estas etapas del desarrollo recién \textbf{se determino el nombre del sistema interactivo POSE IT!}, en la figura \ref{menu} se observan los logos de POSE IT! y de OpenPose, así mismo las 3 funciones mencionadas.
+Se resalta también que a estas etapas del desarrollo recién \textbf{se determinó el nombre del sistema interactivo POSE IT!}, en la figura \ref{menu} se observan los logos de POSE IT! y de OpenPose, así mismo las 3 funciones mencionadas.
 
-\begin{figure}[t!]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=12cm,height=7cm]{./Images/menu.png}
 	\caption{Menú de el Sistema Interactivo POSE IT!}
@@ -342,7 +332,7 @@ Al presionar Options en la figura \ref{menu}se observan las dos funciones observ
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=12cm,height=7cm]{./Images/menuopciones.png}
-	\caption{}
+	\caption{Menú de Opciones}
 	\footnotesize Fuente: Elaboración Propia
 	\label{menuoptions}
 \end{figure}
@@ -357,5 +347,15 @@ Al apretar Play de la figura \ref{menu} se pueden observar la lista de mapas dis
 	\label{menulistas}
 \end{figure}
 
-Finalmente el diseño de la figura \ref{primerintento} se conservará para la ejecución del nivel, sin embargo, se considera a futuro leves cambios para ser más presentable.
+\section{Modificación de Requerimientos Adicionales debido a SCRUM}
+
+La metodología SCRUM
+
+
+
+
+
+
+
+
 
