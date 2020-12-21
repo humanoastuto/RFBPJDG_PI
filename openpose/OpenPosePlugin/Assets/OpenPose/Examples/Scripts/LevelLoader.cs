@@ -10,6 +10,7 @@ public class LevelLoader : MonoBehaviour
     public int levelIndex;
     public float transitionTime = 1f;
     public Button button;
+    static public string dancename;
 
     void Start()
     {
@@ -18,12 +19,12 @@ public class LevelLoader : MonoBehaviour
             Button btn = button.GetComponent<Button>();
             btn.onClick.AddListener(TaskOnClick);
         }
-       
     }
 
     void TaskOnClick()
     {
         StartCoroutine(LoadLevel(levelIndex));
+        dancename = "sombrero";
     }
 
     IEnumerator LoadLevel(int levelIndex)
