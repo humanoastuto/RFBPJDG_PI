@@ -14,6 +14,8 @@ namespace OpenPose.Example {
         // HumanController2D prefab
         [SerializeField] GameObject humanPrefab;
 
+        [SerializeField] Canvas canvas;
+
         // UI elements
         [SerializeField] RectTransform outputTransform;
         [SerializeField] ImageRenderer bgImageRenderer;
@@ -120,6 +122,7 @@ namespace OpenPose.Example {
             videos.enabled = false;
             flipScreen = false;
             uname = "";
+
         }
 
         public void SetInputType(bool isCamera) {
@@ -256,7 +259,7 @@ namespace OpenPose.Example {
                         uname = videos.options[videos.value].text.Replace(".mp4", "");
                     }
                 }
-                string filename = "./Custom/" + uname + "/" + uname + ".txt";
+                string filename = "./Custom/" + uname + "/movement.txt";
                 if (!File.Exists("./Custom/" + uname + "/data.json")) {
                     string datafile = "./Custom/" + uname + "/data.json";
                     string[] data = {
@@ -272,7 +275,7 @@ namespace OpenPose.Example {
                     if (producerString == "-1") {
                         //System.IO.File.Copy(producerString, filename.Replace(".txt", ".mp4"), true);
                     } else {
-                        System.IO.File.Copy(producerString, filename.Replace(".txt", ".mp4"), true);
+                        System.IO.File.Copy(producerString, "./Custom/" + uname + "/video.mp4", true);
                     }
                     for (int i = 0; i < data.Length; i++) {
                         using (System.IO.StreamWriter file = new System.IO.StreamWriter(@datafile, true)) {
@@ -291,8 +294,7 @@ namespace OpenPose.Example {
                 }
                 DrawCopy();
             }
-        }    
-
+        }
         private void DrawCopy() {
             float x = 550;
             float y = 30;

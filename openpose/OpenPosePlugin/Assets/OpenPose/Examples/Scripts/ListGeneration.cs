@@ -50,7 +50,7 @@ public class ListGeneration : MonoBehaviour
         {
             FileInfo[] info = (dir.GetFiles("data.json"));
 
-            if (info.Length != 0 && Directory.Exists((info[0].Directory + "/output")))
+            if (info.Length != 0 && File.Exists((info[0].Directory + "/movement.txt")))
             {
                 string filein = File.ReadAllText(info[0].FullName);
                 lvldat = JsonUtility.FromJson<LevelData>(filein);

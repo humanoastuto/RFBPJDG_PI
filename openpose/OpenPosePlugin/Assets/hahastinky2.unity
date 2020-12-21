@@ -2182,7 +2182,7 @@ PrefabInstance:
     - target: {fileID: 9173190871827486876, guid: 9d2239df914a3c14d91019f4e35ab1a4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9173190871827486877, guid: 9d2239df914a3c14d91019f4e35ab1a4,
         type: 3}
@@ -2272,6 +2272,11 @@ PrefabInstance:
     - target: {fileID: 9173190871937014241, guid: 9d2239df914a3c14d91019f4e35ab1a4,
         type: 3}
       propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173190871937014241, guid: 9d2239df914a3c14d91019f4e35ab1a4,
+        type: 3}
+      propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9173190871937014244, guid: 9d2239df914a3c14d91019f4e35ab1a4,
@@ -9217,6 +9222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   humanPrefab: {fileID: 1275772725644782, guid: 831a1ca4df7dbba40a51933985fa4083,
     type: 3}
+  canvas: {fileID: 441296459}
   outputTransform: {fileID: 1675082011}
   bgImageRenderer: {fileID: 1675082012}
   humanContainer: {fileID: 1775626147}
