@@ -276,6 +276,8 @@ namespace OpenPose.Example {
                         //System.IO.File.Copy(producerString, filename.Replace(".txt", ".mp4"), true);
                     } else {
                         System.IO.File.Copy(producerString, "./Custom/" + uname + "/video.mp4", true);
+                        StartCoroutine(takeScreenShot("Custom/" + uname +"/icon.png" ));
+                        //ScreenCapture.CaptureScreenshot("./Custom/" + uname +"/icon.png");
                     }
                     for (int i = 0; i < data.Length; i++) {
                         using (System.IO.StreamWriter file = new System.IO.StreamWriter(@datafile, true)) {
@@ -295,6 +297,30 @@ namespace OpenPose.Example {
                 DrawCopy();
             }
         }
+
+        public IEnumerator takeScreenShot(string path)
+        {
+            yield return new WaitForEndOfFrame(); 
+            Rect rect = outputTransform.rect;
+            int textWidth = (int) (System.Convert.ToInt32(rect.width) * 0.3631944); // width of the object to capture
+            int textHeight = (int) (System.Convert.ToInt32(rect.height)* 0.3631944); // height of the object to capture
+
+            var startX = System.Convert.ToInt32(-370) + Screen.width / 2; // offset X
+            var startY = System.Convert.ToInt32(-125) + Screen.height / 2; // offset Y
+
+            var tex = new Texture2D(250, 250, TextureFormat.RGB24, false);
+
+            tex.ReadPixels(new Rect(startX, startY, 250, 250), 0, 0);
+            Debug.Log(startX+" : "+startY);
+            tex.Apply();
+
+            // Encode texture into PNG
+            var bytes = tex.EncodeToPNG();
+            Destroy(tex);
+
+            File.WriteAllBytes(path, bytes);
+        }
+
         private void DrawCopy() {
             float x = 550;
             float y = 30;
