@@ -54,19 +54,23 @@
 \BOOKMARK [2][-]{subsection.8.2.2}{C\341lculo a partir de la Normalizaci\363n de Cuadro de Point Cloud}{section.8.2}% 54
 \BOOKMARK [2][-]{subsection.8.2.3}{C\341lculo a partir de la Normalizaci\363n de la distancia entre dos puntos}{section.8.2}% 55
 \BOOKMARK [1][-]{section.8.3}{Dise\361o De GUI}{chapter.8}% 56
-\BOOKMARK [1][-]{section.8.4}{Modificaci\363n de Requerimientos Adicionales debido a SCRUM}{chapter.8}% 57
-\BOOKMARK [0][-]{chapter.9}{Plan de Actividades}{}% 58
-\BOOKMARK [1][-]{subsection.9.0.1}{Cronograma}{chapter.9}% 59
-\BOOKMARK [0][-]{chapter.10}{Conclusiones}{}% 60
-\BOOKMARK [0][-]{chapter.11}{Recomendaciones}{}% 61
-\BOOKMARK [0][-]{chapter.12}{Anexos}{}% 62
-\BOOKMARK [1][-]{section.12.1}{Lista de Abreviaturas}{chapter.12}% 63
-\BOOKMARK [1][-]{section.12.2}{Glosario}{chapter.12}% 64
-\BOOKMARK [1][-]{section.12.3}{Anexo: Control de Sprint}{chapter.12}% 65
-\BOOKMARK [1][-]{section.12.4}{Anexo: Product Backlog}{chapter.12}% 66
-\BOOKMARK [1][-]{section.12.5}{Anexo: Gr\341fico Burn-Up Burn-Down}{chapter.12}% 67
-\BOOKMARK [1][-]{section.12.6}{Anexo: Proceso de Instalaci\363n de OpenPose y Unity para el Desarrollo del Proyecto}{chapter.12}% 68
-\BOOKMARK [1][-]{section.12.7}{Anexo: Archivos Generados}{chapter.12}% 69
-\BOOKMARK [1][-]{section.12.8}{Anexo: Mensajes de Error}{chapter.12}% 70
-\BOOKMARK [1][-]{section.12.9}{Anexo: C\341lculos de Comparaci\363n de Poses}{chapter.12}% 71
-\BOOKMARK [2][-]{subsection.12.9.1}{Ejemplo de C\341lculo de Normalizaci\363n Basada en el Centro de la Cadera}{section.12.9}% 72
+\BOOKMARK [1][-]{section.8.4}{Modificaci\363n y Requerimientos Adicionales}{chapter.8}% 57
+\BOOKMARK [2][-]{subsection.8.4.1}{Requerimientos Adicionales}{section.8.4}% 58
+\BOOKMARK [2][-]{subsection.8.4.2}{Dise\361o de GUI}{section.8.4}% 59
+\BOOKMARK [2][-]{subsection.8.4.3}{Diagrama de Flujo de Datos Modificado}{section.8.4}% 60
+\BOOKMARK [0][-]{chapter.9}{Plan de Actividades}{}% 61
+\BOOKMARK [1][-]{subsection.9.0.1}{Cronograma}{chapter.9}% 62
+\BOOKMARK [0][-]{chapter.10}{Conclusiones}{}% 63
+\BOOKMARK [0][-]{chapter.11}{Recomendaciones}{}% 64
+\BOOKMARK [0][-]{chapter.12}{Anexos}{}% 65
+\BOOKMARK [1][-]{section.12.1}{Lista de Abreviaturas}{chapter.12}% 66
+\BOOKMARK [1][-]{section.12.2}{Glosario}{chapter.12}% 67
+\BOOKMARK [1][-]{section.12.3}{Anexo: Control de Sprint}{chapter.12}% 68
+\BOOKMARK [1][-]{section.12.4}{Anexo: Product Backlog}{chapter.12}% 69
+\BOOKMARK [1][-]{section.12.5}{Anexo: Gr\341fico Burn-Up Burn-Down}{chapter.12}% 70
+\BOOKMARK [1][-]{section.12.6}{Anexo: Proceso de Instalaci\363n de OpenPose y Unity para el Desarrollo del Proyecto}{chapter.12}% 71
+\BOOKMARK [1][-]{section.12.7}{Anexo: Archivos Generados}{chapter.12}% 72
+\BOOKMARK [1][-]{section.12.8}{Anexo: Mensajes de Error}{chapter.12}% 73
+\BOOKMARK [1][-]{section.12.9}{Anexo: C\341lculos de Comparaci\363n de Poses}{chapter.12}% 74
+\BOOKMARK [2][-]{subsection.12.9.1}{Ejemplo de C\341lculo de Normalizaci\363n Basada en el Centro de la Cadera}{section.12.9}% 75
+\BOOKMARK [1][-]{section.12.10}{Dise\361o de GUI Modificados}{chapter.12}% 76
