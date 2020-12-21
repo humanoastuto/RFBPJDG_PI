@@ -1,21 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
-using System.Linq;
 using System.IO;
-using UnityEngine.Networking;
 
-
-
+public static class SelectedChart {
+    public static DirectoryInfo getLocation { get; set; }
+}
 public static class ButtonExtension
 {
-    public static void AddEventListener<T1,T2,T3>(this Button button, T1 param, T2 param2, T3 param3, Action<T1,T2,T3> OnClick)
+    public static void AddEventListener<T1, T2, T3>(this Button button, T1 param, T2 param2, T3 param3, Action<T1, T2, T3> OnClick)
     {
-        button.onClick.AddListener(delegate () {
-            OnClick(param,param2,param3);
+        button.onClick.AddListener(delegate ()
+        {
+            OnClick(param, param2, param3);
         });
     }
 }
@@ -37,6 +36,7 @@ public class ListGeneration : MonoBehaviour
     public Text selectedDance;
     public Text selectedCharter;
     public Image selectedImage;
+    public Button playButton;
     private List<LevelData> levelList;
     private LevelData selectedItem;
 
@@ -46,44 +46,52 @@ public class ListGeneration : MonoBehaviour
         levelList = new List<LevelData>();
         DirectoryInfo root = new DirectoryInfo("./Custom/");
         LevelData lvldat;
-        foreach (DirectoryInfo dir in root.GetDirectories())
+        if (Directory.Exists("./Custom") && root.GetDirectories().Length != 0)
         {
-            FileInfo[] info = (dir.GetFiles("data.json"));
-
-            if (info.Length != 0 && File.Exists((info[0].Directory + "/movement.txt")))
+            playButton.enabled = true;
+            foreach (DirectoryInfo dir in root.GetDirectories())
             {
-                string filein = File.ReadAllText(info[0].FullName);
-                lvldat = JsonUtility.FromJson<LevelData>(filein);
-                levelList.Add(lvldat);
+                FileInfo[] info = (dir.GetFiles("data.json"));
 
-                g = Instantiate(buttonTemplate, transform);
-                g.transform.GetChild(0).GetComponent<Text>().text = lvldat.name;
-                g.transform.GetChild(1).GetComponent<Text>().text = lvldat.artist;
-
-                Texture2D tex = null;
-                byte[] fileData;
-                Sprite mySprite;
-                if (File.Exists((info[0].Directory + "/icon.png")))
+                if (info.Length != 0 && File.Exists((info[0].Directory + "/movement.txt")))
                 {
-                    fileData = File.ReadAllBytes((info[0].Directory + "/icon.png"));
-                    tex = new Texture2D(2, 2);
-                    tex.LoadImage(fileData);
-                    mySprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100.0f);
-                    g.transform.GetChild(2).GetComponent<Image>().sprite = mySprite;
+                    string filein = File.ReadAllText(info[0].FullName);
+                    lvldat = JsonUtility.FromJson<LevelData>(filein);
+                    levelList.Add(lvldat);
+
+                    g = Instantiate(buttonTemplate, transform);
+                    g.transform.GetChild(0).GetComponent<Text>().text = lvldat.name;
+                    g.transform.GetChild(1).GetComponent<Text>().text = lvldat.artist;
+
+                    Texture2D tex = null;
+                    byte[] fileData;
+                    Sprite mySprite;
+                    if (File.Exists((info[0].Directory + "/icon.png")))
+                    {
+                        fileData = File.ReadAllBytes((info[0].Directory + "/icon.png"));
+                        tex = new Texture2D(2, 2);
+                        tex.LoadImage(fileData);
+                        mySprite = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100.0f);
+                        g.transform.GetChild(2).GetComponent<Image>().sprite = mySprite;
+                    }
+
+                    g.GetComponent<Button>().AddEventListener(lvldat, g.transform.GetChild(2).GetComponent<Image>().sprite, info[0].Directory, ItemClicked);
                 }
-
-                g.GetComponent<Button>().AddEventListener(lvldat, g.transform.GetChild(2).GetComponent<Image>().sprite, info[0].Directory, ItemClicked);
             }
+            transform.GetChild(1).GetComponent<Button>().onClick.Invoke();
         }
-
-
+        else
+        {
+            playButton.enabled = false;
+        }
         Destroy(buttonTemplate);
-        transform.GetChild(1).GetComponent<Button>().onClick.Invoke();
+
     }
     void ItemClicked(LevelData lvldat, Sprite sprite, DirectoryInfo location)
     {
-        if(selectedItem != lvldat)
+        if (selectedItem != lvldat)
         {
+            SelectedChart.getLocation = location;
             selectedItem = lvldat;
             selectedName.text = lvldat.name;
             selectedArtist.text = lvldat.artist;
@@ -93,19 +101,15 @@ public class ListGeneration : MonoBehaviour
             {
                 selectedImage.sprite = sprite;
             }
-
             if (File.Exists(location + "/preview.ogg"))
             {
-                // Debug.Log("File exists");
                 StartCoroutine(GetAudioClip(location + "/preview.ogg"));
             }
             else
             {
-                //  Debug.Log("NOt exists");
                 StartCoroutine(FadeOut(0.7f));
             }
         }
-        
     }
 
     IEnumerator GetAudioClip(String url)
@@ -122,7 +126,6 @@ public class ListGeneration : MonoBehaviour
         while (audioSource.volume > 0)
         {
             audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
-
             yield return null;
         }
 
