@@ -314,7 +314,8 @@ namespace OpenPose.Example
                         "   \"name\": \"" + chartname + "\",",
                         "   \"movement\": \"" + movename + "\",",
                         "   \"charter\": \"" + chartername + "\",",
-                        "   \"timer\": \"" + timeToCapture + "\"",
+                        "   \"timer\": \"" + timeToCapture + "\",",
+                        "   \"timeToStart\": \"" + timeToStart + "\"",
                         "}"
                     };
                     System.IO.Directory.CreateDirectory("./Custom/" + uname);

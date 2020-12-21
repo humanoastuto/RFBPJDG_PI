@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 namespace OpenPose.Example {
     /*
@@ -33,6 +34,9 @@ namespace OpenPose.Example {
         [SerializeField] Text scoreText;
         [SerializeField] Text timerText;
         [SerializeField] Button start;
+        [SerializeField] VideoPlayer videoPlayer;
+        [SerializeField] Image panel;
+        
         private List<(float, float)> humancopy = new List<(float, float)>();
         private string[] poses = null;
         private int npose;
@@ -41,8 +45,8 @@ namespace OpenPose.Example {
         private float timeStarted;
         private float timeToSkip;
         private float timeNextSkip;
-        
         private List<bool> points;
+        private string dancename;
 
         // Output
         private OPDatum datum;
@@ -92,12 +96,20 @@ namespace OpenPose.Example {
         private int frameCounter = 0;
 
         private void LoadMap() {
-            poses = System.IO.File.ReadAllLines(@".\Assets\Levels\prueba.txt");
+            //dancename = hahastinky2.Parameters o algo xd
+            panel.color = new Color(0, 0, 1, 1);
+            //panel.enabled = true;
+            dancename = "vidioo";
+            poses = System.IO.File.ReadAllLines(@".\Custom\" + dancename + "\\movement.txt");
+            string[] datajson = System.IO.File.ReadAllLines(@".\Custom\" + dancename + "\\data.json");
+            videoPlayer.url = "./Custom/" + dancename + "/video.mp4";
+            videoPlayer.enabled = true;
+            videoPlayer.Stop();
             npose = 0;
             timer = 0;
             timeNextSkip = float.MaxValue;
             timeToStart = 3;
-            timeToSkip = 1;
+            timeToSkip = float.Parse(datajson[5].Split('"')[3]);
             timeStarted = 0;
             points = new List<bool>();
             for (int i = 0; i < poses.Length; i++) {
@@ -115,7 +127,6 @@ namespace OpenPose.Example {
         {
             EnableCameraRender();
         }
-
 
         private void Start() {
             //StartCoroutine(ExampleCoroutine());
@@ -310,6 +321,7 @@ namespace OpenPose.Example {
         public void StartGame() {
             timeStarted = timer;
             timeNextSkip = timer + timeToStart;
+            videoPlayer.Play();
         }
 
         private string CountPoints() {
@@ -380,10 +392,14 @@ namespace OpenPose.Example {
                 ChangePose();
             }
             if (timeStarted > 0 ) {
-                if (timer - timeStarted - timeToStart > 0) {
-                    
+                if (timer - timeStarted - timeToStart > 0 && npose < poses.Length) {
                     if (humanContainer.GetComponentsInChildren<HumanController2D>().Length > 0) {
                         Compare(humanContainer.GetComponentsInChildren<HumanController2D>()[0].getPoseJoints(), humancopy);
+                        if (points[npose]) {
+                            panel.color = new Color(0, 1, 0, 1);
+                        } else {
+                            panel.color = new Color(1, 0, 0, 1);
+                        }
                     }
                 }
             }
