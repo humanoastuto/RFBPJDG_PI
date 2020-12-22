@@ -1,6 +1,7 @@
 ﻿// OpenPose Unity Plugin v1.0.0alpha-1.5.0
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,14 +24,6 @@ namespace OpenPose.Example
         [SerializeField] Text stateText;
 
         //Created by us
-        [SerializeField] LineRenderer humanTorso;
-        [SerializeField] LineRenderer humanArms;
-        [SerializeField] LineRenderer humanLegs;
-        [SerializeField] LineRenderer humanGlasses;
-        [SerializeField] LineRenderer copyTorso;
-        [SerializeField] LineRenderer copyArms;
-        [SerializeField] LineRenderer copyLegs;
-        [SerializeField] LineRenderer copyGlasses;
         [SerializeField] Text scoreText;
         [SerializeField] Text timerText;
         [SerializeField] Toggle typeCapture;
@@ -43,8 +36,6 @@ namespace OpenPose.Example
 
         //Private Values
         private List<(float, float)> humancopy = new List<(float, float)>();
-        private string[] poses = null;
-        private int npose;
         private float timer;
         private float timeNextCapture;
         private float timeToStart;
@@ -56,6 +47,7 @@ namespace OpenPose.Example
         private string uname;
         private string chartname, artistname, movename, chartername = "";
         private bool saveCustomIcon = true;
+        private string outvideo;
 
         // Output
         private OPDatum datum;
@@ -108,6 +100,7 @@ namespace OpenPose.Example
 
         private void LoadParameters()
         {
+            outvideo = "";
             enterTimeToRedord.characterValidation = InputField.CharacterValidation.Integer;
             timer = 0;
             timeToStart = 3;
@@ -273,58 +266,7 @@ namespace OpenPose.Example
             if (humancopy.Count == 25)
             {
                 string pose = "";
-                if (uname == "")
-                {
-                    if (producerString == "-1")
-                    {
-                        uname = "user";
-                        int i = 1;
-                        while (File.Exists("./Custom/" + uname + i + "/data.json"))
-                        {
-                            i++;
-                        }
-                        uname += i;
-                    }
-                    else
-                    {
-                        uname = chartname;
-                    }
-                }
                 string filename = "./Custom/" + uname + "/movement.txt";
-                if (!File.Exists("./Custom/" + uname + "/data.json"))
-                {
-                    string datafile = "./Custom/" + uname + "/data.json";
-                    string[] data = {
-                        "{",
-                        "   \"artist\": \"" + artistname + "\",",
-                        "   \"name\": \"" + chartname + "\",",
-                        "   \"movement\": \"" + movename + "\",",
-                        "   \"charter\": \"" + chartername + "\",",
-                        "   \"timer\": \"" + timeToCapture + "\",",
-                        "   \"timeToStart\": \"" + timeToStart + "\"",
-                        "}"
-                    };
-                    System.IO.Directory.CreateDirectory("./Custom/" + uname);
-                    if (producerString == "-1")
-                    {
-                        //System.IO.File.Copy(producerString, filename.Replace(".txt", ".mp4"), true);
-                    }
-                    else
-                    {
-                        System.IO.File.Copy(producerString, "./Custom/" + uname + "/video.mp4", true);
-                        if (saveCustomIcon)
-                        {
-                            StartCoroutine(takeScreenShot("Custom/" + uname + "/icon.png"));
-                        }
-                    }
-                    for (int i = 0; i < data.Length; i++)
-                    {
-                        using (System.IO.StreamWriter file = new System.IO.StreamWriter(@datafile, true))
-                        {
-                            file.WriteLine(data[i]);
-                        }
-                    }
-                }
                 float column = Distance(humancopy[1].Item1, humancopy[1].Item2, humancopy[8].Item1, humancopy[8].Item2);
                 float column2 = 300 / column;
                 for (int i = 0; i < 25; i++)
@@ -335,7 +277,7 @@ namespace OpenPose.Example
                 {
                     file.WriteLine(pose);
                 }
-                DrawCopy();
+                //DrawCopy();
             }
         }
 
@@ -361,80 +303,77 @@ namespace OpenPose.Example
             File.WriteAllBytes(path, bytes);
         }
 
-        private void DrawCopy()
-        {
-            float x = 550;
-            float y = 30;
-            float z = 3;
-
-            copyTorso.SetPosition(0, new Vector3(x - humancopy[0].Item1 / z, y - humancopy[0].Item2 / z, -1));
-            copyTorso.SetPosition(1, new Vector3(x - humancopy[1].Item1 / z, y - humancopy[1].Item2 / z, -1));
-            copyTorso.SetPosition(2, new Vector3(x - humancopy[8].Item1 / z, y - humancopy[8].Item2 / z, -1));
-
-            copyArms.SetPosition(0, new Vector3(x - humancopy[4].Item1 / z, y - humancopy[4].Item2 / z, -1));
-            copyArms.SetPosition(1, new Vector3(x - humancopy[3].Item1 / z, y - humancopy[3].Item2 / z, -1));
-            copyArms.SetPosition(2, new Vector3(x - humancopy[2].Item1 / z, y - humancopy[2].Item2 / z, -1));
-            copyArms.SetPosition(3, new Vector3(x - humancopy[1].Item1 / z, y - humancopy[1].Item2 / z, -1));
-            copyArms.SetPosition(4, new Vector3(x - humancopy[5].Item1 / z, y - humancopy[5].Item2 / z, -1));
-            copyArms.SetPosition(5, new Vector3(x - humancopy[6].Item1 / z, y - humancopy[6].Item2 / z, -1));
-            copyArms.SetPosition(6, new Vector3(x - humancopy[7].Item1 / z, y - humancopy[7].Item2 / z, -1));
-
-            copyLegs.SetPosition(0, new Vector3(x - humancopy[23].Item1 / z, y - humancopy[23].Item2 / z, -1));
-            copyLegs.SetPosition(1, new Vector3(x - humancopy[11].Item1 / z, y - humancopy[11].Item2 / z, -1));
-            copyLegs.SetPosition(2, new Vector3(x - humancopy[10].Item1 / z, y - humancopy[10].Item2 / z, -1));
-            copyLegs.SetPosition(3, new Vector3(x - humancopy[9].Item1 / z, y - humancopy[9].Item2 / z, -1));
-            copyLegs.SetPosition(4, new Vector3(x - humancopy[8].Item1 / z, y - humancopy[8].Item2 / z, -1));
-            copyLegs.SetPosition(5, new Vector3(x - humancopy[12].Item1 / z, y - humancopy[12].Item2 / z, -1));
-            copyLegs.SetPosition(6, new Vector3(x - humancopy[13].Item1 / z, y - humancopy[13].Item2 / z, -1));
-            copyLegs.SetPosition(7, new Vector3(x - humancopy[14].Item1 / z, y - humancopy[14].Item2 / z, -1));
-            copyLegs.SetPosition(8, new Vector3(x - humancopy[20].Item1 / z, y - humancopy[20].Item2 / z, -1));
-
-            copyGlasses.SetPosition(0, new Vector3(x - humancopy[17].Item1 / z, y - humancopy[17].Item2 / z, -1));
-            copyGlasses.SetPosition(1, new Vector3(x - humancopy[15].Item1 / z, y - humancopy[15].Item2 / z, -1));
-            copyGlasses.SetPosition(2, new Vector3(x - humancopy[0].Item1 / z, y - humancopy[0].Item2 / z, -1));
-            copyGlasses.SetPosition(3, new Vector3(x - humancopy[16].Item1 / z, y - humancopy[16].Item2 / z, -1));
-            copyGlasses.SetPosition(4, new Vector3(x - humancopy[18].Item1 / z, y - humancopy[18].Item2 / z, -1));
+        private void CreateDirectory() {
+            if (!File.Exists("./Custom/" + uname + "/data.json")) {
+                string datafile = "./Custom/" + uname + "/data.json";
+                string[] data = {
+                    "{",          
+                    "   \"artist\": \"" + artistname + "\",",
+                    "   \"name\": \"" + chartname + "\",",
+                    "   \"movement\": \"" + movename + "\",",
+                    "   \"charter\": \"" + chartername + "\",",
+                    "   \"timer\": \"" + timeToCapture + "\",",
+                    "   \"timeToStart\": \"" + timeToStart + "\"",
+                    "}"
+                };
+                System.IO.Directory.CreateDirectory("./Custom/" + uname);
+                if (producerString == "-1") {
+                    //System.IO.File.Copy(producerString, filename.Replace(".txt", ".mp4"), true);
+                } else {
+                    System.IO.File.Copy(producerString, "./Custom/" + uname + "/video.mp4", true);
+                    if (saveCustomIcon) {
+                        StartCoroutine(takeScreenShot("Custom/" + uname + "/icon.png"));
+                    }
+                }
+                for (int i = 0; i < data.Length; i++) {
+                    using (System.IO.StreamWriter file = new System.IO.StreamWriter(@datafile, true)) {
+                        file.WriteLine(data[i]);
+                    }
+                }
+            }
         }
 
-        public void StartRecord()
-        {
-            if (enterTimeToRedord.text.Length > 0)
-            {
+        private void SetValues() {
+            if (inputType == ProducerType.Video) {
+                producerString = "./Media/" + videos.options[videos.value].text;
+            } else {
+                producerString = "-1";
+            }
+            if (uname == "") {
+                if (producerString == "-1") {
+                    uname = "user";
+                    int i = 1;
+                    while (File.Exists("./Custom/" + uname + i + "/data.json")) {
+                        i++;
+                    }
+                    uname += i;
+                } else {
+                    uname = chartname;
+                }
+            }
+            if (enterTimeToRedord.text.Length > 0) {
                 timeToRecord = float.Parse(enterTimeToRedord.text);
             }
-            if (enterTimeToStart.text.Length > 0)
-            {
+            if (enterTimeToStart.text.Length > 0) {
                 timeToStart = float.Parse(enterTimeToStart.text);
             }
-            switch (timer2.value)
-            {
+            switch (timer2.value) {
                 case 0:
-                    timeToCapture = (float)0.5;
+                    timeToCapture = (float) 0.5;
                     break;
                 case 1:
                     timeToCapture = 1;
                     break;
                 case 2:
-                    timeToCapture = (float)1.5;
+                    timeToCapture = 2;
                     break;
                 case 3:
-                    timeToCapture = 2;
+                    timeToCapture = 3;
                     break;
                 default:
                     timeToCapture = 1;
                     break;
             }
-            if (inputType == ProducerType.Video)
-            {
-                producerString = "./Media/" + videos.options[videos.value].text;
-            }
-            else
-            {
-                producerString = "-1";
-            }
-            uname = "";
-            UserConfigureOpenPose();
-            OPWrapper.OPRun();
             timeStarted = timer;
             timeNextCapture = timeToStart + timer;
             typeCapture.enabled = false;
@@ -442,8 +381,16 @@ namespace OpenPose.Example
             enterTimeToRedord.enabled = false;
             enterTimeToStart.enabled = false;
             timer2.enabled = false;
+            outvideo = Application.dataPath.ToString().Replace("/Assets", "") + "/Custom/" + uname + "/video.avi";
             // exitbttn.enabled = false;
             //  startbttn.enabled = false;
+        }
+
+        public void StartRecord() {
+            SetValues();
+            CreateDirectory();
+            UserConfigureOpenPose();
+            OPWrapper.OPRun();
         }
 
         private void Update()
@@ -463,7 +410,8 @@ namespace OpenPose.Example
                 Vector2 outputSize = outputTransform.sizeDelta;
                 Vector2 screenSize = Camera.main.pixelRect.size;
                 //float scale = Mathf.Min(screenSize.x / outputSize.x, screenSize.y / outputSize.y);
-                float scale = Mathf.Min(screenSize.x / (outputSize.x * 2.3f) , screenSize.y / (outputSize.y * 2.3f)) ;
+                //float scale = Mathf.Min(screenSize.x / (outputSize.x * 2.3f) , screenSize.y / (outputSize.y * 2.3f)) ;
+                float scale = Mathf.Min(2 * screenSize.x / (outputSize.x * 3) , 2 * screenSize.y / (outputSize.y * 3)) ;
                 outputTransform.localScale = new Vector3(scale, scale, scale);
 
                 // Update number of people in UI
@@ -499,24 +447,17 @@ namespace OpenPose.Example
             }
 
             timer += Time.deltaTime;
-            if (humanContainer.GetComponentsInChildren<HumanController2D>().Length > 0 && timeStarted > 0 && OPWrapper.state != OPState.Ready)
-            {
-                if (timer - timeStarted - timeToStart < 0)
-                {
+            if (humanContainer.GetComponentsInChildren<HumanController2D>().Length > 0 && timeStarted > 0 && OPWrapper.state != OPState.Ready) {
+                if (timer - timeStarted - timeToStart < 0) {
                     timerText.text = "-" + ((int)(timeStarted + timeToStart - timer) / 60) + ":" + ((int)(timeStarted + timeToStart - timer) % 60);
-                }
-                else
-                {
+                } else {
                     timerText.text = ((int)(timer - timeStarted - timeToStart) / 60) + ":" + ((int)(timer - timeStarted - timeToStart) % 60);
                 }
-
-                if (timer > timeNextCapture && timer < timeStarted + timeToStart + timeToRecord)
-                {
+                if (timer > timeNextCapture && timer < timeStarted + timeToStart + timeToRecord) {
                     timeNextCapture += timeToCapture;
                     AddPose();
                 }
-                if (((timer - timeStarted - timeToStart) >= timeToRecord))
-                {
+                if (((timer - timeStarted - timeToStart) >= timeToRecord)) {
                     OPWrapper.OPShutdown();
                     typeCapture.enabled = true;
                     videos.enabled = true;
@@ -534,6 +475,55 @@ namespace OpenPose.Example
             {
                 startbttn.enabled = false;
             }
+            if (timer > timeStarted + timeToRecord + timeToCapture) {
+                //OPWrapper.OPShutdown();
+                //SceneManager.LoadScene(1);
+            }
         }
     }
 }
+
+/*
+        [SerializeField] LineRenderer humanTorso;
+        [SerializeField] LineRenderer humanArms;
+        [SerializeField] LineRenderer humanLegs;
+        [SerializeField] LineRenderer humanGlasses;
+        [SerializeField] LineRenderer copyTorso;
+        [SerializeField] LineRenderer copyArms;
+        [SerializeField] LineRenderer copyLegs;
+        [SerializeField] LineRenderer copyGlasses;
+        private void DrawCopy()
+        {
+            float x = 550;
+            float y = -50;
+            float z = 3;
+
+            copyTorso.SetPosition(0, new Vector3(x - humancopy[0].Item1 / z, y - humancopy[0].Item2 / z, -1));
+            copyTorso.SetPosition(1, new Vector3(x - humancopy[1].Item1 / z, y - humancopy[1].Item2 / z, -1));
+            copyTorso.SetPosition(2, new Vector3(x - humancopy[8].Item1 / z, y - humancopy[8].Item2 / z, -1));
+
+            copyArms.SetPosition(0, new Vector3(x - humancopy[4].Item1 / z, y - humancopy[4].Item2 / z, -1));
+            copyArms.SetPosition(1, new Vector3(x - humancopy[3].Item1 / z, y - humancopy[3].Item2 / z, -1));
+            copyArms.SetPosition(2, new Vector3(x - humancopy[2].Item1 / z, y - humancopy[2].Item2 / z, -1));
+            copyArms.SetPosition(3, new Vector3(x - humancopy[1].Item1 / z, y - humancopy[1].Item2 / z, -1));
+            copyArms.SetPosition(4, new Vector3(x - humancopy[5].Item1 / z, y - humancopy[5].Item2 / z, -1));
+            copyArms.SetPosition(5, new Vector3(x - humancopy[6].Item1 / z, y - humancopy[6].Item2 / z, -1));
+            copyArms.SetPosition(6, new Vector3(x - humancopy[7].Item1 / z, y - humancopy[7].Item2 / z, -1));
+
+            copyLegs.SetPosition(0, new Vector3(x - humancopy[23].Item1 / z, y - humancopy[23].Item2 / z, -1));
+            copyLegs.SetPosition(1, new Vector3(x - humancopy[11].Item1 / z, y - humancopy[11].Item2 / z, -1));
+            copyLegs.SetPosition(2, new Vector3(x - humancopy[10].Item1 / z, y - humancopy[10].Item2 / z, -1));
+            copyLegs.SetPosition(3, new Vector3(x - humancopy[9].Item1 / z, y - humancopy[9].Item2 / z, -1));
+            copyLegs.SetPosition(4, new Vector3(x - humancopy[8].Item1 / z, y - humancopy[8].Item2 / z, -1));
+            copyLegs.SetPosition(5, new Vector3(x - humancopy[12].Item1 / z, y - humancopy[12].Item2 / z, -1));
+            copyLegs.SetPosition(6, new Vector3(x - humancopy[13].Item1 / z, y - humancopy[13].Item2 / z, -1));
+            copyLegs.SetPosition(7, new Vector3(x - humancopy[14].Item1 / z, y - humancopy[14].Item2 / z, -1));
+            copyLegs.SetPosition(8, new Vector3(x - humancopy[20].Item1 / z, y - humancopy[20].Item2 / z, -1));
+
+            copyGlasses.SetPosition(0, new Vector3(x - humancopy[17].Item1 / z, y - humancopy[17].Item2 / z, -1));
+            copyGlasses.SetPosition(1, new Vector3(x - humancopy[15].Item1 / z, y - humancopy[15].Item2 / z, -1));
+            copyGlasses.SetPosition(2, new Vector3(x - humancopy[0].Item1 / z, y - humancopy[0].Item2 / z, -1));
+            copyGlasses.SetPosition(3, new Vector3(x - humancopy[16].Item1 / z, y - humancopy[16].Item2 / z, -1));
+            copyGlasses.SetPosition(4, new Vector3(x - humancopy[18].Item1 / z, y - humancopy[18].Item2 / z, -1));
+        }
+*/

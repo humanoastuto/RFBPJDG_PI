@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
@@ -99,23 +100,38 @@ namespace OpenPose.Example {
         private int frameCounter = 0;
 
         private void LoadMap() {
-            //dancename = hahastinky2.Parameters o algo xd
-            dancename = LevelLoader.dancename;
+            DirectoryInfo di = SelectedChart.getLocation;
+            dancename = di.Name;
             poses = System.IO.File.ReadAllLines(@".\Custom\" + dancename + "\\movement.txt");
             string[] datajson = System.IO.File.ReadAllLines(@".\Custom\" + dancename + "\\data.json");
-            videoPlayer.url = "./Custom/" + dancename + "/video.mp4";
-            videoPlayer.enabled = true;
-            videoPlayer.Stop();
             npose = 0;
             timer = 0;
             timeNextSkip = float.MaxValue;
             timeToSkip = float.Parse(datajson[5].Split('"')[3]);
             timeToStart = float.Parse(datajson[6].Split('"')[3]);
             timeStarted = 0;
+            if (File.Exists(di + "/video.mp4")) {
+                videoPlayer.url = di + "/video.mp4";
+                //videoPlayer.playbackSpeed = (float) 0.5;
+                videoPlayer.Stop();
+                Debug.Log("no entra :v");
+            }
+            /*
+            if (File.Exists("../Custom/" + dancename + "/video.mp4")) {
+                videoPlayer.url = "../Custom/" + dancename + "/video.mp4";
+                //videoPlayer.playbackSpeed = (float) 0.5;
+                videoPlayer.Stop();
+                Debug.Log("no entra :v");
+            }*/
             points = new List<bool>();
             for (int i = 0; i < poses.Length; i++) {
                 points.Add(false);
             }
+        }
+
+        double TotalTimeOfVideo(VideoPlayer videoPlayer) {
+            double time = videoPlayer.frameCount / videoPlayer.frameRate;
+            return time;
         }
 
         private void EnableCameraRender()
@@ -266,19 +282,11 @@ namespace OpenPose.Example {
                         dif += System.Math.Abs(human1[i].anchoredPosition.y * tam - human2[i].Item2 - dify);
                     }
                 }
-                if (dif < 1300) {
+                if (dif < 1700) {
                     points[npose] = true;
-                    if (dif < 1000) {
-                        //scoreText.text = "perfecto";
-                    } else {
-                        //scoreText.text = "bien";
-                    }
-                } else {
-                    //scoreText.text = "mal";
                 }
+                //scoreText.text = ((25000 - dif) / 250).ToString();
                 scoreText.text = dif.ToString();
-                //scoreText.text = CountPoints();
-                
             }
             else
             {
@@ -321,9 +329,13 @@ namespace OpenPose.Example {
         }
 
         public void StartGame() {
+            DirectoryInfo di = SelectedChart.getLocation;
             timeStarted = timer;
             timeNextSkip = timer + timeToStart;
-            videoPlayer.Play();
+            if (File.Exists(di + "/video.mp4")) {
+                videoPlayer.Play();
+                Debug.Log(di);
+            }
             timeFinished = 0;
         }
 
@@ -335,11 +347,11 @@ namespace OpenPose.Example {
                 }
             }
             if(n * 3 < poses.Length) {
-                return "das asco" ;
+                return "PUEDES MEJORAR" ;
             } else if (n * 3 / 2 < poses.Length) {
-                return "bien, sigue adelante";
+                return "BIEN";
             } else {
-                return "eres un pvto dios";
+                return "EXCELENTE";
             }
         }
 
@@ -404,7 +416,8 @@ namespace OpenPose.Example {
                     }
                 }
             }
-            if (humancopy.Count == 25)
+            DirectoryInfo di = SelectedChart.getLocation;
+            if (humancopy.Count == 25 && !File.Exists(di + "/video.mp4"))
             {
                 DrawCopy();
             }
@@ -420,7 +433,7 @@ namespace OpenPose.Example {
                     OPWrapper.OPShutdown();
                     videoPlayer.Stop();
                     videoPlayer.enabled = false;
-                    
+                    Debug.Log(videoPlayer.time + " -- ssssssss");
                 }
                 if (timer > timeFinished + 5) {
                     SceneManager.LoadScene(1);
