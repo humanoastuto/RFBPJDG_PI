@@ -1,45 +1,120 @@
-\contentsline {chapter}{\numberline {1}Objetivos}{2}{chapter.1}
-\contentsline {section}{\numberline {1.1}Objetivo General}{2}{section.1.1}
-\contentsline {section}{\numberline {1.2}Objetivos Espec\IeC {\'\i }ficos}{2}{section.1.2}
-\contentsline {chapter}{\numberline {2}Estudio de Diagn\IeC {\'o}stico}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Seguimiento de la Pandemia}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Investigaci\IeC {\'o}n Sobre Los Dispositivos Pioneros en el \IeC {\'a}rea de Body Tracking}{4}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Kinect desarrollado por Microsoft}{4}{subsection.2.2.1}
-\contentsline {subsubsection}{Azure Kinect}{5}{subsubsection*.6}
-\contentsline {subsection}{\numberline {2.2.2}PlayStation Camera desarrollado por Sony Computer Entertainment}{5}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}\IeC {\'A}mbito Cl\IeC {\'\i }nico}{6}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}\IeC {\'A}mbito Pedag\IeC {\'o}gico}{7}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}\IeC {\'A}mbito De Entretenimiento y Entrenamiento}{8}{subsection.2.2.5}
-\contentsline {subsubsection}{Clasificaci\IeC {\'o}n de Edades Para el Uso de Sistemas Interactivos de Entretenimiento y Entrenamiento}{9}{subsubsection*.11}
-\contentsline {subsubsection}{Sistema PEGI}{9}{subsubsection*.12}
-\contentsline {subsubsection}{Sistema ESRB}{10}{subsubsection*.15}
-\contentsline {chapter}{\numberline {3}Marco Te\IeC {\'o}rico}{12}{chapter.3}
-\contentsline {section}{\numberline {3.1}Body Tracking/Motion Capture}{12}{section.3.1}
-\contentsline {subsubsection}{Estimaci\IeC {\'o}n de Poses}{13}{subsubsection*.20}
-\contentsline {subsection}{\numberline {3.1.1}Skeletical Tracking}{14}{subsection.3.1.1}
-\contentsline {section}{\numberline {3.2}Base Te\IeC {\'o}rica}{15}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}C\IeC {\'a}mara y Desambiguaci\IeC {\'o}n}{15}{subsection.3.2.1}
-\contentsline {subsubsection}{Depth of Field (DOF)}{15}{subsubsection*.23}
-\contentsline {subsubsection}{Sensores RGB-D}{16}{subsubsection*.24}
-\contentsline {subsection}{\numberline {3.2.2}Inteligencia Artificial (IA)}{17}{subsection.3.2.2}
-\contentsline {subsubsection}{Machine Learning (ML)}{17}{subsubsection*.26}
-\contentsline {subsubsection}{Deep Learning (DL)}{18}{subsubsection*.27}
-\contentsline {subsubsection}{Modelo DL CAFFE}{18}{subsubsection*.28}
-\contentsline {subsubsection}{Modelo DL COCO}{19}{subsubsection*.29}
-\contentsline {subsubsection}{Neural Network}{19}{subsubsection*.30}
-\contentsline {chapter}{\numberline {4}Estudio de alternativas}{21}{chapter.4}
-\contentsline {section}{\numberline {4.1}An\IeC {\'a}lisis de Alternativas actualmente disponibles en el mercado}{21}{section.4.1}
-\contentsline {subsubsection}{Analizadores M\IeC {\'e}dicos}{21}{subsubsection*.32}
-\contentsline {subsection}{\numberline {4.1.1}Entretenimiento}{21}{subsection.4.1.1}
-\contentsline {subsubsection}{Just Dance}{22}{subsubsection*.33}
-\contentsline {section}{\numberline {4.2}An\IeC {\'a}lisis de Alternativas En Herramientas Disponibles Para el Desarrollo}{22}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Trajes con sensores de movimiento}{22}{subsection.4.2.1}
-\contentsline {subsubsection}{Creaci\IeC {\'o}n de Software propio para Body Tracking}{22}{subsubsection*.35}
-\contentsline {subsection}{\numberline {4.2.2}TensorFlow}{23}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}PoseNet}{23}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Wrnch}{24}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}OpenPose}{25}{subsection.4.2.5}
-\contentsline {subsection}{\numberline {4.2.6}DeepMotion}{25}{subsection.4.2.6}
-\contentsline {subsection}{\numberline {4.2.7}Unity y Kinect}{25}{subsection.4.2.7}
-\contentsline {chapter}{\numberline {5}Plan de Actividades}{26}{chapter.5}
-\contentsline {subsection}{\numberline {5.0.1}Cronograma}{27}{subsection.5.0.1}
+\babel@toc {spanish}{}
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{4}{chapter.1}
+\contentsline {section}{\numberline {1.1}Antecedentes}{4}{section.1.1}
+\contentsline {section}{\numberline {1.2}Descripci\IeC {\'o}n del Problema}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}Justificaci\IeC {\'o}n}{5}{section.1.3}
+\contentsline {section}{\numberline {1.4}Delimitaci\IeC {\'o}n}{6}{section.1.4}
+\contentsline {chapter}{\numberline {2}Estudio de Diagn\IeC {\'o}stico}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Seguimiento de la Pandemia}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}Investigaci\IeC {\'o}n Sobre Los Dispositivos Pioneros en el \IeC {\'a}rea de Body Tracking}{9}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Kinect desarrollado por Microsoft}{9}{subsection.2.2.1}
+\contentsline {subsubsection}{Azure Kinect}{10}{subsubsection*.8}
+\contentsline {subsection}{\numberline {2.2.2}PlayStation Camera desarrollado por Sony Computer Entertainment}{11}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}\IeC {\'A}mbito Cl\IeC {\'\i }nico}{11}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}\IeC {\'A}mbito Pedag\IeC {\'o}gico}{13}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}\IeC {\'A}mbito De Entretenimiento y Entrenamiento}{14}{subsection.2.2.5}
+\contentsline {subsubsection}{Clasificaci\IeC {\'o}n de Edades Para el Uso de Sistemas Interactivos de Entretenimiento y Entrenamiento}{15}{subsubsection*.13}
+\contentsline {subsubsection}{Sistema PEGI}{15}{subsubsection*.14}
+\contentsline {subsubsection}{Sistema ESRB}{16}{subsubsection*.17}
+\contentsline {chapter}{\numberline {3}Objetivos}{18}{chapter.3}
+\contentsline {section}{\numberline {3.1}Objetivo General}{18}{section.3.1}
+\contentsline {section}{\numberline {3.2}Objetivos Espec\IeC {\'\i }ficos}{18}{section.3.2}
+\contentsline {chapter}{\numberline {4}Marco Te\IeC {\'o}rico}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}Body Tracking/Motion Capture}{19}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Skeletical Tracking}{21}{subsection.4.1.1}
+\contentsline {subsubsection}{Estimaci\IeC {\'o}n de Poses}{22}{subsubsection*.24}
+\contentsline {section}{\numberline {4.2}Base Te\IeC {\'o}rica}{23}{section.4.2}
+\contentsline {subsubsection}{Depth of Field (DOF)}{23}{subsubsection*.25}
+\contentsline {subsubsection}{Sensores RGB-D}{24}{subsubsection*.26}
+\contentsline {subsection}{\numberline {4.2.1}C\IeC {\'a}mara y Desambiguaci\IeC {\'o}n}{24}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Inteligencia Artificial (IA)}{25}{subsection.4.2.2}
+\contentsline {subsubsection}{Machine Learning (ML)}{26}{subsubsection*.28}
+\contentsline {subsubsection}{Neural Network}{26}{subsubsection*.29}
+\contentsline {subsubsection}{Deep Learning (DL)}{27}{subsubsection*.31}
+\contentsline {subsubsection}{Modelo DL CAFFE}{28}{subsubsection*.32}
+\contentsline {subsubsection}{Modelo DL COCO}{29}{subsubsection*.33}
+\contentsline {subsection}{\numberline {4.2.3}Point Cloud}{29}{subsection.4.2.3}
+\contentsline {subsubsection}{Point Cloud Registration}{30}{subsubsection*.36}
+\contentsline {chapter}{\numberline {5}Estudio de alternativas}{31}{chapter.5}
+\contentsline {section}{\numberline {5.1}An\IeC {\'a}lisis de Alternativas actualmente disponibles en el mercado}{31}{section.5.1}
+\contentsline {subsubsection}{Analizadores M\IeC {\'e}dicos}{31}{subsubsection*.37}
+\contentsline {subsection}{\numberline {5.1.1}Entretenimiento}{32}{subsection.5.1.1}
+\contentsline {subsubsection}{Just Dance}{32}{subsubsection*.38}
+\contentsline {section}{\numberline {5.2}An\IeC {\'a}lisis de Alternativas En Herramientas Disponibles Para el Desarrollo}{33}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Trajes con sensores de movimiento}{33}{subsection.5.2.1}
+\contentsline {subsubsection}{Creaci\IeC {\'o}n de Software propio para Body Tracking}{33}{subsubsection*.40}
+\contentsline {subsection}{\numberline {5.2.2}TensorFlow}{34}{subsection.5.2.2}
+\contentsline {subsubsection}{PoseNet}{34}{subsubsection*.41}
+\contentsline {subsection}{\numberline {5.2.3}Wrnch}{36}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}OpenPose}{36}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}DeepMotion}{37}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Unity y Kinect}{37}{subsection.5.2.6}
+\contentsline {subsection}{\numberline {5.2.7}Resumen de Accesibilidad de las Alternativas}{37}{subsection.5.2.7}
+\contentsline {chapter}{\numberline {6}Metodolog\IeC {\'\i }a}{40}{chapter.6}
+\contentsline {section}{\numberline {6.1}Metodolog\IeC {\'\i }a \IeC {\'A}gil}{40}{section.6.1}
+\contentsline {section}{\numberline {6.2}Metodolog\IeC {\'\i }a SCRUM}{41}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Componentes de SCRUM}{41}{subsection.6.2.1}
+\contentsline {subsubsection}{Roles de la Metodolog\IeC {\'\i }a SCRUM}{42}{subsubsection*.45}
+\contentsline {subsubsection}{Sprint}{42}{subsubsection*.46}
+\contentsline {subsubsection}{Requerimientos}{43}{subsubsection*.47}
+\contentsline {subsubsection}{Tareas y Estimaci\IeC {\'o}n de Poker}{43}{subsubsection*.48}
+\contentsline {subsubsection}{Reuniones}{44}{subsubsection*.49}
+\contentsline {subsubsection}{Sprint Backlog}{44}{subsubsection*.50}
+\contentsline {subsubsection}{Product Backlog}{45}{subsubsection*.53}
+\contentsline {subsubsection}{Gr\IeC {\'a}fica Burn-Up}{46}{subsubsection*.54}
+\contentsline {subsubsection}{Gr\IeC {\'a}fica Burn-Down}{47}{subsubsection*.55}
+\contentsline {chapter}{\numberline {7}An\IeC {\'a}lisis y Desarrollo del Dise\IeC {\~n}o del Sistema Interactivo}{48}{chapter.7}
+\contentsline {section}{\numberline {7.1}An\IeC {\'a}lisis de Requerimientos}{49}{section.7.1}
+\contentsline {subsubsection}{Caracter\IeC {\'\i }sticas de Usuario}{50}{subsubsection*.57}
+\contentsline {subsection}{\numberline {7.1.1}Requerimientos Funcionales}{50}{subsection.7.1.1}
+\contentsline {subsubsection}{Play}{50}{subsubsection*.58}
+\contentsline {subsubsection}{Crear un nuevo mapa}{51}{subsubsection*.59}
+\contentsline {subsection}{\numberline {7.1.2}Requerimientos No Funcionales}{52}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}Funcionalidad Esperada del Sistema Interactivo}{53}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {7.1.4}Diagrama de Flujo de Datos}{54}{subsection.7.1.4}
+\contentsline {chapter}{\numberline {8}Desarrollo e Implementaci\IeC {\'o}n del Sistema Interactivo}{55}{chapter.8}
+\contentsline {section}{\numberline {8.1}Funcionamiento Base}{55}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Configuraci\IeC {\'o}n del Entorno}{55}{subsection.8.1.1}
+\contentsline {subsubsection}{Caracter\IeC {\'\i }sticas de los Equipos Personales Empleados}{55}{subsubsection*.62}
+\contentsline {subsubsection}{Configuraci\IeC {\'o}n Inicial de las SDK y herramientas}{56}{subsubsection*.63}
+\contentsline {subsection}{\numberline {8.1.2}Creaci\IeC {\'o}n del Men\IeC {\'u}}{57}{subsection.8.1.2}
+\contentsline {subsubsection}{Men\IeC {\'u} de Opciones}{57}{subsubsection*.64}
+\contentsline {subsection}{\numberline {8.1.3}Creaci\IeC {\'o}n de un Mapa}{58}{subsection.8.1.3}
+\contentsline {subsubsection}{Conversi\IeC {\'o}n de V\IeC {\'\i }deo a JSON y JPG}{58}{subsubsection*.66}
+\contentsline {subsubsection}{Eliminaci\IeC {\'o}n de Poses}{59}{subsubsection*.67}
+\contentsline {subsubsection}{Conversi\IeC {\'o}n de JSON a txt y Almacenamiento}{59}{subsubsection*.68}
+\contentsline {subsubsection}{Adici\IeC {\'o}n del Tiempo L\IeC {\'\i }mite para Realizar las Poses}{60}{subsubsection*.69}
+\contentsline {subsection}{\numberline {8.1.4}Comparaci\IeC {\'o}n entre dos Poses}{60}{subsection.8.1.4}
+\contentsline {subsubsection}{Visualizar Movimientos del Usuario y Poses a Imitar}{60}{subsubsection*.70}
+\contentsline {subsubsection}{Control de Tiempo del Mapa}{61}{subsubsection*.72}
+\contentsline {section}{\numberline {8.2}Normalizaci\IeC {\'o}n de Puntos Clave}{61}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}C\IeC {\'a}lculo a partir de la Normalizaci\IeC {\'o}n de un punto}{62}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}C\IeC {\'a}lculo a partir de la Normalizaci\IeC {\'o}n de Cuadro de Point Cloud}{64}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2.3}C\IeC {\'a}lculo a partir de la Normalizaci\IeC {\'o}n de la distancia entre dos puntos}{66}{subsection.8.2.3}
+\contentsline {section}{\numberline {8.3}Dise\IeC {\~n}o De GUI}{68}{section.8.3}
+\contentsline {section}{\numberline {8.4}Modificaci\IeC {\'o}n y Requerimientos Adicionales}{70}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}Requerimientos Adicionales}{70}{subsection.8.4.1}
+\contentsline {subsubsection}{Nuevas Requerimientos Funcionales de Creaci\IeC {\'o}n de Mapa}{72}{subsubsection*.81}
+\contentsline {subsection}{\numberline {8.4.2}Dise\IeC {\~n}o de GUI}{73}{subsection.8.4.2}
+\contentsline {subsubsection}{Modo Play}{73}{subsubsection*.82}
+\contentsline {subsubsection}{Modo Creaci\IeC {\'o}n de Mapas}{73}{subsubsection*.84}
+\contentsline {subsection}{\numberline {8.4.3}Diagrama de Flujo de Datos Modificado}{76}{subsection.8.4.3}
+\contentsline {chapter}{\numberline {9}Plan de Actividades}{78}{chapter.9}
+\contentsline {subsection}{\numberline {9.0.1}Cronograma}{79}{subsection.9.0.1}
+\contentsline {chapter}{\numberline {10}Conclusiones}{80}{chapter.10}
+\contentsline {chapter}{\numberline {11}Recomendaciones}{83}{chapter.11}
+\contentsline {subsubsection}{Requerimientos de los equipos de desarrollo y usuario}{83}{subsubsection*.87}
+\contentsline {subsubsection}{Uso del sistema interactivo}{84}{subsubsection*.88}
+\contentsline {subsubsection}{Desarrollo completo del prototipo}{84}{subsubsection*.89}
+\contentsline {chapter}{\numberline {12}Anexos}{91}{chapter.12}
+\contentsline {section}{\numberline {12.1}Lista de Abreviaturas}{91}{section.12.1}
+\contentsline {section}{\numberline {12.2}Glosario}{92}{section.12.2}
+\contentsline {section}{\numberline {12.3}Anexo: Control de Sprint}{96}{section.12.3}
+\contentsline {section}{\numberline {12.4}Anexo: Product Backlog}{99}{section.12.4}
+\contentsline {section}{\numberline {12.5}Anexo: Gr\IeC {\'a}fico Burn-Up Burn-Down}{102}{section.12.5}
+\contentsline {section}{\numberline {12.6}Anexo: Proceso de Instalaci\IeC {\'o}n de OpenPose y Unity para el Desarrollo del Proyecto}{103}{section.12.6}
+\contentsline {section}{\numberline {12.7}Anexo: Archivos Generados}{107}{section.12.7}
+\contentsline {section}{\numberline {12.8}Anexo: Mensajes de Error}{108}{section.12.8}
+\contentsline {section}{\numberline {12.9}Anexo: C\IeC {\'a}lculos de Comparaci\IeC {\'o}n de Poses}{109}{section.12.9}
+\contentsline {subsection}{\numberline {12.9.1}Ejemplo de C\IeC {\'a}lculo de Normalizaci\IeC {\'o}n Basada en el Centro de la Cadera}{109}{subsection.12.9.1}
+\contentsline {section}{\numberline {12.10}Dise\IeC {\~n}o de GUI Modificados}{120}{section.12.10}

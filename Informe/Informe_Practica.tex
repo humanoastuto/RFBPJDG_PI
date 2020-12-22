@@ -11,12 +11,24 @@
 \usepackage{Pgfgantt}
 \usepackage{pdflscape}
 \usepackage{array}
+\usepackage[user,titleref]{zref}
 \usepackage{hyperref}
 \usepackage{tikz}
+\usepackage{multirow}
+\usepackage{tabto}
+\usepackage{amssymb, amsmath}
+\usepackage{setspace}
 \usepackage{subcaption}
+\usepackage[spanish]{babel}
+\newcommand\summaryname{Abstract}
+\newenvironment{Abstract}%
+{\small\begin{center}%
+		\bfseries{\summaryname} \end{center}}
+
 \usepackage[left=3.50cm, right=2.50cm, top=2.50cm, bottom=2.50cm]{geometry}
 \author{Ricardo Fernández, Brami Prudencio, Juan Diego García}
 \title{Desarrollo de un Sistema Interactivo con Body Tracking}
+\spacing{1.5}
 \begin{document}
 	
 \titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
@@ -30,23 +42,25 @@
 \listoftables	
 \listoffigures
 \pagenumbering{arabic}\setcounter{page}{1}
+\include{Resumen}
 
-%\include{Resumen}
-%\include{Introduccion}
-\include{Objetivos}
+
+\include{Introduccion}
 \include{EstudioDiagnostico}
+\include{Objetivos}
 \include{Marco_Teorico}
 \include{Alternativas}
 \include{Metodologia}
 \include{Diseno}
+\include{Desarrollo_de_Sistema_nteractivo}
 \include{PlanActividades}
-%\include{Evaluacion_Financiera}
 \include{Conclusiones}
+\include{Recomendaciones}
 \bibliographystyle{plain}
 \bibliography{bibliografia}
-\include{Recomendaciones}
-%\include{Anexos}
+\include{Anexos}
 
+%\include{Evaluacion_Financiera}
 
 
 \end{document}

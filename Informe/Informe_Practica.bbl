@@ -71,6 +71,19 @@ Mart{\'\i}n Abadi, Ashish Agarwal, Paul Barham, Eugene Brevdo, Zhifeng Chen,
   systems.
 \newblock {\em arXiv preprint arXiv:1603.04467}, 2016.
 
+\bibitem{pointcloudexample}
+Anónimo.
+\newblock How to get diagonal line of a cube in a point cloud?
+\newblock
+  \url{https://stackoverflow.com/questions/57089009/how-to-get-diagonal-line-of-a-cube-in-a-point-cloud},
+  2019.
+
+\bibitem{beck2001manifiesto}
+Kent Beck, Mike Beedle, Arie van Bennekum, Alistair Cockburn, Ward Cunningham,
+  Martin Fowler, and D~Thomas.
+\newblock Manifiesto por el desarrollo {\'a}gil de software.
+\newblock 2001.
+
 \bibitem{8765346}
 Z.~{Cao}, G.~{Hidalgo Martinez}, T.~{Simon}, S.~{Wei}, and Y.~A. {Sheikh}.
 \newblock Openpose: Realtime multi-person 2d pose estimation using part
@@ -82,6 +95,18 @@ Z.~{Cao}, G.~{Hidalgo Martinez}, T.~{Simon}, S.~{Wei}, and Y.~A. {Sheikh}.
 Zhe Cao, Tomas Simon, Shih-En Wei, and Yaser Sheikh.
 \newblock Realtime multi-person 2d pose estimation using part affinity fields.
 \newblock In {\em CVPR}, 2017.
+
+\bibitem{cinematiccaptures}
+Cinematic Captures.
+\newblock I'm han solo remastered | kinect dance in battlefront ii.
+\newblock \url{https://www.youtube.com/watch?v=ymV-R5vAuQI}, 2018.
+
+\bibitem{carrizo2018metodo}
+Dante Carrizo and Andres Alfaro.
+\newblock M{\'e}todo de aseguramiento de la calidad en una metodolog{\'\i}a de
+  desarrollo de software: un enfoque pr{\'a}ctico.
+\newblock {\em Ingeniare. Revista chilena de ingenier{\'\i}a}, 26(1):114--129,
+  2018.
 
 \bibitem{7934445}
 X.~{Chang}, Z.~{Ma}, M.~{Lin}, Y.~{Yang}, and A.~G. {Hauptmann}.
@@ -188,6 +213,10 @@ Krystof Litomisky.
 \newblock Consumer rgb-d cameras and their applications.
 \newblock {\em Rapport technique, University of California}, 20, 2012.
 
+\bibitem{scrumdiapo}
+Marcelo Lopez.
+\newblock Metodología scrum.
+
 \bibitem{madsen2000depth}
 Ricky~J Madsen, Jon~A Holmes, and Trygve~D Peterson.
 \newblock Depth-of-field indicator for a camera, June~27 2000.
@@ -198,6 +227,12 @@ W~James Murdoch, Chandan Singh, Karl Kumbier, Reza Abbasi-Asl, and Bin Yu.
 \newblock Interpretable machine learning: definitions, methods, and
   applications.
 \newblock {\em arXiv preprint arXiv:1901.04592}, 2019.
+
+\bibitem{myronenko2010point}
+Andriy Myronenko and Xubo Song.
+\newblock Point set registration: Coherent point drift.
+\newblock {\em IEEE transactions on pattern analysis and machine intelligence},
+  32(12):2262--2275, 2010.
 
 \bibitem{oved2018real}
 D~Oved, I~Alvarado, and A~Gallo.
@@ -220,6 +255,18 @@ Debbie Rand, Rachel Kizony, and Patrice Tamar~L Weiss.
 \newblock The sony playstation ii eyetoy: low-cost virtual reality for use in
   rehabilitation.
 \newblock {\em Journal of neurologic physical therapy}, 32(4):155--163, 2008.
+
+\bibitem{ravikumar2017generalised}
+Nishant Ravikumar, Ali Gooya, Alejandro~F Frangi, and Zeike~A Taylor.
+\newblock Generalised coherent point drift for group-wise registration of
+  multi-dimensional point sets.
+\newblock In {\em International Conference on Medical Image Computing and
+  Computer-Assisted Intervention}, pages 309--316. Springer, 2017.
+
+\bibitem{pointcloud}
+Margaret Rouse.
+\newblock point cloud.
+\newblock \url{https://whatis.techtarget.com/definition/point-cloud}, 2020.
 
 \bibitem{ejemplotensorflow}
 Pulkit Sharma.
