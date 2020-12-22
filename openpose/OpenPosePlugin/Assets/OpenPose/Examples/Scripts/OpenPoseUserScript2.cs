@@ -407,12 +407,15 @@ namespace OpenPose.Example
                 bgImageRenderer.UpdateImage(datum.cvInputData);
 
                 // Rescale output UI
-                Vector2 outputSize = outputTransform.sizeDelta;
-                Vector2 screenSize = Camera.main.pixelRect.size;
+                //Vector2 outputSize = outputTransform.sizeDelta;
+               // Vector2 screenSize = Camera.main.pixelRect.size;
                 //float scale = Mathf.Min(screenSize.x / outputSize.x, screenSize.y / outputSize.y);
                 //float scale = Mathf.Min(screenSize.x / (outputSize.x * 2.3f) , screenSize.y / (outputSize.y * 2.3f)) ;
-                float scale = Mathf.Min(2 * screenSize.x / (outputSize.x * 3) , 2 * screenSize.y / (outputSize.y * 3)) ;
+               float scale = 640 / outputTransform.sizeDelta.x ;
+                //Debug.Log(">> "+outputSize.x+" , "+outputSize.y+" | "+screenSize.x+" , "+screenSize.y+" | "+Screen.width+" , "+Screen.height+" | "+outputTransform.rect.x+" , "+outputTransform.rect.y+" <<");
                 outputTransform.localScale = new Vector3(scale, scale, scale);
+                //outputTransform.sizeDelta = new Vector2(640,360);
+               
 
                 // Update number of people in UI
                 if (datum.poseKeypoints == null || datum.poseKeypoints.Empty()) numberPeople = 0;

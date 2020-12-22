@@ -39,6 +39,8 @@ namespace OpenPose.Example {
         [SerializeField] VideoPlayer videoPlayer;
         [SerializeField] Image panel;
         [SerializeField] LevelLoader levelLoader;
+        [SerializeField] Button exit;
+        [SerializeField] GameObject scoreBGPanel;
         
         private List<(float, float)> humancopy = new List<(float, float)>();
         private string[] poses = null;
@@ -359,7 +361,6 @@ namespace OpenPose.Example {
 
             // Update state in UI
             stateText.text = OPWrapper.state.ToString();
-
             // Try getting new frame
             if (OPWrapper.OPGetOutput(out datum)){ // true: has new frame data
 
@@ -368,9 +369,10 @@ namespace OpenPose.Example {
 
                 // Rescale output UI
                 Vector2 outputSize = outputTransform.sizeDelta;
-                Vector2 screenSize = Camera.main.pixelRect.size;
-                float scale = Mathf.Min(outputSize.x / (screenSize.x * 2), outputSize.y / (screenSize.y * 2));
+                //Vector2 screenSize = Camera.main.pixelRect.size;
+                //float scale = Mathf.Min(outputSize.x / (screenSize.x * 2), outputSize.y / (screenSize.y * 2));
                 //float scale = Mathf.Min(screenSize.x / outputSize.x, screenSize.y / outputSize.y);
+                float scale = 426 / outputTransform.sizeDelta.x ;
                 outputTransform.localScale = new Vector3(scale, scale, scale);
 
                 // Update number of people in UI
@@ -426,9 +428,10 @@ namespace OpenPose.Example {
                     timeFinished = timer;
                     scoreText.text = CountPoints();
                     scoreText.rectTransform.sizeDelta = new Vector2(500, 800);
-                    scoreText.transform.position = new Vector3(0, 0, -20);
+                    scoreText.transform.position = new Vector3(0, 0, -200);
                     scoreText.resizeTextMaxSize = 100;
                     scoreText.fontSize = 80;
+                    scoreBGPanel.GetComponent<Image>().enabled = true;
                     levelLoader.enabled = true;
                     OPWrapper.OPShutdown();
                     videoPlayer.Stop();
@@ -436,7 +439,7 @@ namespace OpenPose.Example {
                     Debug.Log(videoPlayer.time + " -- ssssssss");
                 }
                 if (timer > timeFinished + 5) {
-                    SceneManager.LoadScene(1);
+                    exit.GetComponent<Button>().onClick.Invoke();
                 }
             }
         }
