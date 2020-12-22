@@ -24,7 +24,7 @@ public class LevelLoader : MonoBehaviour
     void TaskOnClick()
     {
         StartCoroutine(LoadLevel(levelIndex));
-        dancename = "sombrero";
+        dancename = "video123";
     }
 
     IEnumerator LoadLevel(int levelIndex)
