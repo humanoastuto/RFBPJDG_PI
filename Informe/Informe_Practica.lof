@@ -3,7 +3,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Dispositivo Kinect y un Ejemplo de su Uso en un Videojuego de Volleyball\relax }}{10}{figure.caption.7}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Dispositivos Azure Kinect y PlayStation Camera\relax }}{11}{figure.caption.9}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Ejemplo de un PlayStation Eye y su uso con un videojuego "The Eye Of The Judgement"\relax }}{12}{figure.caption.10}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Ejemplo de un PlayStation Eye y su uso con un videojuego ``The Eye Of The Judgement"\relax }}{12}{figure.caption.10}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Ejemplo de Rehabilitaci\IeC {\'o}n empleando Body Tracking\relax }}{13}{figure.caption.11}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Ejemplo de Clase de Educaci\IeC {\'o}n F\IeC {\'\i }sica empleando Body Tracking\relax }}{14}{figure.caption.12}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Sistema De Clasificaci\IeC {\'o}n PEGI\relax }}{16}{figure.caption.15}
@@ -19,44 +19,50 @@
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Ejemplo de Point Set Registration\relax }}{30}{figure.caption.35}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Traje con Sensores de Movimiento\relax }}{33}{figure.caption.39}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Ejemplos de Datos en la Base de Datos COCO para la estimaci\IeC {\'o}n de pose\relax }}{36}{figure.caption.41}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Ejemplos de Datos en la Base de Datos COCO para la estimaci\IeC {\'o}n de pose\relax }}{35}{figure.caption.42}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Ejemplo de Clasificaci\IeC {\'o}n de imagen de TensorFlow\relax }}{40}{figure.caption.43}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Ejemplo de Clasificaci\IeC {\'o}n de imagen de TensorFlow\relax }}{41}{figure.caption.44}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Ilustraci\IeC {\'o}n de Requerimientos en la GUI\relax }}{52}{figure.caption.59}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Diagrama de Datos de Flujo\relax }}{53}{figure.caption.60}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Ilustraci\IeC {\'o}n de Requerimientos en la GUI\relax }}{53}{figure.caption.60}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Diagrama de Datos de Flujo\relax }}{54}{figure.caption.61}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Pasos a Seguir Para la Creaci\IeC {\'o}n de Mapas\relax }}{57}{figure.caption.64}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Primer GUI para el Desarrollo, Cambiada para el Dise\IeC {\~n}o de GUI Final\relax }}{60}{figure.caption.70}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Sobre posici\IeC {\'o}n de coordenadas de las poses al Centro\relax }}{62}{figure.caption.72}
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Ejemplos de Encuadre de una Point Cloud\relax }}{64}{figure.caption.73}
-\contentsline {figure}{\numberline {8.5}{\ignorespaces Redimensionamiento de la Point Cloud A al tama\IeC {\~n}o de la Point Cloud B\relax }}{64}{figure.caption.74}
-\contentsline {figure}{\numberline {8.6}{\ignorespaces Men\IeC {\'u} de el Sistema Interactivo POSE IT!\relax }}{67}{figure.caption.75}
-\contentsline {figure}{\numberline {8.7}{\ignorespaces Men\IeC {\'u} de Opciones\relax }}{68}{figure.caption.76}
-\contentsline {figure}{\numberline {8.8}{\ignorespaces Men\IeC {\'u} de Listas para Mapas de POSE IT!\relax }}{68}{figure.caption.77}
-\contentsline {figure}{\numberline {8.9}{\ignorespaces Pasos a Seguir Para la Creaci\IeC {\'o}n de Mapas\relax }}{70}{figure.caption.78}
-\contentsline {figure}{\numberline {8.10}{\ignorespaces Ilustraci\IeC {\'o}n de Requerimientos en la GUI\relax }}{70}{figure.caption.79}
-\contentsline {figure}{\numberline {8.11}{\ignorespaces Dise\IeC {\~n}o Final de GUI para el Modo Play\relax }}{73}{figure.caption.82}
-\contentsline {figure}{\numberline {8.12}{\ignorespaces Dise\IeC {\~n}o Final de GUI para el Modo de Creaci\IeC {\'o}n de Mapa\relax }}{74}{figure.caption.84}
-\contentsline {figure}{\numberline {8.13}{\ignorespaces Diagrama de Datos de Flujo\relax }}{76}{figure.caption.85}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Pasos a Seguir Para la Creaci\IeC {\'o}n de Mapas\relax }}{58}{figure.caption.65}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Primer GUI para el Desarrollo, Cambiada para el Dise\IeC {\~n}o de GUI Final\relax }}{61}{figure.caption.71}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Sobre posici\IeC {\'o}n de coordenadas de las poses al Centro\relax }}{63}{figure.caption.73}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Ejemplos de Encuadre de una Point Cloud\relax }}{65}{figure.caption.74}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Redimensionamiento de la Point Cloud A al tama\IeC {\~n}o de la Point Cloud B\relax }}{65}{figure.caption.75}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Men\IeC {\'u} de el Sistema Interactivo POSE IT!\relax }}{68}{figure.caption.76}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces Men\IeC {\'u} de Opciones\relax }}{69}{figure.caption.77}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces Men\IeC {\'u} de Listas para Mapas de POSE IT!\relax }}{69}{figure.caption.78}
+\contentsline {figure}{\numberline {8.9}{\ignorespaces Pasos a Seguir Para la Creaci\IeC {\'o}n de Mapas\relax }}{71}{figure.caption.79}
+\contentsline {figure}{\numberline {8.10}{\ignorespaces Ilustraci\IeC {\'o}n de Requerimientos en la GUI\relax }}{71}{figure.caption.80}
+\contentsline {figure}{\numberline {8.11}{\ignorespaces Dise\IeC {\~n}o Final de GUI para el Modo Play\relax }}{74}{figure.caption.83}
+\contentsline {figure}{\numberline {8.12}{\ignorespaces Dise\IeC {\~n}o Final de GUI para el Modo de Creaci\IeC {\'o}n de Mapa\relax }}{74}{figure.caption.85}
+\contentsline {figure}{\numberline {8.13}{\ignorespaces Diagrama de Datos de Flujo\relax }}{77}{figure.caption.86}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {12.1}{\ignorespaces Sprint 1 concluida\relax }}{95}{figure.caption.90}
-\contentsline {figure}{\numberline {12.2}{\ignorespaces Sprint Backlog del d\IeC {\'\i }a 5 de Noviembre\relax }}{96}{figure.caption.91}
-\contentsline {figure}{\numberline {12.3}{\ignorespaces Tarea de la Sprint 2, Mostrar Acciones a Copiar\relax }}{97}{figure.caption.92}
-\contentsline {figure}{\numberline {12.4}{\ignorespaces Gr\IeC {\'a}fico Burn-Up\relax }}{101}{figure.caption.94}
-\contentsline {figure}{\numberline {12.5}{\ignorespaces Gr\IeC {\'a}fico Burn-Down\relax }}{101}{figure.caption.95}
-\contentsline {figure}{\numberline {12.6}{\ignorespaces Elecci\IeC {\'o}n Personal del Estudiante para Configurar Visual Studio 2019\relax }}{103}{figure.caption.96}
-\contentsline {figure}{\numberline {12.7}{\ignorespaces Version Deseada de Unity Encerrada en Rojo\relax }}{104}{figure.caption.97}
-\contentsline {figure}{\numberline {12.8}{\ignorespaces Captura de Pantalla de la Configuraci\IeC {\'o}n Inicial de OpenPose Plug-in\relax }}{104}{figure.caption.98}
-\contentsline {figure}{\numberline {12.9}{\ignorespaces Prueba de Ejecuci\IeC {\'o}n de Demo de OpenPose\relax }}{105}{figure.caption.99}
-\contentsline {figure}{\numberline {12.10}{\ignorespaces Archivos Generados por la Conversi\IeC {\'o}n usando el Script con OpenPoseDemo\relax }}{106}{figure.caption.100}
-\contentsline {figure}{\numberline {12.11}{\ignorespaces Archivos Generados por la Conversi\IeC {\'o}n usando el Script con OpenPoseDemo\relax }}{107}{figure.caption.101}
-\contentsline {figure}{\numberline {12.12}{\ignorespaces Tabla de Diferencias entre Poses\relax }}{108}{figure.caption.102}
-\contentsline {figure}{\numberline {12.13}{\ignorespaces Poses: T Original - Frame 80 - Frame 95 Curva - Frame 147 Dab\relax }}{109}{figure.caption.103}
-\contentsline {figure}{\numberline {12.14}{\ignorespaces Poses: Frame 155 Curva Cerrada - Frame 158 Curva Cerrada - Frame 72 Desfase - Frame 188 Desfase\relax }}{110}{figure.caption.104}
-\contentsline {figure}{\numberline {12.15}{\ignorespaces GUI del Men\IeC {\'u} Principal\relax }}{119}{figure.caption.113}
-\contentsline {figure}{\numberline {12.16}{\ignorespaces GUI del Men\IeC {\'u} de Opciones\relax }}{120}{figure.caption.114}
-\contentsline {figure}{\numberline {12.17}{\ignorespaces GUI del modo de Creaci\IeC {\'o}n de Mapas\relax }}{120}{figure.caption.115}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {12.1}{\ignorespaces Sprint 1 concluida\relax }}{96}{figure.caption.91}
+\contentsline {figure}{\numberline {12.2}{\ignorespaces Sprint Backlog del d\IeC {\'\i }a 5 de Noviembre\relax }}{97}{figure.caption.92}
+\contentsline {figure}{\numberline {12.3}{\ignorespaces Tarea de la Sprint 2, Mostrar Acciones a Copiar\relax }}{98}{figure.caption.93}
+\contentsline {figure}{\numberline {12.4}{\ignorespaces Gr\IeC {\'a}fico Burn-Up\relax }}{102}{figure.caption.95}
+\contentsline {figure}{\numberline {12.5}{\ignorespaces Gr\IeC {\'a}fico Burn-Down\relax }}{102}{figure.caption.96}
+\contentsline {figure}{\numberline {12.6}{\ignorespaces Elecci\IeC {\'o}n Personal del Estudiante para Configurar Visual Studio 2019\relax }}{104}{figure.caption.97}
+\contentsline {figure}{\numberline {12.7}{\ignorespaces Version Deseada de Unity Encerrada en Rojo\relax }}{105}{figure.caption.98}
+\contentsline {figure}{\numberline {12.8}{\ignorespaces Captura de Pantalla de la Configuraci\IeC {\'o}n Inicial de OpenPose Plug-in\relax }}{105}{figure.caption.99}
+\contentsline {figure}{\numberline {12.9}{\ignorespaces Prueba de Ejecuci\IeC {\'o}n de Demo de OpenPose\relax }}{106}{figure.caption.100}
+\contentsline {figure}{\numberline {12.10}{\ignorespaces Archivos Generados por la Conversi\IeC {\'o}n usando el Script con OpenPoseDemo\relax }}{107}{figure.caption.101}
+\contentsline {figure}{\numberline {12.11}{\ignorespaces Archivos Generados por la Conversi\IeC {\'o}n usando el Script con OpenPoseDemo\relax }}{108}{figure.caption.102}
+\contentsline {figure}{\numberline {12.12}{\ignorespaces Tabla de Diferencias entre Poses\relax }}{109}{figure.caption.103}
+\contentsline {figure}{\numberline {12.13}{\ignorespaces Poses: T Original - Frame 80 - Frame 95 Curva - Frame 147 Dab\relax }}{110}{figure.caption.104}
+\contentsline {figure}{\numberline {12.14}{\ignorespaces Poses: Frame 155 Curva Cerrada - Frame 158 Curva Cerrada - Frame 72 Desfase - Frame 188 Desfase\relax }}{111}{figure.caption.105}
+\contentsline {figure}{\numberline {12.15}{\ignorespaces GUI del Men\IeC {\'u} Principal\relax }}{120}{figure.caption.114}
+\contentsline {figure}{\numberline {12.16}{\ignorespaces GUI del Men\IeC {\'u} de Opciones\relax }}{121}{figure.caption.115}
+\contentsline {figure}{\numberline {12.17}{\ignorespaces GUI del Men\IeC {\'u} de Opciones\relax }}{122}{figure.caption.116}
+\contentsline {figure}{\numberline {12.18}{\ignorespaces GUI del modo de Creaci\IeC {\'o}n de Mapas\relax }}{123}{figure.caption.117}
+\contentsline {figure}{\numberline {12.19}{\ignorespaces GUI del modo de Creaci\IeC {\'o}n de Mapas Secci\IeC {\'o}n de Llenar Datos del Mapa\relax }}{124}{figure.caption.118}
+\contentsline {figure}{\numberline {12.20}{\ignorespaces GUI del modo de Creaci\IeC {\'o}n de Mapas Secci\IeC {\'o}n de Tiempo Entre Poses Guardadas\relax }}{125}{figure.caption.119}
+\contentsline {figure}{\numberline {12.21}{\ignorespaces GUI del modo de Juego, Fondo Azul Previo Inicio de Start\relax }}{126}{figure.caption.120}
+\contentsline {figure}{\numberline {12.22}{\ignorespaces GUI del modo de Juego, Fondo Rojo en Error\relax }}{127}{figure.caption.121}
+\contentsline {figure}{\numberline {12.23}{\ignorespaces GUI del modo de Juego, Fondo Verde Correcto\relax }}{128}{figure.caption.122}

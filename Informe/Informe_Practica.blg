@@ -57,6 +57,10 @@ Warning--entry type for "pointcloudexample" isn't style-file defined
 --line 399 of file bibliografia.bib
 Warning--entry type for "cinematiccaptures" isn't style-file defined
 --line 424 of file bibliografia.bib
+Repeated entry---line 432 of file bibliografia.bib
+ : @article{jia2014caffe
+ :                      ,
+I'm skipping whatever remains of this entry
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
 while executing---line 1049 of file plain.bst
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
@@ -83,4 +87,4 @@ while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "Chen P.,L. Mao, N. George, H. Peter, A. Barbara, L. Fuzhong" for entry Chen
 while executing---line 1090 of file plain.bst
 Warning--empty note in scrumdiapo
-(There were 7 error messages)
+(There were 8 error messages)

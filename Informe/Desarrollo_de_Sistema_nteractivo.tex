@@ -314,7 +314,7 @@ El resultado varía bastante dependiendo de la resolución de la cámara. Se est
 
 \section{Diseño De GUI}
 
-El diseño de la GUI de la figura \ref{requerimientosgrafico} en la fase de diseño se tomó en cuenta para su creación, donde se tienen los botones y funciones esperadas. Para el diseño también se toma en cuenta el principio KISS ("Keep it Simple, Stupid!"), que establece que gran parte de los sistemas son mejores si se mantienen simple que complejos, este se vuelve un objetivo clave para el diseño de la GUI.
+El diseño de la GUI de la figura \ref{requerimientosgrafico} en la fase de diseño se tomó en cuenta para su creación, donde se tienen los botones y funciones esperadas. Para el diseño también se toma en cuenta el principio KISS (``Keep it Simple, Stupid!"), que establece que gran parte de los sistemas son mejores si se mantienen simple que complejos, este se vuelve un objetivo clave para el diseño de la GUI.
 \\
 La licencia de OpenPose específica la necesidad de mantener en claro que el uso de la API esta dirigido a investigación y desarrollo privado, perteneciendo a su creador todos los programas desarrollados con su uso.
 Se resalta también que a estas etapas del desarrollo recién \textbf{se determinó el nombre del sistema interactivo POSE IT!}, en la figura \ref{menu} se observan los logos de POSE IT! y de OpenPose, así mismo las 3 funciones mencionadas.
@@ -327,7 +327,7 @@ Se resalta también que a estas etapas del desarrollo recién \textbf{se determi
 	\label{menu}
 \end{figure}
 
-Al presionar Options en la figura \ref{menu}se observan las dos funciones observadas funcionales marcadas en rojo de la figura \ref{menuoptions}, así mismo se añadió la posibilidad de poner la pantalla en modo "Fullscreen", que en español es pantalla completa.
+Al presionar Options en la figura \ref{menu}se observan las dos funciones observadas funcionales marcadas en rojo de la figura \ref{menuoptions}, así mismo se añadió la posibilidad de poner la pantalla en modo ``Fullscreen", que en español es pantalla completa.
 
 \begin{figure}[t!]
 	\centering
@@ -337,7 +337,7 @@ Al presionar Options en la figura \ref{menu}se observan las dos funciones observ
 	\label{menuoptions}
 \end{figure}
 
-Al apretar Play de la figura \ref{menu} se pueden observar la lista de mapas disponibles, existen dos botones marcados en rojo en la figura \ref{menulistas} para "Volver" al menú principal \ref{menu} o para iniciar a interactuar con el mapa elegido.Marcado en verde, se puede apreciar la lista de mapas disponibles, que al seleccionar un mapa, se escuchará levemente el audio del mapa, si es configurado, en la parte marcada con azul, se verá también el nombre del mapa, el autor que creo la pieza, el grupo que lo toco y quien creo el mapa.
+Al apretar Play de la figura \ref{menu} se pueden observar la lista de mapas disponibles, existen dos botones marcados en rojo en la figura \ref{menulistas} para ``Volver" al menú principal \ref{menu} o para iniciar a interactuar con el mapa elegido.Marcado en verde, se puede apreciar la lista de mapas disponibles, que al seleccionar un mapa, se escuchará levemente el audio del mapa, si es configurado, en la parte marcada con azul, se verá también el nombre del mapa, el autor que creo la pieza, el grupo que lo toco y quien creo el mapa.
 
 \begin{figure}[t!]
 	\centering
@@ -356,7 +356,7 @@ En el modo de Play para imitar poses, se modifica la GUI a una versión final, p
 
 \subsection{Requerimientos Adicionales}
 
-En el modo de Creación de Mapas, se debe tomar en cuenta el modelo de pasos a seguir para crear un mapa mostrado en la figura \ref{pasosaseguir} y cambiarlo para poder generar los mapas con el sistema interactivo como se ve en la figura \ref{pasosaseguirpart2}, ya no se requiere el paso 2, donde el usuario tenía que seleccionar las poses que deseaba imitar, si no que se hace automático, ya no se requiere de la eliminación manual de poses, se requiere de filtrar las poses para imitar. Las poses selectas pasaran por un proceso de normalización de sus valores de la Point Cloud para facilitar su uso en el mapa y se guardaran en un solo archivo .txt, que gracias a la creación de mapas con interfaz gráfica, ya no requiere ser manejado por el usuario y es más sencillo de manejar, la calificación por límite de tiempo es manejada por el usuario en la interfaz gráfica proporcionada.
+En el modo de Creación de Mapas, se debe tomar en cuenta el modelo de pasos a seguir para crear un mapa mostrado en la figura \ref{pasosaseguir} y cambiarlo para poder generar los mapas con el sistema interactivo como se ve en la figura \ref{pasosaseguirpart2}, ya no se requiere el paso 2, donde el usuario tenía que seleccionar las poses que deseaba imitar, si no que se hace de manera automática, ya no se requiere de la eliminación manual de poses, se filtran las poses para imitar. Las poses selectas pasaran por un proceso de normalización de valores de la Point Cloud para facilitar su uso en el mapa y se guardaran en un solo archivo .txt, que gracias a la creación de mapas con interfaz gráfica, ya no requiere ser manejado por el usuario y es más sencillo de manejar, la calificación por límite de tiempo es manejada por el usuario en la interfaz gráfica proporcionada.
 
 En el menú principal se debe tener la opción de entrar al modo de Creación de mapas.
 \begin{figure}[t!]
@@ -367,7 +367,7 @@ En el menú principal se debe tener la opción de entrar al modo de Creación de
 	\label{pasosaseguirpart2}
 \end{figure}
 
-Asi mismo se tiene en consideración el análisis de los requerimientos, que previamente se ilustraba en la figura \ref{requerimientosgrafico}, se lo modificara como se ve en la figura \ref{requerimientosgrafico2}, la función "Grabarme" se mencionará en recomendaciones.
+Así mismo se tiene en consideración el análisis de los requerimientos, que previamente se ilustraba en la figura \ref{requerimientosgrafico}, se lo modificara como se ve en la figura \ref{requerimientosgrafico2}, la función ``Grabarme" será presentada, permite al usuario grabarse a si mismo para construir un nivel.
 
 \begin{figure}[t!]
 	\centering
@@ -383,18 +383,18 @@ Para la creación del mapa se deben tener en cuenta los siguientes requerimiento
 
 \begin{itemize}
 	\item Datos del Mapa: Se debe tener una manera de ingresar los datos del mapa que se creara y visualizan en el menú de listas al seleccionar un mapa\ref{menulistas}, estos son el nombre, el artista, la persona que se mueve y el usuario que crea el mapa.
-	\item Seleccionar vídeo: Único factor que se mantiene externo, se tiene como requisito que el vídeo sea en formato mp4, este es guardado en la dirección ./OpenPosePlugin/Media, así mismo se tiene previsto un modo de usar cámara para grabarse a si mismo, sin embargo, este punto se tiene en cuenta en las delimitaciones fuera del prototipo requerido, sin embargo, se lo mencionará en recomendaciones.
+	\item Seleccionar vídeo: Único factor que se mantiene externo, se tiene como requisito que el vídeo sea en formato mp4, este es guardado en la dirección ./OpenPosePlugin/Media, así mismo se tiene previsto un modo de usar cámara para grabarse a si mismo, se hará mención de esta función en recomendaciones.
 	\item Mostrar vídeo y poses de mapa: Se debe mostrar tanto el vídeo seleccionado como las poses que se están guardando.
 	\item Control del Tiempo: Se debe poder especificar en que parte del vídeo se debe comenzar a grabar, así como cuanto tiempo se va a grabar y cada cuanto tiempo se debe generar una pose para guardar en el mapa. 
 	\item Start: Se debe tener una función que permita iniciar la creación del nivel con los datos ingresados.
 	\item Usar imagen Generada: En el menú de listas se tiene una imagen junto a los datos del mapa, esta puede ser modificada manualmente o ser auto generada con un campo que lo permita y brinde la imagen del vídeo durante su creación.
 \end{itemize}
 
-Todos los datos e imágenes del mapa se pueden modificar manualmente interviniendo en los archivos del mapa, estos mapas se guardaran en la carpeta ./OpenPosePlugin/Custom/\%NombredelMapa\%, se tiene el txt con las poses generadas del mapa, la imagen del mapa que se mostrará en el menú de listas y el vídeo que se deberá imitar, también se disponen de sus archivos.meta, cuya única función es proporcionar un formato accesible para Unity.
+Todos los datos e imágenes del mapa se pueden modificar manualmente interviniendo en los archivos del mapa, estos mapas se guardaran en la carpeta ./OpenPosePlugin/Custom/\%NombredelMapa\%, se tiene el txt con las poses generadas del mapa, la imagen del mapa que se mostrará en el menú de listas y el vídeo que se deberá imitar, también se disponen de sus archivos .meta, cuya única función es proporcionar un formato accesible para Unity.
 
 \subsection{Diseño de GUI}
 
-El menú principal tendrá un nuevo botón para acceder al modo de Creación de Mapas, se podrá observar la versión limpia de la GUI del menú principal, el modo Play y el modo de Creación de Mapas en el anexo \ztitleref{anexogui}.
+El menú principal tendrá un nuevo botón para acceder al modo de Creación de Mapas, se podrá observar la versión limpia de la GUI del sistema interactivo en el anexo \ztitleref{anexogui}.
 
 \subsubsection{Modo Play}
 
@@ -402,9 +402,11 @@ En la GUI del modo Play se tienen los siguientes campos enmarcados con cuadros d
 \begin{enumerate}
 	\item Datos del Nivel (azul): Se muestra el valor de la precisión calculado en la ecuación \ref{equation10}, el tiempo desde que empezó el nivel, si se encuentra el jugador y los FPS a los que va el modo Play.
 	\item Mostrar Usuario (rojo): Se observa el usuario y su pose a partir de la cámara y el plug-in de OpenPose.
-	\item Se muestran las poses a imitar(violeta): Se observa un esqueleto secundario que ofrece visibilidad de la pose a imitar ese tiempo límite.
 	\item Se muestra el vídeo del mapa a imitar (verde): Se observa el vídeo del mapa.
+	\item Botón de Start (Celeste): Al presionarlo, se tiene 3 segundos para que el usuario se acomode y empiece a imitar las poses.
 \end{enumerate}
+
+Se observan en las figuras \ref{gui4.1}, \ref{gui4.2}, \ref{gui4.3} los diferentes estados de la GUI, que marca continuamente color rojo o verde para las poses imitadas correctamente o erróneamente.
 
 \begin{figure}[t!]
 	\centering
@@ -417,25 +419,24 @@ En la GUI del modo Play se tienen los siguientes campos enmarcados con cuadros d
 \subsubsection{Modo Creación de Mapas}
 
 En la GUI del modo de Creación de mapas se tienen en cuenta los siguientes componentes enmarcados con cuadros de colores en la figura \ref{guicrearmapa}:
-
-\begin{enumerate}
-	\item Start(Guindo): Botón para empezar la creación del nivel, es empleado cuando se llenan los datos del mapa.
-	\item Elección de vídeo(Verde): En este lugar se seleccione con cual de los vídeos disponibles se creará el mapa.
-	\item Tiempo entre poses guardadas y uso de Imagen Generada (Celeste): El primero para que el usuario seleccione cada cuanto tiempo se debe guardar una pose tras otra a imitar, el segundo para ver si se guarda la imagen auto generada que se verá en la lista.
-	\item Datos del Mapa (Rojo): Se deben ingresar los datos que se visualizan en el menú de listas al seleccionar un mapa \ref{menulistas}, estos son el nombre, el artista, la persona que se mueve y el usuario que crea el mapa.
-	\item Control de Tiempo(Violeta): Se ven los campos de Time to Record y Delay Before Start, el primero cumple la función de cuanto tiempo se va a grabar y el segundo cuanto se debe esperar para comenzar a grabar.
-	\item Mostrar vídeo y poses generadas(Amarillo): Al presionar Start se observará el transcurso de la creación del mapa, viendo el vídeo y las poses generadas.
-	\item Funciones y Datos Extras(Azul): Se tendrá un botón que permitirá al usuario retroceder al menú principal nuevamente, así mismo se vera el logo de OpenPose, el tiempo transcurrido hasta el momento, si se puede observar algo/alguien a quien imitar y los FPS a los que transcurre la creación del mapa.
-\end{enumerate}
-
-
-\begin{figure}[h]
+\begin{figure}[t!]
 	\centering
 	\includegraphics[width=14cm,height=8cm,]{./Images/guicrearmapa.png}
 	\caption{Diseño Final de GUI para el Modo de Creación de Mapa}
 	\footnotesize Fuente: Elaboración Propia
 	\label{guicrearmapa}
 \end{figure}
+\begin{enumerate}
+	\item Start(Guindo): Botón para empezar la creación del nivel, es empleado cuando se llenan los datos del mapa.
+	\item Elección de vídeo(Verde): En este lugar se seleccione con cual de los vídeos disponibles se creará el mapa.
+	\item Tiempo entre poses guardadas y uso de Imagen Generada (Celeste): El primero para que el usuario seleccione cada cuanto tiempo se debe guardar una pose tras otra a imitar, el segundo para ver si se guarda la imagen auto generada que se verá en la lista.
+	\item Datos del Mapa (Rojo): Se deben ingresar los datos que se visualizan en el menú de listas al seleccionar un mapa \ref{menulistas}, estos son el nombre, el artista, la persona que se mueve y el usuario que crea el mapa.
+	\item Control de Tiempo(Violeta): Se ven los campos de Time to Record y Delay Before Start, el primero cumple la función de cuanto tiempo se va a grabar y el segundo cuanto se debe esperar para comenzar a grabar.
+	\item Mostrar vídeo o usuario (Amarillo): Al presionar Start se observará el transcurso de la creación del mapa, viendo el vídeo y las poses generadas.
+	\item Funciones y Datos Extras(Azul): Se tendrá un botón que permitirá al usuario retroceder al menú principal nuevamente, así mismo se vera el logo de OpenPose, el tiempo transcurrido hasta el momento, si se puede observar algo/alguien a quien imitar y los FPS a los que transcurre la creación del mapa.
+\end{enumerate}
+
+
 
 
 

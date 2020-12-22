@@ -158,7 +158,7 @@ En Redactar Parte 1, están los títulos de Objetivos, Estudio de Diagnóstico, 
 En Redactar Parte 2, están los títulos de Metodología, Diseño, Conclusiones, Recomendaciones, dentro de la metodología se lleva a cabo la tarea de Seguimiento de Product Owner.
 En Redactar Parte 3, están los títulos de Introducción, Anexos, Glosario, Revisión de ortografía y Resumen.
 
-\textbf{En caso de estar en blanco, considerar que todavía no se termino en su totalidad, se encuentra en fase de revisión o pruebas}. Al existir potenciales nuevas tareas, el valor puede variar en la siguiente entrega. Para simplificar la tabla, el proceso de corrección de errores es parte de la tarea correspondiente.
+Al existir potenciales nuevas tareas, el valor puede variar en la siguiente entrega. Para simplificar la tabla, el proceso de corrección de errores es parte de la tarea correspondiente.
 
 \restoregeometry
 \newgeometry{left=0.5cm,bottom=.25cm}
@@ -225,7 +225,7 @@ En Redactar Parte 3, están los títulos de Introducción, Anexos, Glosario, Rev
 
 Inicialmente se deben instalar la SDK de Visual Studio 2019 , de la pagina oficial  \href{https://visualstudio.microsoft.com/es/thank-you-downloading-visual-studio/?sku=Community&rel=16}{visualstudio.microsoft.com}, se ejecuta el archivo, se selecciona el paquete de idioma deseado y se lo descarga.
 
-Posteriormente, se debe seleccionar la versión deseada, en este caso se trabajo con "Visual Studio Community 2019", se deben habilitar las opciones prrincipales de "Desarrollo de .NET", "Desarrollo para el escritorio con C++", "Desarrollo de juego con Unity", para realizar este proyecto. Se tiene que habilitar todas las opciones relacionadas con C++ y las Build Tools VS 2015-2017 en "Desarrollo para el escritorio con C++" como se observa en la figura \ref{vsinstall} de \ztitleref{anexoinstalacion}, ya que OpenPose las utiliza, finalmente se lo debe instalar en el lugar deseado y ejecutar.
+Posteriormente, se debe seleccionar la versión deseada, en este caso se trabajo con ``Visual Studio Community 2019", se deben habilitar las opciones prrincipales de ``Desarrollo de .NET", ``Desarrollo para el escritorio con C++", ``Desarrollo de juego con Unity", para realizar este proyecto. Se tiene que habilitar todas las opciones relacionadas con C++ y las Build Tools VS 2015-2017 en ``Desarrollo para el escritorio con C++" como se observa en la figura \ref{vsinstall} de \ztitleref{anexoinstalacion}, ya que OpenPose las utiliza, finalmente se lo debe instalar en el lugar deseado y ejecutar.
 
 
 \begin{figure}[t!]
@@ -236,13 +236,13 @@ Posteriormente, se debe seleccionar la versión deseada, en este caso se trabajo
 	\label{vsinstall}
 \end{figure}
 
-La instalación de Unity inicia vistiando su pagina oficial de descargas  \href{https://unity3d.com/es/get-unity/download}{unity3d.com/es/get-unity/download}, se selecciona la opción de Descarga Unity Hub, se selecciono la opción "Personal" y de "Usuario recurrente", finalmente se aceptan los términos y condiciones, para descargar el instalador, se lo ejecutara y configurara como se desee, se debe ejecutar el programa instalado "Unity Hub".  
+La instalación de Unity inicia vistiando su pagina oficial de descargas  \href{https://unity3d.com/es/get-unity/download}{unity3d.com/es/get-unity/download}, se selecciona la opción de Descarga Unity Hub, se selecciono la opción ``Personal" y de ``Usuario recurrente", finalmente se aceptan los términos y condiciones, para descargar el instalador, se lo ejecutara y configurara como se desee, se debe ejecutar el programa instalado ``Unity Hub".  
 
-En la página oficial de versiones existentes \href{https://unity3d.com/get-unity/download/archive}{unity3d.com/get-unity/download/archive}, se seleccionara la versión Unity 2019.4.14 y se selecciona la opción "Unity Hub", finalmente se acepta instalar la versión correcta, si se siguieron correctamente los pasos, se tendrá la instalación de la figura \ref{installunity} de \ztitleref{anexoinstalacion} al finalizar.
+En la página oficial de versiones existentes \href{https://unity3d.com/get-unity/download/archive}{unity3d.com/get-unity/download/archive}, se seleccionara la versión Unity 2019.4.14 y se selecciona la opción ``Unity Hub", finalmente se acepta instalar la versión correcta, si se siguieron correctamente los pasos, se tendrá la instalación de la figura \ref{installunity} de \ztitleref{anexoinstalacion} al finalizar.
 
 La herramienta de Body Tracking OpenPose tiene requisitos elevados para su instalación y desarrollo, si bien instalar el programa para modificar el código fuente original puede realizarse siguiendo las instrucciones de  \href{https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/installation/README.md}{openpose/doc/installation/README.md} guardado en el repositorio principal de GitHub (CMU-Perceptual-Computing-Lab/openpose). Sin embargo, se empleara su plug-in de Unity almacenado en el repositorio  \href{https://github.com/CMU-Perceptual-Computing-Lab/openpose\_unity\_plugin}{CMU-Perceptual-Computing-Lab/openpose\_unity\_plugin} de GitHub.
-Se deben realizar x pasos para instalarlo, básicamente seguir las instrucciones de su documentación de instalación. Primero descargar el repositorio de GitHub, ejecutar el archivo "getPlugins.bat", "getModels.bat" y "testBinary.bat" dentro de la carpeta, para descargar los modelos, los archivos binarios de OpenPose y una Demo que se nombrará como \textbf{OpenPoseDemo} con la cual realizar pruebas. 
-Finalmente se abre la escena "Demo.Unity" localizada en ./OpenPosePlugin/Assets/OpenPose/Examples/Scenes/ en Unity y ejecutarla, si se realizo correctamente, se le pedirán aceptar dos problemas debido al versionamiento y será dirigido a la siguiente pantalla de Unity de las figuras \ref{unitydemo} y \ref{unitydemoexample}.
+Se deben realizar x pasos para instalarlo, básicamente seguir las instrucciones de su documentación de instalación. Primero descargar el repositorio de GitHub, ejecutar el archivo ``getPlugins.bat", ``getModels.bat" y ``testBinary.bat" dentro de la carpeta, para descargar los modelos, los archivos binarios de OpenPose y una Demo que se nombrará como \textbf{OpenPoseDemo} con la cual realizar pruebas. 
+Finalmente se abre la escena ``Demo.Unity" localizada en ./OpenPosePlugin/Assets/OpenPose/Examples/Scenes/ en Unity y ejecutarla, si se realizo correctamente, se le pedirán aceptar dos problemas debido al versionamiento y será dirigido a la siguiente pantalla de Unity de las figuras \ref{unitydemo} y \ref{unitydemoexample}.
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=12cm,height=8cm,]{./Images/installunity.png}
@@ -339,6 +339,16 @@ Los cálculos del porcentaje de semejanza entre el T Original con cada Frame sel
 	\label{gui1}
 \end{figure}
 
+\clearpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=16cm,height=10cm]{./Images/menu2.png}
+	\caption{GUI del Menú de Opciones}
+	\footnotesize Fuente: Elaboración Propia
+	\label{gui2.5}
+\end{figure}
+
+\clearpage
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=16cm,height=10cm]{./Images/menuopciones2.png}
@@ -347,16 +357,56 @@ Los cálculos del porcentaje de semejanza entre el T Original con cada Frame sel
 	\label{gui2}
 \end{figure}
 
+\clearpage
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=16cm,height=10cm]{./Images/modocreador.png}
+	\includegraphics[width=16cm,height=10cm]{./Images/crear1.png}
 	\caption{GUI del modo de Creación de Mapas}
 	\footnotesize Fuente: Elaboración Propia
-	\label{gui3}
+	\label{gui3.1}
 \end{figure}
 
+\clearpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=16cm,height=10cm]{./Images/crear2.png}
+	\caption{GUI del modo de Creación de Mapas Sección de Llenar Datos del Mapa}
+	\footnotesize Fuente: Elaboración Propia
+	\label{gui3.2}
+\end{figure}
 
+\clearpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=16cm,height=10cm]{./Images/crear3.png}
+	\caption{GUI del modo de Creación de Mapas Sección de Tiempo Entre Poses Guardadas}
+	\footnotesize Fuente: Elaboración Propia
+	\label{gui3.3}
+\end{figure}
 
+\clearpage
+\begin{figure}[h]
+\centering
+\includegraphics[width=16cm,height=10cm]{./Images/play0.png}
+\caption{GUI del modo de Juego, Fondo Azul Previo Inicio de Start}
+\footnotesize Fuente: Elaboración Propia
+\label{gui4.1}
+\end{figure}
 
+\clearpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=16cm,height=10cm]{./Images/play1.png}
+	\caption{GUI del modo de Juego, Fondo Rojo en Error}
+	\footnotesize Fuente: Elaboración Propia
+	\label{gui4.2}
+\end{figure}
 
-
+\clearpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=16cm,height=10cm]{./Images/play2.png}
+	\caption{GUI del modo de Juego, Fondo Verde Correcto}
+	\footnotesize Fuente: Elaboración Propia
+	\label{gui4.3}
+\end{figure}
